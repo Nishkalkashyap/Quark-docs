@@ -1,0 +1,17 @@
+{
+  "name": "@quark/docs",
+  "version": "0.0.1-beta",
+  "description": "Documentation for quark",
+  "main": "index.js",
+  "scripts": {
+    "start": "vuepress dev",
+    "docs:dev": "vuepress dev",
+    "docs:build": "vuepress build",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "quark"
+  ],
+  "author": "Nishkal Kashyap",
+  "license": "MIT"
+}
