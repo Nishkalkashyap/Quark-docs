@@ -13,5 +13,9 @@
     "quark"
   ],
   "author": "Nishkal Kashyap",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "css-loader": "^2.1.0",
+    "vuetify": "^1.4.4"
+  }
 }

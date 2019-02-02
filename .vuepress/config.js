@@ -2,30 +2,26 @@ const path = require('path');
 
 module.exports = {
     title: 'Quark',
-    desctiption: 'Quark website',
+    desctiption: 'IoT Framework',
+    serviceWorker: true,
     themeConfig: {
-        // nav: [{
-        //         text: 'Home',
-        //         link: ''
-        //     },
-        //     {
-        //         text: 'Intro',
-        //         link: '/intro/'
-        //     }
-        // ],
-        // sidebar: {
-        //     '/intro/': [
-        //         '',
-        //         "Installation"
-        //     ]
-        // }
+        editLinks: true,
+        repoLabel: 'Contribute!',
+        repo: 'Github',
+        lastUpdated: 'Last Updated',
+        serviceWorker: {
+            updatePopup: true
+        },
         sidebar: {
-            '/introduction/': [
-                ''
-            ],
-            '/docs/': [
-                ''
-            ],
+            '/introduction/': [{
+                title: 'Introduction'
+            }],
+            '/docs/': [{
+                title: 'Docs',
+                children : [
+                    'api-references'
+                ]
+            }],
             '/tutorials/': [
                 ''
             ],
@@ -34,15 +30,12 @@ module.exports = {
             ]
         }
     },
-    configureWebpack: {
-        module: {
-            rules: [{
-                test: /\.scss$/,
-                loader: 'sass-loader',
-                options: {
-                    includePaths: [path.resolve('node_modules')]
-                }
-            }]
-        }
-    }
+    // configureWebpack: {
+    //     module: {
+    //         rules: [{
+    //             test: /\.css$/,
+    //             loader: 'css-loader'
+    //         }]
+    //     }
+    // }
 }
