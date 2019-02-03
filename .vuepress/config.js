@@ -37,6 +37,7 @@ module.exports = {
                 '',
                 ['window', 'Window'],
                 ['views', 'Views'],
+                ['app', 'App'],
             ],
             '/faq/': [
                 ''

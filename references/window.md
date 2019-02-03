@@ -1,6 +1,6 @@
-<!-- ---
-sidebarDepth: 4
---- -->
+---
+sidebarDepth: 2
+---
 
 <!-- [[toc]] -->
 
