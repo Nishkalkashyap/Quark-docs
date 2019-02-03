@@ -1,10 +1,10 @@
----
-sidebarDepth: 2
----
+<!-- ---
+sidebarDepth: 4
+--- -->
 
-[[toc]]
+<!-- [[toc]] -->
 
-## Methods
+<!-- ## Methods -->
 
 ### `window.blur()`
 Removes focus from the window.
@@ -66,30 +66,61 @@ supplied will default to their current values.
   * bounds - [`Rectangle`](/)
   * animate - `boolean`(optional) <Badge text="macOS" type="warn" vertical="middle" />
 * returns `void`
+* Usage
 
+```js
+quark.window.setBounds({
+    height : 600,
+    width : 600,
+    x : 0,
+    y : 0
+});
+```
 
 ### `window.setEnabled([enabled])`
 Disable or enable the window.
 * arguments 
-  * enabled `boolean`(optional)
+  * enabled `boolean`
 * returns `void`
+* Usage
+
+```js
+quark.window.setEnabled(true);
+```
 
 ### `window.setOpacity(opacity)`
+Sets the opacity of the window. On Linux does nothing. Value must be between 0-1.
+* arguments
+  * opacity `number`
+* returns `void`
+*  Usage
+
+```js
+quark.window.setOpacity(0.5);
+```
+
+### `window.setProgressBar(progress[, mode])`
 Focuses on the window.
 * arguments
-  * opacity `number` 
+  * progress `number`
+  * mode `('none' | 'normal' | 'indeterminate' | 'error' | 'paused')`<Badge text="Windows" type="warn" vertical="middle" />
 * returns `void`
 
-### `window.setProgressBar()`
-Focuses on the window.
-* returns `void`
+```js
+quark.window.setProgressBar(0.3);
+
+//Or for windows
+quark.window.setProgressBar(0.4, 'error');
+
+```
 
 ### `window.show()`
-Focuses on the window.
+Shows and gives focus to the window.
 * returns `void`
 
 ### `window.unmaximize()`
-Returns `void` - Focuses on the window.
+Unmaximizes the window.
+* returns `void`
 
 
 
