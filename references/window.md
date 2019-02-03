@@ -111,7 +111,6 @@ quark.window.setProgressBar(0.3);
 
 //Or for windows
 quark.window.setProgressBar(0.4, 'error');
-
 ```
 
 ### `window.show()`
@@ -121,6 +120,114 @@ Shows and gives focus to the window.
 ### `window.unmaximize()`
 Unmaximizes the window.
 * returns `void`
+
+
+<!-- Starting webContentsApi -->
+
+### `window.capturePage(callback)`
+Captures a snapshot of the whole visible page. Upon completion callback will be 
+called with callback(image). The image is an instance of NativeImage that stores
+data of the snapshot.
+* arguments
+  * callback `(image : NativeImage) => void` 
+* returns `void`
+* Usage
+
+```js
+quark.window.capturePage((image) => {
+    //your code here, example:
+    console.log(image);
+});
+```
+
+### `window.executeJavaScript(code)`
+Evaluates code in page. Returns a promise with the result of the executed code.
+* arguments
+  * code `string` 
+* returns `Promise<any>`
+* Usage
+
+```js
+const code = `
+    console.log('Hello');
+`
+quark.window.executeJavaScript(code).then((result)=>{
+    console.log(result);
+}).catch((err)=>{
+    console.log(err)
+});
+```
+
+### `window.getFrameRate()`
+Returns the frameRate of the window
+* returns `void`
+
+### `window.getZoomFactor()`
+Gets the current zoom factor and returns a promise that resolves to the value of zoom factor.
+* returns `Promise<number>`
+* Usage
+
+```js
+quark.window.getZoomFactor().then((factor)=>{
+    //Your code here; example:
+    console.log(factor);
+}).catch((err)=>{
+    console.log(err)
+});
+```
+### `window.getZoomLevel()`
+Gets the current zoom level and returns a promise that resolves to the value of zoom level.
+* returns `Promise<number>`
+* Usage
+
+```js
+quark.window.getZoomLevel().then((level)=>{
+    //Your code here; example:
+    console.log(level);
+}).catch((err)=>{
+    console.log(err)
+});
+```
+
+### `window.insertCSS(css)`
+Injects css into the current web page.
+* arguments
+  * css `string` 
+* returns `void`
+* Usage
+```js
+const css = `
+    my-element {
+        background-color : red;
+    }
+`
+quark.window.insertCSS(css);
+```
+
+### `window.setZoomFactor(factor)`
+ Changes the zoom factor to the specified factor. Zoom factor is zoom percent divided by 100, so 300% = 3.0.
+* arguments
+  * factor `number`
+* returns `void`
+* Usage
+```js
+quark.window.setZoomFactor(0.3);
+```
+
+### `window.setZoomLevel(level)`
+Changes the zoom level to the specified level. The original size is 0 and each
+increment above or below represents zooming 20% larger or smaller to default
+limits of 300% and 50% of original size, respectively. The formula for this is
+scale := 1.2 ^ level.
+* arguments
+  * level `number`
+* returns `void`
+* Usage
+```js
+quark.window.setZoomLevel(0.5);
+```
+
+
 
 
 
