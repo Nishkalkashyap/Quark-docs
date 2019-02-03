@@ -12,18 +12,31 @@ module.exports = {
         serviceWorker: {
             updatePopup: true
         },
+        nav: [{
+                text: 'References',
+                link: '/references/'
+            },
+            {
+                text: 'Guide',
+                link: '/guide/'
+            },
+            {
+                text: 'External',
+                link: 'https://google.com'
+            }
+        ],
         sidebar: {
-            '/introduction/': [{
-                title: 'Introduction'
-            }],
             '/docs/': [{
                 title: 'Docs',
-                children : [
+                collapsable: false,
+                children: [
                     'api-references'
                 ]
             }],
-            '/tutorials/': [
-                ''
+            '/references/': [
+                '',
+                ['window', 'Window'],
+                ['views', 'Views'],
             ],
             '/faq/': [
                 ''
