@@ -1,9 +1,30 @@
 # Views
 
-### `app.showItemInFolder([fullPath])`
-Show the given file in a file manager. If possible, select the file. If no path is provided, opens the cueernt process path.
-* returns `void`
+<!-- #### Controls various parts of your applications views. -->
+<!-- _______ -->
 
-### `app.beep()`
-Play the beep sound.
-* returns `void`
+[[toc]]
+
+### `views.createSideView()`
+Creates a side view.
+* returns [`ViewProvider`](/structures/view-provider.md)
+
+### `views.createBottomView()`
+Creates a bottom view.
+* returns [`ViewProvider`](/structures/view-provider.md)
+
+### `views.createTabsView()`
+Creates a tabs view.
+* returns [`ViewProvider`](/structures/view-provider.md)
+
+### `views.sideviewController`
+* see [SideviewController](/structures/sideview-controller.md)
+
+### `views.bottomviewController`
+* see [BottomviewController](/structures/bottomview-controller.md)
+
+### `views.tabsviewController`
+* see [TabsviewController](/structures/tabsview-controller.md)
+
+
+

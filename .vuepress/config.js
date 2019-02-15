@@ -10,6 +10,7 @@ module.exports = {
         repoLabel: 'Contribute',
         repo: 'https://github.com/Nishkalkashyap/Quark-docs',
         lastUpdated: 'Last Updated',
+        ga: 'UA-112064718-3',
         serviceWorker: {
             updatePopup: true
         },
@@ -17,10 +18,14 @@ module.exports = {
                 text: 'References',
                 link: '/references/'
             },
-            // {
-            //     text: 'Guide',
-            //     link: '/guide/'
-            // },
+            {
+                text: 'Structures',
+                link: '/structures/'
+            },
+            {
+                text: 'Download',
+                link: '/download/'
+            },
             // {
             //     text: 'External',
             //     link: 'https://google.com'
@@ -36,13 +41,22 @@ module.exports = {
                 ]
             }],
             '/references/': [
-                // '',
-                // ['window', 'Window'],
-                // ['views', 'Views'],
-                // ['app', 'App'],
                 'window',
-                'views',
-                'app'
+                'app',
+                'views'
+                // {
+                //     title: 'Views',
+                //     collapsable: false,
+                //     children: [
+                //         'views'
+                //     ]
+                // }
+            ],
+            '/structures/': [
+                'sideview-controller',
+                'bottomview-controller',
+                'tabsview-controller',
+                'view-provider',
             ]
         }
     },
