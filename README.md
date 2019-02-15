@@ -1,14 +1,16 @@
 ---
 home: true
-heroImage: /images/Svg.svg
+heroImage: /images/icon.png
+# heroText: Hero Title
+tagline: Platform to develope internet of things.
 actionText: Get Started →
-actionLink: /docs/
+actionLink: /references/
 features:
-- title: Simplicity First
-  details: Minimal setup with markdown-centered project structure helps you focus on writing.
-- title: Vue-Powered
-  details: Enjoy the dev experience of Vue + webpack, use Vue components in markdown, and develop custom themes with Vue.
+- title: Introduction
+  details: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+- title: Node-Powered
+  details: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
 - title: Performant
-  details: VuePress generates pre-rendered static HTML for each page, and runs as an SPA once a page is loaded.
+  details: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
 footer: MIT Licensed | Copyright © 2019-present Nishkal Kashyap
 ---

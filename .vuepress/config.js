@@ -5,9 +5,10 @@ module.exports = {
     desctiption: 'IoT Framework',
     serviceWorker: true,
     themeConfig: {
+        logo: '/images/icon.png',
         editLinks: true,
-        repoLabel: 'Contribute!',
-        repo: 'Github',
+        repoLabel: 'Contribute',
+        repo: 'https://github.com/Nishkalkashyap/Quark-docs',
         lastUpdated: 'Last Updated',
         serviceWorker: {
             updatePopup: true
@@ -16,15 +17,16 @@ module.exports = {
                 text: 'References',
                 link: '/references/'
             },
-            {
-                text: 'Guide',
-                link: '/guide/'
-            },
-            {
-                text: 'External',
-                link: 'https://google.com'
-            }
+            // {
+            //     text: 'Guide',
+            //     link: '/guide/'
+            // },
+            // {
+            //     text: 'External',
+            //     link: 'https://google.com'
+            // }
         ],
+        // sidebar : 'auto'
         sidebar: {
             '/docs/': [{
                 title: 'Docs',
@@ -34,13 +36,13 @@ module.exports = {
                 ]
             }],
             '/references/': [
-                '',
-                ['window', 'Window'],
-                ['views', 'Views'],
-                ['app', 'App'],
-            ],
-            '/faq/': [
-                ''
+                // '',
+                // ['window', 'Window'],
+                // ['views', 'Views'],
+                // ['app', 'App'],
+                'window',
+                'views',
+                'app'
             ]
         }
     },

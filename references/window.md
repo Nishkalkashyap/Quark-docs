@@ -1,10 +1,6 @@
----
-sidebarDepth: 2
----
+# Window
 
-<!-- [[toc]] -->
-
-<!-- ## Methods -->
+[[toc]]
 
 ### `window.blur()`
 Removes focus from the window.

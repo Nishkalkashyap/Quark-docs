@@ -1,6 +1,6 @@
----
-sidebarDepth: 4
----
+# App
+
+[[toc]]
 
 ### `app.showItemInFolder([fullPath])`
 Show the given file in a file manager. If possible, select the file. If no path is provided, opens the cueernt process path.
@@ -31,26 +31,26 @@ Shows a message box. Returns the text of the selected button.
 * returns `string`
 * Usage
 
-```js
+```ts
 
 //Javascript Example
 
 quark.app.showMessageBox('Select your hero', 'Goku or Vegeta?', ['Goku', 'Vegeta'], 'question')
 .then((hero)=>{
     if(hero == 'Goku'){
-        console.log('looser');
+        console.log('loser');
     }else {
         console.log('Saiyan prince approves!');
     }
 }).catch((err)=>{
     console.log(err);
-})
+});
 
 //Typescript example
 quark.app.showMessageBox<'Goku' | 'Vegeta'>('Select your hero', 'Goku or Vegeta?', ['Goku', 'Vegeta'], 'question')
 .then((hero)=>{
     if(hero == 'Goku'){
-        console.log('looser');
+        console.log('loser');
     }else {
         console.log('Saiyan prince approves!');
     }
@@ -109,6 +109,6 @@ quark.app.showSaveDialog({
     console.log(fileName, bookmark);
 }).catch((err)=>{
     console.log('user dismissed the dialog');
-})
+});
 ```
 
