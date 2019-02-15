@@ -1,0 +1,14 @@
+{
+  "projects": {
+    "default": "diy-mechatronics"
+  },
+  "targets": {
+    "diy-mechatronics": {
+      "hosting": {
+        "docs": [
+          "quark-documentation"
+        ]
+      }
+    }
+  }
+}

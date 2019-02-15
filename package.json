@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "start": "vuepress dev",
-    "docs:dev": "vuepress dev",
-    "docs:build": "vuepress build",
+    "build": "vuepress build",
+    "deploy": "firebase deploy",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [

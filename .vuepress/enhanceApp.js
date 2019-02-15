@@ -1,4 +1,4 @@
-import Vuetify from 'vuetify';
+// import Vuetify from 'vuetify';
 // import 'vuetify/dist/vuetify.min.css';
 
 export default ({
@@ -7,5 +7,5 @@ export default ({
     // router, // the router instance for the app
     // siteData // site metadata
 }) => {
-    Vue.use(Vuetify)
+    // Vue.use(Vuetify)
 }
