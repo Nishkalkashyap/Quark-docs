@@ -84,8 +84,6 @@ Removes the focus from view and selects previous view.
 
 
 
-
-
 ## Properties
 
 ### `label`
@@ -119,7 +117,7 @@ Removes the focus from view and selects previous view.
 * type [`ContextMenuRef`](/)
 
 ### `buttons`
-* type [`Array<Button>`](/)
+* type [`Array<ButtonField>`](/)
 
 ### `inputField`
 * type [`InputField`](/)

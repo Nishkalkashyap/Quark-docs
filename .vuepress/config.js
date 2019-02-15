@@ -1,5 +1,3 @@
-const path = require('path');
-
 module.exports = {
     title: 'Quark',
     desctiption: 'IoT Framework',
@@ -41,9 +39,9 @@ module.exports = {
                 ]
             }],
             '/references/': [
-                'window',
                 'app',
-                'views'
+                'views',
+                'window',
                 // {
                 //     title: 'Views',
                 //     collapsable: false,
@@ -53,8 +51,14 @@ module.exports = {
                 // }
             ],
             '/structures/': [
-                'sideview-controller',
                 'bottomview-controller',
+                'button-field',
+                'context-menu-ref',
+                'input-field',
+                'menu-item',
+                'menu-ref',
+                'select-field',
+                'sideview-controller',
                 'tabsview-controller',
                 'view-provider',
             ]
