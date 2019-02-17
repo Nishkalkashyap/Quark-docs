@@ -40,6 +40,7 @@ module.exports = {
             }],
             '/references/': [
                 'app',
+                'util',
                 'views',
                 'window',
                 // {

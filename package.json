@@ -7,7 +7,7 @@
     "start": "vuepress dev",
     "build": "vuepress build",
     "deploy": "firebase deploy",
-    "bd": "npm run build && firebase deploy",
+    "bad": "npm run build && firebase deploy",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [

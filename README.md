@@ -1,7 +1,7 @@
 ---
 home: true
 heroImage: /images/icon.png
-# heroText: Hero Title
+heroText: ( Under Active Development )
 tagline: Platform to develope internet of things.
 actionText: Get Started →
 actionLink: /references/
