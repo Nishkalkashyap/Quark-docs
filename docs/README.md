@@ -1,5 +1,0 @@
-# Quark
-
-## Api References
-
-## Concepts

@@ -1,18 +1,32 @@
 module.exports = {
     title: 'Quark',
     desctiption: 'IoT Framework',
+    ga: 'UA-112064718-3',
     serviceWorker: true,
+    markdown: {
+        config: md => {
+            md.use(require('markdown-it-html5-embed'), {
+                html5embed: {
+                    useImageSyntax: true,
+                    useLinkSyntax: false
+                }
+            })
+        }
+    },
     themeConfig: {
         logo: '/images/icon.png',
         editLinks: true,
         repoLabel: 'Contribute',
         repo: 'https://github.com/Nishkalkashyap/Quark-docs',
         lastUpdated: 'Last Updated',
-        ga: 'UA-112064718-3',
         serviceWorker: {
             updatePopup: true
         },
         nav: [{
+                text: 'Guide',
+                link: '/guide/'
+            },
+            {
                 text: 'References',
                 link: '/references/'
             },
@@ -66,11 +80,12 @@ module.exports = {
         }
     },
     // configureWebpack: {
-    //     module: {
-    //         rules: [{
-    //             test: /\.css$/,
-    //             loader: 'css-loader'
-    //         }]
-    //     }
+    //     mode: 'production',
+    //     // module: {
+    //     //     rules: [{
+    //     //         test: /\.css$/,
+    //     //         loader: 'css-loader'
+    //     //     }]
+    //     // }
     // }
 }
