@@ -76,6 +76,12 @@ module.exports = {
                 'sideview-controller',
                 'tabsview-controller',
                 'view-provider',
+            ],
+            '/guide/': [
+                '',
+                'getting-started.md',
+                'quark-ide.md',
+                'user-interface.md'
             ]
         }
     },
