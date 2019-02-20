@@ -54,6 +54,8 @@ module.exports = {
             }],
             '/references/': [
                 'app',
+                'clipboard',
+                'commands',
                 'util',
                 'views',
                 'window',
@@ -78,7 +80,7 @@ module.exports = {
                 'view-provider',
             ],
             '/guide/': [
-                '',
+                // '',
                 'getting-started.md',
                 'quark-ide.md',
                 'user-interface.md'

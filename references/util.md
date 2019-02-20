@@ -1,5 +1,7 @@
 # Util
 
+[[toc]]
+
 ### `util.createContextMenu(items)`
 * arguments
   * items [`Array<MenuItem>`](/structures/menu-item.md)
