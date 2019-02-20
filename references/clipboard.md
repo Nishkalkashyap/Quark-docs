@@ -1,8 +1,9 @@
 # Clipboard
 
-Perform copy and paste operations on the system clipboard.
+<Header label="Perform copy and paste operations on the system clipboard."/>
 
 [[toc]]
+
 
 ### clipboard.readText()
 Returns the text saved in clipboard.

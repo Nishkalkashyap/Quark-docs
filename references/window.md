@@ -1,5 +1,7 @@
 # Window
 
+<Header label="Controls for window state of your app."/>
+
 [[toc]]
 
 ### `window.blur()`

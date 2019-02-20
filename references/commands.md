@@ -1,5 +1,7 @@
 # Commands
 
+<Header label="Register globally executable commands."/>
+
 [[toc]]
 
 ### `commands.registerCommand(id, handle[, thisArg, label])`

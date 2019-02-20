@@ -1,5 +1,7 @@
 # App
 
+<Header label="Provides methods to perform lower level operations."/>
+
 [[toc]]
 
 ### `app.showItemInFolder([fullPath])`

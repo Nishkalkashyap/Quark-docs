@@ -17,6 +17,9 @@
   "license": "MIT",
   "devDependencies": {
     "css-loader": "^2.1.0",
+    "markdown-it-html5-embed": "^1.0.0",
+    "node-sass": "^4.11.0",
+    "sass-loader": "^7.1.0",
     "vuetify": "^1.4.4"
   }
 }

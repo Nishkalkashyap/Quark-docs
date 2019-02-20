@@ -1,7 +1,6 @@
 # Views
 
-<!-- #### Controls various parts of your applications views. -->
-<!-- _______ -->
+<Header label="Create and control views of your app."/>
 
 [[toc]]
 
