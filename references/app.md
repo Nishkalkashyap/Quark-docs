@@ -1,4 +1,4 @@
-# App
+# app
 
 <Header label="Provides methods to perform lower level operations."/>
 
@@ -113,4 +113,3 @@ quark.app.showSaveDialog({
     console.log('user dismissed the dialog');
 });
 ```
-

@@ -1,4 +1,4 @@
-# Views
+# views
 
 <Header label="Create and control views of your app."/>
 

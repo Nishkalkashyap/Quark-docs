@@ -1,4 +1,4 @@
-# Clipboard
+# clipboard
 
 <Header label="Perform copy and paste operations on the system clipboard."/>
 

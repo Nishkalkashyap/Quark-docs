@@ -1,4 +1,4 @@
-# Window
+# window
 
 <Header label="Controls for window state of your app."/>
 

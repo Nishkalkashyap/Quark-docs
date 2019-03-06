@@ -1,4 +1,4 @@
-# Util
+# util
 
 <Header label="Utilitiy methods to quark api"/>
 

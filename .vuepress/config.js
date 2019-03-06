@@ -3,6 +3,18 @@ module.exports = {
     desctiption: 'IoT Framework',
     ga: 'UA-112064718-3',
     serviceWorker: true,
+    head: [
+        ['script', {}, `
+        (function(h,o,t,j,a,r){
+            h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+            h._hjSettings={hjid:1226062,hjsv:6};
+            a=o.getElementsByTagName('head')[0];
+            r=o.createElement('script');r.async=1;
+            r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+            a.appendChild(r);
+        })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+`]
+    ],
     markdown: {
         config: md => {
             md.use(require('markdown-it-html5-embed'), {
@@ -56,6 +68,7 @@ module.exports = {
                 'app',
                 'clipboard',
                 'commands',
+                'icons',
                 'util',
                 'views',
                 'window',
@@ -71,6 +84,7 @@ module.exports = {
                 'bottomview-controller',
                 'button-field',
                 'context-menu-ref',
+                'icon',
                 'input-field',
                 'menu-item',
                 'menu-ref',
@@ -80,7 +94,6 @@ module.exports = {
                 'view-provider',
             ],
             '/guide/': [
-                // '',
                 'getting-started.md',
                 'quark-ide.md',
                 'user-interface.md'

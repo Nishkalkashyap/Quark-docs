@@ -1,4 +1,4 @@
-# Commands
+# commands
 
 <Header label="Register globally executable commands."/>
 

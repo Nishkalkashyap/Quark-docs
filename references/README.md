@@ -1,8 +1,9 @@
 # References
 
-* [App](/references/app.md)
-* [Clipboard](/references/clipboard.md)
-* [Commands](/references/commands.md)
-* [Util](/references/util.md)
-* [Views](/references/views.md)
-* [Window](/references/window.md)
+* [app](/references/app.md)
+* [clipboard](/references/clipboard.md)
+* [commands](/references/commands.md)
+* [icons](/references/icons.md)
+* [util](/references/util.md)
+* [views](/references/views.md)
+* [window](/references/window.md)
