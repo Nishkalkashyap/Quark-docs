@@ -69,7 +69,6 @@ module.exports = {
                 'clipboard',
                 'commands',
                 'icons',
-                'IKeyBindingRegister',
                 'util',
                 'views',
                 'window',
@@ -86,6 +85,7 @@ module.exports = {
                 'button-field',
                 'context-menu-ref',
                 'icon',
+                'IKeyBindingRegister',
                 'input-field',
                 'menu-item',
                 'menu-ref',
@@ -95,6 +95,7 @@ module.exports = {
                 'view-provider',
             ],
             '/guide/': [
+                'examples.md',
                 'getting-started.md',
                 'quark-ide.md',
                 'user-interface.md'
