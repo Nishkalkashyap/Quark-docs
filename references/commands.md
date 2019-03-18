@@ -11,7 +11,7 @@ Registers a globally executable command.
   * handle `Function`
   * thisArg `any`(optional)
   * label `string`(optional)
-* returns [`IKeyBindingRegister`](/)
+* returns [`IKeyBindingRegister`](/structures/IKeyBindingRegister.md)
 * Usage
 
 

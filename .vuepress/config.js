@@ -69,6 +69,7 @@ module.exports = {
                 'clipboard',
                 'commands',
                 'icons',
+                'IKeyBindingRegister',
                 'util',
                 'views',
                 'window',

@@ -4,6 +4,7 @@
 * [ButtonField](/structures/button-field.md)
 * [ContextMenuRef](/structures/context-menu-ref.md)
 * [Icon](/structures/icon.md)
+* [IKeyBindingRegister](/structures/IKeyBindingRegister.md)
 * [InputField](/structures/input-field.md)
 * [MenuItem](/structures/menu-item.md)
 * [MenuRef](/structures/menu-ref.md)

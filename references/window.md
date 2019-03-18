@@ -111,6 +111,16 @@ quark.window.setProgressBar(0.3);
 quark.window.setProgressBar(0.4, 'error');
 ```
 
+### `window.isResizable()`
+Returns whether the window is resizable or not.
+* returns `boolean`
+
+### `window.setResizable(resizable)`
+Sets the window as resizable or not resizable.
+* argumants
+  * resizable `boolean`
+* returns `void`
+
 ### `window.show()`
 Shows and gives focus to the window.
 * returns `void`
