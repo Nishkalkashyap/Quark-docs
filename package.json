@@ -8,7 +8,8 @@
     "build": "vuepress build",
     "deploy": "firebase deploy",
     "bad": "npm run build && firebase deploy",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "land": "ts-node scripts/make-landing-pages.ts"
   },
   "keywords": [
     "quark"
@@ -16,7 +17,9 @@
   "author": "Nishkal Kashyap",
   "license": "MIT",
   "devDependencies": {
+    "@types/fs-extra": "^5.0.5",
     "css-loader": "^2.1.0",
+    "fs-extra": "^7.0.1",
     "markdown-it-html5-embed": "^1.0.0",
     "node-sass": "^4.11.0",
     "sass-loader": "^7.1.0",
