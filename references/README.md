@@ -1,4 +1,4 @@
-References
+# References
 
 * [App](/references/app.md)
 * [Clipboard](/references/clipboard.md)

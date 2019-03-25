@@ -17,13 +17,13 @@ module.exports = {
         ['script', {
             src: 'https://unpkg.com/ionicons@4.5.5/dist/ionicons.js'
         }],
-        ['script', {
-            src: "https://unpkg.com/@ionic/core@latest/dist/ionic.js"
-        }],
-        ['link', {
-            href: "https://unpkg.com/@ionic/core@latest/css/ionic.bundle.css",
-            rel: "stylesheet"
-        }]
+        // ['script', {
+        //     src: "https://unpkg.com/@ionic/core@latest/dist/ionic.js"
+        // }],
+        // ['link', {
+        //     href: "https://unpkg.com/@ionic/core@latest/css/ionic.bundle.css",
+        //     rel: "stylesheet"
+        // }]
     ],
     markdown: {
         config: md => {
@@ -62,34 +62,35 @@ module.exports = {
             },
         ],
         sidebar: {
-            '/references/': [
-                'app',
-                'clipboard',
-                'commands',
-                'icons',
-                'util',
-                'views',
-                'window'
+            "/guide/": [
+                "examples.md",
+                "getting-started.md",
+                "intro.md",
+                "quark-ide.md",
+                "user-interface.md"
             ],
-            '/structures/': [
-                'bottomview-controller',
-                'button-field',
-                'context-menu-ref',
-                'icon',
-                'IKeyBindingRegister',
-                'input-field',
-                'menu-item',
-                'menu-ref',
-                'select-field',
-                'sideview-controller',
-                'tabsview-controller',
-                'view-provider',
+            "/references/": [
+                "app.md",
+                "clipboard.md",
+                "commands.md",
+                "icons.md",
+                "util.md",
+                "views.md",
+                "window.md"
             ],
-            '/guide/': [
-                'examples.md',
-                'getting-started.md',
-                'quark-ide.md',
-                'user-interface.md'
+            "/structures/": [
+                "bottomview-controller.md",
+                "button-field.md",
+                "context-menu-ref.md",
+                "icon.md",
+                "IKeyBindingRegister.md",
+                "input-field.md",
+                "menu-item.md",
+                "menu-ref.md",
+                "select-field.md",
+                "sideview-controller.md",
+                "tabsview-controller.md",
+                "view-provider.md"
             ]
         }
     },

@@ -1,4 +1,4 @@
-Guide
+# Guide
 
 * [Examples](/guide/examples.md)
 * [Getting Started](/guide/getting-started.md)

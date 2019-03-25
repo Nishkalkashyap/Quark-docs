@@ -1,4 +1,4 @@
-Structures
+# Structures
 
 * [IKeyBindingRegister](/structures/IKeyBindingRegister.md)
 * [Bottomview Controller](/structures/bottomview-controller.md)

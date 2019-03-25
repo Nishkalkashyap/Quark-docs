@@ -4,8 +4,8 @@
   "description": "Documentation for quark",
   "main": "index.js",
   "scripts": {
-    "start": "vuepress dev",
-    "build": "vuepress build",
+    "start": "npm run land && vuepress dev",
+    "build": "npm run land && vuepress build",
     "deploy": "firebase deploy",
     "bad": "npm run build && firebase deploy",
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -31,6 +31,7 @@
     "@ionic/core": "^4.1.2",
     "@ionic/vue": "0.0.2",
     "extract-text-webpack-plugin": "^3.0.2",
+    "js-beautify": "^1.9.0",
     "style-loader": "^0.23.1",
     "webpack-dev-middleware": "^3.6.0"
   }
