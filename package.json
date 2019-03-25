@@ -20,6 +20,15 @@
     "markdown-it-html5-embed": "^1.0.0",
     "node-sass": "^4.11.0",
     "sass-loader": "^7.1.0",
+    "vuepress": "^0.14.10",
+    "vuesax": "^3.8.35",
     "vuetify": "^1.4.4"
+  },
+  "dependencies": {
+    "@ionic/core": "^4.1.2",
+    "@ionic/vue": "0.0.2",
+    "extract-text-webpack-plugin": "^3.0.2",
+    "style-loader": "^0.23.1",
+    "webpack-dev-middleware": "^3.6.0"
   }
 }

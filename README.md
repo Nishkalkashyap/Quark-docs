@@ -1,5 +1,6 @@
 ---
-home: true
+home: false
+# home: true
 heroImage: /images/icon.png
 heroText: ( Under Active Development )
 tagline: Platform to develope internet of things.
@@ -12,5 +13,8 @@ features:
   details: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
 - title: Performant
   details: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+pageClass: landing-page
 footer: MIT Licensed | Copyright © 2019-present Nishkal Kashyap
 ---
+
+<Landing/>
