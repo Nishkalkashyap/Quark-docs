@@ -1,14 +1,28 @@
 import * as fs from 'fs-extra';
 const paths = ['guide', 'references', 'structures'];
 var beautify = require('js-beautify').js;
+import fetch from 'node-fetch';
+import * as YAML from 'yamljs';
 
-regexp(paths);
+createSidebars(paths);
+
 paths.map((v) => {
     createReadmeFiles(v);
 });
 
+fetch('https://storage.googleapis.com/quarkjs-auto-update/latest.yml').then(async (val) => {
+    const text = await val.text();
+    const obj = YAML.parse(text);
+    const url = obj.files[0].url;
+    const file = fs.readFileSync('./download/README.md').toString();
+    const newFile = file.replace(/https:\/\/storage.+exe/, `https://storage.googleapis.com/quarkjs-auto-update/${url}`);
+    fs.writeFileSync('./download/README.md', newFile);
+}).catch((err) => {
+    console.log(err);
+});
 
-function regexp(paths: string[]) {
+
+function createSidebars(paths: string[]) {
     fs.readFile('./.vuepress/config.js').then((file) => {
         const obj = {};
         paths.map((path) => {
@@ -36,12 +50,13 @@ function createReadmeFiles(path: string) {
     }).catch((err) => {
         console.log(err);
     });
-}
 
-const capitalize = (s: string) => {
-    var splitStr = s.split(' ');
-    for (var i = 0; i < splitStr.length; i++) {
-        splitStr[i] = splitStr[i].charAt(0).toUpperCase() + splitStr[i].substring(1);
+
+    function capitalize(s: string) {
+        var splitStr = s.split(' ');
+        for (var i = 0; i < splitStr.length; i++) {
+            splitStr[i] = splitStr[i].charAt(0).toUpperCase() + splitStr[i].substring(1);
+        }
+        return splitStr.join(' ');
     }
-    return splitStr.join(' ');
 }

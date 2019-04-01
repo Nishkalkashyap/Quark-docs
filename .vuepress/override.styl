@@ -1,12 +1,26 @@
 $accentColor = #007acc
+// $accentColor = #3880ff
+// $accentColor = #f97e3e
 // $accentColor = #fa8142
+
+
 // $textColor = #2c3e50
+// $textColor = #020814
 $textColor = #000000
+// $textColor = #ffffff
+
+
 $borderColor = #eaecef
+
+
 // $codeBgColor = #282c34
+// $codeBgColor = #020814
 $codeBgColor = #000000
+// $codeBgColor = #ffffff
+
 
 $textLightColor = #777777
+// $textLightColor = #73849a
 
 body {
     --accent-color : $accentColor;
@@ -17,13 +31,26 @@ body {
     --text-light-color : $textLightColor;
     --text-medium-color : #2f2f2f;
 
-    // background-color: #ffffff;
-    // background-color: #f8f8f8;
+    --background-color: #ffffff;
+
+    // header.navbar {
+    //     color: #ffffff !important;
+    //     background-color: var(--codeBg-color);
+    // }
+
+    // span.site-name {
+    //     color: #ffffff !important;
+    // }
+
+    // div.links {
+    //     background-color: var(--codeBg-color) !important;
+    // }
+
+    // a.router-link-active,a.nav-link:hover {
+    //     color: var(--accent-color) !important;
+    // }
 }
 
-// .navbar, .sidebar, .links, input, body {
-//     // background-color: #f8f8f8 !important;
-//     // background-color: #f2f3f5 !important;
-//     // background-color: #f2f3f5;
-//     background-color: #ffffff;
-// }
+.navbar, .sidebar, .links, input, body {
+    background-color: var(--background-color) !important;
+}

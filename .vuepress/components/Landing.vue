@@ -2,30 +2,35 @@
   <div class="container">
     <div class="row">
       <div class="item">
+        <h1>Build and ship 🔥 your app ⚡ faster</h1>
+        <p>Coder is an open source remote development environment serving Visual Studio Code. Accelerate your workflow and surpass the capabilities of your local development machine.</p>
+        <!-- <vs-button color="primary" @click="goToGuide()">Get Started →</vs-button>
+        <vs-button color="primary" type="flat" @click="goToDownload()">Download</vs-button>-->
+        <ion-button>Button</ion-button>
+      </div>
+
+      <div class="item">
         <video muted autoplay loop style="max-width:100%; height:auto" name="media">
           <source src="/guide/examples/system-monitor.mp4" type="video/mp4">Your browser does not support the video tag.
         </video>
       </div>
-
-      <div class="item">
-        <h1>Build and ship 🔥 your app ⚡ faster</h1>
-        <p>Coder is an open source remote development environment serving Visual Studio Code. Accelerate your workflow and surpass the capabilities of your local development machine.</p>
-        <!-- <vs-button color="primary" @click="goToGuide()">Get Started →</vs-button>
-        <vs-button color="primary" type="flat" @click="goToDownload()">Download</vs-button> -->
-
-        <ion-button>Button</ion-button>
-      </div>
     </div>
+
     <hr>
 
     <div class="row">
+      <div class="item avatar">
+        <img src="/images/avatar.jpg">
+      </div>
+
       <div class="item">
         <h1>
           <ion-icon name="md-flame"></ion-icon>Your Host
         </h1>
         <p>
           Hi, I'm
-          <strong>Nishkal Kashyap</strong> and I created this project to help people build and ship high-quality apps. My mission is simple 👉 produce practical content that <strong>increases developer happiness and productivity</strong> 🚀.
+          <strong>Nishkal Kashyap</strong> and I created this project to help people build and ship high-quality apps. My mission is simple 👉 produce practical content that
+          <strong>increases developer happiness and productivity</strong> 🚀.
         </p>
       </div>
     </div>
@@ -93,6 +98,22 @@ export default {
   }
   hr {
     border-top: dashed 2px var(--text-light-color) !important;
+  }
+
+  .avatar {
+    max-width: 160px;
+    width: 20%;
+    min-width: 100px !important;
+    display: flex;
+    align-items: center;
+    img {
+      // border: solid 2px var(--accent-color);
+      border: solid 2px var(--text-color);
+      border-radius: 500px;
+      display: flex;
+      align-items: center;
+      padding: 3px;
+    }
   }
 }
 </style>

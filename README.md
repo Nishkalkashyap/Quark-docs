@@ -1,6 +1,6 @@
 ---
-home: false
-# home: true
+# home: false
+home: true
 heroImage: /images/icon.png
 heroText: ( Under Active Development )
 tagline: Platform to develope internet of things.
@@ -17,4 +17,4 @@ pageClass: landing-page
 footer: MIT Licensed | Copyright © 2019-present Nishkal Kashyap
 ---
 
-<Landing/>
+<!-- <Landing/> -->
