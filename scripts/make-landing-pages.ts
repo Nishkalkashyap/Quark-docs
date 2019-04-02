@@ -56,10 +56,19 @@ function createReadmeFiles(paths: string[]) {
     function createReadmeFile(path: string) {
         fs.readdir(`./${path}`).then((dirs) => {
             let str = '';
-            str = str.concat(capitalize(`# ${path}`), '\n\n');
             const files = dirs.filter((dir) => { return dir != 'README.md' });
-            files.map((file) => {
-                str = str.concat('* ', `[${capitalize(file.replace(/\.md$/, '').replace(/-/g, ' '))}](/${path}/${file})`, '\n');
+
+            str = str.concat(capitalize(`# ${path}`), '\n\n');
+            // str = str.concat('<Breadcrumbs :url="this.$page"/>', '\n\n\n');
+            str = str.concat('| Objects | Description |', '\n');
+            str = str.concat('| ----- | ----- |', '\n');
+            files.map(async (file) => {
+                // str = str.concat('* ', `[${capitalize(file.replace(/\.md$/, '').replace(/-/g, ' '))}](/${path}/${file})`, '\n');
+
+                const data = (fs.readFileSync(require('path').join(path, file))).toString();
+                const header = (data.match(/Header label="(.+?)"/) || [])[1];
+
+                str = str.concat(`| [${capitalize(file.replace(/\.md$/, '').replace(/-/g, ' '))}](/${path}/${file}) | ${header || ''}|`, '\n');
             });
             fs.writeFileSync(`./${path}/README.md`, str);
         }).catch((err) => {
