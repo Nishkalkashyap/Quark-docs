@@ -21,7 +21,7 @@ function updateDownloadLinks() {
         const date = new Date(obj.releaseDate);
         let file = fs.readFileSync('./download/README.md').toString();
 
-        file = file.replace(/https:\/\/storage.+exe/, `https://storage.googleapis.com/quarkjs-auto-update/${windowsURL}`);
+        file = file.replace(/https:\/\/storage.+exe/g, `https://storage.googleapis.com/quarkjs-auto-update/${windowsURL}`);
         file = file.replace(/__Latest.+?__/, `__Latest Version: ${obj.version}__`);
         file = file.replace(/__Release.+?__/, `__Release Date: ${monthNames[date.getMonth()]} ${date.getDay()} ${date.getFullYear()},  ${date.toLocaleTimeString()}__`);
         fs.writeFileSync('./download/README.md', file);
