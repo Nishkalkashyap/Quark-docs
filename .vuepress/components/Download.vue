@@ -9,10 +9,12 @@
       >
         <img class="download-svg" src="/images/download.svg">
         <span class="platform-name">Windows</span>
+        <span class="platform-distro" style="display:inline;">(.exe)</span>
         <span class="platform-distro">Windows 7, 8, 10</span>
         <span class="coming-soon" v-if="!windows">Coming Soon</span>
       </button>
     </div>
+
     <div class="linux platform">
       <img src="/images/linux-logo.png" style="width:100px">
       <button
@@ -22,10 +24,12 @@
       >
         <img class="download-svg" src="/images/download.svg">
         <span class="platform-name">Linux</span>
+        <span class="platform-distro" style="display:inline;">(.AppImage)</span>
         <span class="platform-distro">Debian, Ubuntu, Red Hat, Fedora</span>
         <span class="coming-soon" v-if="!linux">Coming Soon</span>
       </button>
     </div>
+
     <div class="mac platform">
       <img src="/images/apple-logo.svg">
       <button
@@ -35,6 +39,7 @@
       >
         <img class="download-svg" src="/images/download.svg">
         <span class="platform-name">Mac</span>
+        <span class="platform-distro" style="display:inline;">(.app)</span>
         <span class="platform-distro">macOS 10.9+</span>
         <span class="coming-soon" v-if="!mac">Coming Soon</span>
       </button>
@@ -118,7 +123,7 @@ export default {
     padding: 5px 5px;
     border-radius: 3px;
     right: -30px;
-    top: -10px;
+    top: -15px;
     display: block;
   }
 }

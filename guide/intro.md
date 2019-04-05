@@ -1,6 +1,6 @@
 # About Quark
 
-Quark is an integrated development environment for rapidly building functional , prototypal projects that run as a desktop application inside of an electronjs/nodejs process. 
+Quark is an integrated development environment for rapidly building functional , prototypal projects that run as a desktop application inside of an electronjs/nodejs process.
 
 Quark IDE is basically three distinct components:
 

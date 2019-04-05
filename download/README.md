@@ -13,4 +13,4 @@ __Release Date: April 3 2019,  12:40:46 AM__
 | __Other Linux distros__ (.AppImage) |                                  _Coming Soon_ 🔜                                  |
  -->
 
- <Download windows="https://storage.googleapis.com/quarkjs-auto-update/Quark-win-0.1.8.exe" />
+ <Download windows="https://storage.googleapis.com/quarkjs-auto-update/Quark-win-0.1.8.exe" linux="https://storage.googleapis.com/quarkjs-auto-update/Quark-linux-x86_64-0.1.8.AppImage" />
