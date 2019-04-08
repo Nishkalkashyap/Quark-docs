@@ -1,6 +1,6 @@
 # Glossary
 
-<Header label="Related terms used throughout the documentation."/>
+<Header label="A list of related terms used throughout the documentation."/>
 
 ### Bundling
 Bundling is the process of taking an app's dependencies (code you've written plus any npm modules installed) and compiling/transpiling them down to one single file.

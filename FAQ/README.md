@@ -2,4 +2,4 @@
 
 | Objects | Description |
 | ----- | ----- |
-| [Glossary](/FAQ/glossary.md) | Related terms used throughout the documentation.|
+| [Glossary](/FAQ/glossary.md) | A list of related terms used throughout the documentation.|

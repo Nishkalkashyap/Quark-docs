@@ -38,7 +38,7 @@ module.exports = {
     themeConfig: {
         logo: '/images/icon.png',
         editLinks: true,
-        repoLabel: 'Contribute',
+        repoLabel: 'GitHub',
         repo: 'https://github.com/Nishkalkashyap/Quark-docs',
         lastUpdated: 'Last Updated',
         serviceWorker: {
@@ -46,15 +46,15 @@ module.exports = {
         },
         nav: [{
                 text: 'Guide',
-                link: '/guide/'
+                link: '/guide/intro.html'
             },
             {
                 text: 'References',
-                link: '/references/'
+                link: '/references/app.html'
             },
             {
                 text: 'Structures',
-                link: '/structures/'
+                link: '/structures/bottomview-controller.html'
             },
             {
                 text: 'Download',
@@ -64,7 +64,7 @@ module.exports = {
                 text: 'More',
                 items: [{
                         text: 'FAQ',
-                        link: '/FAQ/'
+                        link: '/FAQ/glossary.html'
                     },
                     {
                         text: 'Social',
