@@ -33,28 +33,13 @@ Shows a message box. Returns the text of the selected button.
 * returns `string`
 * Usage
 
-```ts
-
-//Javascript Example
-
-quark.app.showMessageBox('Select your hero', 'Goku or Vegeta?', ['Goku', 'Vegeta'], 'question')
+```js
+quark.app.showMessageBox('Select your hero', 'Superman or Batman?', ['Superman', 'Batman'], 'question')
 .then((hero)=>{
-    if(hero == 'Goku'){
-        console.log('loser');
+    if(hero == 'Superman'){
+        console.log('Meh!');
     }else {
-        console.log('Saiyan prince approves!');
-    }
-}).catch((err)=>{
-    console.log(err);
-});
-
-//Typescript example
-quark.app.showMessageBox<'Goku' | 'Vegeta'>('Select your hero', 'Goku or Vegeta?', ['Goku', 'Vegeta'], 'question')
-.then((hero)=>{
-    if(hero == 'Goku'){
-        console.log('loser');
-    }else {
-        console.log('Saiyan prince approves!');
+        console.log('Yuss!');
     }
 }).catch((err)=>{
     console.log(err);

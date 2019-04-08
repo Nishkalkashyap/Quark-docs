@@ -1,5 +1,5 @@
 import * as fs from 'fs-extra';
-const paths = ['guide', 'references', 'structures'];
+const paths = ['guide', 'references', 'structures', 'FAQ'];
 var beautify = require('js-beautify').js;
 import fetch from 'node-fetch';
 import * as YAML from 'yamljs';

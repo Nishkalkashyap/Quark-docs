@@ -4,7 +4,7 @@
   "description": "Documentation for quark",
   "main": "index.js",
   "scripts": {
-    "start": "npm run land && vuepress dev",
+    "start": "npm run land && vuepress dev -p 80",
     "build": "npm run land && vuepress build",
     "deploy": "firebase deploy",
     "bad": "npm run build && firebase deploy",

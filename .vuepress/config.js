@@ -60,6 +60,18 @@ module.exports = {
                 text: 'Download',
                 link: '/download/'
             },
+            {
+                text: 'More',
+                items: [{
+                        text: 'FAQ',
+                        link: '/FAQ/'
+                    },
+                    {
+                        text: 'Social',
+                        link: 'https://social.quarkjs.io/'
+                    }
+                ]
+            }
         ],
         sidebar: {
             "/guide/": [
@@ -91,6 +103,9 @@ module.exports = {
                 "sideview-controller.md",
                 "tabsview-controller.md",
                 "view-provider.md"
+            ],
+            "/FAQ/": [
+                "glossary.md"
             ]
         }
     },
