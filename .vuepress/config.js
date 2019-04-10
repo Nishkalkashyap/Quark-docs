@@ -69,6 +69,10 @@ module.exports = {
                     {
                         text: 'Social',
                         link: 'https://social.quarkjs.io/'
+                    },
+                    {
+                        text: 'GitHub',
+                        link: 'https://github.com/Nishkalkashyap/Quark-docs'
                     }
                 ]
             }

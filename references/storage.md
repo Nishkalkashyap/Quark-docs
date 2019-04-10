@@ -11,9 +11,9 @@ Store temporary data in memory while your code is running. As soon as the window
 
 ### local
 Store data locally in an external file. File is created on per project basis. You can only store JSON serializable data.
-* see [PersistantStore](/) 
+* see [PersistantStore](/structures/PersistantStore.md) 
 
 
 ### global
 Store data locally in an external file. Common for a system. You can only store JSON serializable data.
-* see [PersistantStore](/) 
+* see [PersistantStore](/structures/PersistantStore.md) 

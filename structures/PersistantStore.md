@@ -6,7 +6,7 @@
 Gets the property value at path of object. If the resolved value is undefined the defaultValue is used in its place.
 * arguments
   * path `string`
-  * defaultValue `any`
+  * defaultValue `any`(optional)
 * returns `any`
 
 
