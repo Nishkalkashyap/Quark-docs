@@ -16,5 +16,5 @@ Writes text to clipboard.
 * returns `void`
 
 ### clipboard.clear()
-Clears the clipboard.
+Clears the text saved in clipboard.
 * returns `void`

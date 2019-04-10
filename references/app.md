@@ -5,7 +5,7 @@
 [[toc]]
 
 ### `app.showItemInFolder([fullPath])`
-Show the given file in a file manager. If possible, select the file. If no path is provided, opens the cueernt process path.
+Show the given file in a file manager. If possible, select the file. If no path is provided, opens the current process path.
 * returns `void`
 
 ### `app.beep()`
@@ -13,7 +13,7 @@ Play the beep sound.
 * returns `void`
 
 ### `app.getAppMetrics()`
-Gets the `ProcessMetric` object;
+Gets the [`ProcessMetric`](/)` object;
 * returns [`ProcessMetric`](/)
 
 ### `app.getAppPath()`
@@ -22,15 +22,16 @@ Gets the installation path of the app.
 
 ### `app.getVersion()`
 Gets the current version of app.
+* returns `string`
 
 ### `app.showMessageBox(title, message, buttons[, type])`
-Shows a message box. Returns the text of the selected button.
+Shows a message box. Returns a promise that resolves to the text of the selected button.
 * arguments
   * title `string`
   * message `string`
   * buttons `Array<string>` 
   * type `("none" | "info" | "error" | "question" | "warning")` (optional)
-* returns `string`
+* returns `Promise<string>`
 * Usage
 
 ```js
@@ -80,7 +81,7 @@ quark.app.showOpenDialog({
 ```
 
 ### `app.showSaveDialog([options])`
-Shows a save dialog
+Shows a save dialog.
 * arguments
   * options [`SaveDialogOptions`](/)
 * returns `Promise<{ filename: string, bookmark: string }>` 

@@ -2,7 +2,10 @@
 
 | Objects | Description |
 | ----- | ----- |
+| [ICommand](/structures/ICommand.md) | |
 | [IKeyBindingRegister](/structures/IKeyBindingRegister.md) | |
+| [MemoryStore](/structures/MemoryStore.md) | |
+| [PersistantStore](/structures/PersistantStore.md) | |
 | [Bottomview Controller](/structures/bottomview-controller.md) | |
 | [Button Field](/structures/button-field.md) | |
 | [Context Menu Ref](/structures/context-menu-ref.md) | |
