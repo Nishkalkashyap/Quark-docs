@@ -49,12 +49,19 @@ module.exports = {
                 link: '/guide/intro.html'
             },
             {
-                text: 'References',
-                link: '/references/app.html'
-            },
-            {
-                text: 'Structures',
-                link: '/structures/bottomview-controller.html'
+                text: 'API',
+                items: [{
+                        text: 'References',
+                        link: '/references/app.html'
+                    }, {
+                        text: 'Structures',
+                        link: '/structures/bottomview-controller.html'
+                    },
+                    // {
+                    //     text: 'Style Guide',
+                    //     link: '/guide/intro.html'
+                    // }
+                ]
             },
             {
                 text: 'Download',
@@ -83,6 +90,7 @@ module.exports = {
                 "getting-started.md",
                 "intro.md",
                 "quark-ide.md",
+                "setup.md",
                 "user-interface.md"
             ],
             "/references/": [
@@ -116,7 +124,7 @@ module.exports = {
                 "glossary.md"
             ]
         }
-    },
+    }
     // configureWebpack: {
     //     entry: {
     //         styles: [

@@ -2,7 +2,7 @@
 
 [[toc]]
 
-## System monitor aka Task Manager
+## System resource monitor
 <!-- Your browser does not support the video tag. -->
 
 <video muted autoplay loop style="max-width:100%; height:auto" name="media">
@@ -10,7 +10,7 @@
   Your browser does not support the video tag.
 </video> 
 
-## Control Systems
+## Digital control systems
 <!-- Your browser does not support the video tag. -->
 
 <video muted autoplay loop style="max-width:100%; height:auto" name="media">
@@ -23,7 +23,7 @@
   Your browser does not support the video tag.
 </video> 
 
-## Charts
+## Plot Charts
 <!-- Your browser does not support the video tag. -->
 
 <video muted autoplay loop style="max-width:100%; height:auto" name="media">

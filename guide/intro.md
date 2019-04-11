@@ -24,11 +24,11 @@ Quark is built with simplicity in mind, so that creating projects with Quark is 
 
 <!--  -->
 
-## Releases
-Quark releases frequently. We release when there are significant bug fixes, new APIs or are updating versions of Electron or Node.js.
+<!-- ## Releases
+Quark releases frequently. We release when there are significant bug fixes, new APIs or are updating versions of Electron or Node.js. -->
 
-## Versioning
-Once Quark releases in beta phase, it will follow [semver](https://semver.org/). Before that no gurantees are made that the API will be changed in a backwards compatible way.
+<!-- ## Versioning
+Once Quark releases in beta phase, it will follow [semver](https://semver.org/). Before that no gurantees are made that the API will be changed in a backwards compatible way. -->
 
 ## Join the Community
 [social.quarkjs.io](https://social.quarkjs.io)
