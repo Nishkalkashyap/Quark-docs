@@ -4,7 +4,7 @@
 
 ## Code Editor
 
-Inbuilt code editor with intellisense for intelligent code completion..
+Inbuilt code editor with intellisense for intelligent code completion.
 
 <video muted autoplay loop style="max-width:100%; height:auto" name="media" poster="/intro-page-videos/code-editor-poster.png">
   <source src="/intro-page-videos/code-editor-converted.mp4" type="video/mp4">

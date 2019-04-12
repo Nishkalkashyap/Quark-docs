@@ -86,12 +86,12 @@ module.exports = {
         ],
         sidebar: {
             "/guide/": [
-                "examples.md",
-                "getting-started.md",
                 "intro.md",
-                "quark-ide.md",
                 "setup.md",
-                "user-interface.md"
+                "getting-started.md",
+                "quark-ide.md",
+                "user-interface.md",
+                "examples.md"
             ],
             "/references/": [
                 "app.md",
