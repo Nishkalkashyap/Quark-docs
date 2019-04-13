@@ -67,7 +67,7 @@ If you are behind a firewall which needs to whitelist domains used by Quark, her
 * __`npmjs.org`__
 
 ## Updates
-As long as Quark is in the Alpha stage of development, Quark will release a new version every week, and monthly thereafter.
+As long as Quark is in the Alpha stage of development, we will release a new version every week, and monthly thereafter.
 
 ## Versioning
 Once Quark releases in beta phase, it will follow [semver](https://semver.org/). Before that no gurantees are made that the API will be changed in a backwards compatible way.

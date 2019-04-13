@@ -10,7 +10,8 @@ const links = [
     'https://ionicframework.com/docs/intro/',
     'https://medium.com/@ericsimons/stackblitz-online-vs-code-ide-for-angular-react-7d09348497f4',
     'https://styleguide.mailchimp.com/writing-technical-content/',
-    "https://code.visualstudio.com/docs/setup/setup-overview"
+    "https://code.visualstudio.com/docs/setup/setup-overview",
+    "https://docs.platformio.org/en/latest/what-is-platformio.html"
 ]
 
 

@@ -46,7 +46,7 @@ module.exports = {
         },
         nav: [{
                 text: 'Guide',
-                link: '/guide/intro.html'
+                link: '/guide/intro.md'
             },
             {
                 text: 'API',
@@ -55,7 +55,7 @@ module.exports = {
                         link: '/references/app.html'
                     }, {
                         text: 'Structures',
-                        link: '/structures/bottomview-controller.html'
+                        link: '/structures/view-provider.html'
                     },
                     // {
                     //     text: 'Style Guide',
@@ -89,21 +89,24 @@ module.exports = {
                 "intro.md",
                 "setup.md",
                 "getting-started.md",
+                "showcase.md",
                 "quark-ide.md",
-                "user-interface.md",
-                "examples.md"
+                "user-interface.md"
             ],
             "/references/": [
                 "app.md",
-                "clipboard.md",
-                "commands.md",
-                "icons.md",
-                "storage.md",
                 "util.md",
+                "window.md",
                 "views.md",
-                "window.md"
+                "commands.md",
+                "storage.md",
+                "clipboard.md",
+                "icons.md"
             ],
             "/structures/": [
+                "view-provider.md",
+                "tabsview-controller.md",
+                "sideview-controller.md",
                 "bottomview-controller.md",
                 "button-field.md",
                 "context-menu-ref.md",
@@ -115,10 +118,7 @@ module.exports = {
                 "menu-item.md",
                 "menu-ref.md",
                 "PersistantStore.md",
-                "select-field.md",
-                "sideview-controller.md",
-                "tabsview-controller.md",
-                "view-provider.md"
+                "select-field.md"
             ],
             "/FAQ/": [
                 "glossary.md"

@@ -4,7 +4,10 @@ At the heart of Quark IDE is a code editor. Like many other code editors, Quark 
 
 ![UI Overview](/guide/user-interface/ui-overview.png)
 
-# Basic Layout 
+### Contents
+[[toc]]
+
+## Basic Layout 
 Quark IDE comes with a simple and intuitive layout that maximizes the space provided for the editor while leaving ample room to browse and access the full context of your folder or project. The UI is divided into five areas:
 
   * __Editor__ - The main area to edit your files. You can open as many editors as you like side by side vertically and horizontally.
