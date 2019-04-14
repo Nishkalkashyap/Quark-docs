@@ -10,7 +10,8 @@
     "bad": "npm run build && firebase deploy",
     "test": "echo \"Error: no test specified\" && exit 1",
     "land": "ts-node scripts/make-landing-pages.ts",
-    "open": "ts-node scripts/open-links.ts"
+    "open": "ts-node scripts/open-links.ts",
+    "vid": "ts-node ./scripts/convert-videos.ts"
   },
   "keywords": [
     "quark"
@@ -18,6 +19,8 @@
   "author": "Nishkal Kashyap",
   "license": "MIT",
   "devDependencies": {
+    "@ffmpeg-installer/ffmpeg": "^1.0.17",
+    "@ffprobe-installer/ffprobe": "^1.0.10",
     "@types/fluent-ffmpeg": "^2.1.9",
     "@types/fs-extra": "^5.0.5",
     "@types/open": "^6.1.0",

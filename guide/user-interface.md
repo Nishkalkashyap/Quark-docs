@@ -22,8 +22,8 @@ Quark IDE comes with a simple and intuitive layout that maximizes the space prov
 
 Inbuilt code editor with intellisense for intelligent code completion.
 
-<video muted autoplay loop style="max-width:100%; height:auto" name="media" poster="/intro-page-videos/code-editor-poster.png">
-  <source src="/intro-page-videos/code-editor-converted.mp4" type="video/mp4">
+<video muted autoplay loop style="max-width:100%; height:auto" name="media" poster="/c-assets/guide/introduction.png">
+  <source src="/c-assets/guide/introduction.mp4" type="video/mp4">
   Your browser does not support the video tag.
 </video> 
 
@@ -31,8 +31,8 @@ Inbuilt code editor with intellisense for intelligent code completion.
 
 Integrated terminal.
 
-<video muted autoplay loop style="max-width:100%; height:auto" name="media" poster="/intro-page-videos/terminal-poster.png">
-  <source src="/intro-page-videos/terminal-converted.mp4" type="video/mp4">
+<video muted autoplay loop style="max-width:100%; height:auto" name="media" poster="/c-assets/guide/terminal.png">
+  <source src="/c-assets/guide/terminal.mp4" type="video/mp4">
   Your browser does not support the video tag.
 </video> 
 
@@ -40,8 +40,8 @@ Integrated terminal.
 
 Over 150 different configuration settings to aid your development workflow. 
 
-<video muted autoplay loop style="max-width:100%; height:auto" name="media" poster="/intro-page-videos/settings-poster.png">
-  <source src="/intro-page-videos/settings-converted.mp4" type="video/mp4">
+<video muted autoplay loop style="max-width:100%; height:auto" name="media" poster="/c-assets/guide/settings.png">
+  <source src="/c-assets/guide/settings.mp4" type="video/mp4">
   Your browser does not support the video tag.
 </video> 
 
@@ -49,8 +49,17 @@ Over 150 different configuration settings to aid your development workflow.
 
 Multiple theme support.
 
-<video muted autoplay loop style="max-width:100%; height:auto" name="media" poster="/intro-page-videos/themes-poster.png">
-  <source src="/intro-page-videos/themes-converted.mp4" type="video/mp4">
+<video muted autoplay loop style="max-width:100%; height:auto" name="media" poster="/c-assets/guide/themes.png">
+  <source src="/c-assets/guide/themes.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video> 
+
+## Extensible
+
+Fully extensible.
+
+<video muted autoplay loop style="max-width:100%; height:auto" name="media" poster="/c-assets/guide/extensible.png">
+  <source src="/c-assets/guide/extensible.mp4" type="video/mp4">
   Your browser does not support the video tag.
 </video> 
 

@@ -8,6 +8,7 @@ const links = [
     'https://vuejs.org/',
     'https://docs.npmjs.com/about-npm/',
     'https://ionicframework.com/docs/intro/',
+    "https://ionicframework.com/studio",
     'https://medium.com/@ericsimons/stackblitz-online-vs-code-ide-for-angular-react-7d09348497f4',
     'https://styleguide.mailchimp.com/writing-technical-content/',
     "https://code.visualstudio.com/docs/setup/setup-overview",
