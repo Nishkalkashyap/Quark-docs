@@ -2,6 +2,7 @@ import * as mpg from 'fluent-ffmpeg';
 import * as recc from 'recursive-readdir';
 import * as path from 'path';
 import * as fs from 'fs-extra';
+import { defaults } from './video-speed-defaults';
 
 const ffmpeg_path = require('@ffmpeg-installer/ffmpeg').path;
 const ffprobe_path = require('@ffprobe-installer/ffprobe').path;
@@ -13,30 +14,28 @@ const ignoreFunction = (file: string, stat: fs.Stats) => {
         return false;
     }
 
-    if (file.search('node_modules') !== -1 || file.search('.vuepress') !== -1 || file.search('output') !== -1) {
-        return true;
-    }
-
     return file.search(/(mp4|wmv|avi)/g) == -1;
 }
 
-recc('./', [ignoreFunction]).then((files) => {
+recc('./videos', [ignoreFunction]).then((files) => {
     console.log(files);
-    files.map((file) => {
-        convertVideo(file, 3);
+    files.map((filePath) => {
+        convertVideo(filePath);
     });
 }).catch((err) => {
     console.log(err);
 });
 
-function convertVideo(inputPath: string, videoSpeedTimes: number) {
+function convertVideo(inputPath: string) {
 
     const relativePath = path.relative('./videos', inputPath);
     const filename = path.basename(inputPath).replace(path.extname(inputPath), '');
     const outputPath = path.join(baseOutputDir, path.dirname(relativePath), filename.concat('.mp4'));
     const screenshotOutputPath = path.join(baseOutputDir, path.dirname(relativePath), filename.concat('.png'));
+    const videoSpeedTimes: number = defaults[path.resolve(inputPath)] || 3;
 
     fs.ensureDirSync(path.dirname(outputPath));
+
 
     const command = mpg({
         source: inputPath,
@@ -60,7 +59,6 @@ function convertVideo(inputPath: string, videoSpeedTimes: number) {
         .withVideoFilters([
             {
                 filter: 'setpts',
-                // options: '0.5*PTS'
                 options: `${1 / videoSpeedTimes}*PTS`
             }
         ])
