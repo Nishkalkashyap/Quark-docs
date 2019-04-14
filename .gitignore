@@ -79,6 +79,7 @@ typings/
 # DynamoDB Local files
 .dynamodb/
 
-videos/ffmpeg
+videos/
 videos/output
-c-assets/
+.vuepress/public/c-assets/
+dist-previous/

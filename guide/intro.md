@@ -5,6 +5,8 @@
 ## What is Quark.js?
 Quark is a cross-platform, integrated development environment for rapidly building - functional , prototypal projects, written in HTML, CSS and JavaScript with native desktop app like capabilities. 
 
+<!-- Quark allows you to make multiple dashboards with native app like capabilities without actully building an app -->
+
 Quark achieves this functionality by combining several set of tools in one single package and abstracting away the complexity to setup an environment for every single time you start a new project.
 
 These are the set of tool merged together in Quark:-

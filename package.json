@@ -25,6 +25,9 @@
     "@types/fs-extra": "^5.0.5",
     "@types/open": "^6.1.0",
     "@types/recursive-readdir": "^2.2.0",
+    "@types/single-line-log": "^1.1.0",
+    "@types/table": "^4.0.5",
+    "chalk": "^2.4.2",
     "css-loader": "^2.1.0",
     "fluent-ffmpeg": "^2.1.2",
     "fs-extra": "^7.0.1",
@@ -33,6 +36,8 @@
     "open": "^6.1.0",
     "recursive-readdir": "^2.2.2",
     "sass-loader": "^7.1.0",
+    "single-line-log": "^1.1.2",
+    "table": "^5.2.3",
     "vuepress": "^0.14.10",
     "vuesax": "^3.8.35",
     "vuetify": "^1.4.4"
