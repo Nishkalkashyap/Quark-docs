@@ -51,7 +51,7 @@ function createVideos() {
             console.log(chalk.bgGreenBright.black('Converted All Files! ✓✓✓✓'));
             setTimeout(() => {
                 process.exit(0);
-            }, 5000);
+            }, 8000);
         }
 
     }, 500);
@@ -124,7 +124,7 @@ function createVideos() {
                 .saveToFile(outputPath)
                 .takeScreenshots({
                     count: 1,
-                    timemarks: ['0.2'],
+                    timemarks: ['0.3'],
                     filename: screenshotOutputPath,
                     size: '?x1080'
                 })
@@ -132,14 +132,9 @@ function createVideos() {
                     resolve(true);
                     console.log(`Cannot process: ${e}`);
                 })
-                // .on('progress', (e) => {
-                //     process.stdout.write("Progress Percent: " + (e.percent as number).toFixed(2).toString() + "%\r");
-                // })
                 .on('end', (e) => {
                     table[inputPath].finished = chalk.bgGreenBright.black('Finished ✓✓');
                     resolve(true);
-                    // console.log(chalk.bgBlueBright.whiteBright('Finished Building::') + chalk.blueBright.bgBlack(outputPath));
-                    // console.log('\n\n');
                 });
         });
     }
