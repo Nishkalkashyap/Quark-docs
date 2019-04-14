@@ -81,5 +81,5 @@ typings/
 
 videos/
 videos/output
-.vuepress/public/c-assets/
+# .vuepress/public/c-assets/
 dist-previous/
