@@ -18,9 +18,11 @@
   "author": "Nishkal Kashyap",
   "license": "MIT",
   "devDependencies": {
+    "@types/fluent-ffmpeg": "^2.1.9",
     "@types/fs-extra": "^5.0.5",
     "@types/open": "^6.1.0",
     "css-loader": "^2.1.0",
+    "fluent-ffmpeg": "^2.1.2",
     "fs-extra": "^7.0.1",
     "markdown-it-html5-embed": "^1.0.0",
     "node-sass": "^4.11.0",

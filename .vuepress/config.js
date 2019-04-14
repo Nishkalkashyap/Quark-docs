@@ -90,7 +90,6 @@ module.exports = {
                 "setup.md",
                 "getting-started.md",
                 "showcase.md",
-                "quark-ide.md",
                 "user-interface.md"
             ],
             "/references/": [

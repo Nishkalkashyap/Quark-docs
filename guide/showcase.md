@@ -11,7 +11,7 @@
 </video> 
 
 ## Digital control systems
-* Digital control system made with Arduino using pre-installed serialport library.
+* Digital control system made with Arduino UNO using pre-installed serialport library.
 
 <video muted autoplay loop style="max-width:100%; height:auto" name="media">
   <source src="/guide/examples/control-system-1.mp4" type="video/mp4">
