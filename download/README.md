@@ -1,7 +1,7 @@
 # All Downloads
-__Latest Version: 0.1.15__
+__Latest Version: 0.1.16__
 
-__Release Date: April 11 2019,  4:40:19 PM__
+__Release Date: April 14 2019,  9:47:29 PM__
 
 <!-- 
 | Platform                            |                                       64-bit                                       |
@@ -13,4 +13,4 @@ __Release Date: April 11 2019,  4:40:19 PM__
 | __Other Linux distros__ (.AppImage) |                                  _Coming Soon_ 🔜                                  |
  -->
 
- <Download windows="https://storage.googleapis.com/quarkjs-auto-update/Quark-win-0.1.15.exe" linux="https://storage.googleapis.com/quarkjs-auto-update/Quark-linux-x86_64-0.1.15.AppImage" />
+ <Download windows="https://storage.googleapis.com/quarkjs-auto-update/Quark-win-0.1.16.exe" linux="https://storage.googleapis.com/quarkjs-auto-update/Quark-linux-x86_64-0.1.16.AppImage" />

@@ -126,7 +126,9 @@ function createVideos() {
                     count: 1,
                     timemarks: ['0.3'],
                     filename: screenshotOutputPath,
-                    size: '?x1080'
+                    // size: '?x1080'
+                    // size: '?x460'
+                    size: '?x600'
                 })
                 .on('error', (e) => {
                     resolve(true);
