@@ -38,7 +38,7 @@ If you're prompted by Quark, accept the newest update and it will be installed (
 #### Installation
 Quark for linux is officially distributed as an AppImage.
 * Download Quark for Linux from the [download](/download/) page.
-* Once it is downloaded, add the execute permissions to the downloaded file (`Quark-linux-x86_64-${version}.AppImage`).
+* Once it is downloaded, add the _execute_ permissions to the downloaded file (`Quark-linux-x86_64-${version}.AppImage`).
 * Run the appImage to start Quark.
 
 Alternatively, you can also download the .tar.gz archive, extract it and run Quark from there. On the downside, you will need to manually update Quark for each release.
@@ -57,7 +57,7 @@ It is recommended that you install the following third party softwares on your P
 Node.js is a platform for building fast and scalable server applications using JavaScript. Node.js is the runtime and npm is the Package Manager for Node.js modules.
 
 ## Network
-A handful of features within Quark require network communication to work, such as the auto-update mechanism, querying and installing packages. For these features to work properly in a proxy environment, you must have the product correctly configured.
+A handful of features within Quark require network communication to work, such as the auto-update mechanism, querying and installing node packages. For these features to work properly in a proxy environment, you must have the product correctly configured.
 
 If you are behind a firewall which needs to whitelist domains used by Quark, here's the list of hostnames you should allow communication to go through:
 
@@ -67,7 +67,7 @@ If you are behind a firewall which needs to whitelist domains used by Quark, her
 * __`npmjs.org`__
 
 ## Updates
-As long as Quark is in the Alpha stage of development, we will release a new version every week, and monthly thereafter.
+As long as Quark is in the alpha stage of development, we will release a new version every week, and monthly thereafter.
 
 ## Versioning
 Once Quark releases in beta phase, it will follow [semver](https://semver.org/). Before that no gurantees are made that the API will be changed in a backwards compatible way.

@@ -32,7 +32,9 @@ module.exports = {
                     useImageSyntax: true,
                     useLinkSyntax: false
                 }
-            })
+            });
+
+            md.use(require('markdown-it-imsize'));
         }
     },
     themeConfig: {
@@ -88,9 +90,9 @@ module.exports = {
             "/guide/": [
                 "intro.md",
                 "setup.md",
+                "user-interface.md",
                 "getting-started.md",
-                "showcase.md",
-                "user-interface.md"
+                "showcase.md"
             ],
             "/references/": [
                 "app.md",

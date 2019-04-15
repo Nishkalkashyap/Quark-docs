@@ -73,8 +73,8 @@ Once Quark releases in beta phase, it will follow [semver](https://semver.org/).
 ## First Steps
 To get the most out of Quark, start by reviewing a few introductory topics:
 * [Setting up the environment](/guide/setup.md) : Learn how to install Quark and get up and running within minutes.
-* [Showcase](/guide/showcase.md): View example projects made with Quark.
 * [User Interface](/guide/user-interface.md): Get to know how to navigate through the user interface.
+* [Showcase](/guide/showcase.md): View example projects made with Quark.
 
 
 
