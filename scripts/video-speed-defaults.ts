@@ -1,11 +1,17 @@
 import * as path from 'path';
 
 interface IDefaults {
-    [path: string]: number
+    [path: string]: {
+        size?: string;
+        bitrate?: string;
+        speed?: number;
+    }
 }
 
 const defaultsInner: IDefaults = {
-    // './videos/guide/introduction.mp4': 1
+    './videos/guide/hello-world-intro.avi': {
+        speed: 2
+    }
 }
 
 export const defaults: IDefaults = {};

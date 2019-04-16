@@ -11,7 +11,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "land": "ts-node scripts/make-landing-pages.ts",
     "open": "ts-node scripts/open-links.ts",
-    "vid": "ts-node ./scripts/convert-videos.ts"
+    "vid": "ts-node ./scripts/convert-videos.ts",
+    "loc" : "bash -c 'cloc $(git ls-files)'"
   },
   "keywords": [
     "quark"

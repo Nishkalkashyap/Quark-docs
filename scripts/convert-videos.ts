@@ -79,7 +79,9 @@ function createVideos() {
         convertVideo(filesToConvert[index]).then(() => {
             index++;
             convertNextFile();
-        });
+        }).catch((err) => {
+            console.log(err);
+        })
     }
 
     function convertVideo(inputPath: string): Promise<boolean> {
@@ -87,12 +89,14 @@ function createVideos() {
         table[inputPath].started = chalk.bgGreenBright.black('Started ✓✓');
 
         return new Promise((resolve) => {
-            // console.log(chalk.bgBlueBright.whiteBright('Converting:') + chalk.blueBright.bgBlack(inputPath));
             const relativePath = path.relative('./videos', inputPath);
             const filename = path.basename(inputPath).replace(path.extname(inputPath), '');
             const outputPath = path.join(baseOutputDir, path.dirname(relativePath), filename.concat('.mp4'));
             const screenshotOutputPath = path.join(baseOutputDir, path.dirname(relativePath), filename.concat('.png'));
-            const videoSpeedTimes: number = defaults[path.resolve(inputPath)] || 3;
+
+            const videosize: string = (defaults[path.resolve(inputPath)] || {}).size || '?x1080';
+            const videoBitRate: string = (defaults[path.resolve(inputPath)] || {}).bitrate || '360k';
+            const videoSpeedTimes: number = (defaults[path.resolve(inputPath)] || {}).speed || 3;
 
             fs.ensureDirSync(path.dirname(outputPath));
 
@@ -112,9 +116,9 @@ function createVideos() {
 
                 .withNoAudio()
                 .withOutputFormat('mp4')
-                .withSize('?x1080')
                 .withAutoPad(true, '#ffffff')
-                .withVideoBitrate('1000k')
+                .withSize(videosize)
+                .withVideoBitrate(videoBitRate)
                 .withVideoFilters([
                     {
                         filter: 'setpts',

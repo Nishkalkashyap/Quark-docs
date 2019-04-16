@@ -1,5 +1,7 @@
 # Showcase
 
+Following are some sample projects made with Quark.
+
 [[toc]]
 
 ## System resource monitor

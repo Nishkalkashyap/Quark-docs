@@ -9,6 +9,11 @@ Quark is a cross-platform, integrated development environment for rapidly buildi
 
 Quark achieves this functionality by combining several set of tools in one single package and abstracting away the complexity to setup an environment for every single time you start a new project.
 
+<video muted autoplay loop style="max-width:100%; height:auto" name="media" poster="/c-assets/guide/hello-world-intro.png">
+  <source src="/c-assets/guide/hello-world-intro.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video> 
+
 These are the set of tool merged together in Quark:-
 
 1. __A Code Editor__ - This is the place where you write your code. It uses the same code editor that powers the [VS Code](https://code.visualstudio.com/).
