@@ -1,6 +1,6 @@
 # Showcase
 
-Following are some sample projects made with Quark.
+__Following are some sample projects made with Quark.__
 
 [[toc]]
 

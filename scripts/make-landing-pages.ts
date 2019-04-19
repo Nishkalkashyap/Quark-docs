@@ -8,6 +8,18 @@ import { themeConfig } from './../.vuepress/config';
 createSidebars(paths);
 createReadmeFiles(paths);
 updateDownloadLinks();
+createLegalFolder();
+
+function createLegalFolder() {
+    //release notes
+    const notes = fs.readFileSync('./../Quark-electron/releaseNotes.md').toString();
+    fs.writeFileSync('./FAQ/release-notes.md', String().concat(`# Release Notes`, '\n\n', notes));
+
+    //third-party-notice
+    // const notice = fs.readFileSync('./../Quark-electron/ThirdPartyNotices.txt').toString();
+    // fs.writeFileSync('./legal/ThirdPartyNotices.md', String().concat(`# Third Party Notices`, '\n\n<pre>', notice, '\n\n</pre>'));
+
+}
 
 function updateDownloadLinks() {
 

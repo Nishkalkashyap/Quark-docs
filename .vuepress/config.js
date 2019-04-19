@@ -122,7 +122,9 @@ module.exports = {
                 "select-field.md"
             ],
             "/FAQ/": [
-                "glossary.md"
+                "glossary.md",
+                "release-notes.md",
+                "license.md"
             ]
         }
     }

@@ -7,12 +7,12 @@ tagline: Platform to develope internet of things.
 actionText: Get Started →
 actionLink: /guide/intro.html
 features:
-- title: Introduction
-  details: Introducing Quark. Platform to develope internet of things.
-- title: Node-Powered
-  details: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-- title: Performant
-  details: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+- title: Web Technologies
+  details: Quark uses Electron.js and Node.js so you can build your app with HTML, CSS, and JavaScript.
+- title: Simplicity
+  details: Quark is built with simplicity in mind, so that creating projects with Quark is enjoyable, easy to learn, and accessible to just about anyone with basic programming skills.
+- title: Cross Platform
+  details: Compatible with Mac, Windows, and Linux, Quark projects run on all three platforms.
 pageClass: landing-page
 footer: MIT Licensed | Copyright © 2019-present Nishkal Kashyap
 ---
