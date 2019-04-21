@@ -36,11 +36,11 @@ If the above description was too much to grasp, here is an analogy that will hel
 
 | Project Type        |    IDE Used    | Output file type |                 Runtime Environment                 |
 | ------------------- | :------------: | :--------------: | :-------------------------------------------------: |
-| __Android Project__ | Android Studio |      *.apk       |            Android emulator/ Android OS             |
-| __Quark Project__   |   Quark IDE    |   *.build.qrk    | [Electron](https://electronjs.org) Renderer Process |
+| **Android Project** | Android Studio |      *.apk       |            Android emulator/ Android OS             |
+| **Quark Project**   |   Quark IDE    |   *.build.qrk    | [Electron](https://electronjs.org) Renderer Process |
 
 
-!!! info Testing
+!!! note Testing
 This is in no way a comparison between Android studio and Quark. The above example is only to illustrate and compare the process of app development both the IDE's.
 !!! 
 

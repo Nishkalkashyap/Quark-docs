@@ -44,7 +44,7 @@ module.exports = {
         }
     },
     themeConfig: {
-        logo: '/images/icon.png',
+        logo: '/images/icon-svg.svg',
         editLinks: true,
         repoLabel: 'GitHub',
         repo: 'https://github.com/Nishkalkashyap/Quark-docs',

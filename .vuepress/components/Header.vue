@@ -10,8 +10,9 @@ export default {
 
 <style scoped>
 span {
-  border-left: solid 3px var(--text-light-color);
-  color: var(--text-light-color);
+  border-left: solid 3px var(--text-color--light);
+  font-weight: 500;
+  color: var(--text-color--light);
   padding-left: 10px;
   display: inline-block;
   margin: 5px 0px;

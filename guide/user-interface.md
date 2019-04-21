@@ -5,7 +5,6 @@ The entire user interface is inspired by the very popular VS Code editor.
 
 ![UI Overview](/guide/user-interface/ui-overview.png)
 
-#### Contents
 [[toc]]
 
 ## Basic Layout 
@@ -75,7 +74,7 @@ Quark provides two different scopes of settings:
 
 You can change the scope of settings by selecting the appropriate option from the select box at the top right corner of the settings window.
 
-!!! info NOTE
+!!! note NOTE
 Workspace settings take priority over user settings.
 !!! 
 
@@ -98,7 +97,7 @@ Each setting can be edited by either a checkbox, an input or by a drop-down. Sim
 
 ![](/guide/user-interface/changed-settings-markers.png =x300)
 
-!!! info NOTE
+!!! note NOTE
 Note that changed settings have a marker besides them to help you identify them easily.
 !!!
 

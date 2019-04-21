@@ -1,4 +1,5 @@
 import * as fs from 'fs-extra';
+import * as path from 'path';
 const paths = ['guide', 'references', 'structures', 'FAQ'];
 var beautify = require('js-beautify').js;
 import fetch from 'node-fetch';
@@ -6,59 +7,79 @@ import * as YAML from 'yamljs';
 import { themeConfig } from './../.vuepress/config';
 
 const json = require('./../../Quark-electron/package.json');
-const version = json.version;
 
 createSidebars(paths);
 createReadmeFiles(paths);
 updateDownloadLinks();
 createLegalFolder();
+updatePrimaryColor();
+
+function updatePrimaryColor() {
+    //has to be hex code
+    const iconColor = '#000000';
+
+    //can be rgb
+    const accentColor = '#3880ff';
+
+    const overrideFilePath = path.resolve('./.vuepress/override.styl');
+    const svgFilePath = path.resolve(`./.vuepress/public/images/icon-svg.svg`);
+
+    let override = fs.readFileSync(overrideFilePath).toString();
+    override = override.replace(/\$accentColor.+/, `$accentColor = ${accentColor}`);
+    fs.writeFileSync(overrideFilePath, override);
+
+    let svg = fs.readFileSync(svgFilePath).toString();
+    svg = svg.replace(/fill="[#0-9a-z(),]+"/g, `fill="${iconColor}"`);
+    fs.writeFileSync(svgFilePath, svg);
+}
 
 function createLegalFolder() {
-    //release notes
     const notes = fs.readFileSync('./../Quark-electron/releaseNotes.md').toString();
     fs.writeFileSync('./FAQ/release-notes.md', String().concat(`# Release Notes`, '\n\n', notes));
-
-    //third-party-notice
-    // const notice = fs.readFileSync('./../Quark-electron/ThirdPartyNotices.txt').toString();
-    // fs.writeFileSync('./legal/ThirdPartyNotices.md', String().concat(`# Third Party Notices`, '\n\n<pre>', notice, '\n\n</pre>'));
-
 }
 
 function updateDownloadLinks() {
-
     const monthNames = ["January", "February", "March", "April", "May", "June",
         "July", "August", "September", "October", "November", "December"
     ];
 
-    fetch('https://storage.googleapis.com/quarkjs-auto-update/latest.yml').then(async (val) => {
-        const text = await val.text();
-        const obj = YAML.parse(text);
-        const windowsURL = obj.files[0].url;
-        const date = new Date(obj.releaseDate);
-        let file = fs.readFileSync('./download/README.md').toString();
+    const latest = YAML.parse(fs.readFileSync(`./../Quark-electron/release/${json.version}/latest.yml`).toString());
+    const date = new Date(latest.releaseDate);
 
-        // file = file.replace(/https:\/\/storage.+exe/g, `https://storage.googleapis.com/quarkjs-auto-update/${windowsURL}`);
-        file = file.replace(/windows.+exe/g, `windows="https://storage.googleapis.com/quarkjs-auto-update/${version}/${windowsURL}`);
-        file = file.replace(/__Latest.+?__/, `__Latest Version: ${obj.version}__`);
-        file = file.replace(/__Release.+?__/, `__Release Date: ${monthNames[date.getMonth()]} ${date.getDate()} ${date.getFullYear()},  ${date.toLocaleTimeString()}__`);
-        fs.writeFileSync('./download/README.md', file);
-        latestLinux();
-    }).catch((err) => {
-        console.log(err);
+    const contents = fs.readdirSync(`./../Quark-electron/release/${json.version}`);
+    const binaries = contents.filter((bin) => {
+        return !(bin.includes('blockmap') || bin.includes('latest'));
     });
 
-    function latestLinux() {
-        fetch('https://storage.googleapis.com/quarkjs-auto-update/latest-linux.yml').then(async (val) => {
-            const text = await val.text();
-            const obj = YAML.parse(text);
-            const linuxURL = obj.files[0].url;
-            let file = fs.readFileSync('./download/README.md').toString();
-            file = file.replace(/linux.+AppImage/g, `linux="https://storage.googleapis.com/quarkjs-auto-update/${version}/${linuxURL}`);
-            fs.writeFileSync('./download/README.md', file);
-        }).catch((err) => {
-            console.log(err);
-        });
-    }
+    const linuxMain = binaries.find((bin) => { return bin.endsWith('.AppImage') });
+    const windowsMain = binaries.find((bin) => { return bin.endsWith('.exe') });
+
+    const linux_other_downloads = binaries.filter((bin) => {
+        return bin.search(/(.deb|.tar.gz)$/) !== -1;
+    });
+
+    const windows_other_downloads = binaries.filter((bin) => {
+        return bin.search(/(.zip)$/) !== -1;
+    });
+
+
+    let str = '';
+    str = str.concat(`# All Downloads`, '\n');
+    str = str.concat(`__Latest Version: ${json.version}__`, '\n\n');
+    str = str.concat(`__Release Date: ${monthNames[date.getMonth()]} ${date.getDate()} ${date.getFullYear()},  ${date.toLocaleTimeString()}__`, '\n\n');
+
+    str = str.concat('<Download', '\n');
+    str = str.concat(`version="${json.version}"`, '\n');
+
+    str = str.concat(`linux_main='${linuxMain}'`, '\n');
+    str = str.concat(`linux_other='${JSON.stringify(linux_other_downloads)}'`, '\n');
+
+    str = str.concat(`windows_main='${windowsMain}'`, '\n');
+    str = str.concat(`windows_other='${JSON.stringify(windows_other_downloads)}'`, '\n');
+
+    str = str.concat('/>');
+
+    fs.writeFileSync('./download/README.md', str);
 }
 
 
@@ -122,6 +143,43 @@ function createReadmeFiles(paths: string[]) {
             }
             return splitStr.join(' ');
         }
+    }
+}
+
+function updateDownloadLinkssss() {
+
+    const monthNames = ["January", "February", "March", "April", "May", "June",
+        "July", "August", "September", "October", "November", "December"
+    ];
+
+    fetch('https://storage.googleapis.com/quarkjs-auto-update/latest.yml').then(async (val) => {
+        const text = await val.text();
+        const obj = YAML.parse(text);
+        const windowsURL = obj.files[0].url;
+        const date = new Date(obj.releaseDate);
+        let file = fs.readFileSync('./download/README.md').toString();
+
+        // file = file.replace(/https:\/\/storage.+exe/g, `https://storage.googleapis.com/quarkjs-auto-update/${windowsURL}`);
+        file = file.replace(/windows.+exe/g, `windows="https://storage.googleapis.com/quarkjs-auto-update/${json.version}/${windowsURL}`);
+        file = file.replace(/__Latest.+?__/, `__Latest Version: ${obj.version}__`);
+        file = file.replace(/__Release.+?__/, `__Release Date: ${monthNames[date.getMonth()]} ${date.getDate()} ${date.getFullYear()},  ${date.toLocaleTimeString()}__`);
+        fs.writeFileSync('./download/README.md', file);
+        latestLinux();
+    }).catch((err) => {
+        console.log(err);
+    });
+
+    function latestLinux() {
+        fetch('https://storage.googleapis.com/quarkjs-auto-update/latest-linux.yml').then(async (val) => {
+            const text = await val.text();
+            const obj = YAML.parse(text);
+            const linuxURL = obj.files[0].url;
+            let file = fs.readFileSync('./download/README.md').toString();
+            file = file.replace(/linux.+AppImage/g, `linux="https://storage.googleapis.com/quarkjs-auto-update/${json.version}/${linuxURL}`);
+            fs.writeFileSync('./download/README.md', file);
+        }).catch((err) => {
+            console.log(err);
+        });
     }
 }
 

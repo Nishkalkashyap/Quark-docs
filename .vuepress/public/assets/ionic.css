@@ -1,0 +1,241 @@
+@font-face {
+    src: url("./eina-700.woff2") format("woff2"), url("./eina-700.woff") format("woff");
+    font-family: "Eina";
+    font-style: normal;
+    font-weight: 700;
+}
+
+:root {
+    --accent-color: #3880ff;
+    --accent-color-rgb: 56, 128, 255;
+    --background: #ffffff;
+    --code-background: #f5f7fa;
+    --code-color: var(--text-color--dark);
+    --code-font-family: "SFMono-Regular", "Roboto Mono", Consolas, "Liberation Mono", Menlo, Courier, monospace;
+
+    --font-family: system-ui, sans-serif;
+    /* --font-family: "Eina", system-ui, sans-serif; */
+
+    --header-height: 56px;
+    --heading-font-family: "Eina", var(--font-family);
+    --line-rule-color: #edf2f6;
+    --menu-width: 240px;
+    --offset-background: #fdfdff;
+    --offset-background--dark: #f7f7ff;
+    --page-margin-left: var(--menu-width);
+
+    --text-color: #4e5b6a;
+    --text-color--darker: #24282e;
+    --text-color--dark: #020814;
+    --text-color--lighter: #abb2bf;
+    --text-color--light: #73849a;
+}
+
+
+body {
+    background-color: var(--background);
+    color: var(--text-color);
+    font-family: var(--font-family);
+    -webkit-text-size-adjust: none;
+    -moz-text-size-adjust: none;
+    -ms-text-size-adjust: none;
+    text-size-adjust: none;
+    margin: 0;
+    -webkit-font-smoothing: antialiased;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: var(--text-color--dark);
+    font-family: var(--heading-font-family);
+    letter-spacing: -0.03em;
+    line-height: 1.1;
+    padding-top: 2em;
+}
+
+h1 {
+    font-size: 4rem;
+    padding-top: 0;
+}
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 3rem;
+    }
+}
+
+h2 {
+    font-size: 1.825rem;
+}
+
+h3 {
+    font-size: 1.375rem;
+}
+
+h4 {
+    font-size: 1.15rem;
+}
+
+h5,
+h6 {
+    font-size: 1rem;
+}
+
+h2+h3,
+h3+h4 {
+    margin-top: -1em;
+}
+
+blockquote {
+    background: rgba(255, 250, 237, 0.8);
+    border-left: 4px solid #ffcc5f;
+    border-radius: 2px 4px 4px 2px;
+    color: #736545;
+    font-size: 14px;
+    line-height: 1.8;
+    margin: 1em;
+    padding: 2em;
+}
+
+code {
+    background-color: var(--code-background) !important;
+    border-radius: 4px !important;
+    color: var(--code-color) !important;
+    font-family: var(--code-font-family) !important;
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 0;
+    padding: 4px 6px;
+    white-space: pre-wrap;
+}
+
+pre {
+    background-color: var(--code-background) !important;
+    border-radius: 4px;
+    line-height: 1.2;
+    margin: 2rem 0;
+    overflow: auto;
+    padding: 2em;
+}
+
+pre code {
+    background-color: transparent !important;
+    color: inherit !important;
+    padding: 0;
+    white-space: inherit;
+}
+
+table {
+    border-width: 1px 0 0 1px;
+    font-size: 13px;
+    margin: 2em 0;
+    overflow-x: auto;
+    width: 100%;
+}
+
+table,
+td,
+th {
+    border-collapse: collapse;
+    border-color: var(--line-rule-color);
+    border-style: solid;
+}
+
+td,
+th {
+    border-width: 0 1px 1px 0;
+    line-height: 1.5;
+    padding: 1em;
+    text-align: left;
+}
+
+tbody tr:nth-child(odd) {
+    background-color: var(--offset-background);
+}
+
+html {
+    --ion-font-family: var(--ion-default-font)
+}
+
+body {
+    background: var(--ion-background-color)
+}
+
+body.backdrop-no-scroll {
+    overflow: hidden
+}
+
+:root {
+    --ion-color-primary: #3880ff;
+    --ion-color-primary-rgb: 56, 128, 255;
+    --ion-color-primary-contrast: #ffffff;
+    --ion-color-primary-contrast-rgb: 255, 255, 255;
+    --ion-color-primary-shade: #3171e0;
+    --ion-color-primary-tint: #4c8dff;
+
+    --ion-color-secondary: #0cd1e8;
+    --ion-color-secondary-rgb: 12, 209, 232;
+    --ion-color-secondary-contrast: #ffffff;
+    --ion-color-secondary-contrast-rgb: 255, 255, 255;
+    --ion-color-secondary-shade: #0bb8cc;
+    --ion-color-secondary-tint: #24d6ea;
+
+    --ion-color-tertiary: #7044ff;
+    --ion-color-tertiary-rgb: 112, 68, 255;
+    --ion-color-tertiary-contrast: #ffffff;
+    --ion-color-tertiary-contrast-rgb: 255, 255, 255;
+    --ion-color-tertiary-shade: #633ce0;
+    --ion-color-tertiary-tint: #7e57ff;
+
+    --ion-color-success: #10dc60;
+    --ion-color-success-rgb: 16, 220, 96;
+    --ion-color-success-contrast: #ffffff;
+    --ion-color-success-contrast-rgb: 255, 255, 255;
+    --ion-color-success-shade: #0ec254;
+    --ion-color-success-tint: #28e070;
+
+    --ion-color-warning: #ffce00;
+    --ion-color-warning-rgb: 255, 206, 0;
+    --ion-color-warning-contrast: #ffffff;
+    --ion-color-warning-contrast-rgb: 255, 255, 255;
+    --ion-color-warning-shade: #e0b500;
+    --ion-color-warning-tint: #ffd31a;
+
+    --ion-color-danger: #f04141;
+    --ion-color-danger-rgb: 245, 61, 61;
+    --ion-color-danger-contrast: #ffffff;
+    --ion-color-danger-contrast-rgb: 255, 255, 255;
+    --ion-color-danger-shade: #d33939;
+    --ion-color-danger-tint: #f25454;
+
+    --ion-color-dark: #222428;
+    --ion-color-dark-rgb: 34, 34, 34;
+    --ion-color-dark-contrast: #ffffff;
+    --ion-color-dark-contrast-rgb: 255, 255, 255;
+    --ion-color-dark-shade: #1e2023;
+    --ion-color-dark-tint: #383a3e;
+
+    --ion-color-medium: #989aa2;
+    --ion-color-medium-rgb: 152, 154, 162;
+    --ion-color-medium-contrast: #ffffff;
+    --ion-color-medium-contrast-rgb: 255, 255, 255;
+    --ion-color-medium-shade: #86888f;
+    --ion-color-medium-tint: #a2a4ab;
+
+    --ion-color-light: #f4f5f8;
+    --ion-color-light-rgb: 244, 244, 244;
+    --ion-color-light-contrast: #000000;
+    --ion-color-light-contrast-rgb: 0, 0, 0;
+    --ion-color-light-shade: #d7d8da;
+    --ion-color-light-tint: #f5f6f9;
+}

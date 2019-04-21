@@ -1,59 +1,76 @@
-$accentColor = #007acc
-// $accentColor = #3880ff
-// $accentColor = #f97e3e
-// $accentColor = #fa8142
-
-
-// $textColor = #2c3e50
-// $textColor = #020814
-// $textColor = #000000
-// $textColor = #34495e
-
-// $textColor = #111111
-// $textColor = #ffffff
-
+$accentColor = #3880ff
 
 $borderColor = #eaecef
-
-
-// $codeBgColor = #282c34
-// $codeBgColor = #020814
 $codeBgColor = #000000
-// $codeBgColor = #111111
-// $codeBgColor = #ffffff
-
 
 $textLightColor = #777777
-// $textLightColor = #73849a
-
-// .navbar, .sidebar, .links, input, body {
-//     background-color: var(--background-color) !important;
-// }
 
 body {
     --accent-color : $accentColor;
-    --text-color : $textColor;
+    // --text-color : $textColor;
     --border-color : $borderColor;
     --codeBg-color : $codeBgColor;
 
-    --text-light-color : $textLightColor;
     --text-medium-color : #2f2f2f;
 
     --background-color: #ffffff;
 
+
     background-color: var(--background-color);
 
-    // ::selection {
-    //     background: var(--accent-color);
-    // }
-
     header.navbar, div.sidebar {
-        // color: #ffffff !important;
-        // background-color: var(--codeBg-color) !important;
         a.repo-link {
             display: none !important;
         }
     }
+
+    .sidebar-link {
+        font-weight: 500;
+        color: var(--text-color--light);
+    }
+
+    p, li {
+        font-size: 15px !important;
+        // color: var(--text-color) !important;
+    }
+
+    div.table-of-contents:before {
+        content: 'CONTENTS';
+        font-weight: 800;
+        letter-spacing: 0.2em;
+        font-size: 12px;
+        color: var(--text-color--lighter);
+    }
+
+    div.table-of-contents {
+        font-size 14px;
+        > ul {
+            padding-left: 0px;
+        }
+        li {
+            list-style-type: none;
+            line-height: 26px;
+        }
+    }
+
+    div.table-of-contents, 
+    div.table-of-contents:before,
+    .nav-item a, 
+    // .sidebar-links a,
+    .site-name, 
+    .edit-link,
+    .last-updated ,
+    .page-nav span.next,
+    .page-nav span.prev    {
+        font-family: var(--heading-font-family);
+    }
+
+    .edit-link a,
+    .last-updated span    { 
+        // color: var(--ion-color-tertiary) !important;
+        color: var(--ion-color-primary) !important;
+    }
+
 
     // .sidebar-sub-headers {
     //     border-left: solid 1px var(--accent-color);
@@ -141,15 +158,28 @@ $admonition-title
     margin-bottom 0
     
 admonition_types = {
-    note: {color: #0288D1, icon: "edit_sharp"},
+    // note: {color: $accentColor, icon: "edit_sharp"},
+    // abstract: {color: #c5d845, icon: "speaker_notes_filled"},
+    // info: {color: #19d8f5, icon: "info"}
+    // tip: {color: #00bfa5, icon: "code"},
+    // success: {color: #00c853, icon: "check_circle_outline"},
+    // question: {color: #64dd17, icon: "help"},
+    // warning: {color: #ff9100, icon: "warning"},
+    // failure: {color: #ff5252, icon: "close"},
+    // danger: {color: #c2185b, icon: "flash_on"},
+    // bug: {color: #e040fb, icon: "bug_report"},
+    // example: {color: #651fff, icon: "format_list_numbered_rtl"},
+    // quote: {color: #9e9e9e, icon: "format_quote"}
+
+    note: {color: $accentColor, icon: "edit_sharp"},
     abstract: {color: #c5d845, icon: "speaker_notes_filled"},
     info: {color: #19d8f5, icon: "info"}
     tip: {color: #00bfa5, icon: "code"},
-    success: {color: #00c853, icon: "check_circle_outline"},
+    success: {color: #10dc60, icon: "check_circle_outline"},
     question: {color: #64dd17, icon: "help"},
-    warning: {color: #ff9100, icon: "warning"},
+    warning: {color: #ffce00, icon: "warning"},
     failure: {color: #ff5252, icon: "close"},
-    danger: {color: #c2185b, icon: "flash_on"},
+    danger: {color: #f04141, icon: "flash_on"},
     bug: {color: #e040fb, icon: "bug_report"},
     example: {color: #651fff, icon: "format_list_numbered_rtl"},
     quote: {color: #9e9e9e, icon: "format_quote"}
