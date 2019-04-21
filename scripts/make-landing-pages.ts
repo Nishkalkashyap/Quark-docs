@@ -17,7 +17,7 @@ updatePrimaryColor();
 
 function updatePrimaryColor() {
     //has to be hex code
-    const iconColor = '#000000';
+    const iconColor = '#020814';
 
     //can be rgb
     const accentColor = '#3880ff';

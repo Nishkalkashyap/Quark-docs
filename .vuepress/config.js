@@ -17,6 +17,10 @@ module.exports = {
         ['link', {
             href: 'https://fonts.googleapis.com/icon?family=Material+Icons',
             rel: 'stylesheet'
+        }],
+        ['script', {
+            src: '/assets/anime.min.js',
+            type: 'text/javascript'
         }]
         // ['script', {
         //     src: 'https://unpkg.com/ionicons@4.5.5/dist/ionicons.js'
