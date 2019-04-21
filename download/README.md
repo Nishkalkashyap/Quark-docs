@@ -1,7 +1,8 @@
 # All Downloads
-__Latest Version: 0.1.19__
-
-__Release Date: April 20 2019,  9:28:08 PM__
+| Meta                |                            |
+| ------------------- | -------------------------- |
+| Latest Version:     | 0.1.19            |
+| Release Date:       | April 20 2019,  9:28:08 PM|
 
 <Download
 version="0.1.19"

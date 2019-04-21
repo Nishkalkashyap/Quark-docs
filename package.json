@@ -53,6 +53,7 @@
     "js-beautify": "^1.9.0",
     "markdown-it-admonition": "^1.0.4",
     "markdown-it-imsize": "^2.0.1",
+    "markdown-it-multimd-table": "^3.1.3",
     "markdown-it-task-lists": "^2.1.1",
     "node-fetch": "^2.3.0",
     "style-loader": "^0.23.1",

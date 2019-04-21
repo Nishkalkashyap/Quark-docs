@@ -35,7 +35,11 @@ function updatePrimaryColor() {
 
 function createLegalFolder() {
     const notes = fs.readFileSync('./../Quark-electron/releaseNotes.md').toString();
-    fs.writeFileSync('./FAQ/release-notes.md', String().concat(`# Release Notes`, '\n\n', notes));
+    let str = '';
+    str = str.concat('# Release Notes', '\n\n');
+    str = str.concat('[[toc]]', '\n\n');
+    str = str.concat(notes);
+    fs.writeFileSync('./FAQ/release-notes.md', str);
 }
 
 function updateDownloadLinks() {
@@ -65,8 +69,10 @@ function updateDownloadLinks() {
 
     let str = '';
     str = str.concat(`# All Downloads`, '\n');
-    str = str.concat(`__Latest Version: ${json.version}__`, '\n\n');
-    str = str.concat(`__Release Date: ${monthNames[date.getMonth()]} ${date.getDate()} ${date.getFullYear()},  ${date.toLocaleTimeString()}__`, '\n\n');
+    str = str.concat('| Meta                |                            |', '\n');
+    str = str.concat('| ------------------- | -------------------------- |', '\n');
+    str = str.concat(`| Latest Version:     | ${json.version}            |`, '\n');
+    str = str.concat(`| Release Date:       | ${monthNames[date.getMonth()]} ${date.getDate()} ${date.getFullYear()},  ${date.toLocaleTimeString()}|`, '\n\n');
 
     str = str.concat('<Download', '\n');
     str = str.concat(`version="${json.version}"`, '\n');

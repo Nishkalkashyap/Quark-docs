@@ -20,10 +20,3 @@ footer: MIT Licensed | Copyright © 2019-present Nishkal Kashyap
 <!-- <Landing/> -->
 
 <!-- ![fdsf](https://media.giphy.com/media/1APaqOO5JHnWKLc7Bi/giphy.gif) -->
-
-
-!!! note Testing Notes
-Good Note 
-- [ ] incomplete
-- [x] complete
-!!!
