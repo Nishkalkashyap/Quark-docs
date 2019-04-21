@@ -4,7 +4,7 @@
 
 [[toc]]
 
-### `commands.registerCommand(id, handle[, thisArg, label])`
+### commands.registerCommand(id, handle[, thisArg, label])
 Registers a globally executable command.
 * arguments
   * id `string`
@@ -56,7 +56,7 @@ Now the command should be available in the commands palette like so.
 ![registered-command](/references/commands/registered-command.png)
 
 
-### `commands.executeCommand(id, [...args])`
+### commands.executeCommand(id, [...args])
 Executes a registered command.
 * arguments
   * id `string`

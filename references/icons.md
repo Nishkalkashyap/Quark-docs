@@ -4,7 +4,7 @@
 
 [[toc]]
 
-### `icons.registerIcon(icon)`
+### icons.registerIcon(icon)
 Registers an icon in global icon namespace.
 * arguments 
   * icon [`Icon`](/structures/icon.md)
@@ -23,14 +23,14 @@ view.focus();
 ```
 
 
-### `icons.registerIcons(icons)`
+### icons.registerIcons(icons)
 Registers multiple icons in global icon namespace.
 * arguments 
   * icons [`Array<Icon>`](/structures/icon.md)
 * returns `void`
 
 
-### `icons.registerIconInNamespace(icon, namespace)`
+### icons.registerIconInNamespace(icon, namespace)
 Registers an icon under a namespace.
 * arguments 
   * icon [`Icon`](/structures/icon.md)
@@ -50,7 +50,7 @@ view.focus();
 ```
 
 
-### `icons.registerIconsInNamespace(icons, namespace)`
+### icons.registerIconsInNamespace(icons, namespace)
 Registers multiple icons under a namespace.
 * arguments 
   * icons [`Array<Icon>`](/structures/icon.md)

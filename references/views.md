@@ -4,25 +4,25 @@
 
 [[toc]]
 
-### `views.createSideView()`
+### views.createSideView()
 Creates a side view.
 * returns [`ViewProvider`](/structures/view-provider.md)
 
-### `views.createBottomView()`
+### views.createBottomView()
 Creates a bottom view.
 * returns [`ViewProvider`](/structures/view-provider.md)
 
-### `views.createTabsView()`
+### views.createTabsView()
 Creates a tabs view.
 * returns [`ViewProvider`](/structures/view-provider.md)
 
-### `views.sideviewController`
+### views.sideviewController
 * see [SideviewController](/structures/sideview-controller.md)
 
-### `views.bottomviewController`
+### views.bottomviewController
 * see [BottomviewController](/structures/bottomview-controller.md)
 
-### `views.tabsviewController`
+### views.tabsviewController
 * see [TabsviewController](/structures/tabsview-controller.md)
 
 

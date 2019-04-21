@@ -4,51 +4,51 @@
 
 [[toc]]
 
-### `window.blur()`
+### window.blur()
 Removes focus from the window.
 * returns `void`
 
-### `window.center()`
+### window.center()
 Moves window to the center of the screen.
 * returns `void`
 
-### `window.close()`
+### window.close()
 Try to close the window. This has the same effect as a user manually clicking the close button of the window.
 * returns `void`
 
-### `window.focus()`
+### window.focus()
 Focuses on the window.
 * returns `void`
 
-### `window.getBounds()`
+### window.getBounds()
 Returns the position and size of the current window.
 * returns [`Rectangle`](/)
 
-### `window.getOpacity()`
+### window.getOpacity()
 Gets the opacity of the current wondow.
 * returns `number`
 
-### `window.hide()`
+### window.hide()
 Hides the current window.
 * returns `void`
 
-### `window.maximize()`
+### window.maximize()
 Maximizes the window. This will also show (but not focus) the window if it isn't being displayed already.
 * returns `void`
 
-### `window.minimize()`
+### window.minimize()
 Minimizes the window. On some platforms the minimized window will be shown in the Dock.
 * returns `void`
 
-### `window.reload()`
+### window.reload()
 Reloads the current windiw.
 * returns `void`
 
-### `window.restore()`
+### window.restore()
 Restores the window from minimized state to its previous state.
 * returns `void`
 
-### `window.setAlwaysOnTop()`
+### window.setAlwaysOnTop()
 Sets whether the window should show always on top of other windows. After setting this, this window will always stay on top of other windows.
 * returns `void`
 
@@ -57,7 +57,7 @@ Sets whether the window should show always on top of other windows. After settin
 
 
 
-### `window.setBounds(bounds[, animate])`
+### window.setBounds(bounds[, animate])
 Resizes and moves the window to the supplied bounds. Any properties that are not
 supplied will default to their current values.
 * arguments
@@ -75,7 +75,7 @@ quark.window.setBounds({
 });
 ```
 
-### `window.setEnabled([enabled])`
+### window.setEnabled([enabled])
 Disable or enable the window.
 * arguments 
   * enabled `boolean`
@@ -86,7 +86,7 @@ Disable or enable the window.
 quark.window.setEnabled(true);
 ```
 
-### `window.setOpacity(opacity)`
+### window.setOpacity(opacity)
 Sets the opacity of the window. On Linux does nothing. Value must be between 0-1.
 * arguments
   * opacity `number`
@@ -97,7 +97,7 @@ Sets the opacity of the window. On Linux does nothing. Value must be between 0-1
 quark.window.setOpacity(0.5);
 ```
 
-### `window.setProgressBar(progress[, mode])`
+### window.setProgressBar(progress[, mode])
 Focuses on the window.
 * arguments
   * progress `number`
@@ -111,28 +111,28 @@ quark.window.setProgressBar(0.3);
 quark.window.setProgressBar(0.4, 'error');
 ```
 
-### `window.isResizable()`
+### window.isResizable()
 Returns whether the window is resizable or not.
 * returns `boolean`
 
-### `window.setResizable(resizable)`
+### window.setResizable(resizable)
 Sets the window as resizable or not resizable.
 * argumants
   * resizable `boolean`
 * returns `void`
 
-### `window.show()`
+### window.show()
 Shows and gives focus to the window.
 * returns `void`
 
-### `window.unmaximize()`
+### window.unmaximize()
 Unmaximizes the window.
 * returns `void`
 
 
 <!-- Starting webContentsApi -->
 
-### `window.capturePage(callback)`
+### window.capturePage(callback)
 Captures a snapshot of the whole visible page. Upon completion callback will be 
 called with callback(image). The image is an instance of NativeImage that stores
 data of the snapshot.
@@ -148,7 +148,7 @@ quark.window.capturePage((image) => {
 });
 ```
 
-### `window.executeJavaScript(code)`
+### window.executeJavaScript(code)
 Evaluates code in page. Returns a promise with the result of the executed code.
 * arguments
   * code `string` 
@@ -166,11 +166,11 @@ quark.window.executeJavaScript(code).then((result)=>{
 });
 ```
 
-### `window.getFrameRate()`
+### window.getFrameRate()
 Returns the frameRate of the window
 * returns `void`
 
-### `window.getZoomFactor()`
+### window.getZoomFactor()
 Gets the current zoom factor and returns a promise that resolves to the value of zoom factor.
 * returns `Promise<number>`
 * Usage
@@ -183,7 +183,7 @@ quark.window.getZoomFactor().then((factor)=>{
     console.log(err)
 });
 ```
-### `window.getZoomLevel()`
+### window.getZoomLevel()
 Gets the current zoom level and returns a promise that resolves to the value of zoom level.
 * returns `Promise<number>`
 * Usage
@@ -197,7 +197,7 @@ quark.window.getZoomLevel().then((level)=>{
 });
 ```
 
-### `window.insertCSS(css)`
+### window.insertCSS(css)
 Injects css into the current web page.
 * arguments
   * css `string` 
@@ -212,7 +212,7 @@ const css = `
 quark.window.insertCSS(css);
 ```
 
-### `window.setZoomFactor(factor)`
+### window.setZoomFactor(factor)
  Changes the zoom factor to the specified factor. Zoom factor is zoom percent divided by 100, so 300% = 3.0.
 * arguments
   * factor `number`
@@ -222,7 +222,7 @@ quark.window.insertCSS(css);
 quark.window.setZoomFactor(0.3);
 ```
 
-### `window.setZoomLevel(level)`
+### window.setZoomLevel(level)
 Changes the zoom level to the specified level. The original size is 0 and each
 increment above or below represents zooming 20% larger or smaller to default
 limits of 300% and 50% of original size, respectively. The formula for this is

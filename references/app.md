@@ -4,27 +4,27 @@
 
 [[toc]]
 
-### `app.showItemInFolder([fullPath])`
+### app.showItemInFolder([fullPath])
 Show the given file in a file manager. If possible, select the file. If no path is provided, opens the current process path.
 * returns `void`
 
-### `app.beep()`
+### app.beep()
 Play the beep sound.
 * returns `void`
 
-### `app.getAppMetrics()`
+### app.getAppMetrics()
 Gets the [`ProcessMetric`](/)` object;
 * returns [`ProcessMetric`](/)
 
-### `app.getAppPath()`
+### app.getAppPath()
 Gets the installation path of the app.
 * returns `string`
 
-### `app.getVersion()`
+### app.getVersion()
 Gets the current version of app.
 * returns `string`
 
-### `app.showMessageBox(title, message, buttons[, type])`
+### app.showMessageBox(title, message, buttons[, type])
 Shows a message box. Returns a promise that resolves to the text of the selected button.
 * arguments
   * title `string`
@@ -47,7 +47,7 @@ quark.app.showMessageBox('Select your hero', 'Superman or Batman?', ['Superman',
 });
 ```
 
-### `app.showErrorBox(title, content)`
+### app.showErrorBox(title, content)
 Shows an error box.
 * arguments
   * title `string`
@@ -59,7 +59,7 @@ Shows an error box.
 quark.app.showErrorBox('Connection Failed!','Failed to connect to board at COM port 5');
 ```
 
-### `app.showOpenDialog([options])`
+### app.showOpenDialog([options])
 Shows a file/folder open dialog.
 * arguments
   * options [`OpenDialogOptions`](/)(optional)
@@ -80,7 +80,7 @@ quark.app.showOpenDialog({
 });
 ```
 
-### `app.showSaveDialog([options])`
+### app.showSaveDialog([options])
 Shows a save dialog.
 * arguments
   * options [`SaveDialogOptions`](/)
