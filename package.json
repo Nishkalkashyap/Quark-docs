@@ -12,7 +12,7 @@
     "land": "ts-node scripts/make-landing-pages.ts",
     "open": "ts-node scripts/open-links.ts",
     "vid": "ts-node ./scripts/convert-videos.ts",
-    "loc" : "bash -c 'cloc $(git ls-files)'"
+    "loc": "bash -c 'cloc $(git ls-files)'"
   },
   "keywords": [
     "quark"
@@ -25,6 +25,7 @@
     "@types/fluent-ffmpeg": "^2.1.9",
     "@types/fs-extra": "^5.0.5",
     "@types/open": "^6.1.0",
+    "@types/package-json": "^5.0.1",
     "@types/recursive-readdir": "^2.2.0",
     "@types/single-line-log": "^1.1.0",
     "@types/table": "^4.0.5",
@@ -50,7 +51,9 @@
     "@types/yamljs": "^0.2.30",
     "extract-text-webpack-plugin": "^3.0.2",
     "js-beautify": "^1.9.0",
+    "markdown-it-admonition": "^1.0.4",
     "markdown-it-imsize": "^2.0.1",
+    "markdown-it-task-lists": "^2.1.1",
     "node-fetch": "^2.3.0",
     "style-loader": "^0.23.1",
     "webpack-dev-middleware": "^3.6.0",

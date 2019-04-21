@@ -75,9 +75,9 @@ Quark provides two different scopes of settings:
 
 You can change the scope of settings by selecting the appropriate option from the select box at the top right corner of the settings window.
 
-:::tip NOTE
+!!! info NOTE
 Workspace settings take priority over user settings.
-:::
+!!! 
 
 <video muted autoplay loop style="max-width:100%; height:auto" name="media" poster="/c-assets/guide/user-interface/settings.png">
   <source src="/c-assets/guide/user-interface/settings.mp4" type="video/mp4">
@@ -98,9 +98,9 @@ Each setting can be edited by either a checkbox, an input or by a drop-down. Sim
 
 ![](/guide/user-interface/changed-settings-markers.png =x300)
 
-:::tip NOTE
+!!! info NOTE
 Note that changed settings have a marker besides them to help you identify them easily.
-:::
+!!!
 
 
 ## Themes

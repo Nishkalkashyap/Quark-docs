@@ -1,11 +1,24 @@
 {
   "hosting": [{
     "public": "./.vuepress/dist",
-    "target" : "docs",
+    "target": "docs",
     "ignore": [
       "firebase.json",
       "**/.*",
       "**/node_modules/**"
-    ]
+    ],
+    "rewrites": [{
+      "source": "/download-count/**",
+      "function": "downloadCount"
+    }],
+    "cleanUrls": true,
+    "trailingSlash": false,
+    "headers": [{
+      "source": "**/*.@(jpg|jpeg|gif|png|mp4)",
+      "headers": [{
+        "key": "Cache-Control",
+        "value": "max-age=7200"
+      }]
+    }]
   }]
 }

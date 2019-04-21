@@ -1,15 +1,5 @@
 # Devtime References
 
-```
-    Hello
-```
-
-| Tables        |      Are      |  Cool |
-| ------------- | :-----------: | ----:. |
-| col 3 is      | right-aligned | $1600 |
-| col 2 is      |   centered    |   $12 |
-| zebra stripes |   are neat    |    $1 |
-
 ::: tip
 This is a tip
 :::
@@ -27,3 +17,18 @@ This is a dangerous warning
 text : string
 type : 'tip' | 'warn' | 'error'
 vertical : "top"|"middle" default 'top'
+
+
+
+admonitions
+
+<!-- !!! <admonition type> <Admonition title>
+Admonition content
+!!! -->
+
+types = note abstract info tip success warning failure danger bug example quote
+<!-- https://github.com/docarys/markdown-it-admonition -->
+
+!!! note Testing Notes
+Good Note 
+!!!

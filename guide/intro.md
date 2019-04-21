@@ -39,9 +39,10 @@ If the above description was too much to grasp, here is an analogy that will hel
 | __Android Project__ | Android Studio |      *.apk       |            Android emulator/ Android OS             |
 | __Quark Project__   |   Quark IDE    |   *.build.qrk    | [Electron](https://electronjs.org) Renderer Process |
 
-:::tip NOTE
+
+!!! info Testing
 This is in no way a comparison between Android studio and Quark. The above example is only to illustrate and compare the process of app development both the IDE's.
-:::
+!!! 
 
 
 ## Why does this project exists?

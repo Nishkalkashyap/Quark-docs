@@ -4,7 +4,7 @@
       <img src="/images/windows-logo.png" style="width:100px">
       <button
         class="download-button"
-        @click="openExternal(windows)"
+        @click="openExternal('windows_exe', windows)"
         :class="windows? 'download-enabled' : null"
       >
         <img class="download-svg" src="/images/download.svg">
@@ -19,7 +19,7 @@
       <img src="/images/linux-logo.png" style="width:100px">
       <button
         class="download-button"
-        @click="openExternal(linux)"
+        @click="openExternal('linux_appImage', linux)"
         :class="linux? 'download-enabled' : null"
       >
         <img class="download-svg" src="/images/download.svg">
@@ -34,7 +34,7 @@
       <img src="/images/apple-logo.svg">
       <button
         class="download-button"
-        @click="openExternal(mac)"
+        @click="openExternal('mac_dmg',mac)"
         :class="mac? 'download-enabled' : null"
       >
         <img class="download-svg" src="/images/download.svg">
@@ -51,11 +51,13 @@
 export default {
   props: ["windows", "linux", "mac"],
   methods: {
-    openExternal: link => {
+    openExternal: (baseUrl, link) => {
       if (!link) {
         return;
       }
-      window.open(link);
+      const finalUrl = `https://quarkjs.io/download-count/${baseUrl}?redirect=${link}`;
+      window.open(finalUrl);
+      // window.open(link);
     }
   }
 };

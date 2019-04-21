@@ -14,6 +14,10 @@ module.exports = {
                     a.appendChild(r);
                 })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
         `],
+        ['link', {
+            href: 'https://fonts.googleapis.com/icon?family=Material+Icons',
+            rel: 'stylesheet'
+        }]
         // ['script', {
         //     src: 'https://unpkg.com/ionicons@4.5.5/dist/ionicons.js'
         // }],
@@ -35,6 +39,8 @@ module.exports = {
             });
 
             md.use(require('markdown-it-imsize'));
+            md.use(require("markdown-it-admonition"));
+            md.use(require('markdown-it-task-lists'));
         }
     },
     themeConfig: {

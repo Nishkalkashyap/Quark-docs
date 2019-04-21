@@ -5,6 +5,9 @@ import fetch from 'node-fetch';
 import * as YAML from 'yamljs';
 import { themeConfig } from './../.vuepress/config';
 
+const json = require('./../../Quark-electron/package.json');
+const version = json.version;
+
 createSidebars(paths);
 createReadmeFiles(paths);
 updateDownloadLinks();
@@ -35,7 +38,7 @@ function updateDownloadLinks() {
         let file = fs.readFileSync('./download/README.md').toString();
 
         // file = file.replace(/https:\/\/storage.+exe/g, `https://storage.googleapis.com/quarkjs-auto-update/${windowsURL}`);
-        file = file.replace(/windows.+exe/g, `windows="https://storage.googleapis.com/quarkjs-auto-update/${windowsURL}`);
+        file = file.replace(/windows.+exe/g, `windows="https://storage.googleapis.com/quarkjs-auto-update/${version}/${windowsURL}`);
         file = file.replace(/__Latest.+?__/, `__Latest Version: ${obj.version}__`);
         file = file.replace(/__Release.+?__/, `__Release Date: ${monthNames[date.getMonth()]} ${date.getDate()} ${date.getFullYear()},  ${date.toLocaleTimeString()}__`);
         fs.writeFileSync('./download/README.md', file);
@@ -50,7 +53,7 @@ function updateDownloadLinks() {
             const obj = YAML.parse(text);
             const linuxURL = obj.files[0].url;
             let file = fs.readFileSync('./download/README.md').toString();
-            file = file.replace(/linux.+AppImage/g, `linux="https://storage.googleapis.com/quarkjs-auto-update/${linuxURL}`);
+            file = file.replace(/linux.+AppImage/g, `linux="https://storage.googleapis.com/quarkjs-auto-update/${version}/${linuxURL}`);
             fs.writeFileSync('./download/README.md', file);
         }).catch((err) => {
             console.log(err);
