@@ -4,17 +4,17 @@
 
 ## Methods
 
-### `dispose()`
+### dispose()
 Removed the menu and clears the associated resources.
 * returns `void`
 
-### `update(menu)`
+### update(menu)
 Updates the menu.
 * arguments
   * menu [`Array<MenuItem>`](/structures/menu-item.md)
 * returns `void`
 
-### `show(x, y)`
+### show(x, y)
 Shows the ContextMenu at the specified x and y positions.
 * arguments 
   * x `number`
@@ -23,7 +23,7 @@ Shows the ContextMenu at the specified x and y positions.
 
 ## Properties
 
-### `items`
+### items
 Menu items.
 * type [`Array<MenuItem>`](/structures/menu-item.md)
 

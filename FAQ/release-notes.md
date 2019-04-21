@@ -1,7 +1,7 @@
 # Release Notes
 
 ## Quark 0.1.19 - April 20, 2019
-#### SHA-512 Hashes
+### SHA-512 Hashes
 | File | Hash |
 | ----- | ----- |
 | __Quark-linux-amd64-0.1.19.deb__ | mOoXmJWxwtlVzhiG9V+/0gw5+rQgYbPsFsBNxbXSB6BoEvts0vN8nEc+BioyjpA5cN3Lx0VTyAEbm/mE/NZNNQ==  |

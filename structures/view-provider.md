@@ -4,27 +4,27 @@
 
 ## Methods
 
-### `dispose()`
+### dispose()
 Removes the view
 * returns `void`
 
-### `isVisible()`
+### isVisible()
 Returns boolean.
 * returns `void`
 
-### `hide()`
+### hide()
 Hides the view.
 * returns `void`
 
-### `show()`
+### show()
 Shows the view.
 * returns `void`
 
-### `isFocused()`
+### isFocused()
 Returns `true` if the view is focused.
 * returns `boolean`
 
-### `blur()`
+### blur()
 Removes the focus from view and selects previous view.
 * returns `boolean`
 
@@ -32,48 +32,48 @@ Removes the focus from view and selects previous view.
 
 
 
-### `onWillCreateElement()`
+### onWillCreateElement()
 Removes the focus from view and selects previous view.
 * returns `void`
 
-### `onDidCreateElement()`
+### onDidCreateElement()
 Removes the focus from view and selects previous view.
 * returns `void`
 
-### `onDidConnectElement()`
+### onDidConnectElement()
 Removes the focus from view and selects previous view.
 * returns `void`
 
-### `onWillRemoveElement()`
+### onWillRemoveElement()
 Removes the focus from view and selects previous view.
 * returns `void`
 
-### `onDidRemoveElement()`
+### onDidRemoveElement()
 Removes the focus from view and selects previous view.
 * returns `void`
 
-### `onCanEnterView()`
+### onCanEnterView()
 Removes the focus from view and selects previous view.
 * returns `Promise<boolean> | boolean`
 
-### `onDidEnterView()`
+### onDidEnterView()
 Removes the focus from view and selects previous view.
 * returns `void`
 
-### `onCanRemoveView()`
+### onCanRemoveView()
 Removes the focus from view and selects previous view.
 * returns `Promise<boolean> | boolean`
 
-### `onDidRemoveView()`
+### onDidRemoveView()
 Removes the focus from view and selects previous view.
 * returns `void`
 
-### `getProgressBarValue()`
+### getProgressBarValue()
 Removes the focus from view and selects previous view.
 * returns `number | 'indeterminate'`
 
 
-### `setProgressBar([value])`
+### setProgressBar([value])
 Removes the focus from view and selects previous view.
 * arguments
   * value `number`
@@ -86,41 +86,41 @@ Removes the focus from view and selects previous view.
 
 ## Properties
 
-### `label`
+### label
 * type `string`
 
-### `element`
+### element
 * type `Element`
 
-### `keepConnected`
+### keepConnected
 * type `boolean`
 
-### `busy`
+### busy
 * type `boolean`
 
-### `badge`
+### badge
 * type `string | number`
 
-### `icon`
+### icon
 * type `string`
 
-### `tooltip`
+### tooltip
 * type `string`
 
-### `data`
+### data
 * type `any`
 
-### `actionIcon`
+### actionIcon
 * type `string`
 
-### `contextMenu`
+### contextMenu
 * type [`ContextMenuRef`](/)
 
-### `buttons`
+### buttons
 * type [`Array<ButtonField>`](/)
 
-### `inputField`
+### inputField
 * type [`InputField`](/)
 
-### `selectField`
+### selectField
 * type [`SelectField`](/)

@@ -2,7 +2,7 @@
 
 [[toc]]
 
-### `addKeyBinding(keybindings[, when])`
+### addKeyBinding(keybindings[, when])
 * arguments
   * keybindings - `string | Array<string>`
   * when - `string`(optional)

@@ -2,26 +2,26 @@
 
 [[toc]]
 
-<!-- ### `label`
+<!-- ### label
 * type `string`
 
-### `handle`
+### handle
 * type `Function`
 
-### `icon`
+### icon
 * type `string`(optional) -->
 
-### `id`
+### id
 * type `string`
 
-### `handle`
+### handle
 * type `Function`
 
-### `thisArg`
+### thisArg
 * type `any`(optional)
 
-### `label`
+### label
 * type `string`(optional)
 
-### `dispose`
+### dispose
 * type `Function`

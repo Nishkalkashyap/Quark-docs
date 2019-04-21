@@ -4,11 +4,11 @@
 
 ## Methods
 
-### `dispose()`
+### dispose()
 Removed the menu and clears the associated resources.
 * returns `void`
 
-### `update(menu)`
+### update(menu)
 Updates the menu.
 * arguments
   * menu [`Array<MenuItem>`](/structures/menu-item.md)
@@ -16,7 +16,7 @@ Updates the menu.
 
 ## Properties
 
-### `items`
+### items
 Menu items.
 * type [`Array<MenuItem>`](/structures/menu-item.md)
 

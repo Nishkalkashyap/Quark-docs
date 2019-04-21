@@ -8,88 +8,88 @@
 
 [[toc]]
 
-### `getCurrentView()`
+### getCurrentView()
 Returns the current {{$page.frontmatter.view}}.
 * returns [`ViewProvider`](/structures/view-provider.md)
 
-### `getCurrentView()`
+### getCurrentView()
 Returns all registered {{$page.frontmatter.view}}s.
 * returns `Array<ViewProvider>`
 
 
-### `isNavbarVisible()`
+### isNavbarVisible()
 Returns boolean.
 * returns `boolean`
 
 
-### `toggleNavbar()`
+### toggleNavbar()
 Toggles the navbar.
 * returns `void`
 
 
-### `hideNavbar()`
+### hideNavbar()
 Hides the navbar.
 * returns `void`
 
 
-### `showNavbar()`
+### showNavbar()
 Shows the navbar.
 * returns `void`
 
 
-### `selectNextView()`
+### selectNextView()
 Selects the next {{$page.frontmatter.view}}.
 * returns `void`
 
 
-### `selectPreviousView()`
+### selectPreviousView()
 Selects the previous {{$page.frontmatter.view}}.
 * returns `void`
 
 
-### `triggerUpdate()`
+### triggerUpdate()
 Triggers {{$page.frontmatter.view}} update.
 * returns `void`
 
 
-### `removeView(view)`
+### removeView(view)
 Removed the view.
 * arguments
   * view - [`ViewProvider`](/structures/view-provider.md)
 * returns `void`
 
-### `getViewById(id)`
+### getViewById(id)
 Removed the view.
 * arguments
   * id - `string`
 * returns `void`
 
-### `setView(view)`
+### setView(view)
 Removed the view.
 * arguments
   * view - [`ViewProvider`](/structures/view-provider.md)
 * returns `void`
 
-### `isVisible()`
+### isVisible()
 Returns boolean
 * returns `boolean`
 
-### `toggle()`
+### toggle()
 Toggles view visibility.
 * returns `void`
 
-### `hide()`
+### hide()
 Hides the view.
 * returns `void`
 
-### `show()`
+### show()
 Shows the view.
 * returns `void`
 
-### `maximize()`
+### maximize()
 Maximizes the view.
 * returns `void`
 
-### `minimize()`
+### minimize()
 Minimized the view.
 * returns `void`

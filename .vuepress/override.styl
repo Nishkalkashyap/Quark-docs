@@ -1,105 +1,73 @@
 $accentColor = #3880ff
-
 $borderColor = #eaecef
 $codeBgColor = #000000
-
 $textLightColor = #777777
 
 body {
-    --accent-color : $accentColor;
-    // --text-color : $textColor;
-    --border-color : $borderColor;
-    --codeBg-color : $codeBgColor;
+--accent-color : $accentColor;
+// --text-color : $textColor;
+--border-color : $borderColor;
+--codeBg-color : $codeBgColor;
 
-    --text-medium-color : #2f2f2f;
+--text-medium-color : #2f2f2f;
 
-    --background-color: #ffffff;
+--background-color: #ffffff;
 
 
-    background-color: var(--background-color);
+background-color: var(--background-color);
 
-    header.navbar, div.sidebar {
-        a.repo-link {
-            display: none !important;
-        }
+header.navbar, div.sidebar {
+    a.repo-link {
+        display: none !important;
     }
+}
 
-    .sidebar-link {
-        font-weight: 500;
-        color: var(--text-color--light);
+.sidebar-link {
+    font-weight: 500;
+    color: var(--text-color--light);
+}
+
+p, li {
+    font-size: 15px !important;
+    // color: var(--text-color) !important;
+}
+
+div.table-of-contents:before {
+    content: 'CONTENTS';
+    font-weight: 800;
+    letter-spacing: 0.2em;
+    font-size: 12px;
+    color: var(--text-color--lighter);
+}
+
+div.table-of-contents {
+    font-size 14px;
+    > ul {
+        padding-left: 0px;
     }
-
-    p, li {
-        font-size: 15px !important;
-        // color: var(--text-color) !important;
+    li {
+        list-style-type: none;
+        line-height: 26px;
     }
+}
 
-    div.table-of-contents:before {
-        content: 'CONTENTS';
-        font-weight: 800;
-        letter-spacing: 0.2em;
-        font-size: 12px;
-        color: var(--text-color--lighter);
-    }
+div.table-of-contents, 
+div.table-of-contents:before,
+.nav-item a, 
+// .sidebar-links a,
+.site-name, 
+.edit-link,
+.last-updated ,
+.page-nav span.next,
+.page-nav span.prev    {
+    font-family: var(--heading-font-family);
+}
 
-    div.table-of-contents {
-        font-size 14px;
-        > ul {
-            padding-left: 0px;
-        }
-        li {
-            list-style-type: none;
-            line-height: 26px;
-        }
-    }
-
-    div.table-of-contents, 
-    div.table-of-contents:before,
-    .nav-item a, 
-    // .sidebar-links a,
-    .site-name, 
-    .edit-link,
-    .last-updated ,
-    .page-nav span.next,
-    .page-nav span.prev    {
-        font-family: var(--heading-font-family);
-    }
-
-    .edit-link a,
-    .last-updated span    { 
-        // color: var(--ion-color-tertiary) !important;
-        color: var(--ion-color-primary) !important;
-    }
-
-
-    // .sidebar-sub-headers {
-    //     border-left: solid 1px var(--accent-color);
-    //     padding-left: 0px !important;
-    //     margin-left: 16px;
-    // }
-
-    // .sidebar-link.active {
-    //     border-left: 0px !important;
-    // }
-
-    // span.site-name {
-    //     color: #ffffff !important;
-    // }
-
-    // div.links {
-    //     background-color: var(--codeBg-color) !important;
-    // }
-
-    // a.router-link-active,a.nav-link:hover {
-    //     color: var(--accent-color) !important;
-    // }
-
-    // div.sidebar {
-    //     background-color: var(--accent-color) !important;
-    //     a.sidebar-link {
-    //         color: #000000;
-    //     }
-    // }
+.edit-link a,
+.last-updated span    { 
+    // color: var(--ion-color-tertiary) !important;
+    color: var(--ion-color-primary) !important;
+}
 }
 
 
@@ -158,19 +126,6 @@ $admonition-title
     margin-bottom 0
     
 admonition_types = {
-    // note: {color: $accentColor, icon: "edit_sharp"},
-    // abstract: {color: #c5d845, icon: "speaker_notes_filled"},
-    // info: {color: #19d8f5, icon: "info"}
-    // tip: {color: #00bfa5, icon: "code"},
-    // success: {color: #00c853, icon: "check_circle_outline"},
-    // question: {color: #64dd17, icon: "help"},
-    // warning: {color: #ff9100, icon: "warning"},
-    // failure: {color: #ff5252, icon: "close"},
-    // danger: {color: #c2185b, icon: "flash_on"},
-    // bug: {color: #e040fb, icon: "bug_report"},
-    // example: {color: #651fff, icon: "format_list_numbered_rtl"},
-    // quote: {color: #9e9e9e, icon: "format_quote"}
-
     note: {color: $accentColor, icon: "edit_sharp"},
     abstract: {color: #c5d845, icon: "speaker_notes_filled"},
     info: {color: #19d8f5, icon: "info"}

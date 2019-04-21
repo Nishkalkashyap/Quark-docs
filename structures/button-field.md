@@ -2,11 +2,11 @@
 
 [[toc]]
 
-### `label`
+### label
 * type `string`
 
-### `handle`
+### handle
 * type `Function`
 
-### `icon`
+### icon
 * type `string`(optional)

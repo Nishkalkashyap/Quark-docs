@@ -2,27 +2,27 @@
 
 [[toc]]
 
-### `label`
+### label
 Label of the menu item.
 * type `string`
 
-### `command`
+### command
 Command to execute on click.
 * type `string | Function`(optional)
 
-### `children`
+### children
 Children of the menu item.
 * type `Array<MenuItem>`(optional)
 
-### `divider`
+### divider
 Controls whether to show divider or not.
 * type `boolean`(optional)
 
-### `icon`
+### icon
 Icon to show at the menu item.
 * type `string`(optional)
 
 
-### `disabled`
+### disabled
 Icon to show at the menu item.
 * type `boolean`(optional)

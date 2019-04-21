@@ -2,23 +2,23 @@
 
 [[toc]]
 
-### `placeholder`
+### placeholder
 Placeholder for the select field.
 * type `string`
 
-### `currentValue`
+### currentValue
 Current value of the select field. Must be one of the values provided in `options` array.
 * type `Function`
 
-### `isHidden`
+### isHidden
 Controls whether the field is visible or hidden.
 * type `boolean`
 
-### `options`
+### options
 * type `Array<string>`
 
-### `viewOptions`
+### viewOptions
 * type `Array<string>`
 
-### `handle`
+### handle
 * type `(option?: string) => void`
