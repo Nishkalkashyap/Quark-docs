@@ -9,10 +9,10 @@ import * as js from 'js-beautify';
 
 const json = require('./../../Quark-electron/package.json');
 
+createReleaseNotes();
 createSidebars(paths);
 createReadmeFiles(paths);
 updateDownloadLinks();
-createLegalFolder();
 updatePrimaryColor();
 
 function updatePrimaryColor() {
@@ -34,7 +34,7 @@ function updatePrimaryColor() {
     fs.writeFileSync(svgFilePath, svg);
 }
 
-function createLegalFolder() {
+function createReleaseNotes() {
     const notes = fs.readFileSync('./../Quark-electron/releaseNotes.md').toString();
     let str = '';
     str = str.concat('# Release Notes', '\n\n');
@@ -68,16 +68,17 @@ function updateDownloadLinks() {
     });
 
     const notes = fs.readFileSync('./../Quark-electron/releaseNotes.md').toString();
-    const match = notes.match(/{(\n|.)+}/)[0];
+    const preText = `<!-- Quark-${json.version}-start -->`;
+    const postText = `<!-- Quark-${json.version}-end -->`;
+    const substr = notes.substring(notes.indexOf(preText), notes.indexOf(postText));
+    const match = substr.match(/{(\n|.|\s)+}/)[0];
+
     let hashes = '';
     hashes = hashes.concat(`!!! note See SHA-512 Hashes`, '\n');
     hashes = hashes.concat(`<DropDown>`, '\n');
     hashes = hashes.concat(`<ReleaseNotes :sha='${js.js_beautify(JSON.stringify(JSON.parse(match)))}' />`, '\n');
     hashes = hashes.concat(`</DropDown>`, '\n');
     hashes = hashes.concat('!!!', '\n\n');
-
-    // return;
-
 
     let str = '';
     str = str.concat(`# All Downloads`, '\n');
