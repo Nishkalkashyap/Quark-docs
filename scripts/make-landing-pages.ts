@@ -5,6 +5,7 @@ var beautify = require('js-beautify').js;
 import fetch from 'node-fetch';
 import * as YAML from 'yamljs';
 import { themeConfig } from './../.vuepress/config';
+import * as js from 'js-beautify';
 
 const json = require('./../../Quark-electron/package.json');
 
@@ -66,6 +67,17 @@ function updateDownloadLinks() {
         return bin.search(/(.zip)$/) !== -1;
     });
 
+    const notes = fs.readFileSync('./../Quark-electron/releaseNotes.md').toString();
+    const match = notes.match(/{(\n|.)+}/)[0];
+    let hashes = '';
+    hashes = hashes.concat(`!!! note See SHA-512 Hashes`, '\n');
+    hashes = hashes.concat(`<DropDown>`, '\n');
+    hashes = hashes.concat(`<ReleaseNotes :sha='${js.js_beautify(JSON.stringify(JSON.parse(match)))}' />`, '\n');
+    hashes = hashes.concat(`</DropDown>`, '\n');
+    hashes = hashes.concat('!!!', '\n\n');
+
+    // return;
+
 
     let str = '';
     str = str.concat(`# All Downloads`, '\n');
@@ -83,7 +95,8 @@ function updateDownloadLinks() {
     str = str.concat(`windows_main='${windowsMain}'`, '\n');
     str = str.concat(`windows_other='${JSON.stringify(windows_other_downloads)}'`, '\n');
 
-    str = str.concat('/>');
+    str = str.concat('/>', '\n');
+    str = str.concat(hashes);
 
     fs.writeFileSync('./download/README.md', str);
 }
