@@ -1,6 +1,6 @@
 <template>
-  <div>
-    <div class="content--canvas" style="min-height:300px;width:100%"></div>
+  <div style="z-index:0;">
+    <div class="content--canvas" style="max-height:300px;width:100%;overflow:hidden;"></div>
   </div>
 </template>
 
@@ -216,5 +216,12 @@ export default {
 };
 </script>
 
-<style>
+<style lang="scss">
+.content--canvas {
+  // position: relative;
+  canvas {
+    position: absolute !important;
+    z-index: -10;
+  }
+}
 </style>

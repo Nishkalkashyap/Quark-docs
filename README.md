@@ -17,7 +17,7 @@ pageClass: landing-page
 footer: MIT Licensed | Copyright © 2019-present Nishkal Kashyap
 ---
 
-<!-- <Background></Background> -->
+<Background></Background>
 <!-- # Hello -->
 
 <!-- ![fdsf](https://media.giphy.com/media/1APaqOO5JHnWKLc7Bi/giphy.gif) -->
