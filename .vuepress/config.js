@@ -77,10 +77,6 @@ module.exports = {
                 ]
             },
             {
-                text: 'Download',
-                link: '/download/'
-            },
-            {
                 text: 'More',
                 items: [{
                         text: 'FAQ',
@@ -95,6 +91,10 @@ module.exports = {
                         link: 'https://github.com/Nishkalkashyap/Quark-docs'
                     }
                 ]
+            },
+            {
+                text: 'Download',
+                link: '/download/'
             }
         ],
         sidebar: {
