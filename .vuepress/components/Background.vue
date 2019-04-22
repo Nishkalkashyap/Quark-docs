@@ -25,126 +25,134 @@ export default {
     const angle = (x1, y1, x2, y2) => atan2(y2 - y1, x2 - x1);
     const lerp = (n1, n2, speed) => (1 - speed) * n1 + speed * n2;
 
-    const pipeCount = 30;
-    const pipePropCount = 8;
-    const pipePropsLength = pipeCount * pipePropCount;
-    const turnCount = 8;
-    const turnAmount = (360 / turnCount) * TO_RAD;
-    const turnChanceRange = 58;
-    const baseSpeed = 0.5;
-    const rangeSpeed = 1;
+    const particleCount = 700;
+    const particlePropCount = 9;
+    const particlePropsLength = particleCount * particlePropCount;
     const baseTTL = 100;
-    const rangeTTL = 300;
-    const baseWidth = 2;
-    const rangeWidth = 4;
-    const baseHue = 180;
-    const rangeHue = 60;
-    const backgroundColor = "hsla(150,80%,1%,1)";
+    const rangeTTL = 500;
+    const baseSpeed = 0.1;
+    const rangeSpeed = 1;
+    const baseSize = 2;
+    const rangeSize = 10;
+    const baseHue = 10;
+    const rangeHue = 100;
+    const noiseSteps = 2;
+    const xOff = 0.0025;
+    const yOff = 0.005;
+    const zOff = 0.0005;
+    // const backgroundColor = "hsla(60,50%,3%,1)";
+    const backgroundColor = "hsl(218,100%,61%, 1)";
 
     let container;
     let canvas;
     let ctx;
     let center;
+    let gradient;
     let tick;
-    let pipeProps;
+    let particleProps;
+    let positions;
+    let velocities;
+    let lifeSpans;
+    let speeds;
+    let sizes;
+    let hues;
 
     function setup() {
       createCanvas();
       resize();
-      initPipes();
+      initParticles();
       draw();
     }
 
-    function initPipes() {
-      pipeProps = new Float32Array(pipePropsLength);
+    function initParticles() {
+      tick = 0;
+      particleProps = new Float32Array(particlePropsLength);
 
       let i;
 
-      for (i = 0; i < pipePropsLength; i += pipePropCount) {
-        initPipe(i);
+      for (i = 0; i < particlePropsLength; i += particlePropCount) {
+        initParticle(i);
       }
     }
 
-    function initPipe(i) {
-      let x, y, direction, speed, life, ttl, width, hue;
+    function initParticle(i) {
+      let theta, x, y, vx, vy, life, ttl, speed, size, hue;
 
       x = rand(canvas.a.width);
-      y = center[1];
-      direction = round(rand(1)) ? HALF_PI : TAU - HALF_PI;
-      speed = baseSpeed + rand(rangeSpeed);
+      y = rand(canvas.a.height);
+      theta = angle(x, y, center[0], center[1]);
+      vx = cos(theta) * 6;
+      vy = sin(theta) * 6;
       life = 0;
       ttl = baseTTL + rand(rangeTTL);
-      width = baseWidth + rand(rangeWidth);
+      speed = baseSpeed + rand(rangeSpeed);
+      size = baseSize + rand(rangeSize);
       hue = baseHue + rand(rangeHue);
 
-      pipeProps.set([x, y, direction, speed, life, ttl, width, hue], i);
+      particleProps.set([x, y, vx, vy, life, ttl, speed, size, hue], i);
     }
 
-    function updatePipes() {
-      tick++;
-
+    function drawParticles() {
       let i;
 
-      for (i = 0; i < pipePropsLength; i += pipePropCount) {
-        updatePipe(i);
+      for (i = 0; i < particlePropsLength; i += particlePropCount) {
+        updateParticle(i);
       }
     }
 
-    function updatePipe(i) {
+    function updateParticle(i) {
       let i2 = 1 + i,
         i3 = 2 + i,
         i4 = 3 + i,
         i5 = 4 + i,
         i6 = 5 + i,
         i7 = 6 + i,
-        i8 = 7 + i;
-      let x, y, direction, speed, life, ttl, width, hue, turnChance, turnBias;
+        i8 = 7 + i,
+        i9 = 8 + i;
+      let x, y, theta, vx, vy, life, ttl, speed, x2, y2, size, hue;
 
-      x = pipeProps[i];
-      y = pipeProps[i2];
-      direction = pipeProps[i3];
-      speed = pipeProps[i4];
-      life = pipeProps[i5];
-      ttl = pipeProps[i6];
-      width = pipeProps[i7];
-      hue = pipeProps[i8];
+      x = particleProps[i];
+      y = particleProps[i2];
+      theta = angle(x, y, center[0], center[1]) + 0.75 * HALF_PI;
+      vx = lerp(particleProps[i3], 2 * cos(theta), 0.05);
+      vy = lerp(particleProps[i4], 2 * sin(theta), 0.05);
+      life = particleProps[i5];
+      ttl = particleProps[i6];
+      speed = particleProps[i7];
+      x2 = x + vx * speed;
+      y2 = y + vy * speed;
+      size = particleProps[i8];
+      hue = particleProps[i9];
 
-      drawPipe(x, y, life, ttl, width, hue);
+      drawParticle(x, y, theta, life, ttl, size, hue);
 
       life++;
-      x += cos(direction) * speed;
-      y += sin(direction) * speed;
-      turnChance =
-        !(tick % round(rand(turnChanceRange))) &&
-        (!(round(x) % 6) || !(round(y) % 6));
-      turnBias = round(rand(1)) ? -1 : 1;
-      direction += turnChance ? turnAmount * turnBias : 0;
 
-      pipeProps[i] = x;
-      pipeProps[i2] = y;
-      pipeProps[i3] = direction;
-      pipeProps[i5] = life;
+      particleProps[i] = x2;
+      particleProps[i2] = y2;
+      particleProps[i3] = vx;
+      particleProps[i4] = vy;
+      particleProps[i5] = life;
 
-      checkBounds(x, y);
-      life > ttl && initPipe(i);
+      life > ttl && initParticle(i);
     }
 
-    function drawPipe(x, y, life, ttl, width, hue) {
+    function drawParticle(x, y, theta, life, ttl, size, hue) {
+      let xRel = x - 0.5 * size,
+        yRel = y - 0.5 * size;
+
       ctx.a.save();
-      ctx.a.strokeStyle = `hsla(${hue},75%,50%,${fadeInOut(life, ttl) *
-        0.125})`;
+      ctx.a.lineCap = "round";
+      ctx.a.lineWidth = 1;
+      // ctx.a.strokeStyle = `hsla(${hue},100%,60%,${fadeInOut(life, ttl)})`;
+      ctx.a.strokeStyle = `hsla(${hue},100%,61%,${fadeInOut(life, ttl)})`;
       ctx.a.beginPath();
-      ctx.a.arc(x, y, width, 0, TAU);
-      ctx.a.stroke();
+      ctx.a.translate(xRel, yRel);
+      ctx.a.rotate(theta);
+      ctx.a.translate(-xRel, -yRel);
+      ctx.a.strokeRect(xRel, yRel, size, size);
       ctx.a.closePath();
       ctx.a.restore();
-    }
-
-    function checkBounds(x, y) {
-      if (x > canvas.a.width) x = 0;
-      if (x < 0) x = canvas.a.width;
-      if (y > canvas.a.height) y = 0;
-      if (y < 0) y = canvas.a.height;
     }
 
     function createCanvas() {
@@ -166,7 +174,6 @@ export default {
         b: canvas.b.getContext("2d")
       };
       center = [];
-      tick = 0;
     }
 
     function resize() {
@@ -186,25 +193,37 @@ export default {
       center[1] = 0.5 * canvas.a.height;
     }
 
-    function render() {
+    function renderGlow() {
       ctx.b.save();
-      ctx.b.fillStyle = backgroundColor;
-      ctx.b.fillRect(0, 0, canvas.b.width, canvas.b.height);
-      ctx.b.restore();
-
-      ctx.b.save();
-      ctx.b.filter = "blur(12px)";
+      ctx.b.filter = "blur(8px) brightness(200%)";
+      ctx.b.globalCompositeOperation = "lighter";
       ctx.b.drawImage(canvas.a, 0, 0);
       ctx.b.restore();
 
       ctx.b.save();
+      ctx.b.filter = "blur(4px) brightness(200%)";
+      ctx.b.globalCompositeOperation = "lighter";
+      ctx.b.drawImage(canvas.a, 0, 0);
+      ctx.b.restore();
+    }
+
+    function render() {
+      ctx.b.save();
+      ctx.b.globalCompositeOperation = "lighter";
       ctx.b.drawImage(canvas.a, 0, 0);
       ctx.b.restore();
     }
 
     function draw() {
-      updatePipes();
+      tick++;
 
+      ctx.a.clearRect(0, 0, canvas.a.width, canvas.a.height);
+
+      ctx.b.fillStyle = backgroundColor;
+      ctx.b.fillRect(0, 0, canvas.a.width, canvas.a.height);
+
+      drawParticles();
+      renderGlow();
       render();
 
       window.requestAnimationFrame(draw);

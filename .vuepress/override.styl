@@ -1,5 +1,5 @@
 $accentColor = #3880ff
-$borderColor = #eaecef
+$borderColor = #edf2f6;
 $codeBgColor = #000000
 $textLightColor = #777777
 
@@ -83,6 +83,47 @@ body {
     
     table {
         border-top: 0px;
+    }
+
+    h1:hover, h2:hover, h3:hover, h4:hover, h5:hover, h6:hover {
+        a {
+            transition: 0.3s opacity;
+        }
+    }
+
+    a.nav-link:hover {
+        transition: 0.2s border-bottom;
+    }
+
+    div.dropdown-wrapper {
+        ul.nav-dropdown {
+            display: block !important;
+            max-height: 0px;
+            padding: 0px;
+            border-width: 0px;
+            transition: 0.1s all;
+            overflow: hidden;
+            box-shadow: 4px 4px 12px 4px rgba(0,0,0,0.025);
+
+            li a {
+                font-size: 14px;
+                font-weight: 100 !important;
+            }
+        }
+    }
+    div.dropdown-wrapper:hover {
+        ul.nav-dropdown {
+            max-height: 200px;
+            padding: 10px 0px;
+            border-width: 1px;
+            border-color: var(--line-rule-color);
+        }
+    }
+
+    .search-box {
+        input {
+            border-color: var(--line-rule-color);
+        }
     }
 }
 
