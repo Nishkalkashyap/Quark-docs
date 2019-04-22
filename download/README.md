@@ -1,8 +1,9 @@
 # All Downloads
-| Meta                |                            |
+| Meta                                            ||
 | ------------------- | -------------------------- |
 | Latest Version:     | 0.2.0            |
 | Release Date:       | April 22 2019,  3:52:01 PM|
+| [Release Notes](/FAQ/release-notes.html)        ||
 
 <Download
 version="0.2.0"

@@ -82,10 +82,11 @@ function updateDownloadLinks() {
 
     let str = '';
     str = str.concat(`# All Downloads`, '\n');
-    str = str.concat('| Meta                |                            |', '\n');
+    str = str.concat('| Meta                                            ||', '\n');
     str = str.concat('| ------------------- | -------------------------- |', '\n');
     str = str.concat(`| Latest Version:     | ${json.version}            |`, '\n');
-    str = str.concat(`| Release Date:       | ${monthNames[date.getMonth()]} ${date.getDate()} ${date.getFullYear()},  ${date.toLocaleTimeString()}|`, '\n\n');
+    str = str.concat(`| Release Date:       | ${monthNames[date.getMonth()]} ${date.getDate()} ${date.getFullYear()},  ${date.toLocaleTimeString()}|`, '\n');
+    str = str.concat(`| [Release Notes](/FAQ/release-notes.html)        ||`, '\n\n');
 
     str = str.concat('<Download', '\n');
     str = str.concat(`version="${json.version}"`, '\n');

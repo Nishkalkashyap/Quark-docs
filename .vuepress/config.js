@@ -18,6 +18,11 @@ module.exports = {
             href: 'https://fonts.googleapis.com/icon?family=Material+Icons',
             rel: 'stylesheet'
         }],
+        ['link', {
+            rel: 'shortcut icon',
+            type: 'image/svg',
+            href: '/images/icon-svg.svg'
+        }],
         // ['script', {
         //     src: '/assets/anime.min.js',
         //     type: 'text/javascript'
