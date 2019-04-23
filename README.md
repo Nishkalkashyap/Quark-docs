@@ -2,7 +2,7 @@
 # home: false
 home: true
 heroImage: /images/icon-svg.svg
-heroText: ( Under Active Development )
+heroText: Quark
 tagline: Platform to develope internet of things.
 actionText: Get Started →
 actionLink: /guide/intro.html
@@ -21,7 +21,4 @@ pageClass: landing-page
 footer: MIT Licensed | Copyright © 2019-present Nishkal Kashyap
 ---
 
-<!-- <Background></Background> -->
-<!-- # Hello -->
-
-<!-- ![fdsf](https://media.giphy.com/media/1APaqOO5JHnWKLc7Bi/giphy.gif) -->
+<Home />

@@ -100,7 +100,6 @@ export default {
       window.open(this.getLinkFromBinary(bin));
     },
     getExtensionFromBinary: function(bin) {
-      console.log(bin);
       if (bin.endsWith(".exe")) {
         return ".exe";
       }
