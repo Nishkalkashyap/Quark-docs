@@ -9,7 +9,7 @@
 export default {};
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 $black: #161719;
 .home {
   // width: 100vw !important;

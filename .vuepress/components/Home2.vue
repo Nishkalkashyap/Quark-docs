@@ -14,7 +14,7 @@ export default {
 };
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 $total: 300; // total particles
 $orb-size: 500px;
 $particle-size: 4px;

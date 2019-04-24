@@ -50,7 +50,7 @@ export default {
 };
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .landing-page {
   .vs-button {
     margin: 10px 0px;

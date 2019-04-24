@@ -32,7 +32,7 @@ export default {
 };
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .dropdown {
   font-family: var(--heading-font-family);
   overflow: hidden;

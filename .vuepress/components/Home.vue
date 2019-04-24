@@ -145,7 +145,7 @@ export default {
 };
 </script>
 
-<style>
+<style lang="scss" scoped>
 div.background {
   position: absolute;
   top: 0px;
