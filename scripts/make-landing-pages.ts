@@ -35,7 +35,7 @@ function updatePrimaryColor() {
 }
 
 function createReleaseNotes() {
-    const notes = fs.readFileSync('./../Quark-electron/releaseNotes.md').toString();
+    const notes = fs.readFileSync('./../Quark-electron/dev-assets/releaseNotes.md').toString();
     let str = '';
     str = str.concat('# Release Notes', '\n\n');
     str = str.concat('[[toc]]', '\n\n');
@@ -67,7 +67,7 @@ function updateDownloadLinks() {
         return bin.search(/(.zip)$/) !== -1;
     });
 
-    const notes = fs.readFileSync('./../Quark-electron/releaseNotes.md').toString();
+    const notes = fs.readFileSync('./../Quark-electron/dev-assets/releaseNotes.md').toString();
     const preText = `<!-- Quark-${json.version}-start -->`;
     const postText = `<!-- Quark-${json.version}-end -->`;
     const substr = notes.substring(notes.indexOf(preText), notes.indexOf(postText));

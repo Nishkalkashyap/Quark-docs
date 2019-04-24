@@ -56,9 +56,9 @@ export default {
 
       ctx.beginPath();
       // ctx.arc(this.x, this.y, this.r, Math.PI * 2, false);
-      ctx.moveTo(this.x, this.y + 5);
+      ctx.moveTo(this.x, this.y + 3);
       ctx.lineTo(this.x, this.y);
-      ctx.lineTo(this.x + 5, this.y + 5);
+      ctx.lineTo(this.x + 3, this.y + 3);
       ctx.fill();
       ctx.stroke();
 

@@ -21,4 +21,4 @@ pageClass: landing-page
 footer: MIT Licensed | Copyright © 2019-present Nishkal Kashyap
 ---
 
-<Home />
+<!-- <Home /> -->
