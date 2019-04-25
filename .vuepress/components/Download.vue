@@ -21,7 +21,7 @@
     </div>
 
     <div class="platform">
-      <img src="/images/linux-logo.png" style="width:100px">
+      <img src="/images/linux-logo.png" style="width:86px;height:100px;">
       <button
         class="download-button"
         @click="openExternal(linux_main)"
@@ -88,7 +88,7 @@ export default {
   },
   methods: {
     getLinkFromBinary: function(bin) {
-       if (!bin) {
+      if (!bin) {
         return;
       }
       const finalUrl = `https://quarkjs.io/download-count/?version=${
@@ -129,6 +129,7 @@ export default {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
+  font-family: var(--heading-font-family);
 }
 .platform {
   display: flex;
@@ -141,6 +142,7 @@ export default {
   }
 
   .download-button {
+    font-family: var(--heading-font-family);
     margin-top: 20px;
     position: relative;
     background-color: var(--text-color--darker);
@@ -150,6 +152,7 @@ export default {
     padding: 10px 0px;
     width: 220px;
     cursor: pointer;
+    border-radius: 2px;
 
     .download-svg {
       width: 18px;
@@ -157,7 +160,7 @@ export default {
 
     .platform-name {
       padding-left: 20px;
-      font-size: 20px;
+      font-size: 18px;
       font-weight: 500;
     }
 
