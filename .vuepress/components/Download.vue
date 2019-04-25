@@ -88,7 +88,7 @@ export default {
   },
   methods: {
     getLinkFromBinary: function(bin) {
-      if (!bin) {
+       if (!bin) {
         return;
       }
       const finalUrl = `https://quarkjs.io/download-count/?version=${
@@ -97,6 +97,9 @@ export default {
       return finalUrl;
     },
     openExternal: function(bin) {
+      if (!bin) {
+        return;
+      }
       window.open(this.getLinkFromBinary(bin));
     },
     getExtensionFromBinary: function(bin) {

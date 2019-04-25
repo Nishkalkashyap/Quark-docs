@@ -14,7 +14,6 @@
     --code-font-family: "SFMono-Regular", "Roboto Mono", Consolas, "Liberation Mono", Menlo, Courier, monospace;
 
     --font-family: system-ui, sans-serif;
-    /* --font-family: "Eina", system-ui, sans-serif; */
 
     --header-height: 56px;
     --heading-font-family: "Eina", var(--font-family);
