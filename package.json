@@ -1,10 +1,11 @@
 {
   "name": "@quark/docs",
-  "version": "0.0.1-beta",
+  "version": "0.2.2-1",
   "description": "Documentation for quark",
   "main": "index.js",
   "scripts": {
     "start": "npm run land && vuepress dev -p 80",
+    "cloud-build": "vuepress build",
     "build": "npm run land && vuepress build",
     "deploy": "firebase deploy",
     "bad": "npm run build && firebase deploy",
