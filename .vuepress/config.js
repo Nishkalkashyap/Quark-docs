@@ -1,3 +1,5 @@
+const path = require('path');
+
 module.exports = {
     title: 'Quark',
     desctiption: 'IoT Framework',
@@ -143,6 +145,9 @@ module.exports = {
                 "release-notes.md"
             ]
         }
+    },
+    configureWebpack: (config) => {
+        config.resolve.alias['@public'] = path.resolve('./.vuepress/public');
     }
     // configureWebpack: {
     //     entry: {

@@ -53,7 +53,7 @@ quark.commands.registerCommand('my.awesome.command.id', () => {
 ```
 Now the command should be available in the commands palette like so.
 
-![registered-command](/references/commands/registered-command.png)
+![registered-command](~@public/references/commands/registered-command.png)
 
 
 ### commands.executeCommand(id, [...args])
