@@ -1,4 +1,15 @@
 steps:
+# Decrypt
+- name: gcr.io/cloud-builders/gcloud
+  args:
+  - kms
+  - decrypt
+  - --ciphertext-file=.env.enc
+  - --plaintext-file=.env
+  - --location=global
+  - --keyring=cloud-build
+  - --key=cloud_build_docs-env
+
 # install
 - name: 'gcr.io/cloud-builders/npm'
   args : ['install']
@@ -9,4 +20,4 @@ steps:
 
 # deploy
 - name: 'gcr.io/$PROJECT_ID/firebase'
-  args : ['deploy']
+  args : ['deploy-ci']
