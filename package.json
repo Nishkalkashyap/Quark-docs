@@ -1,6 +1,6 @@
 {
   "name": "@quark/docs",
-  "version": "0.2.2-6",
+  "version": "0.2.2-7",
   "description": "Documentation for quark",
   "main": "index.js",
   "scripts": {
@@ -14,6 +14,7 @@
     "land": "ts-node scripts/make-landing-pages.ts",
     "open": "ts-node scripts/open-links.ts",
     "vid": "ts-node ./scripts/convert-videos.ts",
+    "ssn": "ts-node ./scripts/send-build-notification.ts",
     "loc": "bash -c 'cloc $(git ls-files)'"
   },
   "keywords": [
@@ -48,13 +49,18 @@
     "vuetify": "^1.4.4"
   },
   "dependencies": {
+    "@google-cloud/pubsub": "^0.28.1",
     "@ionic/core": "^4.1.2",
     "@ionic/vue": "0.0.2",
+    "@slack/web-api": "^5.0.1",
+    "@types/dotenv": "^6.1.1",
     "@types/mock-require": "^2.0.0",
     "@types/node-fetch": "^2.1.7",
     "@types/yamljs": "^0.2.30",
     "animejs": "^3.0.1",
+    "dotenv": "^7.0.0",
     "extract-text-webpack-plugin": "^3.0.2",
+    "firebase-functions": "^2.3.0",
     "js-beautify": "^1.9.0",
     "markdown-it-admonition": "^1.0.4",
     "markdown-it-imsize": "^2.0.1",

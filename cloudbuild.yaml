@@ -21,3 +21,7 @@ steps:
 # deploy
 - name: 'gcr.io/cloud-builders/npm'
   args : ['run','deploy-ci']
+
+# build-notofication
+- name: 'gcr.io/cloud-builders/npm'
+  args : ['run','ssn']
