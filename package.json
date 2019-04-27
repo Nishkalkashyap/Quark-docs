@@ -1,6 +1,6 @@
 {
   "name": "@quark/docs",
-  "version": "0.2.2-8",
+  "version": "0.2.3",
   "description": "Documentation for quark",
   "main": "index.js",
   "scripts": {
@@ -10,7 +10,7 @@
     "deploy": "firebase deploy",
     "deploy-ci": "firebase deploy --token \"$FIREBASE_TOKEN\"",
     "bad": "npm run build && firebase deploy",
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "npm run build",
     "land": "ts-node scripts/make-landing-pages.ts",
     "open": "ts-node scripts/open-links.ts",
     "vid": "ts-node ./scripts/convert-videos.ts",
