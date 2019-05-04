@@ -1,25 +1,25 @@
 # All Downloads
 | Meta                                            ||
 | ------------------- | -------------------------- |
-| Latest Version:     | 0.2.6            |
-| Release Date:       | May 3 2019,  11:51:21 PM|
+| Latest Version:     | 0.2.7            |
+| Release Date:       | May 4 2019,  12:51:59 AM|
 | [Release Notes](/FAQ/release-notes.html)        ||
 
 <Download
-version="0.2.6"
-linux_main='Quark-linux-x86_64-0.2.6.AppImage'
-linux_other='["Quark-linux-amd64-0.2.6.deb","Quark-linux-x64-0.2.6.tar.gz"]'
-windows_main='Quark-win-0.2.6.exe'
-windows_other='["Quark-win-x64-0.2.6.zip"]'
+version="0.2.7"
+linux_main='Quark-linux-x86_64-0.2.7.AppImage'
+linux_other='["Quark-linux-amd64-0.2.7.deb","Quark-linux-x64-0.2.7.tar.gz"]'
+windows_main='Quark-win-0.2.7.exe'
+windows_other='["Quark-win-x64-0.2.7.zip"]'
 />
 !!! note See SHA-512 Hashes
 <DropDown>
 <ReleaseNotes :sha='{
-    "Quark-linux-amd64-0.2.6.deb": "OBb+45HFUpkCEpupsQdLi9TpWOBF29OnBy5QMzUzmpfS7XDYBmy4Rch4jNAqCI2WbmQgASb7AgSOi85JLG0Ryg==",
-    "Quark-win-0.2.6.exe": "Q67ggpqrXH+9fv/OAeEVqTXwP4TFl9Lz77fF3JPrxRGMY8fkMpRQDCvF1qz74zbOXD6gP9dsUE7jLwmLoGPy5g==",
-    "Quark-win-x64-0.2.6.zip": "A05VkU3q9t9b4/30ewMLrgD5oF0IWPkQuvEMhM7Q/n19h9fvTYjqUCfO1krpeFyIUEt0sA+cglbmqjPuASyjlg==",
-    "Quark-linux-x64-0.2.6.tar.gz": "vtMHLr3OkO8Tw5aeYpAsAKCkCS5EkvHnCGjtMiyf8intoaelJGp+VqygLu90niP4cnA5DiIIBS6xiPtocEBkVg==",
-    "Quark-linux-x86_64-0.2.6.AppImage": "DpsXEt9Eh+0OWmodCOmN7+X0zhudsp34rdtIk7L89MnFBmDUom4Wa4AI86AXFGG2pL9pkTKCn7AkhBp8Br5vrA=="
+    "Quark-linux-amd64-0.2.7.deb": "RfwNsA9Ym1ui9PUmSC2vpKr92vZBWzKNwtiP6hUkvdURI+xht2tGZHCD76sOQsaTt+lQTGVD+9ia1CJ4vxx/RQ==",
+    "Quark-win-0.2.7.exe": "7l8mMK/c1szokzAQXhd0PHmUVE341iY0AHGpsopQKzc1s+Xy0RvpFYK6MwdfgGZXdYn/UZLAs3tEyB+vYQP6Fw==",
+    "Quark-win-x64-0.2.7.zip": "vOUIwouyvU5u/276YlS/3DUTTtjjUjLcRP6t60SPZvHNd9k7aMJMDO5aR9pk5fFe7XJLpiZxHZG5Tan+CpjdRA==",
+    "Quark-linux-x64-0.2.7.tar.gz": "byWTF/NA4PDp1uxX5FaSyzIeLNuhpQtl+Wy3RaJYZoHZcSxjHj1DVxqcZDmxCmn773VXWtopo2rbPL4/m1JayQ==",
+    "Quark-linux-x86_64-0.2.7.AppImage": "T+mHOfp7LNN75dxMDiNWPU7CjX+kMF0MR1RbZOakw1zS9r98gnpXYK7A0+5B9xOhlGQ+0t/sj9r/FZVm6CB8BQ=="
 }' />
 </DropDown>
 !!!
