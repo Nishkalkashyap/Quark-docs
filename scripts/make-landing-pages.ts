@@ -48,6 +48,10 @@ function updateDownloadLinks() {
         "July", "August", "September", "October", "November", "December"
     ];
 
+    if (!fs.pathExistsSync(`./../Quark-electron/release/${json.version}/latest.yml`)) {
+        return;
+    }
+
     const latest = YAML.parse(fs.readFileSync(`./../Quark-electron/release/${json.version}/latest.yml`).toString());
     const date = new Date(latest.releaseDate);
 

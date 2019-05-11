@@ -6,7 +6,8 @@ module.exports = {
     ga: 'UA-112064718-3',
     serviceWorker: true,
     head: [
-        ['script', {}, `
+        [
+            'script', {}, `
                 (function(h,o,t,j,a,r){
                     h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
                     h._hjSettings={hjid:1226062,hjsv:6};
@@ -15,16 +16,33 @@ module.exports = {
                     r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
                     a.appendChild(r);
                 })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
-        `],
-        ['link', {
-            href: 'https://fonts.googleapis.com/icon?family=Material+Icons',
-            rel: 'stylesheet'
-        }],
-        ['link', {
-            rel: 'shortcut icon',
-            type: 'image/svg',
-            href: '/images/icon-svg.svg'
-        }],
+        `
+        ],
+        [
+            'link', {
+                href: 'https://fonts.googleapis.com/icon?family=Material+Icons',
+                rel: 'stylesheet'
+            }
+        ],
+        [
+            'link', {
+                rel: 'shortcut icon',
+                type: 'image/svg',
+                href: '/images/icon-svg.svg'
+            },
+        ],
+        [
+            'script', {
+                src: '/__/firebase/6.0.2/firebase-app.js',
+                type: 'text/javascript'
+            }
+        ],
+        [
+            'script', {
+                src: '/__/firebase/init.js',
+                type: 'text/javascript'
+            }
+        ]
         // ['script', {
         //     src: '/assets/anime.min.js',
         //     type: 'text/javascript'
