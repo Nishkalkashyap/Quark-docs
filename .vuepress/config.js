@@ -42,7 +42,18 @@ module.exports = {
                 src: '/__/firebase/init.js',
                 type: 'text/javascript'
             }
-        ]
+        ],
+        [
+            'script', {
+                src: '/__/firebase/6.0.2/firebase-performance.js',
+                type: 'text/javascript'
+            }
+        ],
+        [
+            'script', {}, `
+                var perf = firebase.performance();
+        `
+        ],
         // ['script', {
         //     src: '/assets/anime.min.js',
         //     type: 'text/javascript'
