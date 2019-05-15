@@ -1,3 +1,10 @@
+---
+title : User Interface and Features
+description : ''
+author : nishkal
+tags : ['guide']
+---
+
 # User Interface and Features
 At the heart of Quark IDE is a code editor. Like many other code editors, Quark adopts a common user interface and layout of an explorer on the left showing all of the files and folders in your project, an editor on the right showing contents of the file you've opened.
 

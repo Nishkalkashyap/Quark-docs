@@ -1,3 +1,10 @@
+---
+title : Getting Started
+description : ''
+author : nishkal
+tags : ['faq']
+---
+
 # Getting Started
 Welcome to Quark. Quark is a flexible software sketchbook that helps you rapidly create functional softwares for your prototypal projects.
 

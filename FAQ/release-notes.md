@@ -1,3 +1,10 @@
+---
+title : Release Notes
+description : ''
+author : nishkal
+tags : ['faq']
+---
+
 # Release Notes
 
 [[toc]]

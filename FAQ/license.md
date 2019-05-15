@@ -1,3 +1,10 @@
+---
+title : License
+description : GNU GENERAL PUBLIC LICENSE
+author : nishkal
+tags : ['faq']
+---
+
 # License
 
 ### GNU GENERAL PUBLIC LICENSE

@@ -9,7 +9,7 @@ export function printConsoleStatus(message: string, status: 'danger' | 'success'
 }
 
 export function getFrontmatterFromPath(path: string): Frontmatter {
-    const frontmatter = fs.readFileSync(path).toString().match(/---([\s\S\n]+)---/) || [];
+    const frontmatter = fs.readFileSync(path).toString().match(/---([\s\S\n]+?)---/) || [];
     try {
         const data = YAML.parse(frontmatter[1] || '');
         return data;

@@ -28,5 +28,7 @@ async function checkFiles() {
 }
 
 function isValidFile(path: string): boolean {
-    return !!getFrontmatterFromPath(path);
+    const frontmatter = getFrontmatterFromPath(path);
+    return ((frontmatter && !!frontmatter.author) || path.endsWith('README.md'))
+    || path.match(/(style-guide|tags|devtime)/) != null
 }

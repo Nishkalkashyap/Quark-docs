@@ -1,3 +1,10 @@
+---
+title : Setting up Quark
+description : ''
+author : nishkal
+tags : ['guide']
+---
+
 # Setting up Quark
 
 Getting up and running with Quark is quick and easy. It is a small [download](/download/) so you can install in a matter of minutes and give Quark a try.
