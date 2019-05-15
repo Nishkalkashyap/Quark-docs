@@ -64,7 +64,7 @@ function createFilesInTagsFolder(data: IFrontmatterData[]) {
             str = str.concat(
                 `<MetaCard title="${file.frontmatter.title}" `,
                 `description="${file.frontmatter.description}" `,
-                `link="${file.path}" `,
+                `link="${file.path.replace('.md', '.html').replace(/[\\/]/g, '/')}" `,
                 `tags='${JSON.stringify(file.frontmatter.tags)}' />`, '\n\n');
             fs.writeFileSync(path.join(TAGS_BASE_PATH, tag + '.md'), str);
         });

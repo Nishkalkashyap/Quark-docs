@@ -1,8 +1,7 @@
 <template>
   <div class="card-container">
-    <div class="title">{{title}}</div>
+    <div class="title" @click="openLink()">{{title}}</div>
     <div class="description">{{description}}</div>
-    <div class="description">{{link}}</div>
     <div class="tags">
       <Tag v-for="tag of dtags" :name="tag" :key="tag"></Tag>
     </div>
@@ -19,9 +18,12 @@ export default {
     };
   },
   mounted: function() {
-    console.log("Mounted");
-    console.log(this.tags, typeof this.tags);
     this.dtags = JSON.parse(this.tags);
+  },
+  methods: {
+    openLink: function() {
+      this.$router.push({ path: `/${this.link}` });
+    }
   },
   components: {
     Tag
@@ -31,20 +33,29 @@ export default {
 
 <style lang="scss">
 .card-container {
-  padding: 40px;
-  background-color: var(--text-color--lighter);
-  margin: 40px 0px;
+  padding: 20px;
+  margin: 40px 20px;
   display: inline-block;
   color: var();
   border-radius: 2px;
+  box-shadow: 0px 4px 8px rgba(0, 30, 84, 0.12);
   .title {
-    font-family: var(--heading-font-family) !important;
-    font-size: 26px;
+    font-family: var(--heading-font-family);
+    margin: 10px 0px;
+    font-size: 28px;
     color: var(--text-color--dark);
   }
 
   .description {
-    font-size: 13px;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 10px 0px;
+  }
+
+  .tag-container {
+    font-size: 14px;
+    margin: 5px 5px;
+    padding: 6px 10px 6px 10px;
   }
 }
 </style>

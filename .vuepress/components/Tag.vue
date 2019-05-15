@@ -1,5 +1,9 @@
 <template>
-  <div class="tag-container" :style="{'background' : background, 'color' : color}">
+  <div
+    class="tag-container"
+    :style="{'background' : background, 'color' : color}"
+    @click="openTagPage()"
+  >
     <span>#</span>
     <span>{{name}}</span>
   </div>
@@ -22,6 +26,11 @@ export default {
     this.background = AllTags[this.name]
       ? AllTags[this.name].background
       : "var(--text-color--dark)";
+  },
+  methods: {
+    openTagPage: function() {
+      this.$router.push({ path: `/tags/${this.name}.html` });
+    }
   }
 };
 </script>

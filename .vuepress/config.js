@@ -181,7 +181,10 @@ module.exports = {
                 "license.md",
                 "release-notes.md"
             ],
-            "/tags/": [],
+            "/tags/": [
+                "javascript.md",
+                "nodejs.md"
+            ],
             "/snippets/": [
                 "cron-example-schedule.md",
                 "install-nodejs.md"
