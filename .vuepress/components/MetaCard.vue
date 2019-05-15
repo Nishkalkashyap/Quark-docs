@@ -35,6 +35,8 @@ export default {
 .card-container {
   padding: 20px;
   margin: 40px 20px;
+  min-width: 350px;
+  max-width: 600px;
   display: inline-block;
   color: var();
   border-radius: 2px;
@@ -44,6 +46,7 @@ export default {
     margin: 10px 0px;
     font-size: 28px;
     color: var(--text-color--dark);
+    cursor: pointer;
   }
 
   .description {

@@ -172,43 +172,6 @@ function createReadmeFiles(paths: string[]) {
     }
 }
 
-function updateDownloadLinkssss() {
-
-    const monthNames = ["January", "February", "March", "April", "May", "June",
-        "July", "August", "September", "October", "November", "December"
-    ];
-
-    fetch('https://storage.googleapis.com/quarkjs-auto-update/latest.yml').then(async (val) => {
-        const text = await val.text();
-        const obj = YAML.parse(text);
-        const windowsURL = obj.files[0].url;
-        const date = new Date(obj.releaseDate);
-        let file = fs.readFileSync('./download/README.md').toString();
-
-        // file = file.replace(/https:\/\/storage.+exe/g, `https://storage.googleapis.com/quarkjs-auto-update/${windowsURL}`);
-        file = file.replace(/windows.+exe/g, `windows="https://storage.googleapis.com/quarkjs-auto-update/${json.version}/${windowsURL}`);
-        file = file.replace(/__Latest.+?__/, `__Latest Version: ${obj.version}__`);
-        file = file.replace(/__Release.+?__/, `__Release Date: ${monthNames[date.getMonth()]} ${date.getDate()} ${date.getFullYear()},  ${date.toLocaleTimeString()}__`);
-        fs.writeFileSync('./download/README.md', file);
-        latestLinux();
-    }).catch((err) => {
-        console.log(err);
-    });
-
-    function latestLinux() {
-        fetch('https://storage.googleapis.com/quarkjs-auto-update/latest-linux.yml').then(async (val) => {
-            const text = await val.text();
-            const obj = YAML.parse(text);
-            const linuxURL = obj.files[0].url;
-            let file = fs.readFileSync('./download/README.md').toString();
-            file = file.replace(/linux.+AppImage/g, `linux="https://storage.googleapis.com/quarkjs-auto-update/${json.version}/${linuxURL}`);
-            fs.writeFileSync('./download/README.md', file);
-        }).catch((err) => {
-            console.log(err);
-        });
-    }
-}
-
 interface ISidebarObject {
     [name: string]: string[];
 }

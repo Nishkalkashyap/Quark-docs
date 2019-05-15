@@ -1,0 +1,8 @@
+.tags-page .content {
+    max-width: 960px;
+}
+
+.tags-page .tags-container {
+    display: flex;
+    justify-content: center;
+}

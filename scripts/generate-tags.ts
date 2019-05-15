@@ -59,14 +59,19 @@ function createFilesInTagsFolder(data: IFrontmatterData[]) {
         });
 
         let str = '';
+        str = str.concat('---', '\n', 'pageClass : tags-page', '\n', '---', '\n\n\n');
         str = str.concat(`# ${tag}`, '\n\n');
+        str = str.concat(`<Header label="${AllTags[tag].description}" />`, '\n');
+        str = str.concat('<div class="tags-container">', '\n');
         files.map((file) => {
             str = str.concat(
                 `<MetaCard title="${file.frontmatter.title}" `,
                 `description="${file.frontmatter.description}" `,
                 `link="${file.path.replace('.md', '.html').replace(/[\\/]/g, '/')}" `,
-                `tags='${JSON.stringify(file.frontmatter.tags)}' />`, '\n\n');
-            fs.writeFileSync(path.join(TAGS_BASE_PATH, tag + '.md'), str);
+                `tags='${JSON.stringify(file.frontmatter.tags)}' />`, '\n\n'
+            );
         });
+        str = str.concat('</div>', '\n');
+        fs.writeFileSync(path.join(TAGS_BASE_PATH, tag + '.md'), str);
     });
 }
