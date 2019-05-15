@@ -1,9 +1,9 @@
 import * as fs from 'fs-extra';
-import * as path from 'path';
+import * as Path from 'path';
 import * as recc from 'recursive-readdir';
-import * as YAML from 'yamljs';
 import { AllTags } from './types';
 import { themeConfig } from '../.vuepress/config';
+import { IFrontmatterData, getFrontmatterFromPath } from './util';
 var beautify = require('js-beautify').js;
 
 const sidebars = ['guide', 'references', 'structures', 'FAQ', 'tags', 'snippets'];
@@ -27,17 +27,14 @@ async function createTagsDirectory() {
     const promises = (await recc(SNIPPETS_BASE_PATH, ['README.md'])).map(async (file) => {
         frontmatterData.push({
             path: file,
-            frontmatter: getFrontmatter((await fs.readFile(file)).toString())
+            frontmatter: getFrontmatterFromPath(file)
         });
     });
     await Promise.all(promises);
     createReadmePage();
     createFilesInTagsFolder(frontmatterData);
 
-    function getFrontmatter(fileData: string): Frontmatter {
-        const frontmatter = fileData.match(/---([\s\S\n]+)---/);
-        return YAML.parse(frontmatter[1]);
-    }
+
 
     function createReadmePage() {
         let str = '';
@@ -46,7 +43,7 @@ async function createTagsDirectory() {
         Object.keys(AllTags).map((tag) => {
             str = str.concat(`<Tag name="${tag}" />`, '\n');
         });
-        fs.writeFileSync(path.join(TAGS_BASE_PATH, 'README.md'), str);
+        fs.writeFileSync(Path.join(TAGS_BASE_PATH, 'README.md'), str);
     }
 
     function createFilesInTagsFolder(data: IFrontmatterData[]) {
@@ -70,8 +67,54 @@ async function createTagsDirectory() {
                 );
             });
             str = str.concat('</div>', '\n');
-            fs.writeFileSync(path.join(TAGS_BASE_PATH, tag + '.md'), str);
+            fs.writeFileSync(Path.join(TAGS_BASE_PATH, tag + '.md'), str);
         });
+    }
+}
+
+function createReadmeFiles(paths: string[]) {
+
+    paths.map((v) => {
+        createReadmeFile(v);
+    });
+
+    function createReadmeFile(path: string) {
+        fs.readdir(`./${path}`).then((dirs) => {
+            let str = '';
+            const files = dirs.filter((dir) => { return dir != 'README.md' });
+
+            str = str.concat(capitalize(`# ${path}`), '\n\n');
+            // str = str.concat('| Objects | Description |', '\n');
+            // str = str.concat('| ----- | ----- |', '\n');
+
+            files.map((file) => {
+                const frontmatter = getFrontmatterFromPath(Path.join(path, file));
+                if (frontmatter) {
+                    str = str.concat(
+                        `<MetaCard title="${frontmatter.title}" `,
+                        `description="${frontmatter.description}" `,
+                        `link="${path.replace('.md', '.html').replace(/[\\/]/g, '/')}" `,
+                        `tags='${JSON.stringify(frontmatter.tags)}' />`, '\n\n'
+                    );
+                }
+                // const data = (fs.readFileSync(Path.join(path, file))).toString();
+                // const header = (data.match(/Header label="(.+?)"/) || [])[1];
+                // str = str.concat(`| [${capitalize(file.replace(/\.md$/, '').replace(/-/g, ' '))}](/${path}/${file}) | ${header || ''}|`, '\n');
+            });
+
+            fs.writeFileSync(`./${path}/README.md`, str);
+        }).catch((err) => {
+            console.log(err);
+        });
+
+
+        function capitalize(s: string) {
+            var splitStr = s.split(' ');
+            for (var i = 0; i < splitStr.length; i++) {
+                splitStr[i] = splitStr[i].charAt(0).toUpperCase() + splitStr[i].substring(1);
+            }
+            return splitStr.join(' ');
+        }
     }
 }
 
@@ -83,8 +126,8 @@ function updatePrimaryColor() {
     //can be rgb
     const accentColor = '#3880ff';
 
-    const overrideFilePath = path.resolve('./.vuepress/override.styl');
-    const svgFilePath = path.resolve(`./.vuepress/public/images/icon-svg.svg`);
+    const overrideFilePath = Path.resolve('./.vuepress/override.styl');
+    const svgFilePath = Path.resolve(`./.vuepress/public/images/icon-svg.svg`);
 
     let override = fs.readFileSync(overrideFilePath).toString();
     override = override.replace(/\$accentColor.+/, `$accentColor = ${accentColor}`);
@@ -117,56 +160,9 @@ function createSidebars(paths: string[]) {
     });
 }
 
-function createReadmeFiles(paths: string[]) {
-
-    paths.map((v) => {
-        createReadmeFile(v);
-    });
-
-    function createReadmeFile(path: string) {
-        fs.readdir(`./${path}`).then((dirs) => {
-            let str = '';
-            const files = dirs.filter((dir) => { return dir != 'README.md' });
-
-            str = str.concat(capitalize(`# ${path}`), '\n\n');
-            // str = str.concat('<Breadcrumbs :url="this.$page"/>', '\n\n\n');
-            str = str.concat('| Objects | Description |', '\n');
-            str = str.concat('| ----- | ----- |', '\n');
-            files.map(async (file) => {
-                // str = str.concat('* ', `[${capitalize(file.replace(/\.md$/, '').replace(/-/g, ' '))}](/${path}/${file})`, '\n');
-
-                const data = (fs.readFileSync(require('path').join(path, file))).toString();
-                const header = (data.match(/Header label="(.+?)"/) || [])[1];
-
-                str = str.concat(`| [${capitalize(file.replace(/\.md$/, '').replace(/-/g, ' '))}](/${path}/${file}) | ${header || ''}|`, '\n');
-            });
-            fs.writeFileSync(`./${path}/README.md`, str);
-        }).catch((err) => {
-            console.log(err);
-        });
 
 
-        function capitalize(s: string) {
-            var splitStr = s.split(' ');
-            for (var i = 0; i < splitStr.length; i++) {
-                splitStr[i] = splitStr[i].charAt(0).toUpperCase() + splitStr[i].substring(1);
-            }
-            return splitStr.join(' ');
-        }
-    }
-}
 
-type IFrontmatterData = {
-    path: string;
-    frontmatter: Frontmatter;
-};
-
-type Frontmatter = {
-    author: string;
-    tags: string[];
-    title: string;
-    description: string;
-};
 
 interface ISidebarObject {
     [name: string]: string[];
