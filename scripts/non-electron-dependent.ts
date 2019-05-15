@@ -9,33 +9,19 @@ var beautify = require('js-beautify').js;
 const sidebars = ['guide', 'references', 'structures', 'FAQ', 'tags', 'snippets'];
 const readmefiles = ['guide', 'references', 'structures', 'FAQ'];
 
+const SNIPPETS_BASE_PATH = './snippets';
+const TAGS_BASE_PATH = './tags';
 
 (async () => {
-    await activate().catch(console.error);
+    await activate();
     createSidebars(sidebars);
     createReadmeFiles(readmefiles);
     updatePrimaryColor();
 })().catch(console.error);
 
 
-type IFrontmatterData = {
-    path: string;
-    frontmatter: Frontmatter;
-};
-
-type Frontmatter = {
-    author: string;
-    tags: string[];
-    title: string;
-    description: string;
-};
-
-const SNIPPETS_BASE_PATH = './snippets';
-const TAGS_BASE_PATH = './tags';
-
-
 async function activate() {
-    await fs.ensureDir(TAGS_BASE_PATH);
+    fs.ensureDirSync(TAGS_BASE_PATH);
 
     const frontmatterData: IFrontmatterData[] = [];
     const promises = (await recc(SNIPPETS_BASE_PATH, ['README.md'])).map(async (file) => {
@@ -169,6 +155,18 @@ function createReadmeFiles(paths: string[]) {
         }
     }
 }
+
+type IFrontmatterData = {
+    path: string;
+    frontmatter: Frontmatter;
+};
+
+type Frontmatter = {
+    author: string;
+    tags: string[];
+    title: string;
+    description: string;
+};
 
 interface ISidebarObject {
     [name: string]: string[];
