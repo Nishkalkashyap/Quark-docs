@@ -9,10 +9,13 @@ var beautify = require('js-beautify').js;
 const sidebars = ['guide', 'references', 'structures', 'FAQ', 'tags', 'snippets'];
 const readmefiles = ['guide', 'references', 'structures', 'FAQ'];
 
-activate().catch(console.error);
-createSidebars(sidebars);
-createReadmeFiles(readmefiles);
-updatePrimaryColor();
+
+(async () => {
+    await activate().catch(console.error);
+    createSidebars(sidebars);
+    createReadmeFiles(readmefiles);
+    updatePrimaryColor();
+})().catch(console.error);
 
 
 type IFrontmatterData = {
