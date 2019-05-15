@@ -101,12 +101,12 @@ module.exports = {
                 text: 'API',
                 items: [{
                         text: 'References',
-                        // link: '/references/'
-                        link: '/references/app.html'
+                        link: '/references/'
+                        // link: '/references/app.html'
                     }, {
                         text: 'Structures',
-                        // link: '/structures/'
-                        link: '/structures/view-provider.html'
+                        link: '/structures/'
+                        // link: '/structures/view-provider.html'
                     },
                     // {
                     //     text: 'Style Guide',

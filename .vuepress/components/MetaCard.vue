@@ -37,7 +37,7 @@ export default {
   margin: 40px 20px;
   flex-grow: 1;
   min-width: 300px;
-  max-width: 600px;
+  max-width: 450px;
   display: inline-block;
   color: var();
   border-radius: 2px;
