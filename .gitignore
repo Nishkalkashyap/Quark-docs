@@ -84,3 +84,4 @@ videos/output
 # .vuepress/public/c-assets/
 dist-previous/
 tags/README.md
+snippets/README.md

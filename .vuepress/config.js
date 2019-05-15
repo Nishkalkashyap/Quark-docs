@@ -119,6 +119,14 @@ module.exports = {
                         link: '/FAQ/glossary.html'
                     },
                     {
+                        text: 'Tags',
+                        link: '/tags/'
+                    },
+                    {
+                        text: 'Snippets',
+                        link: '/snippets/'
+                    },
+                    {
                         text: 'Social',
                         link: 'https://social.quarkjs.io/'
                     },
@@ -172,6 +180,11 @@ module.exports = {
                 "glossary.md",
                 "license.md",
                 "release-notes.md"
+            ],
+            "/tags/": [],
+            "/snippets/": [
+                "cron-example-schedule.md",
+                "install-nodejs.md"
             ]
         }
     },
