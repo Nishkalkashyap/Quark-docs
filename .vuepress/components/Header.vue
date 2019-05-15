@@ -1,5 +1,5 @@
 <template>
-  <span>{{label}}</span>
+  <span>{{label || $page.frontmatter.description}}</span>
 </template>
 
 <script>

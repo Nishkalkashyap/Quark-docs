@@ -1,7 +1,12 @@
+---
+title : Commands
+description : Register globally executable commands that trigger an action on invocation.
+author : nishkal
+tags : ['api']
+---
+
 # commands
-
-<Header label="Register globally executable commands that trigger an action on invocation."/>
-
+<Header/>
 [[toc]]
 
 ### commands.registerCommand(id, handle[, thisArg, label])

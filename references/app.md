@@ -1,7 +1,12 @@
+---
+title : App
+description : Provides methods to perform lower level operations.
+author : nishkal
+tags : ['api']
+---
+
 # app
-
-<Header label="Provides methods to perform lower level operations."/>
-
+<Header/>
 [[toc]]
 
 ### app.showItemInFolder([fullPath])

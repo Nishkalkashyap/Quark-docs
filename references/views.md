@@ -1,7 +1,12 @@
+---
+title : Views
+description : Create and control views of your app.
+author : nishkal
+tags : ['api']
+---
+
 # views
-
-<Header label="Create and control views of your app."/>
-
+<Header/>
 [[toc]]
 
 ### views.createSideView()

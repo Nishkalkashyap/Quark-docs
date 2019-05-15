@@ -1,7 +1,12 @@
+---
+title : Util
+description : Utilitiy methods to quark api.
+author : nishkal
+tags : ['api']
+---
+
 # util
-
-<Header label="Utilitiy methods to quark api"/>
-
+<Header/>
 [[toc]]
 
 ### util.createContextMenu(items)

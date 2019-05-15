@@ -1,7 +1,12 @@
+---
+title : Storage
+description : Store data
+author : nishkal
+tags : ['api']
+---
+
 # storage
-
-<Header label="Store data"/>
-
+<Header/>
 [[toc]]
 
 ### inMemory
