@@ -9,10 +9,10 @@ var beautify = require('js-beautify').js;
 const sidebars = ['guide', 'references', 'structures', 'FAQ', 'tags', 'snippets'];
 const readmefiles = ['guide', 'references', 'structures', 'FAQ'];
 
+activate().catch(console.error);
 createSidebars(sidebars);
 createReadmeFiles(readmefiles);
 updatePrimaryColor();
-activate().catch(console.error);
 
 
 type IFrontmatterData = {
@@ -32,7 +32,7 @@ const TAGS_BASE_PATH = './tags';
 
 
 async function activate() {
-    await fs.ensureDir('./tags');
+    await fs.ensureDir(TAGS_BASE_PATH);
 
     const frontmatterData: IFrontmatterData[] = [];
     const promises = (await recc(SNIPPETS_BASE_PATH, ['README.md'])).map(async (file) => {
