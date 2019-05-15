@@ -1,7 +1,5 @@
 ---
-{
-    view : 'tabsview'
-}
+view : 'tabsview'
 ---
 
 # TabsviewController

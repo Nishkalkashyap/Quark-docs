@@ -1,7 +1,5 @@
 ---
-{
-    view : 'bottomview'
-}
+view : 'bottomview'
 ---
 
 # BottomviewController

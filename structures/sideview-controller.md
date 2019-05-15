@@ -1,7 +1,5 @@
 ---
-{
-    view : 'sideview'
-}
+view : 'sideview'
 ---
 
 # SideviewController
