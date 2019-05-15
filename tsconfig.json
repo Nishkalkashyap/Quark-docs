@@ -24,7 +24,8 @@
       ],
       "strict": false,
       "skipLibCheck": true,
-      "allowJs": true
+      "allowJs": true,
+      "strictNullChecks": false
     },
     "include": [
       "./"
