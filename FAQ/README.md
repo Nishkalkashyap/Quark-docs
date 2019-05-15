@@ -1,7 +1,12 @@
+---
+pageClass : tags-page
+sidebar : false
+---
+
 # FAQ
 
-| Objects | Description |
-| ----- | ----- |
-| [Glossary](/FAQ/glossary.md) | A list of related terms used throughout the documentation.|
-| [License](/FAQ/license.md) | |
-| [Release Notes](/FAQ/release-notes.md) | |
+<div class="tags-container">
+
+<MetaCard title="Glossary" description="A list of related terms used throughout the documentation." link="FAQ" tags='["faq"]' />
+
+</div>

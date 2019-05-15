@@ -1,19 +1,16 @@
+---
+pageClass : tags-page
+sidebar : false
+---
+
 # Structures
 
-| Objects | Description |
-| ----- | ----- |
-| [ICommand](/structures/ICommand.md) | |
-| [IKeyBindingRegister](/structures/IKeyBindingRegister.md) | |
-| [MemoryStore](/structures/MemoryStore.md) | |
-| [PersistantStore](/structures/PersistantStore.md) | |
-| [Bottomview Controller](/structures/bottomview-controller.md) | |
-| [Button Field](/structures/button-field.md) | |
-| [Context Menu Ref](/structures/context-menu-ref.md) | |
-| [Icon](/structures/icon.md) | |
-| [Input Field](/structures/input-field.md) | |
-| [Menu Item](/structures/menu-item.md) | |
-| [Menu Ref](/structures/menu-ref.md) | |
-| [Select Field](/structures/select-field.md) | |
-| [Sideview Controller](/structures/sideview-controller.md) | |
-| [Tabsview Controller](/structures/tabsview-controller.md) | |
-| [View Provider](/structures/view-provider.md) | |
+<div class="tags-container">
+
+<MetaCard title="undefined" description="undefined" link="structures" tags='undefined' />
+
+<MetaCard title="undefined" description="undefined" link="structures" tags='undefined' />
+
+<MetaCard title="undefined" description="undefined" link="structures" tags='undefined' />
+
+</div>

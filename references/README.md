@@ -1,4 +1,11 @@
+---
+pageClass : tags-page
+sidebar : false
+---
+
 # References
+
+<div class="tags-container">
 
 <MetaCard title="App" description="Provides methods to perform lower level operations." link="references" tags='["api"]' />
 
@@ -16,3 +23,4 @@
 
 <MetaCard title="Window" description="Controls for window state of your app." link="references" tags='["api"]' />
 
+</div>

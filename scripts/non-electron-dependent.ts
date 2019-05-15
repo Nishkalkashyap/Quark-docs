@@ -34,8 +34,6 @@ async function createTagsDirectory() {
     createReadmePage();
     createFilesInTagsFolder(frontmatterData);
 
-
-
     function createReadmePage() {
         let str = '';
         str = str.concat('# Tags', '\n\n');
@@ -54,10 +52,10 @@ async function createTagsDirectory() {
             });
 
             let str = '';
-            str = str.concat('---', '\n', 'pageClass : tags-page', '\n', '---', '\n\n\n');
+            str = str.concat('---', '\n', 'pageClass : tags-page', '\n', 'sidebar : false', '\n', '---', '\n\n');
             str = str.concat(`# ${tag}`, '\n\n');
-            str = str.concat(`<Header label="${AllTags[tag].description}" />`, '\n');
-            str = str.concat('<div class="tags-container">', '\n');
+            str = str.concat(`<Header label="${AllTags[tag].description}" />`, '\n\n');
+            str = str.concat('<div class="tags-container">', '\n\n');
             files.map((file) => {
                 str = str.concat(
                     `<MetaCard title="${file.frontmatter.title}" `,
@@ -80,12 +78,12 @@ function createReadmeFiles(paths: string[]) {
 
     function createReadmeFile(path: string) {
         fs.readdir(`./${path}`).then((dirs) => {
-            let str = '';
             const files = dirs.filter((dir) => { return dir != 'README.md' });
 
+            let str = '';
+            str = str.concat('---', '\n', 'pageClass : tags-page', '\n', 'sidebar : false', '\n', '---', '\n\n');
             str = str.concat(capitalize(`# ${path}`), '\n\n');
-            // str = str.concat('| Objects | Description |', '\n');
-            // str = str.concat('| ----- | ----- |', '\n');
+            str = str.concat('<div class="tags-container">', '\n\n');
 
             files.map((file) => {
                 const frontmatter = getFrontmatterFromPath(Path.join(path, file));
@@ -97,10 +95,8 @@ function createReadmeFiles(paths: string[]) {
                         `tags='${JSON.stringify(frontmatter.tags)}' />`, '\n\n'
                     );
                 }
-                // const data = (fs.readFileSync(Path.join(path, file))).toString();
-                // const header = (data.match(/Header label="(.+?)"/) || [])[1];
-                // str = str.concat(`| [${capitalize(file.replace(/\.md$/, '').replace(/-/g, ' '))}](/${path}/${file}) | ${header || ''}|`, '\n');
             });
+            str = str.concat('</div>', '\n');
 
             fs.writeFileSync(`./${path}/README.md`, str);
         }).catch((err) => {

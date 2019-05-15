@@ -35,7 +35,8 @@ export default {
 .card-container {
   padding: 20px;
   margin: 40px 20px;
-  min-width: 350px;
+  flex-grow: 1;
+  min-width: 300px;
   max-width: 600px;
   display: inline-block;
   color: var();
