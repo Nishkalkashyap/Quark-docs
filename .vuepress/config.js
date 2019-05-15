@@ -177,6 +177,7 @@ module.exports = {
     },
     configureWebpack: (config) => {
         config.resolve.alias['@public'] = path.resolve('./.vuepress/public');
+        config.resolve.alias['@scripts'] = path.resolve('./scripts');
     }
     // configureWebpack: {
     //     entry: {
