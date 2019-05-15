@@ -1,6 +1,5 @@
 import * as fs from 'fs-extra';
 import * as path from 'path';
-const paths = ['guide', 'references', 'structures', 'FAQ'];
 var beautify = require('js-beautify').js;
 import fetch from 'node-fetch';
 import * as YAML from 'yamljs';
@@ -8,10 +7,12 @@ import { themeConfig } from './../.vuepress/config';
 import * as js from 'js-beautify';
 
 const json = require('./../../Quark-electron/package.json');
+const sidebars = ['guide', 'references', 'structures', 'FAQ', 'tags', 'snippets'];
+const readmefiles = ['guide', 'references', 'structures', 'FAQ'];
 
 createReleaseNotes();
-createSidebars(paths);
-createReadmeFiles(paths);
+createSidebars(sidebars);
+createReadmeFiles(readmefiles);
 updateDownloadLinks();
 updatePrimaryColor();
 

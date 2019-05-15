@@ -37,6 +37,7 @@ export default {
   margin: 10px 10px;
   box-shadow: 4px 4px 12px 4px rgba(0, 0, 0, 0);
   transition: 0.2s box-shadow;
+  line-height: 70px;
 }
 
 .tag-container:hover {
