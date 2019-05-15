@@ -52,9 +52,9 @@ async function createTagsDirectory() {
             });
 
             let str = '';
-            str = str.concat('---', '\n', 'pageClass : tags-page', '\n', 'sidebar : false', '\n', '---', '\n\n');
+            str = str.concat('---', '\n', 'pageClass : sidebar-metacard-container', '\n', `description : ${AllTags[tag].description}`, '\n', '---', '\n\n');
             str = str.concat(`# ${tag}`, '\n\n');
-            str = str.concat(`<Header label="${AllTags[tag].description}" />`, '\n\n');
+            str = str.concat(`<Header/>`, '\n\n');
             str = str.concat('<div class="tags-container">', '\n\n');
             files.map((file) => {
                 str = str.concat(
@@ -81,7 +81,7 @@ function createReadmeFiles(paths: string[]) {
             const files = dirs.filter((dir) => { return dir != 'README.md' });
 
             let str = '';
-            str = str.concat('---', '\n', 'pageClass : tags-page', '\n', 'sidebar : false', '\n', '---', '\n\n');
+            str = str.concat('---', '\n', 'pageClass : no-sidebar-metacard-container', '\n', 'sidebar : false', '\n', '---', '\n\n');
             str = str.concat(capitalize(`# ${path}`), '\n\n');
             str = str.concat('<div class="tags-container">', '\n\n');
 
