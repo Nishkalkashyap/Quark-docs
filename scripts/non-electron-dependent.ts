@@ -7,20 +7,20 @@ import { themeConfig } from '../.vuepress/config';
 var beautify = require('js-beautify').js;
 
 const sidebars = ['guide', 'references', 'structures', 'FAQ', 'tags', 'snippets'];
-const readmefiles = ['guide', 'references', 'structures', 'FAQ'];
+const readmefiles = ['guide', 'references', 'structures', 'FAQ', 'snippets'];
 
 const SNIPPETS_BASE_PATH = './snippets';
 const TAGS_BASE_PATH = './tags';
 
 (async () => {
-    await activate();
+    await createTagsDirectory();
     createSidebars(sidebars);
     createReadmeFiles(readmefiles);
     updatePrimaryColor();
 })().catch(console.error);
 
 
-async function activate() {
+async function createTagsDirectory() {
     fs.ensureDirSync(TAGS_BASE_PATH);
 
     const frontmatterData: IFrontmatterData[] = [];
@@ -31,7 +31,7 @@ async function activate() {
         });
     });
     await Promise.all(promises);
-    createTagsPage();
+    createReadmePage();
     createFilesInTagsFolder(frontmatterData);
 
     function getFrontmatter(fileData: string): Frontmatter {
@@ -39,7 +39,7 @@ async function activate() {
         return YAML.parse(frontmatter[1]);
     }
 
-    function createTagsPage() {
+    function createReadmePage() {
         let str = '';
         str = str.concat('# Tags', '\n\n');
 
@@ -48,33 +48,33 @@ async function activate() {
         });
         fs.writeFileSync(path.join(TAGS_BASE_PATH, 'README.md'), str);
     }
+
+    function createFilesInTagsFolder(data: IFrontmatterData[]) {
+
+        Object.keys(AllTags).map((tag) => {
+            const files = data.filter((d) => {
+                return d.frontmatter.tags.includes(tag);
+            });
+
+            let str = '';
+            str = str.concat('---', '\n', 'pageClass : tags-page', '\n', '---', '\n\n\n');
+            str = str.concat(`# ${tag}`, '\n\n');
+            str = str.concat(`<Header label="${AllTags[tag].description}" />`, '\n');
+            str = str.concat('<div class="tags-container">', '\n');
+            files.map((file) => {
+                str = str.concat(
+                    `<MetaCard title="${file.frontmatter.title}" `,
+                    `description="${file.frontmatter.description}" `,
+                    `link="${file.path.replace('.md', '.html').replace(/[\\/]/g, '/')}" `,
+                    `tags='${JSON.stringify(file.frontmatter.tags)}' />`, '\n\n'
+                );
+            });
+            str = str.concat('</div>', '\n');
+            fs.writeFileSync(path.join(TAGS_BASE_PATH, tag + '.md'), str);
+        });
+    }
 }
 
-
-function createFilesInTagsFolder(data: IFrontmatterData[]) {
-
-    Object.keys(AllTags).map((tag) => {
-        const files = data.filter((d) => {
-            return d.frontmatter.tags.includes(tag);
-        });
-
-        let str = '';
-        str = str.concat('---', '\n', 'pageClass : tags-page', '\n', '---', '\n\n\n');
-        str = str.concat(`# ${tag}`, '\n\n');
-        str = str.concat(`<Header label="${AllTags[tag].description}" />`, '\n');
-        str = str.concat('<div class="tags-container">', '\n');
-        files.map((file) => {
-            str = str.concat(
-                `<MetaCard title="${file.frontmatter.title}" `,
-                `description="${file.frontmatter.description}" `,
-                `link="${file.path.replace('.md', '.html').replace(/[\\/]/g, '/')}" `,
-                `tags='${JSON.stringify(file.frontmatter.tags)}' />`, '\n\n'
-            );
-        });
-        str = str.concat('</div>', '\n');
-        fs.writeFileSync(path.join(TAGS_BASE_PATH, tag + '.md'), str);
-    });
-}
 
 function updatePrimaryColor() {
     //has to be hex code
