@@ -1,4 +1,8 @@
 ---
+title : Tabsview
+description : ''
+author : nishkal
+tags : ['structures', 'api']
 view : 'tabsview'
 ---
 

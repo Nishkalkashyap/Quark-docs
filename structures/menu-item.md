@@ -1,3 +1,10 @@
+---
+title : MenuItem
+description : ''
+author : nishkal
+tags : ['structures', 'api']
+---
+
 # MenuItem
 
 [[toc]]

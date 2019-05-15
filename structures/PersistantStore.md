@@ -1,3 +1,10 @@
+---
+title : PersistantStore
+description : ''
+author : nishkal
+tags : ['structures', 'api']
+---
+
 # PersistantStore
 
 [[toc]]

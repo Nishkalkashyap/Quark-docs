@@ -1,3 +1,10 @@
+---
+title : IKeyBindingRegister
+description : ''
+author : nishkal
+tags : ['structures', 'api']
+---
+
 # IKeyBindingRegister
 
 [[toc]]

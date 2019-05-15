@@ -1,3 +1,10 @@
+---
+title : ICommand
+description : ''
+author : nishkal
+tags : ['structures', 'api']
+---
+
 # ICommand
 
 [[toc]]
