@@ -4,8 +4,7 @@
     :style="{'background' : background, 'color' : color}"
     @click="openTagPage()"
   >
-    <span>#</span>
-    <span>{{name}}</span>
+    <span>#{{name}}</span>
   </div>
 </template>
 
@@ -47,6 +46,7 @@ export default {
   box-shadow: 4px 4px 12px 4px rgba(0, 0, 0, 0);
   transition: 0.2s box-shadow;
   line-height: 70px;
+  word-break: keep-all;
 }
 
 .tag-container:hover {

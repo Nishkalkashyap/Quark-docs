@@ -4,6 +4,7 @@ import * as recc from 'recursive-readdir';
 import { AllTags } from './types';
 import { themeConfig } from '../.vuepress/config';
 import { IFrontmatterData, getFrontmatterFromPath } from './util';
+import { reccursiveIgnoreFunction, isValidFile } from './check-files';
 var beautify = require('js-beautify').js;
 
 const sidebars = ['guide', 'references', 'structures', 'FAQ', 'tags', 'snippets'];
@@ -24,31 +25,30 @@ async function createTagsDirectory() {
     fs.ensureDirSync(TAGS_BASE_PATH);
 
     const frontmatterData: IFrontmatterData[] = [];
-    const promises = (await recc(SNIPPETS_BASE_PATH, ['README.md'])).map(async (file) => {
+    (await recc(Path.join('./'), ['README.md', reccursiveIgnoreFunction])).map((file) => {
         frontmatterData.push({
             path: file,
             frontmatter: getFrontmatterFromPath(file)
         });
     });
-    await Promise.all(promises);
-    createReadmePage();
     createFilesInTagsFolder(frontmatterData);
+    createReadmePage();
 
     function createReadmePage() {
-        let str = '';
-        str = str.concat('# Tags', '\n\n');
-
+        let readmeData = '';
+        readmeData = readmeData.concat('# Tags', '\n\n');
         Object.keys(AllTags).map((tag) => {
-            str = str.concat(`<Tag name="${tag}" />`, '\n');
+            readmeData = readmeData.concat(`<Tag name="${tag}" />`, '\n');
         });
-        fs.writeFileSync(Path.join(TAGS_BASE_PATH, 'README.md'), str);
+        fs.writeFileSync(Path.join(TAGS_BASE_PATH, 'README.md'), readmeData);
     }
 
     function createFilesInTagsFolder(data: IFrontmatterData[]) {
-
         Object.keys(AllTags).map((tag) => {
             const files = data.filter((d) => {
-                return d.frontmatter.tags.includes(tag);
+                if (d.frontmatter) {
+                    return d.frontmatter.tags.includes(tag);
+                }
             });
 
             let str = '';
@@ -118,9 +118,17 @@ function createReadmeFiles(paths: string[]) {
 function updatePrimaryColor() {
     //has to be hex code
     const iconColor = '#020814';
+    // const iconColor = '#10dc60';
 
     //can be rgb
-    const accentColor = '#3880ff';
+    // const accentColor = '#3880ff';//blue
+    // const accentColor = '#10dc60';//green
+    // const accentColor = '#ffce00';//yello
+    // const accentColor = '#f04141';//red
+    // const accentColor = '#09c372';//fireship green
+    // const accentColor = '#fa7c3b';//fireship orange
+    // const accentColor = '#020814';//black
+    const accentColor = '#5851ff';//stenciljs purple
 
     const overrideFilePath = Path.resolve('./.vuepress/override.styl');
     const svgFilePath = Path.resolve(`./.vuepress/public/images/icon-svg.svg`);

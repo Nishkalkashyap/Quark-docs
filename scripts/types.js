@@ -18,5 +18,25 @@ export const AllTags = {
         color: 'var(--ion-color-secondary)',
         background: 'var(--text-color--dark)',
         description: `Arduino is an open-source hardware and software company, project and user community that designs and manufactures single-board microcontrollers.`
+    },
+    structures: {
+        color: 'var(--ion-color-secondary)',
+        background: 'var(--text-color--dark)',
+        description: `Arduino is an open-source hardware and software company, project and user community that designs and manufactures single-board microcontrollers.`
+    },
+    api: {
+        color: 'var(--ion-color-secondary)',
+        background: 'var(--text-color--dark)',
+        description: `Arduino is an open-source hardware and software company, project and user community that designs and manufactures single-board microcontrollers.`
+    },
+    guide: {
+        color: 'var(--ion-color-secondary)',
+        background: 'var(--text-color--dark)',
+        description: `Arduino is an open-source hardware and software company, project and user community that designs and manufactures single-board microcontrollers.`
+    },
+    faq: {
+        color: 'var(--ion-color-secondary)',
+        background: 'var(--text-color--dark)',
+        description: `Arduino is an open-source hardware and software company, project and user community that designs and manufactures single-board microcontrollers.`
     }
 };

@@ -180,7 +180,8 @@ export default {
   }
 
   .download-enabled:hover {
-    background-color: var(--ion-color-primary-tint);
+    // background-color: var(--ion-color-primary-tint);
+    box-shadow: 4px 4px 12px 4px rgba(0, 0, 0, 0.15);
   }
 
   .other-downloads-heading {

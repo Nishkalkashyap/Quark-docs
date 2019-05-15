@@ -184,6 +184,10 @@ module.exports = {
                 "release-notes.md"
             ],
             "/tags/": [
+                "api.md",
+                "faq.md",
+                "guide.md",
+                "structures.md",
                 "arduino.md",
                 "typescript.md",
                 "javascript.md",

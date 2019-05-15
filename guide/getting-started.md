@@ -2,7 +2,7 @@
 title : Getting Started
 description : ''
 author : nishkal
-tags : ['faq']
+tags : ['guide']
 ---
 
 # Getting Started
