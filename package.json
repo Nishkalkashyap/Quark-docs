@@ -5,10 +5,10 @@
   "main": "index.js",
   "scripts": {
     "pre": "npm run tags && npm run land",
-    "land": "ts-node scripts/make-landing-pages.ts",
-    "tags": "ts-node scripts/generate-tags.ts",
+    "land": "ts-node scripts/electron-dependent.ts",
+    "tags": "ts-node scripts/non-electron-dependent.ts",
     "start": "npm run pre && vuepress dev -p 80",
-    "cloud-build": "vuepress build",
+    "cloud-build": "npm run tags && vuepress build",
     "build": "npm run pre && vuepress build",
     "deploy": "firebase deploy",
     "deploy-ci": "firebase deploy --token \"$FIREBASE_TOKEN\"",

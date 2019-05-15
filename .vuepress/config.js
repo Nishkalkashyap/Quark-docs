@@ -182,6 +182,8 @@ module.exports = {
                 "release-notes.md"
             ],
             "/tags/": [
+                "arduino.md",
+                "typescript.md",
                 "javascript.md",
                 "nodejs.md"
             ],
