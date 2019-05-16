@@ -37,16 +37,18 @@ async function createTagsDirectory() {
     function createReadmePage() {
         let readmeData = '';
         readmeData = readmeData.concat('# Tags', '\n\n');
+        readmeData = readmeData.concat('<div class="tags-container">', '\n\n');
         Object.keys(AllTags).map((tag) => {
             readmeData = readmeData.concat(`<Tag name="${tag}" />`, '\n');
         });
+        readmeData = readmeData.concat(`</div>`);
         fs.writeFileSync(Path.join(TAGS_BASE_PATH, 'README.md'), readmeData);
     }
 
     function createFilesInTagsFolder(data: IFrontmatterData[]) {
         Object.keys(AllTags).map((tag) => {
             const files = data.filter((d) => {
-                if (d.frontmatter) {
+                if (d.frontmatter && d.frontmatter.tags) {
                     return d.frontmatter.tags.includes(tag);
                 }
             });
@@ -121,14 +123,14 @@ function updatePrimaryColor() {
     // const iconColor = '#10dc60';
 
     //can be rgb
-    // const accentColor = '#3880ff';//blue
+    const accentColor = '#3880ff';//blue
     // const accentColor = '#10dc60';//green
     // const accentColor = '#ffce00';//yello
     // const accentColor = '#f04141';//red
     // const accentColor = '#09c372';//fireship green
     // const accentColor = '#fa7c3b';//fireship orange
     // const accentColor = '#020814';//black
-    const accentColor = '#5851ff';//stenciljs purple
+    // const accentColor = '#5851ff';//stenciljs purple
 
     const overrideFilePath = Path.resolve('./.vuepress/override.styl');
     const svgFilePath = Path.resolve(`./.vuepress/public/images/icon-svg.svg`);

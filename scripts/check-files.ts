@@ -48,13 +48,5 @@ export function isValidFile(path: string): boolean {
     }
 
     const check3 = frontmatter.tags.every((val) => { return AllTags[val] });
-
     return check3;
-
-
-    // const check2 = frontmatter.tags && frontmatter.tags.every((tag) => { return !!AllTags[tag] });
-
-    // if (!check2) {
-    //     return check2;
-    // }
 }

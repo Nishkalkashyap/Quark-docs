@@ -1,9 +1,11 @@
 <template>
-  <div class="card-container">
-    <div class="title" @click="openLink()">{{title}}</div>
-    <div class="description">{{description}}</div>
-    <div class="tags">
-      <Tag v-for="tag of dtags" :name="tag" :key="tag"></Tag>
+  <div>
+    <div class="card-container">
+      <div class="title" @click="openLink()">{{title}}</div>
+      <div class="description">{{description}}</div>
+      <div class="tags">
+        <Tag v-for="tag of dtags" :name="tag" :key="tag"></Tag>
+      </div>
     </div>
   </div>
 </template>
@@ -31,7 +33,7 @@ export default {
 };
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .card-container {
   padding: 20px;
   margin: 40px 20px;
@@ -41,7 +43,8 @@ export default {
   display: inline-block;
   color: var();
   border-radius: 2px;
-  box-shadow: 0px 0.175em 0.5em rgba(2, 8, 20, 0.1), 0px 0.085em 0.175em rgba(2, 8, 20, 0.08);
+  box-shadow: 0px 0.175em 0.5em rgba(2, 8, 20, 0.1),
+    0px 0.085em 0.175em rgba(2, 8, 20, 0.08);
   transition: all 250ms;
   .title {
     font-family: var(--heading-font-family);
@@ -65,6 +68,7 @@ export default {
 }
 .card-container:hover {
   transform: translateY(-2px);
-  box-shadow: 0 0.35em 1.175em rgba(2, 8, 20, 0.1), 0 0.175em 0.5em rgba(2, 8, 20, 0.08);
+  box-shadow: 0 0.35em 1.175em rgba(2, 8, 20, 0.1),
+    0 0.175em 0.5em rgba(2, 8, 20, 0.08);
 }
 </style>
