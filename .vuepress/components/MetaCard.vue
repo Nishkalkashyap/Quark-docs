@@ -1,6 +1,7 @@
 <template>
   <div>
     <div class="card-container">
+      <slot></slot>
       <div class="title" @click="openLink()">{{title}}</div>
       <div class="description">{{description}}</div>
       <div class="tags">
@@ -13,7 +14,7 @@
 <script>
 import Tag from "./Tag.vue";
 export default {
-  props: ["title", "description", "tags", "link"],
+  props: ["title", "description", "tags", "link", "cover"],
   data: () => {
     return {
       dtags: []
@@ -46,6 +47,10 @@ export default {
   box-shadow: 0px 0.175em 0.5em rgba(2, 8, 20, 0.1),
     0px 0.085em 0.175em rgba(2, 8, 20, 0.08);
   transition: all 250ms;
+
+  img {
+    cursor: pointer;
+  }
   .title {
     font-family: var(--heading-font-family);
     margin: 10px 0px;

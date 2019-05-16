@@ -28,4 +28,5 @@ export type Frontmatter = {
     tags: string[];
     title: string;
     description: string;
+    cover : string;
 };

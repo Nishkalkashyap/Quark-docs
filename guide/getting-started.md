@@ -3,6 +3,7 @@ title : Getting Started
 description : ''
 author : nishkal
 tags : ['guide']
+cover : /g-images/guide/getting-started.png
 ---
 
 # Getting Started

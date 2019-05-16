@@ -15,7 +15,7 @@ export const AllTags = {
         description: `Node.js is an open-source, cross-platform JavaScript run-time environment that executes JavaScript code outside of a browser.`
     },
     arduino: {
-        color: 'var(--ion-color-secondary)',
+        color: 'var(--accent-color)',
         background: 'var(--text-color--dark)',
         description: `Arduino is an open-source hardware and software company, project and user community that designs and manufactures single-board microcontrollers.`
     },
@@ -23,22 +23,22 @@ export const AllTags = {
 
 
     structures: {
-        color: 'var(--ion-color-secondary)',
+        color: 'var(--accent-color)',
         background: 'var(--text-color--dark)',
         description: `Arduino is an open-source hardware and software company, project and user community that designs and manufactures single-board microcontrollers.`
     },
     api: {
-        color: 'var(--ion-color-secondary)',
+        color: 'var(--accent-color)',
         background: 'var(--text-color--dark)',
         description: `Arduino is an open-source hardware and software company, project and user community that designs and manufactures single-board microcontrollers.`
     },
     guide: {
-        color: 'var(--ion-color-secondary)',
+        color: 'var(--accent-color)',
         background: 'var(--text-color--dark)',
         description: `Arduino is an open-source hardware and software company, project and user community that designs and manufactures single-board microcontrollers.`
     },
     faq: {
-        color: 'var(--ion-color-secondary)',
+        color: 'var(--accent-color)',
         background: 'var(--text-color--dark)',
         description: `Arduino is an open-source hardware and software company, project and user community that designs and manufactures single-board microcontrollers.`
     }

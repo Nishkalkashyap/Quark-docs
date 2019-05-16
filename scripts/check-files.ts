@@ -36,7 +36,7 @@ async function checkFiles() {
 }
 
 export function isValidFile(path: string): boolean {
-    const check1 = path.endsWith('README.md') || path.match(/(style-guide|tags|devtime)/) != null;
+    const check1 = path.endsWith('README.md') || path.match(/(style-guide|tags|devtime|release-notes)/) != null;
     if (check1) {
         return check1;
     }

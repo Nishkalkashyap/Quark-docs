@@ -4,7 +4,7 @@ import * as recc from 'recursive-readdir';
 import { AllTags } from './types';
 import { themeConfig } from '../.vuepress/config';
 import { IFrontmatterData, getFrontmatterFromPath } from './util';
-import { reccursiveIgnoreFunction, isValidFile } from './check-files';
+import { reccursiveIgnoreFunction } from './check-files';
 var beautify = require('js-beautify').js;
 
 const sidebars = ['guide', 'references', 'structures', 'FAQ', 'tags', 'snippets'];
@@ -63,7 +63,9 @@ async function createTagsDirectory() {
                     `<MetaCard title="${file.frontmatter.title}" `,
                     `description="${file.frontmatter.description}" `,
                     `link="${file.path.replace('.md', '.html').replace(/[\\/]/g, '/')}" `,
-                    `tags='${JSON.stringify(file.frontmatter.tags)}' />`, '\n\n'
+                    `tags='${JSON.stringify(file.frontmatter.tags)}'>`,
+                    file.frontmatter.cover ? `<img src="${file.frontmatter.cover}"> ` : '',
+                    '</MetaCard>', '\n\n'
                 );
             });
             str = str.concat('</div>', '\n');
@@ -94,7 +96,9 @@ function createReadmeFiles(paths: string[]) {
                         `<MetaCard title="${frontmatter.title}" `,
                         `description="${frontmatter.description}" `,
                         `link="${Path.join(path, file).replace('.md', '.html').replace(/[\\/]/g, '/')}" `,
-                        `tags='${JSON.stringify(frontmatter.tags)}' />`, '\n\n'
+                        `tags='${JSON.stringify(frontmatter.tags)}'>`,
+                        frontmatter.cover ? `<img src="${frontmatter.cover}"> ` : '',
+                        '</MetaCard>', '\n\n'
                     );
                 }
             });
