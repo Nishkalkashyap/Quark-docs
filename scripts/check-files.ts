@@ -50,10 +50,10 @@ export function isValidFile(path: string): { isValid: boolean, errMsg: string } 
         return { isValid: check2, errMsg: 'Frontmatter required member missing.' };
     }
 
-    const check3 = frontmatter.cover ? fs.existsSync(Path.join(GIMAGES_OUT, frontmatter.cover)) : true;
-    if (!check3) {
-        return { isValid: check3, errMsg: `Cover image path does not exists. ${(Path.join(GIMAGES_OUT, frontmatter.cover))}` };
-    }
+    // const check3 = frontmatter.cover ? fs.existsSync(Path.join(GIMAGES_OUT, frontmatter.cover)) : true;
+    // if (!check3) {
+    //     return { isValid: check3, errMsg: `Cover image path does not exists. ${(Path.join(GIMAGES_OUT, frontmatter.cover))}` };
+    // }
 
     const check4 = frontmatter.tags.every((val) => { return AllTags[val] });
     return { isValid: check4, errMsg: 'Tags match.' };
