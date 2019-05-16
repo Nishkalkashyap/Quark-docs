@@ -12,6 +12,7 @@
     "deploy-ci": "firebase deploy --token \"$FIREBASE_TOKEN\"",
     "bad": "npm run build && firebase deploy",
     "test": "npm run build",
+    "check": "ts-node ./scripts/check-files.ts",
     "open": "ts-node scripts/open-links.ts",
     "img": "ts-node scripts/convert-images.ts",
     "vid": "ts-node ./scripts/convert-videos.ts",
