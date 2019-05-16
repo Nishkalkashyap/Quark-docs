@@ -98,6 +98,10 @@ module.exports = {
                 link: '/guide/intro.md'
             },
             {
+                text: 'Tags',
+                link: '/tags/'
+            },
+            {
                 text: 'API',
                 items: [{
                         text: 'References',
@@ -107,7 +111,7 @@ module.exports = {
                         text: 'Structures',
                         link: '/structures/'
                         // link: '/structures/view-provider.html'
-                    },
+                    }
                     // {
                     //     text: 'Style Guide',
                     //     link: '/guide/intro.html'
@@ -119,10 +123,6 @@ module.exports = {
                 items: [{
                         text: 'FAQ',
                         link: '/FAQ/glossary.html'
-                    },
-                    {
-                        text: 'Tags',
-                        link: '/tags/'
                     },
                     {
                         text: 'Snippets',

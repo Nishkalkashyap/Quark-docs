@@ -91,7 +91,7 @@ function createReadmeFiles(paths: string[]) {
                     str = str.concat(
                         `<MetaCard title="${frontmatter.title}" `,
                         `description="${frontmatter.description}" `,
-                        `link="${path.replace('.md', '.html').replace(/[\\/]/g, '/')}" `,
+                        `link="${Path.join(path, file).replace('.md', '.html').replace(/[\\/]/g, '/')}" `,
                         `tags='${JSON.stringify(frontmatter.tags)}' />`, '\n\n'
                     );
                 }
