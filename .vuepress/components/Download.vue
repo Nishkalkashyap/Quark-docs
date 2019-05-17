@@ -127,7 +127,7 @@ export default {
 <style lang="scss">
 .container {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   flex-wrap: wrap;
   font-family: var(--heading-font-family);
 }
@@ -136,7 +136,7 @@ export default {
   flex-direction: column;
   align-items: center;
   min-width: 200px;
-  margin: 60px 0px;
+  margin: 60px 12px;
   img {
     max-height: 100px !important;
   }
