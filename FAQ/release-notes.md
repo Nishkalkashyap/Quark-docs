@@ -1,7 +1,5 @@
 # Release Notes
 
-[[toc]]
-
 <!-- Quark-0.2.13-start -->
 ## Quark 0.2.13 - May 15, 2019
 

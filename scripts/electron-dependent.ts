@@ -11,7 +11,6 @@ function createReleaseNotes() {
     const notes = fs.readFileSync('./../Quark-electron/dev-assets/releaseNotes.md').toString();
     let str = '';
     str = str.concat('# Release Notes', '\n\n');
-    str = str.concat('[[toc]]', '\n\n');
     str = str.concat(notes);
     fs.writeFileSync('./FAQ/release-notes.md', str);
 }

@@ -135,6 +135,10 @@ module.exports = {
                         link: '/snippets/'
                     },
                     {
+                        text: 'Release notes',
+                        link: '/FAQ/release-notes.html'
+                    },
+                    {
                         text: 'Social',
                         link: 'https://social.quarkjs.io/'
                     },
