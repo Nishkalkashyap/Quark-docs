@@ -60,7 +60,7 @@ async function createTagsDirectory() {
             str = str.concat('<div class="tags-container">', '\n\n');
             files.map((file) => {
                 str = str.concat(
-                    `<MetaCard link="${file.path.replace('.md', '.html').replace(/[\\/]/g, '/')}" >`,
+                    `<MetaCard link="/${file.path.replace('.md', '.html').replace(/[\\/]/g, '/')}" >`,
                     file.frontmatter.cover ? `<img src="${file.frontmatter.cover}"> ` : '',
                     '</MetaCard>', '\n\n'
                 );
@@ -90,7 +90,7 @@ function createReadmeFiles(paths: string[]) {
                 const frontmatter = getFrontmatterFromPath(Path.join(path, file));
                 if (frontmatter) {
                     str = str.concat(
-                        `<MetaCard link="${Path.join(path, file).replace('.md', '.html').replace(/[\\/]/g, '/')}" >`,
+                        `<MetaCard link="/${Path.join(path, file).replace('.md', '.html').replace(/[\\/]/g, '/')}" >`,
                         frontmatter.cover ? `<img src="${frontmatter.cover}"> ` : '',
                         '</MetaCard>', '\n\n'
                     );
