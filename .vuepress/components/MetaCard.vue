@@ -79,7 +79,7 @@ export default {
 .card-container {
   margin: 40px 20px;
   flex-grow: 1;
-  min-width: 300px;
+  min-width: 250px;
   max-width: 450px;
   display: inline-block;
   color: var();
@@ -141,5 +141,12 @@ export default {
   transform: translateY(-2px);
   box-shadow: 0 0.35em 1.175em rgba(2, 8, 20, 0.1),
     0 0.175em 0.5em rgba(2, 8, 20, 0.08);
+}
+
+@media only screen and (max-width: 600px) {
+  .card-container {
+    margin-left: 0px;
+    margin-right: 0px;
+  }
 }
 </style>
