@@ -1,7 +1,7 @@
 /* sidebar stuff */
 .no-sidebar-metacard-container .content {
-    max-width: calc(100% - 20px);
-    padding: 32px 100px;
+    max-width: calc(100% - 20px) !important;
+    padding: 32px 100px !important;
 }
 
 .no-sidebar-metacard-container .tags-container,
@@ -12,8 +12,8 @@
 }
 
 .sidebar-metacard-container .content {
-    max-width: calc(100% - 100px);
-    padding: 32px 30px;
+    max-width: calc(100% - 100px) !important;
+    padding: 32px 30px !important;
 }
 
 /* Prism language js */
