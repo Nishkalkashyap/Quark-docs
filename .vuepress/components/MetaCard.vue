@@ -5,8 +5,14 @@
     </div>
     <div class="card-content">
       <div class="last-updated" v-if="lastUpdated">{{lastUpdated}}</div>
-      <div class="title" @click="openLink()">{{frontmatter.title || page.title}}</div>
-      <div class="description" v-if="frontmatter.description">{{desc}}<router-link :to="{ path: this.link}">...</router-link></div>
+      <div class="title" @click="openLink()">
+        <img src="/images/icon-svg.svg" v-if="!frontmatter.cover">
+        <span>{{frontmatter.title || page.title}}</span>
+      </div>
+      <div class="description" v-if="frontmatter.description">
+        {{desc}}
+        <router-link :to="{ path: this.link}">...</router-link>
+      </div>
       <div class="tags">
         <Tag v-for="tag of frontmatter.tags" :name="tag" :key="tag"></Tag>
       </div>
@@ -103,6 +109,19 @@ export default {
       padding-top: 10px;
       color: var(--text-color--dark);
       cursor: pointer;
+      span {
+        display: inline-block;
+        vertical-align: middle;
+      }
+
+      img {
+        width: 20px;
+        display: inline-block;
+        border: solid 1px var(--text-color--dark);
+        border-radius: 200px;
+        padding: 4px 4px 4px 5px;
+        vertical-align: middle;
+      }
     }
 
     .description {

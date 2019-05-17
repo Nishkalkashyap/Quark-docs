@@ -3,7 +3,7 @@ import * as Path from 'path';
 import * as recc from 'recursive-readdir';
 import { AllTags } from './types';
 import { themeConfig } from '../.vuepress/config';
-import { IFrontmatterData, getFrontmatterFromPath, capitalize } from './util';
+import { IFrontmatterData, getFrontmatterFromPath, capitalize, Frontmatter } from './util';
 import { reccursiveIgnoreFunction } from './check-files';
 var beautify = require('js-beautify').js;
 
@@ -51,6 +51,11 @@ async function createTagsDirectory() {
                 if (d.frontmatter && d.frontmatter.tags) {
                     return d.frontmatter.tags.includes(tag);
                 }
+            }).sort((a, b) => {
+                if (a.frontmatter.cover && b.frontmatter.cover) { return 0; }
+                if (a.frontmatter.cover && !b.frontmatter.cover) { return -1; }
+                if (!a.frontmatter.cover && b.frontmatter.cover) { return 1; }
+                return 0;
             });
 
             let str = '';
@@ -78,19 +83,28 @@ function createReadmeFiles(paths: string[]) {
     });
 
     function createReadmeFile(path: string) {
-        fs.readdir(`./${path}`).then((dirs) => {
-            const files = dirs.filter((dir) => { return dir != 'README.md' });
+        fs.readdir(`./${path}`).then((dir) => {
+            const files = dir.filter((file) => { return file != 'README.md' });
+            const frontmatters = files
+                .map((file) => {
+                    return getFrontmatterFromPath(Path.join(path, file));
+                }).sort((a, b) => {
+                    if (a.cover && b.cover) { return 0; }
+                    if (a.cover && !b.cover) { return -1; }
+                    if (!a.cover && b.cover) { return 1; }
+                    return 0;
+                });
+
 
             let str = '';
             str = str.concat('---', '\n', 'pageClass : no-sidebar-metacard-container', '\n', 'sidebar : false', '\n', '---', '\n\n');
             str = str.concat(capitalize(`# ${path}`), '\n\n');
             str = str.concat('<div class="tags-container">', '\n\n');
 
-            files.map((file) => {
-                const frontmatter = getFrontmatterFromPath(Path.join(path, file));
+            frontmatters.map((frontmatter) => {
                 if (frontmatter) {
                     str = str.concat(
-                        `<MetaCard link="/${Path.join(path, file).replace('.md', '.html').replace(/[\\/]/g, '/')}" >`,
+                        `<MetaCard link="/${frontmatter.path.replace('.md', '.html').replace(/[\\/]/g, '/')}" >`,
                         frontmatter.cover ? `<img src="${frontmatter.cover}"> ` : '',
                         '</MetaCard>', '\n\n'
                     );
@@ -102,8 +116,6 @@ function createReadmeFiles(paths: string[]) {
         }).catch((err) => {
             console.log(err);
         });
-
-
     }
 }
 

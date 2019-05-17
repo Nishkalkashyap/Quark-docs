@@ -8,10 +8,11 @@ export function printConsoleStatus(message: string, status: 'danger' | 'success'
     console.log(color(`| ${emoji}  | ${message}`));
 }
 
-export function getFrontmatterFromPath(path: string): Frontmatter {
+export function getFrontmatterFromPath(path: string): (Frontmatter & { path: string }) | null {
     const frontmatter = fs.readFileSync(path).toString().match(/---([\s\S\n]+?)---/);
     try {
         const data = YAML.parse(frontmatter[1]);
+        data.path = path;
         return data;
     } catch (err) {
         return null;
