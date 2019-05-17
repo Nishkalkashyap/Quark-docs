@@ -1,7 +1,9 @@
 <template>
   <div>
     <div class="card-container">
-      <slot></slot>
+      <div class="image-container" @click="openLink()">
+        <slot></slot>
+      </div>
       <div class="title" @click="openLink()">{{title}}</div>
       <div class="description">{{description}}</div>
       <div class="tags">

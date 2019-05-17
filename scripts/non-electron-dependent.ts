@@ -3,7 +3,7 @@ import * as Path from 'path';
 import * as recc from 'recursive-readdir';
 import { AllTags } from './types';
 import { themeConfig } from '../.vuepress/config';
-import { IFrontmatterData, getFrontmatterFromPath } from './util';
+import { IFrontmatterData, getFrontmatterFromPath, capitalize } from './util';
 import { reccursiveIgnoreFunction } from './check-files';
 var beautify = require('js-beautify').js;
 
@@ -55,7 +55,7 @@ async function createTagsDirectory() {
 
             let str = '';
             str = str.concat('---', '\n', 'pageClass : sidebar-metacard-container', '\n', `description : ${AllTags[tag].description}`, '\n', '---', '\n\n');
-            str = str.concat(`# ${tag}`, '\n\n');
+            str = str.concat(`# ${capitalize(tag)}`, '\n\n');
             str = str.concat(`<Header/>`, '\n\n');
             str = str.concat('<div class="tags-container">', '\n\n');
             files.map((file) => {
@@ -110,13 +110,6 @@ function createReadmeFiles(paths: string[]) {
         });
 
 
-        function capitalize(s: string) {
-            var splitStr = s.split(' ');
-            for (var i = 0; i < splitStr.length; i++) {
-                splitStr[i] = splitStr[i].charAt(0).toUpperCase() + splitStr[i].substring(1);
-            }
-            return splitStr.join(' ');
-        }
     }
 }
 
