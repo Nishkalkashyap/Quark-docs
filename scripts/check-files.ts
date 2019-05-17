@@ -45,7 +45,7 @@ export function isValidFile(path: string): { isValid: boolean, errMsg: string } 
     }
 
     const frontmatter = getFrontmatterFromPath(path);
-    const check2 = !!(!!frontmatter.author && frontmatter.description != null && !!frontmatter.tags!! && frontmatter.title);
+    const check2 = !!(!!frontmatter.author && frontmatter.description != null && !!frontmatter.tags!!);
     if (!check2) {
         return { isValid: check2, errMsg: 'Frontmatter required member missing.' };
     }

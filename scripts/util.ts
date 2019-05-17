@@ -34,7 +34,6 @@ export type IFrontmatterData = {
 export type Frontmatter = {
     author: string;
     tags: string[];
-    title: string;
     description: string;
-    cover : string;
+    cover: string;
 };
