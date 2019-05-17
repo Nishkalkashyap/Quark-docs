@@ -1,5 +1,5 @@
 ---
-description : ''
+description : 'fdsfds fdsfds'
 author : nishkal
 tags : ['guide']
 cover : ~@public/g-images/guide/user-interface.png

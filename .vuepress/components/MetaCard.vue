@@ -1,17 +1,17 @@
 <template>
-    <div class="card-container">
-      <div class="image-container" @click="openLink()">
-        <slot></slot>
-      </div>
-      <div class="card-content">
-        <div class="last-updated" v-if="lastUpdated">{{lastUpdated}}</div>
-        <div class="title" @click="openLink()">{{frontmatter.title || page.title}}</div>
-        <div class="description" v-if="frontmatter.description">{{frontmatter.description}}</div>
-        <div class="tags">
-          <Tag v-for="tag of frontmatter.tags" :name="tag" :key="tag"></Tag>
-        </div>
+  <div class="card-container">
+    <div class="image-container" @click="openLink()">
+      <slot></slot>
+    </div>
+    <div class="card-content">
+      <div class="last-updated" v-if="lastUpdated">{{lastUpdated}}</div>
+      <div class="title" @click="openLink()">{{frontmatter.title || page.title}}</div>
+      <div class="description" v-if="frontmatter.description">{{desc}}<router-link :to="{ path: this.link}">...</router-link></div>
+      <div class="tags">
+        <Tag v-for="tag of frontmatter.tags" :name="tag" :key="tag"></Tag>
       </div>
     </div>
+  </div>
 </template>
 
 <script>
@@ -31,6 +31,14 @@ export default {
     this.frontmatter = this.page.frontmatter;
   },
   computed: {
+    desc() {
+      let str = this.frontmatter.description || "";
+      if (str.length >= 140) {
+        // str = str.substring(0, 140).concat("....");
+        str = str.substring(0, 140);
+      }
+      return str;
+    },
     lastUpdated() {
       if (this.page && this.page.lastUpdated) {
         return (
@@ -75,8 +83,10 @@ export default {
     0px 0.085em 0.175em rgba(2, 8, 20, 0.08);
   transition: all 250ms;
 
-  img {
-    cursor: pointer;
+  .image-container {
+    img {
+      cursor: pointer;
+    }
   }
 
   .card-content {

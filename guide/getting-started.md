@@ -2,7 +2,7 @@
 description : 'Welcome to Quark. Quark is a flexible software sketchbook that helps you rapidly create functional softwares for your prototypal projects.'
 author : nishkal
 tags : ['guide']
-cover : ~@public//g-images/guide/getting-started.png
+cover : ~@public/g-images/guide/getting-started.png
 ---
 
 # Getting Started

@@ -1,5 +1,5 @@
 ---
-description : ''
+description : 'Following are some sample projects made with Quark.'
 author : nishkal
 tags : ['guide']
 ---
