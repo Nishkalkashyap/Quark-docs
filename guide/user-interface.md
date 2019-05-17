@@ -2,6 +2,7 @@
 description : ''
 author : nishkal
 tags : ['guide']
+cover : ~@public/g-images/guide/user-interface.png
 ---
 
 # User Interface and Features

@@ -2,6 +2,7 @@
 description : ''
 author : nishkal
 tags : ['guide']
+cover : ~@public/g-images/guide/setting-up-quark.png
 ---
 
 # Setting up Quark
