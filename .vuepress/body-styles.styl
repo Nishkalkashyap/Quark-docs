@@ -97,28 +97,42 @@ body {
     }
 
     header.navbar div.dropdown-wrapper {
+        position relative;
+
         ul.nav-dropdown {
             display: block !important;
             max-height: 0px;
-            // padding: 0px;
             border-width: 0px;
             overflow: hidden;
             box-shadow: 4px 4px 12px 4px rgba(0,0,0,0.025);
             opacity: 0;
-            transition: 0.25s all;
+            transition: 250ms opacity;
+            list-style: none;
+            position: absolute;
+            right: -50px;
+            top: 55px;
 
             li a {
                 font-size: 14px;
                 font-weight: 100 !important;
+                padding: 0px;
+            }
+
+            li a::after {
+                display: none !important;
+            }
+
+            li h4 {
+                padding-left: 0px;
             }
         }
     }
 
     header.navbar div.dropdown-wrapper:hover {
         ul.nav-dropdown {
-            max-height: 200px;
-            padding: 10px 0px;
-            padding: 20px 0px;
+            max-height: 600px;
+            padding: 20px 50px;
+            padding: 20px 50px;
             border-width: 1px;
             border-color: var(--line-rule-color);
             opacity: 1;

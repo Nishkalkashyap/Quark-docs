@@ -1,4 +1,5 @@
-export const AllTags = {
+module.exports.AllTags = {
+// export const AllTags = {
     javascript: {
         background: 'var(--text-color--dark)',
         color: 'var(--ion-color-warning)',

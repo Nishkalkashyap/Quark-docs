@@ -1,5 +1,7 @@
 const path = require('path');
 
+const AllTags = require('./../scripts/types').AllTags;
+
 module.exports = {
     title: 'Quark',
     desctiption: 'IoT Framework',
@@ -105,7 +107,12 @@ module.exports = {
             },
             {
                 text: 'Tags',
-                link: '/tags/'
+                items: Object.keys(AllTags).map((tag) => {
+                    return {
+                        text: tag,
+                        link: `/tags/${tag}.html`
+                    }
+                })
             },
             {
                 text: 'API',
@@ -135,16 +142,16 @@ module.exports = {
                         link: '/snippets/'
                     },
                     {
-                        text: 'Release notes',
-                        link: '/FAQ/release-notes.html'
-                    },
-                    {
-                        text: 'Social',
-                        link: 'https://social.quarkjs.io/'
-                    },
-                    {
-                        text: 'GitHub',
-                        link: 'https://github.com/Nishkalkashyap/Quark-docs'
+                        text: 'Links',
+                        items: [{
+                                text: 'Social',
+                                link: 'https://social.quarkjs.io/'
+                            },
+                            {
+                                text: 'GitHub',
+                                link: 'https://github.com/Nishkalkashyap/Quark-docs'
+                            }
+                        ]
                     }
                 ]
             },
