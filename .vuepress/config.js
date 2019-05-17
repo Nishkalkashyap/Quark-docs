@@ -20,6 +20,12 @@ module.exports = {
         ],
         [
             'link', {
+                href: '/pwa/manifest.json',
+                rel: 'manifest'
+            }
+        ],
+        [
+            'link', {
                 href: 'https://fonts.googleapis.com/icon?family=Material+Icons',
                 rel: 'stylesheet'
             }
