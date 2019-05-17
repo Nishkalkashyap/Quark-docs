@@ -1,5 +1,4 @@
 ---
-title : Tabsview
 description : ''
 author : nishkal
 tags : ['structures', 'api']

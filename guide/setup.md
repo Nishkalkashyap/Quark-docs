@@ -1,5 +1,4 @@
 ---
-title : Setting up Quark
 description : ''
 author : nishkal
 tags : ['guide']

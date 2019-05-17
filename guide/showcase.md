@@ -1,5 +1,4 @@
 ---
-title : Showcase
 description : ''
 author : nishkal
 tags : ['guide']

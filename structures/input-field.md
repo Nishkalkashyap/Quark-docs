@@ -1,5 +1,4 @@
 ---
-title : InputField
 description : ''
 author : nishkal
 tags : ['structures', 'api']

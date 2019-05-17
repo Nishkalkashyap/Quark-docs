@@ -1,5 +1,4 @@
 ---
-title : SelectField
 description : ''
 author : nishkal
 tags : ['structures', 'api']

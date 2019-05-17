@@ -1,5 +1,4 @@
 ---
-title : Sideview
 description : ''
 author : nishkal
 tags : ['structures', 'api']

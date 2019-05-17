@@ -1,5 +1,4 @@
 ---
-title : App
 description : Provides methods to perform lower level operations.
 author : nishkal
 tags : ['api']

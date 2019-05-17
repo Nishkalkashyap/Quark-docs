@@ -1,5 +1,4 @@
 ---
-title : Icons
 description : Register icons to be used in UI components.
 author : nishkal
 tags : ['api']

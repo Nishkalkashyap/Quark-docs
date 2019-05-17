@@ -1,5 +1,4 @@
 ---
-title : Getting Started
 description : ''
 author : nishkal
 tags : ['guide']

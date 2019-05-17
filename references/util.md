@@ -1,5 +1,4 @@
 ---
-title : Util
 description : Utilitiy methods to quark api.
 author : nishkal
 tags : ['api']

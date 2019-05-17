@@ -1,5 +1,4 @@
 ---
-title : MemoryStore
 description : ''
 author : nishkal
 tags : ['structures', 'api']

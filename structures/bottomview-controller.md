@@ -1,5 +1,4 @@
 ---
-title : Bottomview
 description : ''
 author : nishkal
 tags : ['structures', 'api']

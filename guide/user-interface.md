@@ -1,5 +1,4 @@
 ---
-title : User Interface and Features
 description : ''
 author : nishkal
 tags : ['guide']

@@ -1,5 +1,4 @@
 ---
-title : Views
 description : Create and control views of your app.
 author : nishkal
 tags : ['api']

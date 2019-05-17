@@ -1,5 +1,4 @@
 ---
-title : Storage
 description : Store data
 author : nishkal
 tags : ['api']

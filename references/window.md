@@ -1,5 +1,4 @@
 ---
-title : Window
 description : Controls for window state of your app.
 author : nishkal
 tags : ['api']

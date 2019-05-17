@@ -1,5 +1,4 @@
 ---
-title : Commands
 description : Register globally executable commands that trigger an action on invocation.
 author : nishkal
 tags : ['api']

@@ -1,5 +1,4 @@
 ---
-title : Clipboard
 description : Perform copy and paste operations on the system clipboard.
 author : nishkal
 tags : ['api']

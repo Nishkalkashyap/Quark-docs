@@ -1,5 +1,4 @@
 ---
-title : ViewProvider
 description : ''
 author : nishkal
 tags : ['structures', 'api']

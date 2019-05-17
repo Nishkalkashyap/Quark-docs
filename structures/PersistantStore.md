@@ -1,5 +1,4 @@
 ---
-title : PersistantStore
 description : ''
 author : nishkal
 tags : ['structures', 'api']

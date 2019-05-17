@@ -1,5 +1,4 @@
 ---
-title : Icon
 description : ''
 author : nishkal
 tags : ['structures', 'api']
