@@ -7,7 +7,7 @@
 .no-sidebar-metacard-container .tags-container,
 .sidebar-metacard-container .tags-container {
     display: flex;
-    justify-content: space-around;
+    justify-content: left;
     flex-wrap: wrap;
 }
 

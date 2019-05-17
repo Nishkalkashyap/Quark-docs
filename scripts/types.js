@@ -1,45 +1,45 @@
 export const AllTags = {
     javascript: {
-        color: 'var(--text-color--dark)',
-        background: 'var(--ion-color-warning)',
+        background: 'var(--text-color--dark)',
+        color: 'var(--ion-color-warning)',
         description: `JavaScript (JS) is a lightweight interpreted or just-in-time compiled programming language.`
     },
     typescript: {
-        color: 'var(--text-color--dark)',
-        background: 'var(--ion-color-primary)',
+        background: 'var(--text-color--dark)',
+        color: 'var(--ion-color-primary)',
         description: `TypeScript is an open-source programming language developed and maintained by Microsoft. It is a strict syntactical superset of JavaScript.`
     },
     nodejs: {
-        color: 'var(--text-color--dark)',
-        background: 'var(--ion-color-success)',
+        background: 'var(--text-color--dark)',
+        color: 'var(--ion-color-success)',
         description: `Node.js is an open-source, cross-platform JavaScript run-time environment that executes JavaScript code outside of a browser.`
     },
     arduino: {
-        color: 'var(--accent-color)',
         background: 'var(--text-color--dark)',
+        color: '#7044ff',
         description: `Arduino is an open-source hardware and software company, project and user community that designs and manufactures single-board microcontrollers.`
     },
 
 
 
     structures: {
-        color: 'var(--accent-color)',
         background: 'var(--text-color--dark)',
+        color: '#ff5252',
         description: `Arduino is an open-source hardware and software company, project and user community that designs and manufactures single-board microcontrollers.`
     },
     api: {
-        color: 'var(--accent-color)',
         background: 'var(--text-color--dark)',
+        color: '#651fff',
         description: `Arduino is an open-source hardware and software company, project and user community that designs and manufactures single-board microcontrollers.`
     },
     guide: {
-        color: 'var(--accent-color)',
         background: 'var(--text-color--dark)',
+        color: '#e040fb',
         description: `Arduino is an open-source hardware and software company, project and user community that designs and manufactures single-board microcontrollers.`
     },
     faq: {
-        color: 'var(--accent-color)',
         background: 'var(--text-color--dark)',
+        color: '#651fff',
         description: `Arduino is an open-source hardware and software company, project and user community that designs and manufactures single-board microcontrollers.`
     }
 };

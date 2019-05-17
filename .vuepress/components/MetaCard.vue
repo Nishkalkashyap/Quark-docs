@@ -1,19 +1,17 @@
 <template>
-  <div>
     <div class="card-container">
       <div class="image-container" @click="openLink()">
         <slot></slot>
       </div>
       <div class="card-content">
         <div class="last-updated" v-if="lastUpdated">{{lastUpdated}}</div>
-        <div class="title" @click="openLink()">{{page.title}}</div>
-        <div class="description">{{frontmatter.description}}</div>
+        <div class="title" @click="openLink()">{{frontmatter.title || page.title}}</div>
+        <div class="description" v-if="frontmatter.description">{{frontmatter.description}}</div>
         <div class="tags">
           <Tag v-for="tag of frontmatter.tags" :name="tag" :key="tag"></Tag>
         </div>
       </div>
     </div>
-  </div>
 </template>
 
 <script>
@@ -84,20 +82,23 @@ export default {
   .card-content {
     padding: 10px 20px;
     .last-updated {
-      font-size: 14px;
+      font-family: var(--heading-font-family);
+      font-size: 12px;
     }
 
     .title {
       font-family: var(--heading-font-family);
       font-size: 28px;
+      padding-bottom: 20px;
+      padding-top: 10px;
       color: var(--text-color--dark);
       cursor: pointer;
     }
 
     .description {
-      font-size: 18px;
+      font-size: 14px;
       font-weight: 500;
-      padding: 10px 0px;
+      padding-bottom: 20px;
     }
 
     .tag-container {
