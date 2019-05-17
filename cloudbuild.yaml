@@ -25,3 +25,6 @@ steps:
 # build-notofication
 - name: 'gcr.io/cloud-builders/npm'
   args : ['run','ssn']
+
+options:
+ machineType: 'N1_HIGHCPU_8'
