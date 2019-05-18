@@ -10,7 +10,7 @@ At the heart of Quark IDE is a code editor. Like many other code editors, Quark 
 
 The entire user interface is inspired by the very popular VS Code editor.
 
-![UI Overview](~@public/guide/user-interface/ui-overview.png)
+![UI Overview](~@public/g-images/guide/user-interface/ui-overview.png)
 
 [[toc]]
 
@@ -34,7 +34,7 @@ Quark comes bundled with [Monaco code editor](https://microsoft.github.io/monaco
 #### Explorer
 The Explorer is used to browse, open, and manage all of the files and folders in your project. 
 
-![](~@public/guide/user-interface/explorer.png =450x)
+![](~@public/g-images/guide/user-interface/explorer.png =450x)
 
 Here are the following things you can do in explorer:
 
@@ -63,7 +63,7 @@ To open the terminal:
 #### Managing multiple terminals
 You can create multiple terminals open to different locations and easily navigate between them. Terminal instances can be added by clicking the plus icon on the top-right of the TERMINAL panel or by triggering the ``` Ctrl+Shift+` ``` command. This action creates another entry in the drop-down list that can be used to switch between them.
 
-![](~@public/guide/user-interface/multiple-terminals.png =250x)
+![](~@public/g-images/guide/user-interface/multiple-terminals.png =250x)
 
 * Remove terminal instances by pressing the trash can button. The terminal instance last focused on gets deleted.
 * You can also split the terminal by triggering the `Ctrl+\` command or by pressing the __Fork Terminal__ button or from the main menu.
@@ -97,12 +97,12 @@ Workspace settings take priority over user settings.
 #### Settings groups
 Common settings are grouped together so that you can navigate through them easily.
 
-![](~@public/guide/user-interface/setting-group.png =x300)
+![](~@public/g-images/guide/user-interface/setting-group.png =x300)
 
 #### Edit Settings
 Each setting can be edited by either a checkbox, an input or by a drop-down. Simply edit the text or select the option you want to change to the desired settings.
 
-![](~@public/guide/user-interface/changed-settings-markers.png =x300)
+![](~@public/g-images/guide/user-interface/changed-settings-markers.png =x300)
 
 !!! note NOTE
 Note that changed settings have a marker besides them to help you identify them easily.

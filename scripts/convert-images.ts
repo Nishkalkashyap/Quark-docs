@@ -22,6 +22,11 @@ const arr: IMap[] = [
         inputPath: Path.join('./.vuepress/buildAssets', './guide/intro'),
         outputPath: Path.join('./.vuepress/public/g-images', './guide/intro'),
         width: 1200
+    },
+    {
+        inputPath: Path.join('./.vuepress/buildAssets', './guide/user-interface'),
+        outputPath: Path.join('./.vuepress/public/g-images', './guide/user-interface'),
+        width: 1200
     }
 ];
 
@@ -50,13 +55,26 @@ async function convertFolder(map: IMap) {
 }
 
 async function convertFile(map: IMap) {
+
+    const meta = await sharp(map.inputPath).metadata();
+    let width: number = map.width || 600;
+    let height: number = map.height;
+
+    if ((meta.width < width) && !map.forceGivenSize) {
+        width = meta.width;
+    }
+
+    if (height && (meta.height < height) && !map.forceGivenSize) {
+        height = meta.height;
+    }
+
     const buffer = await sharp(map.inputPath)
-        .resize(map.width || 600, map.height)
+        .resize(width, height)
         .toBuffer();
 
     fs.ensureDirSync(Path.dirname(map.outputPath));
 
-    if(map.outputPath.includes('buildAssets')){
+    if (map.outputPath.includes('buildAssets')) {
         throw Error('Output path is input path');
     }
 
@@ -68,4 +86,5 @@ interface IMap {
     outputPath: string;
     width?: number;
     height?: number;
+    forceGivenSize?: boolean
 }
