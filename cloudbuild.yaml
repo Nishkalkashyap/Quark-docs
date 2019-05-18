@@ -18,13 +18,13 @@ steps:
 - name: 'gcr.io/cloud-builders/npm'
   args : ['run','cloud-build']
 
-# deploy
-- name: 'gcr.io/cloud-builders/npm'
-  args : ['run','deploy-ci']
-
 # worker
 - name: 'gcr.io/cloud-builders/npm'
   args : ['run','worker']
+
+# deploy
+- name: 'gcr.io/cloud-builders/npm'
+  args : ['run','deploy-ci']
 
 # build-notofication
 - name: 'gcr.io/cloud-builders/npm'
