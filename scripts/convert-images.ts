@@ -15,12 +15,12 @@ const ignoreFunction = (file: string, stat: fs.Stats) => {
 
 const arr: IMap[] = [
     {
-        inputPath: Path.join('./.vuepress/', './buildAssets/guide'),
-        outputPath: Path.join('./.vuepress/', './public/g-images/guide'),
+        inputPath: Path.join('./.vuepress/buildAssets', './guide'),
+        outputPath: Path.join('./.vuepress/public/g-images', './guide'),
     },
     {
-        inputPath: Path.join('./.vuepress/', './buildAssets/guide/intro'),
-        outputPath: Path.join('./.vuepress/', './public/g-images/guide/intro'),
+        inputPath: Path.join('./.vuepress/buildAssets', './guide/intro'),
+        outputPath: Path.join('./.vuepress/public/g-images', './guide/intro'),
         width: 1200
     }
 ];
