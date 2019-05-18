@@ -19,8 +19,8 @@ steps:
   args : ['run','cloud-build']
 
 # worker
-- name: 'gcr.io/cloud-builders/npm'
-  args : ['run','worker']
+# - name: 'gcr.io/cloud-builders/npm'
+#   args : ['run','worker']
 
 # deploy
 - name: 'gcr.io/cloud-builders/npm'
