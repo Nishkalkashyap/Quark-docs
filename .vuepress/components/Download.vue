@@ -100,7 +100,11 @@ export default {
       if (!bin) {
         return;
       }
-      window.open(this.getLinkFromBinary(bin));
+      const link = this.getLinkFromBinary(bin);
+      if (typeof ga != "undefined") {
+        ga("send", "event", "Downloads", "download", link);
+      }
+      window.open(link);
     },
     getExtensionFromBinary: function(bin) {
       if (bin.endsWith(".exe")) {
