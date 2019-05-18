@@ -7,9 +7,9 @@ const ignoreFunction = (file: string, stat: fs.Stats) => {
     if (file.endsWith('.png')) {
         return false;
     }
-    if (stat.isDirectory()) {
-        return false;
-    }
+    // if (stat.isDirectory()) {
+    //     return false;
+    // }
     return true;
 }
 
@@ -17,9 +17,15 @@ const arr: IMap[] = [
     {
         inputPath: Path.join('./.vuepress/', './buildAssets/guide'),
         outputPath: Path.join('./.vuepress/', './public/g-images/guide'),
+    },
+    {
+        inputPath: Path.join('./.vuepress/', './buildAssets/guide/intro'),
+        outputPath: Path.join('./.vuepress/', './public/g-images/guide/intro'),
+        width: 1200
     }
 ];
 
+fs.emptyDirSync('./.vuepress/public/g-images');
 convert(arr);
 
 function convert(maps: IMap[]) {
@@ -49,6 +55,11 @@ async function convertFile(map: IMap) {
         .toBuffer();
 
     fs.ensureDirSync(Path.dirname(map.outputPath));
+
+    if(map.outputPath.includes('buildAssets')){
+        throw Error('Output path is input path');
+    }
+
     await fs.writeFile(map.outputPath, buffer);
 }
 
