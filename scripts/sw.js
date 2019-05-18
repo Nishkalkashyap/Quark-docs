@@ -23,7 +23,16 @@ workbox.routing.registerRoute(
 
 workbox.routing.registerRoute(
     new RegExp('.(mp4)$'),
-    new workbox.strategies.StaleWhileRevalidate({
+    new workbox.strategies.CacheFirst({
         cacheName: 'videos',
+        plugins: [
+            // new workbox.cacheableResponse.Plugin({
+            //     statuses: [0, 200],
+            // }),
+            new workbox.expiration.Plugin({
+                maxAgeSeconds: 60 * 60 * 24 * 365,
+                maxEntries: 30,
+            }),
+        ],
     })
 );

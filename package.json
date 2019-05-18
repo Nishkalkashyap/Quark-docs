@@ -1,6 +1,6 @@
 {
   "name": "@quark/docs",
-  "version": "0.2.13.24",
+  "version": "0.2.13.25",
   "description": "Documentation for quark",
   "main": "index.js",
   "scripts": {
@@ -9,6 +9,7 @@
     "start": "npm run tags && npm run land && npm run img && vuepress dev -p 80",
     "build": "npm run tags && npm run land && npm run img && vuepress build",
     "cloud-build": "npm run tags && npm run img && vuepress build",
+    "worker": "npx ts-node ./scripts/post-build.ts",
     "deploy-ci": "firebase deploy --token \"$FIREBASE_TOKEN\"",
     "bad": "npm run build && firebase deploy",
     "test": "npm run build",
