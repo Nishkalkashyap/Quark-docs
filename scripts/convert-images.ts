@@ -3,9 +3,7 @@ import * as Path from 'path';
 import * as fs from 'fs-extra';
 import * as recc from 'recursive-readdir';
 
-const GIMAGES_PATH = './g-images';
-const GIMAGES_OUT = './.vuepress/public';
-
+const GIMAGES_PATH = './.vuepress/buildAssets/g-images';
 convertImages().catch(console.error);
 
 async function convertImages() {
@@ -20,7 +18,7 @@ async function convertImages() {
     }]);
 
     files.map(async (file) => {
-        const outFilePath = Path.join(GIMAGES_OUT, file);
+        const outFilePath = file.replace('buildAssets', 'public')
         await fs.ensureDir(Path.dirname(outFilePath));
         const buffer = await sharp(file)
             .resize(600)
