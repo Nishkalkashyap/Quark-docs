@@ -2,6 +2,7 @@ import * as sharp from 'sharp';
 import * as Path from 'path';
 import * as fs from 'fs-extra';
 import * as recc from 'recursive-readdir';
+import { printConsoleStatus } from './util'
 
 const ignoreFunction = (file: string, stat: fs.Stats) => {
     if (file.endsWith('.png')) {
@@ -13,19 +14,22 @@ const ignoreFunction = (file: string, stat: fs.Stats) => {
     return true;
 }
 
+const guideInputPath = './.vuepress/buildAssets/guide';
+const guideOutputPath = './.vuepress/public/g-images/guide';
+
 const arr: IMap[] = [
     {
-        inputPath: Path.join('./.vuepress/buildAssets', './guide'),
-        outputPath: Path.join('./.vuepress/public/g-images', './guide'),
+        inputPath: Path.join(guideInputPath, './'),
+        outputPath: Path.join(guideOutputPath, './'),
     },
     {
-        inputPath: Path.join('./.vuepress/buildAssets', './guide/intro'),
-        outputPath: Path.join('./.vuepress/public/g-images', './guide/intro'),
+        inputPath: Path.join(guideInputPath, './intro'),
+        outputPath: Path.join(guideOutputPath, './intro'),
         width: 1200
     },
     {
-        inputPath: Path.join('./.vuepress/buildAssets', './guide/user-interface'),
-        outputPath: Path.join('./.vuepress/public/g-images', './guide/user-interface'),
+        inputPath: Path.join(guideInputPath, './user-interface'),
+        outputPath: Path.join(guideOutputPath, './user-interface'),
         width: 1200
     }
 ];
@@ -56,6 +60,10 @@ async function convertFolder(map: IMap) {
 
 async function convertFile(map: IMap) {
 
+    if (map.outputPath.includes('buildAssets')) {
+        throw Error('Output path is input path');
+    }
+
     const meta = await sharp(map.inputPath).metadata();
     let width: number = map.width || 600;
     let height: number = map.height;
@@ -74,11 +82,8 @@ async function convertFile(map: IMap) {
 
     fs.ensureDirSync(Path.dirname(map.outputPath));
 
-    if (map.outputPath.includes('buildAssets')) {
-        throw Error('Output path is input path');
-    }
-
     await fs.writeFile(map.outputPath, buffer);
+    printConsoleStatus(`Generated image at: ${map.outputPath};`, 'success')
 }
 
 interface IMap {
