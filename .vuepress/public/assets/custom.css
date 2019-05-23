@@ -27,3 +27,20 @@ div[class*="language-"]:before {
     color: var(--accent-color);
     font-family: var(--heading-font-family);
 }
+
+.sw-update-popup {
+    border: none;
+    border-radius: 0px;
+    background-color: var(--text-color--dark);
+    color: var(--accent-color);
+    font-family: var(--heading-font-family);
+}
+
+.sw-update-popup button {
+    border: none;
+    background-color: var(--accent-color);
+    font-family: var(--heading-font-family);
+    font-size: 16px;
+    margin-top: 15px !important;
+    cursor: pointer;
+}

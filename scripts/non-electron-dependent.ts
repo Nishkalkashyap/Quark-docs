@@ -124,8 +124,8 @@ function createReadmeFiles(paths: string[]) {
 
 async function updatePrimaryColor() {
     //has to be hex code
-    // const iconColor = '#020814';
-    const iconColor = '#09c372';
+    const iconColor = '#020814';
+    // const iconColor = '#09c372';
     // const iconColor = '#10dc60';
 
     //can be rgb
