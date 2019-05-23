@@ -144,20 +144,29 @@ async function updatePrimaryColor() {
     const overrideFilePath = Path.resolve('./.vuepress/override.styl');
     const svgFilePath = Path.resolve(`./.vuepress/public/images/icon-svg.svg`);
     const pngFilePath = Path.resolve(`./.vuepress/public/images/icon.png`);
+    const manifestFilePath = Path.resolve(`./.vuepress/public/pwa/manifest.json`);
 
     let override = fs.readFileSync(overrideFilePath).toString();
     override = override.replace(/\$accentColor.+/, `$accentColor = ${accentColor}`);
     fs.writeFileSync(overrideFilePath, override);
 
+    //svg color
     let svg = fs.readFileSync(svgFilePath).toString();
     svg = svg.replace(/fill="[#0-9a-z(),]+"/g, `fill="${iconColor}"`);
     fs.writeFileSync(svgFilePath, svg);
 
+
+    //png image
     const imageBuffer = await sharp(svgFilePath)
     .png()
     .toBuffer();
-
     fs.writeFileSync(pngFilePath, imageBuffer);
+
+
+    //manifest json color
+    const manifest = fs.readJsonSync(manifestFilePath);
+    manifest.theme_color = accentColor;
+    fs.writeFileSync(manifestFilePath, JSON.stringify(manifest));
 }
 
 function createSidebars(paths: string[]) {
