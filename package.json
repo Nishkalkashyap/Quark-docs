@@ -1,6 +1,6 @@
 {
   "name": "@quark/docs",
-  "version": "0.2.14.4",
+  "version": "0.2.14.5",
   "description": "Documentation for quark",
   "main": "index.js",
   "scripts": {
