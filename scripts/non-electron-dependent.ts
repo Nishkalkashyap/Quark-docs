@@ -123,14 +123,18 @@ function createReadmeFiles(paths: string[]) {
 function updatePrimaryColor() {
     //has to be hex code
     const iconColor = '#020814';
+    // const iconColor = '#09c372';
     // const iconColor = '#10dc60';
 
     //can be rgb
-    const accentColor = '#3880ff';//blue
+    // const accentColor = '#ff5252';//red
+    // const accentColor = '#3880ff';//blue
+    // const accentColor = '#3b5bdb';//purple
+    // const accentColor = '#ffce00';//ionic-warning
     // const accentColor = '#10dc60';//green
     // const accentColor = '#ffce00';//yello
     // const accentColor = '#f04141';//red
-    // const accentColor = '#09c372';//fireship green
+    const accentColor = '#09c372';//fireship green
     // const accentColor = '#fa7c3b';//fireship orange
     // const accentColor = '#020814';//black
     // const accentColor = '#5851ff';//stenciljs purple

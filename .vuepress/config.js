@@ -36,7 +36,7 @@ module.exports = {
             'link', {
                 rel: 'shortcut icon',
                 type: 'image/svg',
-                href: '/images/icon-svg.svg'
+                href: '/images/icon.png'
             },
         ],
         [
@@ -218,6 +218,7 @@ module.exports = {
     },
     configureWebpack: (config) => {
         config.resolve.alias['@public'] = path.resolve('./.vuepress/public');
+        config.resolve.alias['@vuepress'] = path.resolve('./.vuepress');
         config.resolve.alias['@scripts'] = path.resolve('./scripts');
     }
     // configureWebpack: {
