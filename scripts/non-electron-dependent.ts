@@ -5,6 +5,8 @@ import { AllTags } from './types';
 import { themeConfig } from '../.vuepress/config';
 import { IFrontmatterData, getFrontmatterFromPath, capitalize, Frontmatter } from './util';
 import { reccursiveIgnoreFunction } from './check-files';
+import * as sharp from 'sharp';
+
 var beautify = require('js-beautify').js;
 
 const sidebars = ['guide', 'references', 'structures', 'FAQ', 'tags', 'snippets'];
@@ -120,10 +122,10 @@ function createReadmeFiles(paths: string[]) {
 }
 
 
-function updatePrimaryColor() {
+async function updatePrimaryColor() {
     //has to be hex code
-    const iconColor = '#020814';
-    // const iconColor = '#09c372';
+    // const iconColor = '#020814';
+    const iconColor = '#09c372';
     // const iconColor = '#10dc60';
 
     //can be rgb
@@ -141,6 +143,7 @@ function updatePrimaryColor() {
 
     const overrideFilePath = Path.resolve('./.vuepress/override.styl');
     const svgFilePath = Path.resolve(`./.vuepress/public/images/icon-svg.svg`);
+    const pngFilePath = Path.resolve(`./.vuepress/public/images/icon.png`);
 
     let override = fs.readFileSync(overrideFilePath).toString();
     override = override.replace(/\$accentColor.+/, `$accentColor = ${accentColor}`);
@@ -149,6 +152,12 @@ function updatePrimaryColor() {
     let svg = fs.readFileSync(svgFilePath).toString();
     svg = svg.replace(/fill="[#0-9a-z(),]+"/g, `fill="${iconColor}"`);
     fs.writeFileSync(svgFilePath, svg);
+
+    const imageBuffer = await sharp(svgFilePath)
+    .png()
+    .toBuffer();
+
+    fs.writeFileSync(pngFilePath, imageBuffer);
 }
 
 function createSidebars(paths: string[]) {
