@@ -96,8 +96,38 @@ body {
         border-color: var(--line-rule-color);
     }
 
+    // navbar text-size
+    // span.title, a.nav-link {
+    //     font-size: 16px;
+    // }
+
     header.navbar div.dropdown-wrapper {
         position relative;
+        height: 100%;
+
+        a.dropdown-title {
+
+            span.arrow {
+                position: relative;
+                border: 0px;
+            }
+
+            span.arrow:before {
+                width: 14px;
+                height: 14px;
+                display: inline-block;
+                content: '';
+                position: absolute;
+                background-color: var(--text-color);
+                transition: 0.2s all;
+                top: -6px;
+                left: -6px;
+                mask-size: cover;
+                -webkit-mask-size: cover;
+                mask: url(/images/arrow.svg) no-repeat 50% 50%;
+                -webkit-mask: url(/images/arrow.svg) no-repeat 50% 50%;
+            }
+        }
 
         ul.nav-dropdown {
             display: block !important;
@@ -136,6 +166,10 @@ body {
             border-width: 1px;
             border-color: var(--line-rule-color);
             opacity: 1;
+        }
+
+        span.arrow:before {
+            transform: rotate(-180deg);
         }
     }
 
@@ -198,13 +232,14 @@ body {
             position: absolute;
             left: 14px;
             top: 21px;
-            mask-size: cover;
-            -webkit-mask: url(/images/download.svg) no-repeat 50% 50%;
-            mask: url(/images/download.svg) no-repeat 50% 50%;
-            -webkit-mask-size: cover;
-            mask-size: cover;
             background-color: #ffffff;
             transition: 0.2s all;
+
+            mask-size: cover;
+            -webkit-mask-size: cover;
+
+            mask: url(/images/download.svg) no-repeat 50% 50%;
+            -webkit-mask: url(/images/download.svg) no-repeat 50% 50%;
         }
 
         .nav-item a[href="/download/"]:hover:before, .nav-item a[href="/download/"].router-link-active:before{
