@@ -28,12 +28,6 @@ module.exports = {
         ],
         [
             'link', {
-                href: 'https://fonts.googleapis.com/icon?family=Material+Icons',
-                rel: 'stylesheet'
-            }
-        ],
-        [
-            'link', {
                 rel: 'shortcut icon',
                 type: 'image/svg',
                 href: '/images/icon.png'
