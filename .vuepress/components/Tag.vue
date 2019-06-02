@@ -20,15 +20,14 @@ export default {
   },
   mounted: function() {
     const name = this.name.toLowerCase();
-    this.color = AllTags[name]
-      ? AllTags[name].color
-      : "var(--text-color)";
+    this.color = AllTags[name] ? AllTags[name].color : "var(--text-color)";
     this.background = AllTags[name]
       ? AllTags[name].background
       : "var(--text-color--dark)";
   },
   methods: {
     openTagPage: function() {
+      const name = this.name.toLowerCase();
       this.$router.push({ path: `/tags/${name}.html` });
     }
   }
