@@ -3,6 +3,9 @@ description : 'Quark is a cross-platform, integrated development environment for
 author : nishkal
 tags : ['guide']
 cover : ~@public//g-images/guide/introduction.png
+# meta:
+#   - name: description
+#     content: my custom meta description
 ---
 
 # Introduction
