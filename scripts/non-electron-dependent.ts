@@ -61,9 +61,14 @@ async function createTagsDirectory() {
             });
 
             let str = '';
-            str = str.concat('---', '\n', 'pageClass : sidebar-metacard-container', '\n', `description : ${AllTags[tag].description}`, '\n', '---', '\n\n');
-            str = str.concat(`# ${capitalize(tag)}`, '\n\n');
-            str = str.concat(`<Header/>`, '\n\n');
+            str = str.concat('---', '\n',
+                'pageClass : sidebar-metacard-container', '\n',
+                `description : ${AllTags[tag].description}`, '\n',
+                `title : ${tag}`, '\n',
+                '---', '\n\n');
+            // str = str.concat(`# ${capitalize(tag)}`, '\n\n');
+            str = str.concat(`<Tag name="${capitalize(tag)}" />`, '\n\n');
+            str = str.concat(`<Header />`, '\n\n');
             str = str.concat('<div class="tags-container">', '\n\n');
             files.map((file) => {
                 str = str.concat(
@@ -157,8 +162,8 @@ async function updatePrimaryColor() {
 
     //png image
     const imageBuffer = await sharp(svgFilePath)
-    .png()
-    .toBuffer();
+        .png()
+        .toBuffer();
     fs.writeFileSync(pngFilePath, imageBuffer);
 
 

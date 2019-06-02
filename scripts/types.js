@@ -1,4 +1,4 @@
-const AllTags = {
+exports.AllTags = reverse({
     javascript: {
         background: 'var(--text-color--dark)',
         color: '#f0db4f',
@@ -6,7 +6,7 @@ const AllTags = {
     },
     typescript: {
         background: 'var(--text-color--dark)',
-        color: '##2775c3',
+        color: '#2775c3',
         description: `TypeScript is an open-source programming language developed and maintained by Microsoft. It is a strict syntactical superset of JavaScript.`
     },
     nodejs: {
@@ -34,19 +34,23 @@ const AllTags = {
         color: '#6675e0',
         description: `Arduino is an open-source hardware and software company, project and user community that designs and manufactures single-board microcontrollers.`
     }
-};
-
-// const _AllTags = AllTags;
-const _AllTags = reverse(AllTags);
-export { _AllTags as AllTags };
+});
 
 function reverse(tags) {
-    Object.keys(tags).map((tag) => {
+    // Object.keys(tags).map((tag) => {
+    //     const background = tags[tag].background;
+    //     const color = tags[tag].color;
+
+    //     tags[tag].background = color;
+    //     tags[tag].color = background;
+    // });
+
+    for (let tag in tags) {
         const background = tags[tag].background;
         const color = tags[tag].color;
 
         tags[tag].background = color;
         tags[tag].color = background;
-    });
+    }
     return tags;
 }

@@ -15,6 +15,6 @@ span {
   color: var(--text-color--light);
   padding-left: 10px;
   display: inline-block;
-  margin: 5px 0px;
+  margin: 20px 0px;
 }
 </style>

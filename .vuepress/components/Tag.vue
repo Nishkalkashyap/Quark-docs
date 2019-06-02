@@ -19,16 +19,17 @@ export default {
     };
   },
   mounted: function() {
-    this.color = AllTags[this.name]
-      ? AllTags[this.name].color
+    const name = this.name.toLowerCase();
+    this.color = AllTags[name]
+      ? AllTags[name].color
       : "var(--text-color)";
-    this.background = AllTags[this.name]
-      ? AllTags[this.name].background
+    this.background = AllTags[name]
+      ? AllTags[name].background
       : "var(--text-color--dark)";
   },
   methods: {
     openTagPage: function() {
-      this.$router.push({ path: `/tags/${this.name}.html` });
+      this.$router.push({ path: `/tags/${name}.html` });
     }
   }
 };
