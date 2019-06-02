@@ -18,6 +18,10 @@ steps:
 - name: 'gcr.io/cloud-builders/npm'
   args : ['run','cloud-build']
 
+# post-build
+- name: 'gcr.io/cloud-builders/npm'
+  args : ['run','post-build']
+
 # worker
 # - name: 'gcr.io/cloud-builders/npm'
 #   args : ['run','worker']

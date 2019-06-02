@@ -36,6 +36,8 @@ async function checkFiles() {
             printConsoleStatus(`Error: ${result.errMsg}\n`, 'danger');
         }
     });
+
+    console.log(`Checked: ${files.length}`);
 }
 
 export function isValidFile(path: string): { isValid: boolean, errMsg: string } {

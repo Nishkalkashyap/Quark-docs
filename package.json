@@ -9,6 +9,7 @@
     "start": "npm run tags && npm run land && npm run img && vuepress dev -p 80",
     "build": "npm run tags && npm run land && npm run img && vuepress build",
     "cloud-build": "npm run tags && npm run img && vuepress build",
+    "post-build": "npx ts-node ./scripts/create-site-map.ts",
     "worker": "npx ts-node ./scripts/post-build.ts",
     "deploy-ci": "firebase deploy --token \"$FIREBASE_TOKEN\"",
     "bad": "npm run build && firebase deploy",
