@@ -4,7 +4,7 @@ const AllTags = require('./../scripts/types').AllTags;
 
 module.exports = {
     title: 'Quark',
-    desctiption: 'IoT Framework',
+    description: 'IoT Framework',
     ga: 'UA-112064718-3',
     serviceWorker: true,
     head: [
