@@ -14,7 +14,7 @@ span {
   font-weight: 500;
   color: var(--text-color--light);
   padding-left: 10px;
-  display: inline-block;
+  display: block;
   margin: 20px 0px;
 }
 </style>
