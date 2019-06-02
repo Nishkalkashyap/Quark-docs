@@ -1,20 +1,22 @@
 <template>
-  <div class="card-container">
-    <div class="image-container" @click="openLink()">
-      <slot></slot>
-    </div>
-    <div class="card-content">
-      <div class="last-updated" v-if="lastUpdated">{{lastUpdated}}</div>
-      <div class="title" @click="openLink()">
-        <img src="/images/icon-svg.svg" v-if="!frontmatter.cover">
-        <span>{{frontmatter.title || page.title}}</span>
+  <div class="padding">
+    <div class="card-container">
+      <div class="image-container" @click="openLink()">
+        <slot></slot>
       </div>
-      <div class="description" v-if="frontmatter.description">
-        {{desc}}
-        <router-link :to="{ path: this.link}">...</router-link>
-      </div>
-      <div class="tags">
-        <Tag v-for="tag of frontmatter.tags" :name="tag" :key="tag"></Tag>
+      <div class="card-content">
+        <div class="last-updated" v-if="lastUpdated">{{lastUpdated}}</div>
+        <div class="title" @click="openLink()">
+          <img src="/images/icon-svg.svg" v-if="!frontmatter.cover">
+          <span>{{frontmatter.title || page.title}}</span>
+        </div>
+        <div class="description" v-if="frontmatter.description">
+          {{desc}}
+          <router-link :to="{ path: this.link}">...</router-link>
+        </div>
+        <div class="tags">
+          <Tag v-for="tag of frontmatter.tags" :name="tag" :key="tag"></Tag>
+        </div>
       </div>
     </div>
   </div>
@@ -76,13 +78,33 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.card-container {
-  margin: 40px 20px;
-  flex-grow: 1;
-  min-width: 250px;
-  max-width: 450px;
+div.padding {
+  padding: 10px 10px;
   display: inline-block;
-  color: var();
+  flex-basis: 33%;
+  max-width: 33%;
+  min-width: 32%;
+  box-sizing: border-box;
+}
+
+@media (max-width: 1200px) {
+  div.padding {
+    flex-basis: 50%;
+    max-width: 50%;
+  }
+}
+
+@media (max-width: 959px) {
+  div.padding {
+    flex-basis: 100%;
+    max-width: 100%;
+    padding: 10px 50px;
+  }
+}
+
+.card-container {
+  background-color: var(--code-background);
+  display: block;
   overflow: hidden;
   border-radius: 2px;
   box-shadow: 0px 0.175em 0.5em rgba(2, 8, 20, 0.1),
@@ -104,7 +126,7 @@ export default {
 
     .title {
       font-family: var(--heading-font-family);
-      font-size: 28px;
+      font-size: 23px;
       padding-bottom: 20px;
       padding-top: 10px;
       color: var(--text-color--dark);
