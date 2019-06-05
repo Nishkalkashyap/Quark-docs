@@ -199,7 +199,7 @@ function createSidebars(paths: string[]) {
 function generateAllDocsPage() {
 
     const folders = sidebars.filter((val) => {
-        return !val.match(/(tags|FAQ|guide|all)/);
+        return !val.match(/(tags|FAQ|all)/);
     });
 
     let str = ``;
@@ -207,36 +207,43 @@ function generateAllDocsPage() {
     str = str.concat(`description : All docs on one page.`, '\n');
     str = str.concat(`author : nishkal`, '\n');
     str = str.concat(`tags : []`, '\n');
+    str = str.concat(`sidebarDepth: 4`, '\n');
     str = str.concat(`---`, '\n');
 
-    str = str.concat(`\n\n[[toc]]\n`);
+    str = str.concat(`\n# All Docs\n`);
 
     folders.map((folder) => {
-        // str = str.concat('\n', `# ${folder}`, '\n');
+        str = str.concat('\n', `## ${folder}`, '\n');
 
-        const files = fs.readdirSync(folder).filter((val) => !val.includes('README.md'));
+        let files = fs.readdirSync(folder).filter((val) => !val.includes('README.md'));
+
+        const initialObject: ISidebarObject = JSON.parse(JSON.stringify(themeConfig.sidebar));
+        files = files.sort((a, b) => {
+            return initialObject[`/${folder}/`].indexOf(a) - initialObject[`/${folder}/`].indexOf(b)
+        });
+
         files.map((file) => {
             const frontmatter = getFrontmatterFromPath(Path.join(folder, file));
             let data = fs.readFileSync(Path.join(folder, file)).toString();
 
             data = data
                 .replace(/---([\s\S\n]+?)---/, '')
-                .replace(/(#.*?)\s/g, '$1# ')
+                .replace(/(#.*?)\s/g, '$1## ')
                 .replace(/\[\[toc\]\]/g, '');
 
             //set heading
-            const regex = /[\s\n]#{2}\s(\w+)/;
+            const regex = /[\s\n]#{3}\s(\w+)/;
             const match = data.match(regex);
             if (match) {
-                data = data.replace(regex, '## $1');
+                data = data.replace(regex, '### $1');
             } else {
-                data = `\n\n## ${file.replace('.md', '')}\n\n`.concat(data);
+                data = `\n\n### ${file.replace('.md', '')}\n\n`.concat(data);
             }
 
             if (frontmatter) {
                 data = data.replace(/<Header\/>/g, `<Header label="${frontmatter.description}" />`)
             }
-            str = str.concat(data, '\n\n');
+            str = str.concat(data, '\n', '________', '\n\n');
         });
     });
 
