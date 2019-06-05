@@ -247,6 +247,7 @@ function generateAllDocsPage() {
         });
     });
 
+    fs.ensureFileSync('./all/README.md');
     fs.writeFileSync('./all/README.md', str);
 }
 
