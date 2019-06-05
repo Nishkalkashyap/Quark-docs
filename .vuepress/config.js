@@ -199,7 +199,6 @@ module.exports = {
                 "faq.md",
                 "guide.md",
                 "structures.md",
-                "arduino.md",
                 "typescript.md",
                 "javascript.md",
                 "nodejs.md"
@@ -207,6 +206,9 @@ module.exports = {
             "/snippets/": [
                 "cron-example-schedule.md",
                 "install-nodejs.md"
+            ],
+            "/all/": [
+                ""
             ]
         }
     },

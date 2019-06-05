@@ -20,6 +20,7 @@ const TAGS_BASE_PATH = './tags';
     createSidebars(sidebars);
     createReadmeFiles(readmefiles);
     updatePrimaryColor();
+    generateAllDocsPage();
 })().catch(console.error);
 
 
@@ -187,12 +188,59 @@ function createSidebars(paths: string[]) {
     });
 
     fs.readFile('./.vuepress/config.js').then((file) => {
-        const str = String().concat('sidebar:', JSON.stringify(obj).replace(/(:|,|\[)/g, '$1\n'));
+        const str = String().concat('sidebar:', JSON.stringify(Object.assign(initialObject, obj)).replace(/(:|,|\[)/g, '$1\n'));
         const match = file.toString().replace(/sidebar:(.|\n|\s|{)+?}/, str);
         fs.writeFileSync('./.vuepress/config.js', beautify(match));
     }).catch((err) => {
         console.log(err);
     });
+}
+
+function generateAllDocsPage() {
+
+    const folders = sidebars.filter((val) => {
+        return !val.match(/(tags|FAQ|guide|all)/);
+    });
+
+    let str = ``;
+    str = str.concat(`---`, '\n');
+    str = str.concat(`description : All docs on one page.`, '\n');
+    str = str.concat(`author : nishkal`, '\n');
+    str = str.concat(`tags : []`, '\n');
+    str = str.concat(`---`, '\n');
+
+    str = str.concat(`\n\n[[toc]]\n`);
+
+    folders.map((folder) => {
+        // str = str.concat('\n', `# ${folder}`, '\n');
+
+        const files = fs.readdirSync(folder).filter((val) => !val.includes('README.md'));
+        files.map((file) => {
+            const frontmatter = getFrontmatterFromPath(Path.join(folder, file));
+            let data = fs.readFileSync(Path.join(folder, file)).toString();
+
+            data = data
+                .replace(/---([\s\S\n]+?)---/, '')
+                .replace(/(#.*?)\s/g, '$1# ')
+                .replace(/\[\[toc\]\]/g, '');
+
+            //set heading
+            const regex = /[\s\n]#{2}\s(\w+)/;
+            const match = data.match(regex);
+            if (match) {
+                data = data.replace(regex, '## $1');
+            } else {
+                data = `\n\n## ${file.replace('.md', '')}\n\n`.concat(data);
+            }
+
+            if (frontmatter) {
+                data = data.replace(/<Header\/>/g, `<Header label="${frontmatter.description}" />`)
+            }
+            str = str.concat(data, '\n\n');
+        });
+    });
+
+    fs.writeFileSync('./all/README.md', str);
 }
 
 
