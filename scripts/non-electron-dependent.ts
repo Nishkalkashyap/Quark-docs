@@ -213,7 +213,7 @@ function generateAllDocsPage() {
     str = str.concat(`\n# All Docs\n`);
 
     folders.map((folder) => {
-        str = str.concat('\n', `## ${folder}`, '\n');
+        str = str.concat('\n', `## ${caps(folder)}`, '\n');
 
         let files = fs.readdirSync(folder).filter((val) => !val.includes('README.md'));
 
@@ -249,6 +249,11 @@ function generateAllDocsPage() {
 
     fs.ensureFileSync('./all/README.md');
     fs.writeFileSync('./all/README.md', str);
+}
+
+function caps(str: string) {
+    str = str[0].toUpperCase() + str.substr(1, str.length);
+    return str;
 }
 
 
