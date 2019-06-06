@@ -3,6 +3,8 @@ import * as Path from 'path';
 import * as fs from 'fs-extra';
 import { ChildProcess, exec } from 'child_process';
 
+const domainName = 'quarkjs.io';
+
 createSiteMap().catch(console.error);
 
 export async function createSiteMap() {
@@ -43,7 +45,7 @@ export async function createSiteMap() {
         if (!file.endsWith('.md') || obj.str.length == 0) {
             url = url.concat(`
             <url>
-                <loc>https://quarkjs.io/${file.replace(/\.(md)$/g, '.html')}</loc> 
+                <loc>https://${domainName}/${file.replace(/\.(md)$/g, '.html')}</loc> 
                 <changefreq>daily</changefreq>
             </url>
             `);
@@ -51,7 +53,7 @@ export async function createSiteMap() {
             const date = obj.str.replace(/\n/g, '');
             url = url.concat(`
             <url>
-                <loc>https://quarkjs.io/${file.replace(/\.(md)$/g, '.html')}</loc>
+                <loc>https://${domainName}/${file.replace(/\.(md)$/g, '.html')}</loc>
                 <lastmod>${(new Date(date)).toISOString()}</lastmod>
             </url>
             `);
