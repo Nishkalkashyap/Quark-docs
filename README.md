@@ -2,7 +2,7 @@
 # home: false
 home: true
 heroImage: /images/icon-svg.svg
-heroText: Quarkyyyy
+heroText: Quark
 tagline: Platform to develope internet of things.
 actionText: Get Started →
 actionLink: /guide/intro.html
