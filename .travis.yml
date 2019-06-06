@@ -26,10 +26,11 @@ script:
   - npm run post-build
 
 deploy:
-  provider: firebase
-  token:
-    secure: LF/KYTxiB8tcvwpBlg5z0W/BHk868uTZGLDFgD48ajEM7rRMBmKrPlZx9tV8xFCHsXEmBTGThDGXGzvPZsXD6m8kSM+fRZuf5Hz97R2aFYwwi0HpE/mtbBedClhDCxX2hA8/2fJ9avitjXGCf3ZrBBYJ55du0pf55iQyybQAtgZV3AMbtcUg5NZZvTGm4L2xfCLUtloAw7YnpYDndtfEa/1Mne0rYP+aQTN/NgL9xTK2uDeLqi2HHH9wWjg2X16DfiQzeB24v9pv/AgfIk0X0gEi1NpdQwpmS2zYJzl0Re9J9npxWajUCSmHv1Mi5pKypxudTi5Pn6VcDydfdE3/4gJx7KHXjueyzpGaCkM3GhsJbggEWWE2gOcEyNB98TLNl/v5nM2zjEPxOytkwgHGgNZEc7xFV4BTnujQLaGdhtzHdxP4Joqd4YmRPTgD2MpqtLnm+H9aXs1D8gkpJ0US2AunqZYdUGoodI/YNhUeJBzZtEcZFhv2gtYjuAHsCqAUgBqYZyb7ai6CbOSuGgBAbvwOGXrLdS/X/nlXVgN4plNHrbR9h8I63GH2KyR6jiG/rH0x1M0CpvMsEddUzynXTVXLkJiEHpuCj9F6AHe1sy1cp/ZUH+c2nnQh5lXTasrCCZCnx4u+BHgjTd2qzcWOX273Syhn6paLpwcL/AndMbU=
-  project: diy-mechatronics
+  provider: gcs
+  access_key_id: "GCS Interoperable Access Key ID"
+  secret_access_key: "GCS Interoperable Access Secret"
+  bucket: "GCS Bucket"
+  skip_cleanup: true
 
 after_deploy:
   - npm run ssn
