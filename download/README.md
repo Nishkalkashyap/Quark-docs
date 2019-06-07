@@ -1,4 +1,7 @@
 # All Downloads
+![Build Status](https://travis-ci.org/Nishkalkashyap/Quark-electron.svg?branch=master)
+![https://ci.appveyor.com/api/projects/status/32r7s2skrgm9ubva?svg=true](https://ci.appveyor.com/api/projects/status/32r7s2skrgm9ubva?svg=true)
+
 | Meta                                            ||
 | ------------------- | -------------------------- |
 | Latest Version:     | 0.2.16            |

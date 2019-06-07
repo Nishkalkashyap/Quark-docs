@@ -58,6 +58,8 @@ function updateDownloadLinks() {
 
     let str = '';
     str = str.concat(`# All Downloads`, '\n');
+    str = str.concat(`![Build Status](https://travis-ci.org/Nishkalkashyap/Quark-electron.svg?branch=master)`, '\n');
+    str = str.concat(`![https://ci.appveyor.com/api/projects/status/32r7s2skrgm9ubva?svg=true](https://ci.appveyor.com/api/projects/status/32r7s2skrgm9ubva?svg=true)`, '\n');
     str = str.concat('| Meta                                            ||', '\n');
     str = str.concat('| ------------------- | -------------------------- |', '\n');
     str = str.concat(`| Latest Version:     | ${json.version}            |`, '\n');
