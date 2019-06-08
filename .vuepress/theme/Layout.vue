@@ -1,7 +1,7 @@
 <template>
   <ParentLayout>
     <!-- <PageBottom slot="page-bottom"/> -->
-    <Disqus slot="page-bottom" />
+    <!-- <Disqus slot="page-bottom" /> -->
 
     <!-- <PageBottom slot="sidebar-top"/> -->
     <!-- <BuySellAds slot="page-bottom"/> -->

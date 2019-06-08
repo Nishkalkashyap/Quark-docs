@@ -62,3 +62,7 @@ __Following are some sample projects made with Quark.__
   <source src="~@public/c-assets/guide/showcase/web-browser.mp4" type="video/mp4">
   Your browser does not support the video tag.
 </video> 
+
+!!! note Note
+Find these projects on [Github](https://github.com/Nishkalkashyap/quark-projects)
+!!!

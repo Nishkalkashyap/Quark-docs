@@ -45,8 +45,11 @@ export default {
   width: calc(100% - 50px);
   /* max-width: calc(100% - 200px); */
 
-  // iframe {
-  //   background-color: green;
-  // }
+  iframe {
+    #footer {
+      display: none !important;
+      background-color: red;
+    }
+  }
 }
 </style>
