@@ -57,9 +57,13 @@ function updateDownloadLinks() {
     hashes = hashes.concat('!!!', '\n\n');
 
     let str = '';
+    str = str.concat(`---`, '\n', 'pageClass: download-page', '\n', '---', '\n\n');
     str = str.concat(`# All Downloads`, '\n');
-    str = str.concat(`![Build Status](https://travis-ci.org/Nishkalkashyap/Quark-electron.svg?branch=master)`, '\n');
-    str = str.concat(`![https://ci.appveyor.com/api/projects/status/32r7s2skrgm9ubva?svg=true](https://ci.appveyor.com/api/projects/status/32r7s2skrgm9ubva?svg=true)`, '\n');
+    str = str.concat(`[![Build Status](https://travis-ci.org/Nishkalkashyap/Quark-electron.svg?branch=master)](https://travis-ci.org/Nishkalkashyap/Quark-electron)`, '\n');
+    str = str.concat(`[![Build Status](https://ci.appveyor.com/api/projects/status/32r7s2skrgm9ubva?svg=true)](https://ci.appveyor.com/project/Nishkalkashyap/quark-electron)`, '\n');
+    // str = str.concat(`[![Known Vulnerabilities](https://snyk.io/test/github/Nishkalkashyap/Quark-electron/badge.svg)](https://snyk.io/test/github/Nishkalkashyap/Quark-electron)`, '\n');
+    str = str.concat(`[![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/Nishkalkashyap/Quark-docs)`, '\n');
+    // str = str.concat(`[![HitCount](http://hits.dwyl.io/Nishkalkashyap/Quark-docs.svg)](http://hits.dwyl.io/Nishkalkashyap/Quark-docs)`, '\n');
     str = str.concat('| Meta                                            ||', '\n');
     str = str.concat('| ------------------- | -------------------------- |', '\n');
     str = str.concat(`| Latest Version:     | ${json.version}            |`, '\n');

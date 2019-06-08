@@ -12,6 +12,10 @@
     }
 }
 
+.download-page a svg {
+    display: none !important;
+}
+
 
 
 .no-sidebar-metacard-container .tags-container,

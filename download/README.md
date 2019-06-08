@@ -1,6 +1,11 @@
+---
+pageClass: download-page
+---
+
 # All Downloads
-![Build Status](https://travis-ci.org/Nishkalkashyap/Quark-electron.svg?branch=master)
-![https://ci.appveyor.com/api/projects/status/32r7s2skrgm9ubva?svg=true](https://ci.appveyor.com/api/projects/status/32r7s2skrgm9ubva?svg=true)
+[![Build Status](https://travis-ci.org/Nishkalkashyap/Quark-electron.svg?branch=master)](https://travis-ci.org/Nishkalkashyap/Quark-electron)
+[![Build Status](https://ci.appveyor.com/api/projects/status/32r7s2skrgm9ubva?svg=true)](https://ci.appveyor.com/project/Nishkalkashyap/quark-electron)
+[![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/Nishkalkashyap/Quark-docs)
 | Meta                                            ||
 | ------------------- | -------------------------- |
 | Latest Version:     | 0.2.17            |
