@@ -53,6 +53,7 @@
         <span class="platform-distro">macOS 10.9+</span>
         <span class="coming-soon" v-if="!mac">Coming Soon</span>
       </button>
+      <span style="font-size:12px"><a href="mailto:hello@nishkal.in?subject=Quark%20Build%20for%20Mac">Let us know</a> if you want to get it sooner!</span>
     </div>
   </div>
 </template>
