@@ -3,12 +3,12 @@ import * as YAML from 'yamljs';
 import * as js from 'js-beautify';
 
 const json = require('./../../Quark-electron/package.json');
+const notes = fs.readFileSync('./../Quark-electron/dev-assets/releaseNotes.md').toString();
 
 createReleaseNotes();
 updateDownloadLinks();
 
 function createReleaseNotes() {
-    const notes = fs.readFileSync('./../Quark-electron/dev-assets/releaseNotes.md').toString();
     let str = '';
     str = str.concat('# Release Notes', '\n\n');
     str = str.concat(notes);
@@ -43,7 +43,6 @@ function updateDownloadLinks() {
         return bin.search(/(.zip)$/) !== -1;
     });
 
-    const notes = fs.readFileSync('./../Quark-electron/dev-assets/releaseNotes.md').toString();
     const preText = `<!-- Quark-${json.version}-start -->`;
     const postText = `<!-- Quark-${json.version}-end -->`;
     const substr = notes.substring(notes.indexOf(preText), notes.indexOf(postText));
