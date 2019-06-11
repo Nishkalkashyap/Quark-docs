@@ -12,6 +12,8 @@ matrix:
   - os: linux
     node_js: lts/*
 before_install:
+- openssl aes-256-cbc -K $encrypted_e001d8d331d4_key -iv $encrypted_e001d8d331d4_iv
+  -in cloud-storage-key.json.enc -out cloud-storage-key.json -d
 - npm i -g firebase-tools
 install:
 - npm install
