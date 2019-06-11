@@ -1,6 +1,8 @@
 import * as YAML from 'yamljs';
 import * as fs from 'fs-extra';
 import chalk from 'chalk';
+import { Storage } from '@google-cloud/storage';
+process.env.GOOGLE_APPLICATION_CREDENTIALS = './cloud-storage-key.json';
 
 export function printConsoleStatus(message: string, status: 'danger' | 'success' | 'warning' | 'info'): void {
     let emoji = (status == 'danger') ? '  ❗' : (status == 'success') ? ' ✅ ' : (status == 'warning') ? ' ⚠️ ' : ' ️️💁 ';
@@ -25,6 +27,26 @@ export function capitalize(s: string) {
         splitStr[i] = splitStr[i].charAt(0).toUpperCase() + splitStr[i].substring(1);
     }
     return splitStr.join(' ');
+}
+
+export function getFiles(bucketName: string, version: string): Promise<string[]> {
+    return new Promise((resolve) => {
+
+        const arr: string[] = [];
+        const storage = new Storage({
+            projectId: 'diy-mechatronics'
+        });
+        storage.bucket(bucketName).getFiles().then((folders) => {
+            folders.map((files) => {
+                files.map((file) => {
+                    if (file.name.includes(`Quark-${version}`)) {
+                        arr.push(file.name);
+                    }
+                });
+                resolve(arr);
+            });
+        });
+    });
 }
 
 export type IFrontmatterData = {
