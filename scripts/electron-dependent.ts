@@ -14,7 +14,7 @@ root().catch(console.error);
 async function root() {
     await getRawContent();
     createReleaseNotes();
-    await updateDownloadLinks();
+    await updateDownloadLinks(await getFiles('quarkjs-auto-update', version), './download/README.md');
 }
 
 async function getRawContent() {
@@ -32,14 +32,13 @@ function createReleaseNotes() {
     fs.writeFileSync('./FAQ/release-notes.md', str);
 }
 
-async function updateDownloadLinks() {
+function updateDownloadLinks(contents: string[], outFilePath: string) {
     const monthNames = ["January", "February", "March", "April", "May", "June",
         "July", "August", "September", "October", "November", "December"
     ];
 
     const date = new Date(latestYML.releaseDate);
 
-    const contents = await getFiles('quarkjs-auto-update', '0.2.17');
     const binaries = contents.filter((bin) => {
         return !(bin.includes('blockmap') || bin.includes('latest'));
     });
@@ -94,7 +93,7 @@ async function updateDownloadLinks() {
     str = str.concat('/>', '\n');
     str = str.concat(hashes);
 
-    fs.writeFileSync('./download/README.md', str);
+    fs.writeFileSync(outFilePath, str);
 }
 
 
