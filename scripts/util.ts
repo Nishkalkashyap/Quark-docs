@@ -40,7 +40,7 @@ export function getFiles(bucketName: string, version: string): Promise<string[]>
             folders.map((files) => {
                 files.map((file) => {
                     if (file.name.includes(`Quark-${version}`)) {
-                        arr.push(file.name);
+                        arr.push(file.name.replace(`Quark-${version}/`, ''));
                     }
                 });
                 resolve(arr);

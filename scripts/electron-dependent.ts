@@ -1,12 +1,29 @@
 import * as fs from 'fs-extra';
 import * as YAML from 'yamljs';
 import * as js from 'js-beautify';
+import fetch from 'node-fetch';
+import { getFiles } from './util';
 
-const json = require('./../../Quark-electron/package.json');
-const notes = fs.readFileSync('./../Quark-electron/dev-assets/releaseNotes.md').toString();
+// let json: any;
+let version: string;
+let notes: string;
+let latestYMLText: string;
+let latestYML: any;
 
-createReleaseNotes();
-updateDownloadLinks();
+root().catch(console.error);
+async function root() {
+    await getRawContent();
+    createReleaseNotes();
+    await updateDownloadLinks();
+}
+
+async function getRawContent() {
+    latestYMLText = await (await fetch(`https://storage.googleapis.com/quarkjs-auto-update/latest.yml`)).text();
+    latestYML = YAML.parse(latestYMLText);
+    version = latestYML.version;
+    // json = await (await fetch('https://raw.githubusercontent.com/Nishkalkashyap/Quark-electron/release/package.json')).json();
+    notes = await (await fetch('https://raw.githubusercontent.com/Nishkalkashyap/Quark-electron/release/dev-assets/releaseNotes.md')).text();
+}
 
 function createReleaseNotes() {
     let str = '';
@@ -15,19 +32,14 @@ function createReleaseNotes() {
     fs.writeFileSync('./FAQ/release-notes.md', str);
 }
 
-function updateDownloadLinks() {
+async function updateDownloadLinks() {
     const monthNames = ["January", "February", "March", "April", "May", "June",
         "July", "August", "September", "October", "November", "December"
     ];
 
-    if (!fs.pathExistsSync(`./../Quark-electron/release/${json.version}/latest.yml`)) {
-        return;
-    }
+    const date = new Date(latestYML.releaseDate);
 
-    const latest = YAML.parse(fs.readFileSync(`./../Quark-electron/release/${json.version}/latest.yml`).toString());
-    const date = new Date(latest.releaseDate);
-
-    const contents = fs.readdirSync(`./../Quark-electron/release/${json.version}`);
+    const contents = await getFiles('quarkjs-auto-update', '0.2.17');
     const binaries = contents.filter((bin) => {
         return !(bin.includes('blockmap') || bin.includes('latest'));
     });
@@ -43,9 +55,10 @@ function updateDownloadLinks() {
         return bin.search(/(.zip)$/) !== -1;
     });
 
-    const preText = `<!-- Quark-${json.version}-start -->`;
-    const postText = `<!-- Quark-${json.version}-end -->`;
+    const preText = `<!-- Quark-${version}-start -->`;
+    const postText = `<!-- Quark-${version}-end -->`;
     const substr = notes.substring(notes.indexOf(preText), notes.indexOf(postText));
+    // console.log(json);
     const match = substr.match(/{(\n|.|\s)+}/)[0];
 
     let hashes = '';
@@ -65,12 +78,12 @@ function updateDownloadLinks() {
     // str = str.concat(`[![HitCount](http://hits.dwyl.io/Nishkalkashyap/Quark-docs.svg)](http://hits.dwyl.io/Nishkalkashyap/Quark-docs)`, '\n');
     str = str.concat('| Meta                                            ||', '\n');
     str = str.concat('| ------------------- | -------------------------- |', '\n');
-    str = str.concat(`| Latest Version:     | ${json.version}            |`, '\n');
+    str = str.concat(`| Latest Version:     | ${version}            |`, '\n');
     str = str.concat(`| Release Date:       | ${monthNames[date.getMonth()]} ${date.getDate()} ${date.getFullYear()},  ${date.toLocaleTimeString()}|`, '\n');
     str = str.concat(`| [Release Notes](/FAQ/release-notes.html)        ||`, '\n\n');
 
     str = str.concat('<Download', '\n');
-    str = str.concat(`version="${json.version}"`, '\n');
+    str = str.concat(`version="${version}"`, '\n');
 
     str = str.concat(`linux_main='${linuxMain}'`, '\n');
     str = str.concat(`linux_other='${JSON.stringify(linux_other_downloads)}'`, '\n');
