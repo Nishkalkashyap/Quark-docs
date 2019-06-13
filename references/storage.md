@@ -2,7 +2,7 @@
 description : Store data
 author : nishkal
 tags : ['api', 'references']
-cover : ~@public/g-images/api/api.png
+cover : ~@public/g-images/api/references.png
 ---
 
 # storage

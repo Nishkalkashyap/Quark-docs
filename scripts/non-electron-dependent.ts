@@ -59,6 +59,8 @@ async function createTagsDirectory() {
                 if (a.frontmatter.cover && !b.frontmatter.cover) { return -1; }
                 if (!a.frontmatter.cover && b.frontmatter.cover) { return 1; }
                 return 0;
+            }).sort((a, b) => {
+                return (a.path > b.path) ? 1 : (a.path < b.path) ? -1 : 0
             });
 
             let str = '';

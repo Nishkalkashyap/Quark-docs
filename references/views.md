@@ -2,7 +2,7 @@
 description : Create and control views of your app.
 author : nishkal
 tags : ['api', 'references']
-cover : ~@public/g-images/api/api.png
+cover : ~@public/g-images/api/references.png
 ---
 
 # views

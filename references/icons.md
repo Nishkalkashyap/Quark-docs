@@ -2,7 +2,7 @@
 description : Register icons to be used in UI components.
 author : nishkal
 tags : ['api', 'references']
-cover : ~@public/g-images/api/api.png
+cover : ~@public/g-images/api/references.png
 ---
 
 # icons

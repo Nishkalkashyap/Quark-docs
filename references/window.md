@@ -2,7 +2,7 @@
 description : Controls for window state of your app.
 author : nishkal
 tags : ['api', 'references']
-cover : ~@public/g-images/api/api.png
+cover : ~@public/g-images/api/references.png
 ---
 
 # window
