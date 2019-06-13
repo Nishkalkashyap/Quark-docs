@@ -2,6 +2,7 @@
 description : ''
 author : nishkal
 tags : ['structures', 'api']
+cover: ~@public/g-images/api/structures.png
 ---
 
 # InputField

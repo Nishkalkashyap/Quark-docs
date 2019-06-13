@@ -3,6 +3,7 @@ description : ''
 author : nishkal
 tags : ['structures', 'api']
 view : 'bottomview'
+cover: ~@public/g-images/api/structures.png
 ---
 
 # BottomviewController
