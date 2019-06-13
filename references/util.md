@@ -1,7 +1,8 @@
 ---
 description : Utilitiy methods to quark api.
 author : nishkal
-tags : ['api']
+tags : ['api', 'references']
+cover : ~@public/g-images/api/api.png
 ---
 
 # util

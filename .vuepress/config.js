@@ -199,6 +199,7 @@ module.exports = {
                 "release-notes.md"
             ],
             "/tags/": [
+                "references.md",
                 "api.md",
                 "faq.md",
                 "guide.md",

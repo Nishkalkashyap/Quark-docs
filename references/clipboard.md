@@ -1,7 +1,8 @@
 ---
 description : Perform copy and paste operations on the system clipboard.
 author : nishkal
-tags : ['api']
+tags : ['api', 'references']
+cover : ~@public/g-images/api/api.png
 ---
 
 # clipboard

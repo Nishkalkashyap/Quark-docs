@@ -1,7 +1,8 @@
 ---
 description : Store data
 author : nishkal
-tags : ['api']
+tags : ['api', 'references']
+cover : ~@public/g-images/api/api.png
 ---
 
 # storage

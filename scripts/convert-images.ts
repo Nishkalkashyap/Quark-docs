@@ -15,9 +15,15 @@ const ignoreFunction = (file: string, stat: fs.Stats) => {
 }
 
 const guideInputPath = './.vuepress/buildAssets/guide';
+const apiInputPath = './.vuepress/buildAssets/api';
 const guideOutputPath = './.vuepress/public/g-images/guide';
+const apiOutputPath = './.vuepress/public/g-images/api';
 
 const arr: IMap[] = [
+    {
+        inputPath: Path.join(apiInputPath, './'),
+        outputPath: Path.join(apiOutputPath, './'),
+    },
     {
         inputPath: Path.join(guideInputPath, './'),
         outputPath: Path.join(guideOutputPath, './'),

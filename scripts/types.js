@@ -19,6 +19,11 @@ exports.AllTags = reverse({
         color: '#ff5252',
         description: `Arduino is an open-source hardware and software company, project and user community that designs and manufactures single-board microcontrollers.`
     },
+    references: {
+        background: '#ffffff',
+        color: '#3880ff',
+        description: `Arduino is an open-source hardware and software company, project and user community that designs and manufactures single-board microcontrollers.`
+    },
     api: {
         background: '#ffffff',
         color: '#6675e0',

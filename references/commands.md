@@ -1,7 +1,8 @@
 ---
 description : Register globally executable commands that trigger an action on invocation.
 author : nishkal
-tags : ['api']
+tags : ['api', 'references']
+cover : ~@public/g-images/api/api.png
 ---
 
 # commands

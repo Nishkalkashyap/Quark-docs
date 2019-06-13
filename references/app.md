@@ -1,7 +1,8 @@
 ---
 description : Provides methods to perform lower level operations.
 author : nishkal
-tags : ['api']
+tags : ['api', 'references']
+cover : ~@public/g-images/api/api.png
 ---
 
 # app
