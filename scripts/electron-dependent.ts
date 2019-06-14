@@ -6,6 +6,7 @@ import fetch from 'node-fetch';
 const json = fs.readJsonSync('./scripts/__package.json');
 let version = json.version;
 const notes = fs.readFileSync('./scripts/__release-notes.md').toString();
+const bucketUrl = 'https://storage.googleapis.com/quark-release.quarkjs.io/stable'
 
 createReleaseNotes();
 updateDownloadLinks();
@@ -22,19 +23,15 @@ async function updateDownloadLinks() {
         "July", "August", "September", "October", "November", "December"
     ];
 
-    const latestYMLText = await (await fetch(`https://storage.googleapis.com/quarkjs-auto-update/latest.yml`)).text();
+    const latestYMLText = await (await fetch(`${bucketUrl}/latest.yml`)).text();
     const latestYML = YAML.parse(latestYMLText);
 
     const date = new Date(latestYML.releaseDate);
 
-    const win32_SHA = JSON.parse(await (await fetch(`https://quark-release.quarkjs.io/stable/win32-shasum.json`)).text());
-    const linux_SHA = JSON.parse(await (await fetch(`https://quark-release.quarkjs.io/stable/linux-shasum.json`)).text());
+    const win32_SHA = JSON.parse(await (await fetch(`${bucketUrl}/win32-shasum.json`)).text());
+    const linux_SHA = JSON.parse(await (await fetch(`${bucketUrl}/linux-shasum.json`)).text());
 
-    const contents = Object.keys(Object.assign(win32_SHA, linux_SHA));
-
-    const binaries = contents.filter((bin) => {
-        return !(bin.includes('blockmap') || bin.includes('latest'));
-    });
+    const binaries = Object.keys(win32_SHA).concat(Object.keys(linux_SHA));
 
     const linuxMain = binaries.find((bin) => { return bin.endsWith('.AppImage') });
     const windowsMain = binaries.find((bin) => { return bin.endsWith('.exe') });
