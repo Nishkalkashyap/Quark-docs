@@ -1,5 +1,34 @@
 # Release Notes
 
+<!-- Quark-0.3.3-start -->
+## Quark 0.3.3 - June 14, 2019
+
+#### Other changes
+* Partially added crash reporter.
+* Dependency updates.
+
+#### Dependencies:
+* Updated: `typescript@^3.5.2` (Previous: v^3.4.5)
+* Updated: `webpack@^4.34.0` (Previous: v^4.32.2)
+
+
+!!! info See SHA-512 Hashes
+<DropDown>
+<ReleaseNotes :sha='{
+    "Quark-win-0.3.3.exe": "YjYTFz/GsmxAfJJJ8MQ5uEPQ7NAY+Hoc96xWtXsfwzUuTkxxMy5bbSPepCI0EnCWC9la4jyak9ONESnIGT6Mjg==",
+    "Quark-win-x64-0.3.3.msi": "gJltS4l2PVfOWOSoYXF/pafOJbcic9J3hrtIwiSjBett7NQTzvM3S2Ex3XWdv+JXxK6Bf4KAy40DdQ2uv5lwDg==",
+    "Quark-win-x64-0.3.3.zip": "aQbh2rEtx5bosqOLxLCozengwMfebTqDTz0l+sifPmkKcr/7uW6HoTOdwQPEAqzlEyaAeXhxoAwiAMonuzfukg==",
+    "Quark-linux-amd64-0.3.3.deb": "kXxRp3cX3KD7VFCeGf9TbWDHg4uEZJXzJ74DhJQZGohp1is4lsAzmJ2zb39f4c+Hc++qR4xp4kxWzvhLQraJAQ==",
+    "Quark-linux-x64-0.3.3.tar.gz": "4ubVJJyN3mM1aA6Z0JTTDVV7GZWMgklALWuyKPcYiC9bbrB050NpFDjyxa2dKN5qdfdqZBEfOimnx3Eah0CAEg==",
+    "Quark-linux-x86_64-0.3.3.AppImage": "8fo3i7HG7oIpeyR1fYiGEqkrNwGbWXnmlaPuuGr2E693H9EuL9cXluNGO38T7fvGvpFDpuLGvLFLiyZARfwKZA=="
+}' />
+</DropDown>
+!!!
+
+<!-- ---------------------------------------------- -->
+<!-- Quark-0.3.3-end -->
+
+
 <!-- Quark-0.3.2-start -->
 ## Quark 0.3.2 - June 14, 2019
 
