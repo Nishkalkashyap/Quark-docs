@@ -66,9 +66,9 @@ async function updateDownloadLinks() {
     str = str.concat(`[![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/Nishkalkashyap/Quark-docs)`, '\n');
     // str = str.concat(`[![HitCount](http://hits.dwyl.io/Nishkalkashyap/Quark-docs.svg)](http://hits.dwyl.io/Nishkalkashyap/Quark-docs)`, '\n');
     str = str.concat('| Meta                                            ||', '\n');
-    str = str.concat('| ------------------- | -------------------------- |', '\n');
-    str = str.concat(`| Latest Version:     | ${version}            |`, '\n');
-    str = str.concat(`| Release Date:       | ${monthNames[date.getMonth()]} ${date.getDate()} ${date.getFullYear()},  ${date.toLocaleTimeString()}|`, '\n');
+    str = str.concat('| -------------------    | -------------------------- |', '\n');
+    str = str.concat(`| ⚡ Latest Version:     | ${version}            |`, '\n');
+    str = str.concat(`| 🆕 Release Date:       | ${monthNames[date.getMonth()]} ${date.getDate()} ${date.getFullYear()},  ${date.toLocaleTimeString()}|`, '\n');
     str = str.concat(`| [Release Notes](/FAQ/release-notes.html)        ||`, '\n\n');
 
     str = str.concat('<Download', '\n');

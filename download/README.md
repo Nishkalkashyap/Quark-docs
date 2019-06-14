@@ -7,9 +7,9 @@ pageClass: download-page
 [![Build Status](https://ci.appveyor.com/api/projects/status/e9n73kxva64pccwe/branch/release?svg=true)](https://ci.appveyor.com/project/Nishkalkashyap/quark-electron)
 [![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/Nishkalkashyap/Quark-docs)
 | Meta                                            ||
-| ------------------- | -------------------------- |
-| Latest Version:     | 0.3.1            |
-| Release Date:       | June 14 2019,  5:05:30 PM|
+| -------------------    | -------------------------- |
+| ⚡ Latest Version:     | 0.3.1            |
+| 🆕 Release Date:       | June 14 2019,  5:05:30 PM|
 | [Release Notes](/FAQ/release-notes.html)        ||
 
 <Download
