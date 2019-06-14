@@ -1,5 +1,32 @@
 # Release Notes
 
+<!-- Quark-0.3.1-start -->
+## Quark 0.3.1 - June 14, 2019
+
+#### Other changes
+* Testing auto-updates for cloud-releaes.
+
+#### Dependencies:
+* Removed: `electron-builder-squirrel-windows@^20.42.0`
+
+
+!!! info See SHA-512 Hashes
+<DropDown>
+<ReleaseNotes :sha='{
+    "Quark-win-0.3.1.exe": "HF3CEerww8IWFoF2bZtFND6HyvM+5M89TVVHsYZSDJIwfBdMosBQFm4GZNMVWUguzj8J3nQtXIEtWPYR0ULqfA==",
+    "Quark-win-x64-0.3.1.msi": "YcFMo1Odso4t0g21xKW5W+hO6fYblTpGOOc7C5HEErLB1frfcPf7KXVVgb/4BlCOanbQMyalH35HGEY1jl+bcA==",
+    "Quark-win-x64-0.3.1.zip": "p2DXyQhsP8cjIShoyYfM4yEZ8GQrWrbtNQgYBjO04N91Ea5l6veMNDMv5rkENTt17t9wmxDBxoT/46bPIsQf5w==",
+    "Quark-linux-amd64-0.3.1.deb": "FyhS8nCQ7xg8uXSaAlmF6i4b9Yf8hewZcl89WpRUyE8/2VPWAs5M7bAfcVzCmHIZcRgaH7Pf2JAdO0itzUpzfg==",
+    "Quark-linux-x64-0.3.1.tar.gz": "E4OTzNZ9RYX/XF8S6h9uqPQ9xNanT9GxB4SSP+Cb78AlylfoSkXBF2hW5qBAoteLOl7ZLyBBp76QOwai6t2+qA==",
+    "Quark-linux-x86_64-0.3.1.AppImage": "yWC2Rf/2O1V7S2Bwat4PMrsDtWyfDjX52ZfuT7gr+2r9j4h/4Ui4R9bgz6I3lPl6mXrbnNKafAVUUVwP+EDCsw=="
+}' />
+</DropDown>
+!!!
+
+<!-- ---------------------------------------------- -->
+<!-- Quark-0.3.1-end -->
+
+
 <!-- Quark-0.3.0-start -->
 ## Quark 0.3.0 - June 14, 2019
 
