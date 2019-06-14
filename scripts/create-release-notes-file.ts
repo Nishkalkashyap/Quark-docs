@@ -10,7 +10,7 @@ let currentNotes: string;
 let latestYMLText: string;
 let latestYML: any;
 const releaseNotesPath = './scripts/__release-notes.md';
-const bucketUrl = 'https://storage.googleapis.com/quark-release.quarkjs.io/stable';
+const bucketUrl = 'https://quark-release.quarkjs.io/stable';
 
 let win32_SHA: any;
 let linux_SHA: any;
