@@ -8,26 +8,26 @@ pageClass: download-page
 [![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/Nishkalkashyap/Quark-docs)
 | Meta                                            ||
 | -------------------    | -------------------------- |
-| ⚡ Latest Version:     | 0.3.4            |
-| 🆕 Release Date:       | June 14 2019,  10:36:05 PM|
+| ⚡ Latest Version:     | 0.3.5            |
+| 🆕 Release Date:       | June 15 2019,  1:46:59 AM|
 | [Release Notes](/FAQ/release-notes.html)        ||
 
 <Download
-version="0.3.4"
-linux_main='Quark-linux-x86_64-0.3.4.AppImage'
-linux_other='["Quark-linux-amd64-0.3.4.deb","Quark-linux-x64-0.3.4.tar.gz"]'
-windows_main='Quark-win-0.3.4.exe'
-windows_other='["Quark-win-x64-0.3.4.msi","Quark-win-x64-0.3.4.zip"]'
+version="0.3.5"
+linux_main='Quark-linux-x86_64-0.3.5.AppImage'
+linux_other='["Quark-linux-amd64-0.3.5.deb","Quark-linux-x64-0.3.5.tar.gz"]'
+windows_main='Quark-win-0.3.5.exe'
+windows_other='["Quark-win-x64-0.3.5.msi","Quark-win-x64-0.3.5.zip"]'
 />
 !!! note See SHA-512 Hashes
 <DropDown>
 <ReleaseNotes :sha='{
-    "Quark-win-0.3.4.exe": "xc84bp1QbLzq/DT3grUPbw971jEe51xH0lzzloYmmCg08Ihmw3FV+ScKy9rtk2GlAXJCM1A8Ax5OJiBwa4klbA==",
-    "Quark-win-x64-0.3.4.msi": "nDLb+hWCYvz4CIjTkKHwFDJEGSs6J6N9Lw+nJR2CitrjoJ+djlQzVVrJB3hvYHTXZXzWds9x1dEjApMgKsgHgA==",
-    "Quark-win-x64-0.3.4.zip": "AU9qo8igLmiqo5Q4j/qDsgFVgiqfm8Eb5K0FViwRk8QCULcc3wdltYlVdnke9zEXOvvbTTuOB939/9w/AVaWSA==",
-    "Quark-linux-amd64-0.3.4.deb": "pj/u7vgncBZKPuBEK4OCkM/RDObnG2IddQ8Hxk04Xz/yUP/yE1FktrqkIA5+HhbGaKESzsM0eqOe2c2jTW1CoA==",
-    "Quark-linux-x64-0.3.4.tar.gz": "rPXN/EITZRgz7QdkmIG7FA4ySI/oYY/Usd8oShq71D/ze10SyHMBRGbmUyoGO3yv7NGWDZGNRLfeeKcOCPUMtw==",
-    "Quark-linux-x86_64-0.3.4.AppImage": "z8k4zQnTu9L8rzi9ZY9Ihv1aiup9EUop0rdpUWGoNHK8cdvtkSuwWfNFNCRvtFjqfzrRz51EMy1mCiGyfzQa6Q=="
+    "Quark-win-0.3.5.exe": "Ds1dGug/xB+Gtl7W9TVFvznVzMynoUHI+bNHf+Ovv/nBwi3fziwWph4M3IT1tTSXDQv1xwr+G5RlITcnSW37vg==",
+    "Quark-win-x64-0.3.5.msi": "PIo2yBmt02CueCbZDrC3L62mJO2gppB6qibFn+SCd7a2AbpzhsF1EDlHVZtWaV/FalSxAFT0Y7f4wTwa0C8AKg==",
+    "Quark-win-x64-0.3.5.zip": "u/nTDHwlq6YNuitD+ivCYdcFoxoK7lsqIhSaCjUIH8+9agvAwY+6/N1aO8HqBNB+VcnwcwlGbz+yb8RJJB6imw==",
+    "Quark-linux-amd64-0.3.5.deb": "hhL8gwdOvObz3Avn5ZOblFtkvE+cfjL5ovMwWmTc6AAJRY80MXzQfl55M+C+7QMReQN5mMRzC6vCZ8LVBN/u1Q==",
+    "Quark-linux-x64-0.3.5.tar.gz": "Em03ZRGEi4XtAnR4tjjWAYEl5B2l+67/oMgUupWI0DSkRvlMaQLRKdbvWErxUqZW4v31vFM6A69AlcUfUg27DQ==",
+    "Quark-linux-x86_64-0.3.5.AppImage": "V8RgiSyDuIhFThmuNGn6d+SldmoLRZHl2eY8bj0qG1tZ5g0oI5M80cOkrtG+4bKWeZAt+Unz0zjwMM1qmaRiMw=="
 }' />
 </DropDown>
 !!!
