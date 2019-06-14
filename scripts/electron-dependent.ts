@@ -41,7 +41,7 @@ async function updateDownloadLinks() {
     });
 
     const windows_other_downloads = binaries.filter((bin) => {
-        return bin.search(/(.zip)$/) !== -1;
+        return bin.search(/(.zip|.msi)$/) !== -1;
     });
 
     const preText = `<!-- Quark-${version}-start -->`;
