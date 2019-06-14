@@ -111,6 +111,9 @@ export default {
       if (bin.endsWith(".exe")) {
         return ".exe";
       }
+      if (bin.endsWith(".msi")) {
+        return ".msi";
+      }
       if (bin.endsWith(".zip")) {
         return ".zip";
       }
