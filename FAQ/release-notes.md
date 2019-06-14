@@ -1,5 +1,41 @@
 # Release Notes
 
+<!-- Quark-0.3.0-start -->
+## Quark 0.3.0 - June 14, 2019
+
+#### Bug fixes:
+* fixed slow devtools open and reload issue.
+
+#### Other changes
+* added branch master-all.
+* added cloudflare CDN in front of release channel.
+* First fully cloud-built release. 💃 💃
+
+#### Breaking:
+* old auto-updates will stop working.
+
+#### Dependencies:
+* Updated: `electron-store@^3.3.0` (Previous: v^3.2.0)
+* Updated: `electron@4.1.3` (Previous: v^4.2.2)
+
+
+!!! info See SHA-512 Hashes
+<DropDown>
+<ReleaseNotes :sha='{
+    "Quark-win-0.3.0.exe": "5bKFlr/zI7aDPDohxZHMKodyoQlHt/99C1XTX7P/zo6+8PPWpNvUteJVes8o/RfwYbTGTmFYe9+GAN06Rvt5/w==",
+    "Quark-win-x64-0.3.0.msi": "T35dy6wqOtQJ8xpuIlTGBeG6vWgVHKPxw82Umm7Nr9OXUj5X6Q04GP3Qv9qC+11m8Cuj28PoivKuZv0oB0qf1Q==",
+    "Quark-win-x64-0.3.0.zip": "Rxilq7PDKGI4r0ZAqaENUfDpmmv3C3OuD4y/eS3h7YscJ9gufVX5Lex8VmFDlZLUH+PtHReFbNmkO82QI91HoA==",
+    "Quark-linux-amd64-0.3.0.deb": "xQJ92MAyrIXmn8Kvw3ozGDbG45znkXUlluIZmCIM/2LXw4TkzAdUdRyuRrtJ+WenAsfVVwVAQ3+AHvqcWEJG5w==",
+    "Quark-linux-x64-0.3.0.tar.gz": "Jg5yJmGpHpreVO1uGYtu7cBt5I11kbFRmPiPb7JNohx0Oizq94y7oOr7HIk7lIRVfeUunIrPK/KFedefi79Nzw==",
+    "Quark-linux-x86_64-0.3.0.AppImage": "iyM6hbL89ak1Vup+7V5OWD/YReyY17WUDY8TMY/58dekj8aSZP3fn2yYUMpLoRFiA+ghjCJGYl+wd9enJyl/xQ=="
+}' />
+</DropDown>
+!!!
+
+<!-- ---------------------------------------------- -->
+<!-- Quark-0.3.0-end -->
+
+
 <!-- Quark-0.2.17-start -->
 ## Quark 0.2.17 - June 8, 2019
 
