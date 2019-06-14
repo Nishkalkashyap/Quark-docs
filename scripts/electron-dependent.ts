@@ -6,7 +6,7 @@ import fetch from 'node-fetch';
 const json = fs.readJsonSync('./scripts/__package.json');
 let version = json.version;
 const notes = fs.readFileSync('./scripts/__release-notes.md').toString();
-const bucketUrl = 'https://storage.googleapis.com/quark-release.quarkjs.io/stable'
+const bucketUrl = 'https://storage.googleapis.com/quark-release.quarkjs.io/stable';
 
 createReleaseNotes();
 updateDownloadLinks();

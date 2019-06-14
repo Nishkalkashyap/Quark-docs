@@ -10,6 +10,7 @@ let currentNotes: string;
 let latestYMLText: string;
 let latestYML: any;
 const releaseNotesPath = './scripts/__release-notes.md';
+const bucketUrl = 'https://storage.googleapis.com/quark-release.quarkjs.io/stable';
 
 let win32_SHA: any;
 let linux_SHA: any;
@@ -28,14 +29,14 @@ async function root() {
 }
 
 async function getRawContent() {
-    latestYMLText = await (await fetch(`https://quark-release.quarkjs.io/stable/latest.yml`)).text();
-    json = JSON.parse(await (await fetch(`https://quark-release.quarkjs.io/stable/package.json`)).text());
+    latestYMLText = await (await fetch(`${bucketUrl}/latest.yml`)).text();
+    json = JSON.parse(await (await fetch(`${bucketUrl}/package.json`)).text());
     latestYML = YAML.parse(latestYMLText);
     version = latestYML.version;
-    currentNotes = await (await fetch('https://quark-release.quarkjs.io/stable/current-release-notes.md')).text();
+    currentNotes = await (await fetch(`${bucketUrl}/current-release-notes.md`)).text();
 
-    win32_SHA = JSON.parse(await (await fetch(`https://quark-release.quarkjs.io/stable/win32-shasum.json`)).text());
-    linux_SHA = JSON.parse(await (await fetch(`https://quark-release.quarkjs.io/stable/linux-shasum.json`)).text());
+    win32_SHA = JSON.parse(await (await fetch(`${bucketUrl}/win32-shasum.json`)).text());
+    linux_SHA = JSON.parse(await (await fetch(`${bucketUrl}/linux-shasum.json`)).text());
 }
 
 
