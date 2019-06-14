@@ -2,28 +2,13 @@ import * as fs from 'fs-extra';
 import * as YAML from 'yamljs';
 import * as js from 'js-beautify';
 import fetch from 'node-fetch';
-import { getFiles } from './util';
 
-// let json: any;
-let version: string;
-let notes: string;
-let latestYMLText: string;
-let latestYML: any;
+const json = fs.readJsonSync('./scripts/__package.json');
+let version = json.version;
+const notes = fs.readFileSync('./scripts/__release-notes.md').toString();
 
-root().catch(console.error);
-async function root() {
-    await getRawContent();
-    createReleaseNotes();
-    await updateDownloadLinks(await getFiles('quarkjs-auto-update', version), './download/README.md');
-}
-
-async function getRawContent() {
-    latestYMLText = await (await fetch(`https://storage.googleapis.com/quarkjs-auto-update/latest.yml`)).text();
-    latestYML = YAML.parse(latestYMLText);
-    version = latestYML.version;
-    // json = await (await fetch('https://raw.githubusercontent.com/Nishkalkashyap/Quark-electron/release/package.json')).json();
-    notes = await (await fetch('https://raw.githubusercontent.com/Nishkalkashyap/Quark-electron/release/dev-assets/releaseNotes.md')).text();
-}
+createReleaseNotes();
+updateDownloadLinks();
 
 function createReleaseNotes() {
     let str = '';
@@ -32,12 +17,20 @@ function createReleaseNotes() {
     fs.writeFileSync('./FAQ/release-notes.md', str);
 }
 
-function updateDownloadLinks(contents: string[], outFilePath: string) {
+async function updateDownloadLinks() {
     const monthNames = ["January", "February", "March", "April", "May", "June",
         "July", "August", "September", "October", "November", "December"
     ];
 
+    const latestYMLText = await (await fetch(`https://storage.googleapis.com/quarkjs-auto-update/latest.yml`)).text();
+    const latestYML = YAML.parse(latestYMLText);
+
     const date = new Date(latestYML.releaseDate);
+
+    const win32_SHA = JSON.parse(await (await fetch(`https://quark-release.quarkjs.io/stable/win32-shasum.json`)).text());
+    const linux_SHA = JSON.parse(await (await fetch(`https://quark-release.quarkjs.io/stable/linux-shasum.json`)).text());
+
+    const contents = Object.keys(Object.assign(win32_SHA, linux_SHA));
 
     const binaries = contents.filter((bin) => {
         return !(bin.includes('blockmap') || bin.includes('latest'));
@@ -93,7 +86,7 @@ function updateDownloadLinks(contents: string[], outFilePath: string) {
     str = str.concat('/>', '\n');
     str = str.concat(hashes);
 
-    fs.writeFileSync(outFilePath, str);
+    fs.writeFileSync('./download/README.md', str);
 }
 
 
