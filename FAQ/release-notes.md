@@ -1,5 +1,30 @@
 # Release Notes
 
+<!-- Quark-0.3.6-start -->
+## Quark 0.3.6 - June 15, 2019
+
+#### Features
+* Fixed textmate-tokens issue. [TMThemes are not working properly #5](https://github.com/NeekSandhu/monaco-textmate/issues/5)
+
+
+
+!!! info See SHA-512 Hashes
+<DropDown>
+<ReleaseNotes :sha='{
+    "Quark-win-0.3.6.exe": "ZjUq0IO4a2NqrzR4Mt2DwKPBKk1s7RLY58lzWpNFTwhFEbdxRiaGz8rAY8be529rsUTRLErNTvFNZurHa9twPw==",
+    "Quark-win-x64-0.3.6.msi": "01fCRYsbWgsGP4wyVLueKzTy3iLAbu2rE5AvV4/XKzFBlHh1PAY29DuSdUw76pQqitwTBdZtNXUMGGfe3REnBA==",
+    "Quark-win-x64-0.3.6.zip": "ghaW7jutFcv17Ig4PU0a9Y+10ft9jtEJZ433LeKuBwSacMJdPMFHWa7LsdaTrgAHFK8Yg/AEvou6xc9cg1MFXg==",
+    "Quark-linux-amd64-0.3.6.deb": "5+HQKnXI7S8HQJqJ66EiHCxXjGS6plmqxZd1wnl53/ZyUabAS1iBX/2FPBVnZlmVo3Wix+bOqQQ7xiATNQklDw==",
+    "Quark-linux-x64-0.3.6.tar.gz": "vqEE7mFQAE/QsFFJM9Hkytpu+Sfu9QbpOc7h/2IwJFBETndBuK3f4/MSgyF+fopa0cIMzkIEe+YO0d6PBGFHtA==",
+    "Quark-linux-x86_64-0.3.6.AppImage": "SxPYpFfcvRKQQquCUkmonXYvaXIo0e0yOMp4DnVCfap01M6P52bTS7wh76QjmUvvo+3ntNohgt2XC8zMpZUreg=="
+}' />
+</DropDown>
+!!!
+
+<!-- ---------------------------------------------- -->
+<!-- Quark-0.3.6-end -->
+
+
 <!-- Quark-0.3.5-start -->
 ## Quark 0.3.5 - June 15, 2019
 
