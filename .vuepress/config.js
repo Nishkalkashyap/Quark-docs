@@ -132,12 +132,20 @@ module.exports = {
                         link: '/all/'
                     },
                     {
+                        text: 'All Tags',
+                        link: '/tags/'
+                    },
+                    {
                         text: 'FAQ',
                         link: '/FAQ/glossary.html'
                     },
                     {
                         text: 'Snippets',
                         link: '/snippets/'
+                    },
+                    {
+                        text: 'Release notes',
+                        link: '/releases/current-release.html'
                     },
                     {
                         text: 'Links',
@@ -214,8 +222,8 @@ module.exports = {
             ],
             "/releases/": [
                 "current-release.md",
-                "Quark-v0.1.md",
-                "Quark-v0.2.md"
+                "Quark-v0.2.md",
+                "Quark-v0.1.md"
             ],
             "/all/": [
                 ""
