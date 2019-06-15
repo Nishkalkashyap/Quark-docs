@@ -30,6 +30,7 @@ export default {
     };
   },
   mounted() {
+    console.log(`Mounted`);
     this.$on("sw-updated", this.onSWUpdated);
   },
   methods: {
