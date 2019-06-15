@@ -25,7 +25,7 @@
       <slot name="page-bottom" slot="bottom"/>
     </Page>
 
-    <SWUpdatePopup :updateEvent="swUpdateEvent"/>
+    <!-- <SWUpdatePopup :updateEvent="swUpdateEvent"/>     -->
   </div>
 </template>
 

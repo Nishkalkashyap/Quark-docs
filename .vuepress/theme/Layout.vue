@@ -5,6 +5,7 @@
 
     <!-- <PageBottom slot="sidebar-top"/> -->
     <!-- <BuySellAds slot="page-bottom"/> -->
+    <SWUpdatePopup slot="page-bottom" :updateEvent="swUpdateEvent"/>
   </ParentLayout>
 </template>
 
@@ -13,11 +14,26 @@
 import ParentLayout from "./Layouttt.vue";
 import PageBottom from "./PageBottom.vue";
 import Disqus from "./Disqus.vue";
+import SWUpdatePopup from "@default-theme/SWUpdatePopup.vue";
 export default {
   components: {
     ParentLayout,
     PageBottom,
-    Disqus
+    Disqus,
+    SWUpdatePopup
+  },
+  data() {
+    return {
+      swUpdateEvent: null
+    };
+  },
+  mounted() {
+    this.$on("sw-updated", this.onSWUpdated);
+  },
+  methods: {
+    onSWUpdated(e) {
+      this.swUpdateEvent = e;
+    }
   }
 };
 </script>
