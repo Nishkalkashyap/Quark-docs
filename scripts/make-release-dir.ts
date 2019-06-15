@@ -20,8 +20,8 @@ export function makeReleaseDir() {
 
     versionMatches.map((version, index) => {
         const frontmatter = getFrontmatterFromObject({
-            description: `"Release notes for all the releases in minor version: Quark-${versions[index]}"`,
-            title: `"Release notes: Quark-${versions[index]}"`,
+            description: `"Release notes for all the releases in minor version: Quark-${versions[index]}.x"`,
+            title: `"Release notes: Quark-${versions[index]}.x"`,
             author: 'nishkal',
             tags: '[]',
             sidebarDepth: '4'
@@ -29,14 +29,14 @@ export function makeReleaseDir() {
 
         let str = '';
         str = str.concat(`# Release Notes\n\n`);
-        str = str.concat(`## Version: Quark-v${versions[index]}`, '\n\n');
+        str = str.concat(`## Version: Quark-v${versions[index]}.x`, '\n\n');
         str = str.concat('\n\n', '[[toc]]', '\n\n');
         str = str.concat(version.join('\n\n'));
 
         if (versions[index] == currentVersion) {
             const frontmatter = getFrontmatterFromObject({
-                description: `"Release notes current release: Quark-${versions[index]}"`,
-                title: `"Current release: Quark-${versions[index]}"`,
+                description: `"Release notes current release: Quark-${versions[index]}.x"`,
+                title: `"Current release: Quark-${versions[index]}.x"`,
                 author: 'nishkal',
                 tags: '[]',
                 sidebarDepth: '4'

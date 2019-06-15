@@ -10,7 +10,7 @@ pageClass: download-page
 | -------------------    | -------------------------- |
 | ⚡ Latest Version:     | 0.3.6            |
 | 🆕 Release Date:       | June 15 2019,  1:46:59 AM|
-| [Release Notes](/FAQ/release-notes.html)        ||
+| [Release Notes](/releases/current-release.html)        ||
 
 <Download
 version="0.3.6"

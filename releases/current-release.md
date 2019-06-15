@@ -1,6 +1,6 @@
 ---
-description: "Release notes current release: Quark-0.3"
-title: "Current release: Quark-0.3"
+description: "Release notes current release: Quark-0.3.x"
+title: "Current release: Quark-0.3.x"
 author: nishkal
 tags: []
 sidebarDepth: 4
@@ -9,7 +9,7 @@ sidebarDepth: 4
 
 # Release Notes
 
-## Version: Quark-v0.3
+## Version: Quark-v0.3.x
 
 
 

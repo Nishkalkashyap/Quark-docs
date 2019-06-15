@@ -5,7 +5,9 @@
 
     <!-- <PageBottom slot="sidebar-top"/> -->
     <!-- <BuySellAds slot="page-bottom"/> -->
-    <SWUpdatePopup slot="page-bottom" :updateEvent="swUpdateEvent"/>
+    <div slot="page-bottom">
+      <SWUpdatePopup :updateEvent="swUpdateEvent"/>
+    </div>
   </ParentLayout>
 </template>
 
@@ -32,6 +34,8 @@ export default {
   },
   methods: {
     onSWUpdated(e) {
+      console.log(e);
+      console.log(`Service Worker Updated`);
       this.swUpdateEvent = e;
     }
   }

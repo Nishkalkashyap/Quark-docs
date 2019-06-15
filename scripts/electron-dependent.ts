@@ -71,7 +71,7 @@ async function updateDownloadLinks() {
     str = str.concat('| -------------------    | -------------------------- |', '\n');
     str = str.concat(`| ⚡ Latest Version:     | ${version}            |`, '\n');
     str = str.concat(`| 🆕 Release Date:       | ${monthNames[date.getMonth()]} ${date.getDate()} ${date.getFullYear()},  ${date.toLocaleTimeString()}|`, '\n');
-    str = str.concat(`| [Release Notes](/FAQ/release-notes.html)        ||`, '\n\n');
+    str = str.concat(`| [Release Notes](/releases/current-release.html)        ||`, '\n\n');
 
     str = str.concat('<Download', '\n');
     str = str.concat(`version="${version}"`, '\n');

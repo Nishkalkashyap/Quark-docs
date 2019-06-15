@@ -1,6 +1,6 @@
 ---
-description: "Release notes for all the releases in minor version: Quark-0.2"
-title: "Release notes: Quark-0.2"
+description: "Release notes for all the releases in minor version: Quark-0.2.x"
+title: "Release notes: Quark-0.2.x"
 author: nishkal
 tags: []
 sidebarDepth: 4
@@ -9,7 +9,7 @@ sidebarDepth: 4
 
 # Release Notes
 
-## Version: Quark-v0.2
+## Version: Quark-v0.2.x
 
 
 
