@@ -49,6 +49,16 @@ export function getFiles(bucketName: string, version: string): Promise<string[]>
     });
 }
 
+export function getFrontmatterFromObject(obj: object) {
+    let str = '';
+    str = str.concat(`---`, '\n');
+    Object.keys(obj).map((key) => {
+        str = str.concat(`${key}: ${obj[key]}`, '\n');
+    });
+    str = str.concat(`---`, '\n');
+    return str;
+}
+
 export type IFrontmatterData = {
     path: string;
     frontmatter: Frontmatter;

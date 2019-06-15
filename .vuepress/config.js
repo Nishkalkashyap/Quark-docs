@@ -212,6 +212,11 @@ module.exports = {
                 "cron-example-schedule.md",
                 "install-nodejs.md"
             ],
+            "/releases/": [
+                "current-release.md",
+                "Quark-v0.1.md",
+                "Quark-v0.2.md"
+            ],
             "/all/": [
                 ""
             ]
