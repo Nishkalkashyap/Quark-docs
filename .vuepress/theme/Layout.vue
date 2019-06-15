@@ -9,7 +9,8 @@
 </template>
 
 <script>
-import ParentLayout from '@default-theme/Layout.vue';
+// import ParentLayout from '@default-theme/Layout.vue';
+import ParentLayout from './Layouttt.vue';
 import PageBottom from './PageBottom.vue';
 import Disqus from './Disqus.vue';
 export default {
