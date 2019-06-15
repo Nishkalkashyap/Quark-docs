@@ -2,6 +2,7 @@ import * as fs from 'fs-extra';
 import * as YAML from 'yamljs';
 import * as js from 'js-beautify';
 import fetch from 'node-fetch';
+import { makeReleaseDir } from './make-release-dir';
 
 const json = fs.readJsonSync('./scripts/__package.json');
 let version = json.version;
@@ -10,6 +11,7 @@ const bucketUrl = 'https://quark-release.quarkjs.io/stable';
 
 createReleaseNotes();
 updateDownloadLinks();
+makeReleaseDir();
 
 function createReleaseNotes() {
     let str = '';
