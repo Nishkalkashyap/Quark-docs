@@ -20,6 +20,16 @@ Writes text to clipboard.
   * text `string`
 * returns `void`
 
+### clipboard.readHTML()
+Returns the markup saved in clipboard.
+* returns `string`
+
+### clipboard.writeHTML(text)
+Writes markup to the clipboard.
+* arguments
+  * text `string`
+* returns `void`
+
 ### clipboard.clear()
 Clears the text saved in clipboard.
 * returns `void`
