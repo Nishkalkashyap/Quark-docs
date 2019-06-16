@@ -19,8 +19,9 @@ const TAGS_BASE_PATH = './tags';
     await createTagsDirectory();
     createSidebars(sidebars);
     createReadmeFiles(readmefiles);
-    updatePrimaryColor();
+    await updatePrimaryColor();
     generateAllDocsPage();
+    await createRoutes();
 })().catch(console.error);
 
 
@@ -256,6 +257,19 @@ function generateAllDocsPage() {
 function caps(str: string) {
     str = str[0].toUpperCase() + str.substr(1, str.length);
     return str;
+}
+
+
+async function createRoutes() {
+    let results: any[] = await recc('./', ['README.md', reccursiveIgnoreFunction])
+    results = results.map((res) => {
+        const redirect = res.replace(/[\\]/g, '/').replace('.md', '');
+        return {
+            redirect: '/'.concat(redirect, '.html'),
+            path: '/'.concat(redirect, '/')
+        }
+    });
+    fs.writeFileSync('./.vuepress/routes.json', (JSON.stringify(results, undefined, 4)));
 }
 
 
