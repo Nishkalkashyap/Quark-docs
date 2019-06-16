@@ -8,20 +8,21 @@
       "**/node_modules/**"
     ],
     "rewrites": [{
-      "source": "/download-count/**",
-      "function": "downloadCount"
-    },
-    {
-      "source": "/crash-reporter/**",
-      "function": "crashReporter"
-    }],
-    "cleanUrls": true,
+        "source": "/download-count/**",
+        "function": "downloadCount"
+      },
+      {
+        "source": "/crash-reporter/**",
+        "function": "crashReporter"
+      }
+    ],
+    "cleanUrls": false,
     "trailingSlash": false,
     "headers": [{
       "source": "**/*.@(jpg|jpeg|gif|png|mp4)",
       "headers": [{
         "key": "Cache-Control",
-        "value": "max-age=7200"
+        "value": "max-age=1209600"
       }]
     }]
   }]

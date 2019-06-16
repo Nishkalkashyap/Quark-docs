@@ -7,6 +7,7 @@
     "prepare-release": "ts-node scripts/create-release-notes-file.ts && ts-node scripts/electron-dependent.ts",
     "tags": "ts-node scripts/non-electron-dependent.ts",
     "start": "npm run tags && npm run img && vuepress dev -p 80",
+    "qs": "vuepress dev -p 80",
     "build": "npm run tags && npm run img && vuepress build",
     "cloud-build": "npm run tags && npm run img && vuepress build",
     "post-build": "npx ts-node ./scripts/create-site-map.ts",
