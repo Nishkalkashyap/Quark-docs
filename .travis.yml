@@ -4,6 +4,10 @@ language: node_js
 cache:
 - npm
 notifications:
+  slack:
+    on_success: always
+    on_failure: always
+    secure: InkKrWoaPciVFhywwut0dbtZ4fNHwZJeMbZSrHZiVNAK15p9wJx1/cRqVJeqPl59EuThkLy6sQ96lzo3ufORby50Vhv2aBgq8Q1GffSfn8PACXhRUVnUUGLO8bva7QPWHlkMuU/bQpTiZohbV8VWIejj7lKFny55ckOpf6Y8TMqEA+W52rxrMSSFrzUnEYTHgB+QA4+JUGHjyoRjeaLw4nKwU+MTO2G4Jb6RuFt+bdvWuQwjCia/Mkzr1DnrUVxMLMbfmqZErx1Qa7onhWJ6OsQ8dVfmnEFYxwiJDbS4L0xQuJE1Bh9DDYycaN5eZkA4kW7KfClxj2kDvSdpltePapLL81kUrZo8SeEi2J7TTGGK2yS8t/n1vqSxjE/zyNwbZp3F+QOA36ehw8hfFijgyNkKxXk19J2sTEHQ9Hddk7PuXf/BekymKPx2bz5fH6YGe/qIkLwP0GuqAtaRbBegShlz78OIi3B2+9sEG9/0fskzz1OeTc2R29fJJMIuFD0fhCrNzZeL9/8I/BfWsk4IMx6ig/VVkGI0ZsCjuBzeMdrgmFNZ1Bcb7UuGREKDn+mVNMXuzG2zAEJSv5c4Ssj5yGqtDxuGfI3v6UFOO3XI9aJPR+lzfSDAdVvpdQUH4c95DiSY3DB2Yck0nwXa9TRAVjHswikL/gfSen4MPz7ZdPY=
   email:
     on_success: never
     on_failure: change
