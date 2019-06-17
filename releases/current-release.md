@@ -15,6 +15,34 @@ sidebarDepth: 4
 
 [[toc]]
 
+<!-- Quark-0.3.7-start -->
+## Quark 0.3.7 - June 15, 2019
+
+#### Features
+* Added clipboard readHTML and writeHTML functions.
+
+#### Other changes
+* Updated test scripts.
+* Updated default runtime theme.
+
+
+
+!!! info See SHA-512 Hashes
+<DropDown>
+<ReleaseNotes :sha='{
+    "Quark-win-0.3.7.exe": "F98SjmtcU5/EoZMwo8Y6InrMu4yHwxWfEZjXXClbv/UOJ/2c0R+P/7Y184Xc7sNm8I/G7bloQhTtQdkIJcH3hw==",
+    "Quark-win-x64-0.3.7.msi": "HsEo9+mkM5xuxHlzW9Er3/JWP/zySpQr84ocBAuajQwqnHZwtKeexXWKrXIMVt/k6FeGnVbKDwu5YonSu93/6w==",
+    "Quark-win-x64-0.3.7.zip": "emloNBNmGHUAEGpDxQH89+kzqUIjuVskO1CeVxRgqIAsj+G+Rc0LuDCBDuzw58Q7qaayBNyPQRuoa/dCDDwNYA==",
+    "Quark-linux-amd64-0.3.7.deb": "JNKs41dFIz/tXRbSfj/dKaoB1djQ8rD95vjmA1n3UNMo/EjZHC/2UqphXGGE/u/WOTagaPhrKEwtc/QeQvNe5Q==",
+    "Quark-linux-x64-0.3.7.tar.gz": "tGJo1BTkenMuBmzBW/CEB1KbUORuCl7Sy8PCJxD65+1PUJRWPJ9hBiAEH6IRKcDS4kS/esh5nGZS7GC/fnaizw==",
+    "Quark-linux-x86_64-0.3.7.AppImage": "GPlXk4aIllLolWVT3IeAeBnBn5J5msmq5BdiVVu8tD6w2VhtfmoGgAtHeqLuRM2n9AFgzFKROyVa/IkwxL2XmA=="
+}' />
+</DropDown>
+!!!
+
+<!-- ---------------------------------------------- -->
+<!-- Quark-0.3.7-end -->
+
 <!-- Quark-0.3.6-start -->
 ## Quark 0.3.6 - June 15, 2019
 
