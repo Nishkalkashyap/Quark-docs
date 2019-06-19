@@ -16,6 +16,8 @@ const SNIPPETS_BASE_PATH = './snippets';
 const TAGS_BASE_PATH = './tags';
 
 (async () => {
+    console.log(new Date());
+    console.log(Date.now());
     await createTagsDirectory();
     createSidebars(sidebars);
     createReadmeFiles(readmefiles);
