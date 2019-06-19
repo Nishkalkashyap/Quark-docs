@@ -3,7 +3,7 @@ import * as Path from 'path';
 import * as recc from 'recursive-readdir';
 import { AllTags } from './types';
 import { themeConfig } from '../.vuepress/config';
-import { IFrontmatterData, getFrontmatterFromPath, capitalize, Frontmatter } from './util';
+import { IFrontmatterData, getFrontmatterFromPath, capitalize, Frontmatter, randomIntFromInterval } from './util';
 import { reccursiveIgnoreFunction } from './check-files';
 import * as sharp from 'sharp';
 
@@ -136,20 +136,12 @@ function createReadmeFiles(paths: string[]) {
 async function updatePrimaryColor() {
     //has to be hex code
     const iconColor = '#020814';
-    // const iconColor = '#09c372';
-    // const iconColor = '#10dc60';
 
     //can be rgb
-    // const accentColor = '#ff5252';//red
-    const accentColor = '#3880ff';//ionic blue
-    // const accentColor = '#3b5bdb';//purple
-    // const accentColor = '#ffce00';//ionic-warning
-    // const accentColor = '#10dc60';//green
-    // const accentColor = '#09c372';//fireship green
-    // const accentColor = '#fa7c3b';//fireship orange
+    const accentColor = process.env.TRAVIS_EVENT_TYPE == 'cron' ? getRandomColor() : '#3880ff';
+    console.log(process.env.TRAVIS_EVENT_TYPE);
+    // const accentColor = '#3880ff';//ionic blue
     // const accentColor = '#020814';//black
-    // const accentColor = '#5851ff';//stenciljs purple
-    // const accentColor = '#3eaf7c';//vuepress green
 
     const overrideFilePath = Path.resolve('./.vuepress/override.styl');
     const svgFilePath = Path.resolve(`./.vuepress/public/images/icon-svg.svg`);
@@ -177,6 +169,19 @@ async function updatePrimaryColor() {
     const manifest = fs.readJsonSync(manifestFilePath);
     manifest.theme_color = accentColor;
     fs.writeFileSync(manifestFilePath, JSON.stringify(manifest));
+
+    function getRandomColor(): string {
+        const arr = [
+            '#ff5252',
+            '#3880ff',
+            '#3b5bdb',
+            '#ffce00',
+            '#09c372',
+            '#fa7c3b',
+            '#5851ff'
+        ];
+        return arr[randomIntFromInterval(0, 6)]
+    }
 }
 
 function createSidebars(paths: string[]) {
