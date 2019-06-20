@@ -138,9 +138,9 @@ async function updatePrimaryColor() {
     const iconColor = '#020814';
 
     //can be rgb
-    const accentColor = process.env.TRAVIS_EVENT_TYPE == 'cron' ? getRandomColor() : '#3880ff';
+    // const accentColor = process.env.TRAVIS_EVENT_TYPE == 'cron' ? getRandomColor() : '#3880ff';
     console.log(process.env.TRAVIS_EVENT_TYPE);
-    // const accentColor = '#3880ff';//ionic blue
+    const accentColor = '#3880ff';//ionic blue
     // const accentColor = '#020814';//black
 
     const overrideFilePath = Path.resolve('./.vuepress/override.styl');
