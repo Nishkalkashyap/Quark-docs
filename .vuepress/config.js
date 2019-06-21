@@ -243,6 +243,7 @@ module.exports = {
         config.resolve.alias['@public'] = path.resolve('./.vuepress/public');
         config.resolve.alias['@vuepress'] = path.resolve('./.vuepress');
         config.resolve.alias['@scripts'] = path.resolve('./scripts');
+        config.resolve.alias['@buildAssets'] = path.resolve('./.vuepress/buildAssets');
     }
     // configureWebpack: {
     //     entry: {

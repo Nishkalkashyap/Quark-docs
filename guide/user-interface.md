@@ -2,7 +2,7 @@
 description : 'fdsfds fdsfds'
 author : nishkal
 tags : ['guide']
-cover : ~@public/g-images/guide/user-interface.png
+cover : ~@buildAssets/guide/user-interface.png
 ---
 
 # User Interface and Features
@@ -10,7 +10,7 @@ At the heart of Quark IDE is a code editor. Like many other code editors, Quark 
 
 The entire user interface is inspired by the very popular VS Code editor.
 
-![UI Overview](~@public/g-images/guide/user-interface/ui-overview.png)
+![UI Overview](~@buildAssets/guide/user-interface/ui-overview.png)
 
 [[toc]]
 
@@ -26,15 +26,15 @@ Quark IDE comes with a simple and intuitive layout that maximizes the space prov
 ## Code Editor
 Quark comes bundled with [Monaco code editor](https://microsoft.github.io/monaco-editor/index.html) which is the same code editor used in VS Code. Monaco editor provides rich IntelliSense, validation and out of the box support for for HTML, CSS, SCSS, JSON and Javascript.
 
-<video muted autoplay loop style="max-width:100%; height:auto" name="media" poster="~@public/c-assets/guide/user-interface/introduction.png">
-  <source src="~@public/c-assets/guide/user-interface/introduction.mp4" type="video/mp4">
+<video muted autoplay loop style="max-width:100%; height:auto" name="media" poster="~@buildAssets/guide/user-interface/introduction.png">
+  <source src="~@buildAssets/guide/user-interface/introduction.mp4" type="video/mp4">
   Your browser does not support the video tag.
 </video> 
 
 #### Explorer
 The Explorer is used to browse, open, and manage all of the files and folders in your project. 
 
-![](~@public/g-images/guide/user-interface/explorer.png =450x)
+![](~@buildAssets/guide/user-interface/explorer.png =450x)
 
 Here are the following things you can do in explorer:
 
@@ -55,15 +55,15 @@ To open the terminal:
 * Navigate to main menu and select `Terminal > Fork Terminal`.
 * From the Command Palette (Ctrl+Shift+P), use the `Terminal: Fork Terminal` command.
 
-<video muted autoplay loop style="max-width:100%; height:auto" name="media" poster="~@public/c-assets/guide/user-interface/terminal.png">
-  <source src="~@public/c-assets/guide/user-interface/terminal.mp4" type="video/mp4">
+<video muted autoplay loop style="max-width:100%; height:auto" name="media" poster="~@buildAssets/guide/user-interface/terminal.png">
+  <source src="~@buildAssets/guide/user-interface/terminal.mp4" type="video/mp4">
   Your browser does not support the video tag.
 </video> 
 
 #### Managing multiple terminals
 You can create multiple terminals open to different locations and easily navigate between them. Terminal instances can be added by clicking the plus icon on the top-right of the TERMINAL panel or by triggering the ``` Ctrl+Shift+` ``` command. This action creates another entry in the drop-down list that can be used to switch between them.
 
-![](~@public/g-images/guide/user-interface/multiple-terminals.png =250x)
+![](~@buildAssets/guide/user-interface/multiple-terminals.png =250x)
 
 * Remove terminal instances by pressing the trash can button. The terminal instance last focused on gets deleted.
 * You can also split the terminal by triggering the `Ctrl+\` command or by pressing the __Fork Terminal__ button or from the main menu.
@@ -85,8 +85,8 @@ You can change the scope of settings by selecting the appropriate option from th
 Workspace settings take priority over user settings.
 !!! 
 
-<video muted autoplay loop style="max-width:100%; height:auto" name="media" poster="~@public/c-assets/guide/user-interface/settings.png">
-  <source src="~@public/c-assets/guide/user-interface/settings.mp4" type="video/mp4">
+<video muted autoplay loop style="max-width:100%; height:auto" name="media" poster="~@buildAssets/guide/user-interface/settings.png">
+  <source src="~@buildAssets/guide/user-interface/settings.mp4" type="video/mp4">
   Your browser does not support the video tag.
 </video> 
 
@@ -97,12 +97,12 @@ Workspace settings take priority over user settings.
 #### Settings groups
 Common settings are grouped together so that you can navigate through them easily.
 
-![](~@public/g-images/guide/user-interface/setting-group.png =x300)
+![](~@buildAssets/guide/user-interface/setting-group.png =x300)
 
 #### Edit Settings
 Each setting can be edited by either a checkbox, an input or by a drop-down. Simply edit the text or select the option you want to change to the desired settings.
 
-![](~@public/g-images/guide/user-interface/changed-settings-markers.png =x300)
+![](~@buildAssets/guide/user-interface/changed-settings-markers.png =x300)
 
 !!! note NOTE
 Note that changed settings have a marker besides them to help you identify them easily.
@@ -113,8 +113,8 @@ Note that changed settings have a marker besides them to help you identify them 
 
 * Multiple theme support.
 
-<video muted autoplay loop style="max-width:100%; height:auto" name="media" poster="~@public/c-assets/guide/user-interface/themes.png">
-  <source src="~@public/c-assets/guide/user-interface/themes.mp4" type="video/mp4">
+<video muted autoplay loop style="max-width:100%; height:auto" name="media" poster="~@buildAssets/guide/user-interface/themes.png">
+  <source src="~@buildAssets/guide/user-interface/themes.mp4" type="video/mp4">
   Your browser does not support the video tag.
 </video> 
 
@@ -122,8 +122,8 @@ Note that changed settings have a marker besides them to help you identify them 
 
 * Inbuilt npm client to install node packages for your projects.
 
-<video muted autoplay loop style="max-width:100%; height:auto" name="media" poster="~@public/c-assets/guide/user-interface/extensible.png">
-  <source src="~@public/c-assets/guide/user-interface/extensible.mp4" type="video/mp4">
+<video muted autoplay loop style="max-width:100%; height:auto" name="media" poster="~@buildAssets/guide/user-interface/extensible.png">
+  <source src="~@buildAssets/guide/user-interface/extensible.mp4" type="video/mp4">
   Your browser does not support the video tag.
 </video> 
 

@@ -2,7 +2,7 @@
 description : 'Following are some sample projects made with Quark.'
 author : nishkal
 tags : ['guide']
-cover : ~@public/g-images/guide/showcase.png
+cover : ~@buildAssets/guide/showcase.png
 ---
 
 # Showcase

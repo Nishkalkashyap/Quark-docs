@@ -2,7 +2,7 @@
 description : 'Getting up and running with Quark is quick and easy. It is a small download so you can install in a matter of minutes and give Quark a try.'
 author : nishkal
 tags : ['guide']
-cover : ~@public/g-images/guide/setting-up-quark.png
+cover : ~@buildAssets/guide/setting-up-quark.png
 ---
 
 # Setting up Quark
