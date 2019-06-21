@@ -6,10 +6,10 @@
   "scripts": {
     "prepare-release": "ts-node scripts/create-release-notes-file.ts && ts-node scripts/electron-dependent.ts",
     "tags": "ts-node scripts/non-electron-dependent.ts",
-    "start": "npm run tags && npm run img && vuepress dev -p 80",
+    "start": "npm run tags && vuepress dev -p 80",
     "qs": "vuepress dev -p 80",
-    "build": "npm run tags && npm run img && vuepress build",
-    "cloud-build": "npm run tags && npm run img && vuepress build",
+    "build": "npm run tags && vuepress build",
+    "cloud-build": "npm run tags && vuepress build",
     "post-build": "npx ts-node ./scripts/create-site-map.ts",
     "worker": "npx ts-node ./scripts/post-build.ts",
     "deploy-ci": "firebase deploy --token \"$FIREBASE_TOKEN\"",
@@ -18,7 +18,6 @@
     "check": "ts-node ./scripts/check-files.ts",
     "server": "cd ./.vuepress/dist && http-server -p 80",
     "open": "ts-node scripts/open-links.ts",
-    "img": "ts-node scripts/convert-images.ts",
     "vid": "ts-node ./scripts/convert-videos.ts",
     "ssn": "ts-node ./scripts/send-build-notification.ts",
     "loc": "bash -c 'cloc $(git ls-files)'"
