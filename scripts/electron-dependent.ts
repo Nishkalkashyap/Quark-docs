@@ -2,7 +2,7 @@ import * as fs from 'fs-extra';
 import * as YAML from 'yamljs';
 import * as js from 'js-beautify';
 import fetch from 'node-fetch';
-import { makeReleaseDir } from './make-release-dir';
+import { makeReleaseDir } from './make-release-dir2';
 
 const json = fs.readJsonSync('./scripts/__package.json');
 let version = json.version;

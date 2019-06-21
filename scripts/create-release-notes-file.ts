@@ -11,6 +11,7 @@ let currentNotes: string;
 let latestYMLText: string;
 let latestYML: any;
 const releaseNotesPath = './scripts/__release-notes.md';
+const versionsJson = './scripts/versions.json';
 const bucketUrl = 'https://quark-release.quarkjs.io/stable';
 
 let win32_SHA: any;
@@ -92,7 +93,7 @@ function gitDiff(): string {
 }
 
 
-async function createShaHash(): Promise<any> {
+async function createShaHash(): Promise<string> {
 
     const obj = {} as any;
     const shaObj = Object.assign(win32_SHA, linux_SHA);
@@ -128,6 +129,13 @@ async function createShaHash(): Promise<any> {
     str = str.concat(postText);
     str = str.concat(baseReleaseNotes);
     fs.writeFileSync(releaseNotesPath, str);
+
+    const baseVersionsObj = fs.readJsonSync(versionsJson);
+    baseVersionsObj[json.version] = str;
+    fs.writeJsonSync(versionsJson, baseVersionsObj);
+
+
+
     printConsoleStatus(`Release notes added successfully!`, 'success');
     return str;
 }
