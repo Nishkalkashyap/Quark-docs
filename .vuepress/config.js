@@ -212,8 +212,7 @@ module.exports = {
             ],
             "/FAQ/": [
                 "glossary.md",
-                "license.md",
-                "release-notes.md"
+                "license.md"
             ],
             "/tags/": [
                 "references.md",
