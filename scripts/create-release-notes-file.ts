@@ -134,8 +134,8 @@ async function createShaHash(): Promise<string> {
     const baseVersionsObj = JSON.parse(fs.readFileSync(versionsJson).toString());
     baseVersionsObj[json.version] = str;
     let filteredObject: any = {};
-    Object.keys(baseVersionsObj).sort(compareVersions).map((key) => { filteredObject[key] = baseVersionsObj[key] });
-    fs.writeFileSync(versionsJson, JSON.stringify(baseVersionsObj, undefined, 4));
+    Object.keys(baseVersionsObj).sort(compareVersions).reverse().map((key) => { filteredObject[key] = baseVersionsObj[key] });
+    fs.writeFileSync(versionsJson, JSON.stringify(filteredObject, undefined, 4));
 
 
 
