@@ -30,12 +30,10 @@ export default {
     };
   },
   mounted() {
-    console.log(`Mounted`);
     this.$on("sw-updated", this.onSWUpdated);
   },
   methods: {
     onSWUpdated(e) {
-      console.log(e);
       console.log(`Service Worker Updated`);
       this.swUpdateEvent = e;
     }
