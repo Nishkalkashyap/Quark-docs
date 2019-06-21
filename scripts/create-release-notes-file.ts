@@ -5,6 +5,7 @@ import fetch from 'node-fetch';
 import { printConsoleStatus } from './util';
 
 let json: any;
+let brokenReleaseJson: any;
 let version: string;
 let currentNotes: string;
 let latestYMLText: string;
@@ -22,6 +23,7 @@ const monthNames = ["January", "February", "March", "April", "May", "June",
 
 root().then(() => {
     fs.writeFileSync('./scripts/__package.json', JSON.stringify(json, undefined, 4));
+    fs.writeFileSync('./scripts/__broken-releases.json', JSON.stringify(brokenReleaseJson, undefined, 4));
 }).catch(console.error);
 async function root() {
     await getRawContent();
@@ -31,6 +33,7 @@ async function root() {
 async function getRawContent() {
     latestYMLText = await (await fetch(`${bucketUrl}/latest.yml`)).text();
     json = JSON.parse(await (await fetch(`${bucketUrl}/package.json`)).text());
+    brokenReleaseJson = JSON.parse(await (await fetch(`${bucketUrl}/broken-releases.json`)).text());
     latestYML = YAML.parse(latestYMLText);
     version = latestYML.version;
     currentNotes = await (await fetch(`${bucketUrl}/current-release-notes.md`)).text();
