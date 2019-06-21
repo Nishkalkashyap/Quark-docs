@@ -29,8 +29,6 @@ deploy:
   project: diy-mechatronics
   local_dir: "./.vuepress/dist"
   skip_cleanup: true
-after_deploy:
-- npm run ssn
 env:
   global:
     secure: tuHY+rHarKQ2vz5NBUWGqNbWM65Nkd6blCGCQPwA2mwSpFj6P34sjPeBfP/ugtLX93oBXs3upkRFgdjwELYO82TC+0guRkvP+fQVqHCkkhvZkgZwbixTVbiryS1/TRffjY94tB3gRhaTT4rlk1f7pCskSVNo9xMMSrl67DV8iodbjnlXai+FI6TLmipX20pda3Ln3dA2HuOOk2CPf6b5BZeR5W6VQkWoPye+EX3zQSIu3zNwwbwyQIRQ7QOHNbpBcvHMexSYuJaqxZwSybg+8uMokNaP7rxy5cSnibveP20KzUkwK06fms6q7Wi3KZhcCqq3bc0Pv4JY95wQJe07rux5Vh9ri/Ss4ozckXAP2Af88nR6Xchke0bFCjfHMZ5Q7glfh5WqE6B+x8N13lSSUt4zEE7/LTnJpShIe8EfRB+ZP3c/VvMfnokbEJWpx/KHYiOhoHVBPUZUbs6Sy7SyHo7XX7XRDXKhNLC/f5YrS8sec5pZfz9aRnM+7IAsjJTIwmrK50E8q9UIDnlx1qLm6j+6k0JHIi3OQLwessXVJthScWon0XOwkza4x+QN1QbhE/Io/12Hc2I1h974IAMad+jMGgqOKImnzIRqr9aA68jllU4WpuF66jYC/CyTk2NKgpjD6HFA7YzP6wZRXg2vk1480FGm/59CvvRVpRA/hgg=
