@@ -155,7 +155,7 @@ module.exports = {
                     {
                         text: 'Links',
                         items: [{
-                                text: 'Quark services status',
+                                text: 'Services status',
                                 link: 'https://status.quarkjs.io'
                             },
                             {
