@@ -130,9 +130,9 @@ async function createShaHash(): Promise<string> {
     str = str.concat(baseReleaseNotes);
     fs.writeFileSync(releaseNotesPath, str);
 
-    const baseVersionsObj = fs.readJsonSync(versionsJson);
+    const baseVersionsObj = JSON.parse(fs.readFileSync(versionsJson).toString());
     baseVersionsObj[json.version] = str;
-    fs.writeJsonSync(versionsJson, baseVersionsObj);
+    fs.writeFileSync(versionsJson, JSON.stringify(baseVersionsObj, undefined, 4));
 
 
 
