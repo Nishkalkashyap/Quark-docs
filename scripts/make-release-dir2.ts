@@ -13,22 +13,22 @@ const versionNotes: { [version: string]: string } = JSON.parse(fs.readFileSync('
 
 makeReleaseDir();
 export function makeReleaseDir() {
-    let allVersionNotes: any = {};
+    let tempVersionNotes: any = {};
     badReleases.map((release) => {
-        allVersionNotes[release] = `## Bad Release`;
+        tempVersionNotes[release] = `## Bad Release`;
     });
-    allVersionNotes = Object.assign(allVersionNotes, versionNotes);
+    tempVersionNotes = Object.assign(tempVersionNotes, versionNotes);
 
-    let versions: any = {};
-    Object.keys(allVersionNotes)
+    let allVersionNotes: any = {};
+    Object.keys(tempVersionNotes)
         .sort(compareVersions)
         .map((key) => {
-            versions[key] = allVersionNotes[key];
+            allVersionNotes[key] = tempVersionNotes[key];
         });
-    console.log(versions);
+    console.log(allVersionNotes);
 
-    const matches = Object.keys(versions).map((key) => {
-        return versions[key];
+    const matches = Object.keys(allVersionNotes).map((key) => {
+        return allVersionNotes[key];
     });
 
     const versionMatches = versions.reverse().map((val) => {

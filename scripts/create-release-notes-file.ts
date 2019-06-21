@@ -3,6 +3,7 @@ import * as YAML from 'yamljs';
 import * as js from 'js-beautify';
 import fetch from 'node-fetch';
 import { printConsoleStatus } from './util';
+import * as compareVersions from 'compare-versions';
 
 let json: any;
 let brokenReleaseJson: any;
@@ -10,7 +11,7 @@ let version: string;
 let currentNotes: string;
 let latestYMLText: string;
 let latestYML: any;
-const releaseNotesPath = './scripts/__release-notes.md';
+// const releaseNotesPath = './scripts/__release-notes.md';
 const versionsJson = './scripts/versions.json';
 const bucketUrl = 'https://quark-release.quarkjs.io/stable';
 
@@ -102,18 +103,18 @@ async function createShaHash(): Promise<string> {
     });
 
     const date = new Date(latestYML.releaseDate);
-    let baseReleaseNotes = fs.readFileSync(releaseNotesPath).toString();
+    // let baseReleaseNotes = fs.readFileSync(releaseNotesPath).toString();
 
     const preText = `<!-- Quark-${json.version}-start -->`;
     const postText = `<!-- Quark-${json.version}-end -->\n\n\n`;
 
-    if (baseReleaseNotes.includes(json.version)) {
-        const start = baseReleaseNotes.indexOf(preText);
-        const end = baseReleaseNotes.indexOf(postText) + postText.length;
+    // if (baseReleaseNotes.includes(json.version)) {
+    //     const start = baseReleaseNotes.indexOf(preText);
+    //     const end = baseReleaseNotes.indexOf(postText) + postText.length;
 
-        const substr = baseReleaseNotes.substring(start, end);
-        baseReleaseNotes = baseReleaseNotes.replace(substr, '');
-    }
+    //     const substr = baseReleaseNotes.substring(start, end);
+    //     baseReleaseNotes = baseReleaseNotes.replace(substr, '');
+    // }
 
     let str = '';
     str = str.concat(preText, '\n');
@@ -127,11 +128,13 @@ async function createShaHash(): Promise<string> {
     str = str.concat('!!!', '\n\n');
     str = str.concat('<!-- ---------------------------------------------- -->', '\n');
     str = str.concat(postText);
-    str = str.concat(baseReleaseNotes);
-    fs.writeFileSync(releaseNotesPath, str);
+    // str = str.concat(baseReleaseNotes);
+    // fs.writeFileSync(releaseNotesPath, str);
 
     const baseVersionsObj = JSON.parse(fs.readFileSync(versionsJson).toString());
     baseVersionsObj[json.version] = str;
+    let filteredObject: any = {};
+    Object.keys(baseVersionsObj).sort(compareVersions).map((key) => { filteredObject[key] = baseVersionsObj[key] });
     fs.writeFileSync(versionsJson, JSON.stringify(baseVersionsObj, undefined, 4));
 
 
