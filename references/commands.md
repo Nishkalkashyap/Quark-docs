@@ -2,7 +2,7 @@
 description : Register globally executable commands that trigger an action on invocation.
 author : nishkal
 tags : ['api', 'references']
-cover : ~@public/g-images/api/references.png
+cover : ~@buildAssets/api/references.png
 ---
 
 # commands

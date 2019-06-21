@@ -2,7 +2,7 @@
 description : 'Quark is a cross-platform, integrated development environment for rapidly building - functional , prototypal projects, written in HTML, CSS and JavaScript with native desktop app like capabilities.'
 author : nishkal
 tags : ['guide']
-cover : ~@public//g-images/guide/introduction.png
+cover : ~@buildAssets/guide/introduction.png
 # meta:
 #   - name: description
 #     content: my custom meta description

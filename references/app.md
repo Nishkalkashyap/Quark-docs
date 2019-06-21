@@ -2,7 +2,7 @@
 description : Provides methods to perform lower level operations.
 author : nishkal
 tags : ['api', 'references']
-cover : ~@public/g-images/api/references.png
+cover : ~@buildAssets/api/references.png
 ---
 
 # app

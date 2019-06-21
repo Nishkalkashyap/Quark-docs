@@ -2,7 +2,7 @@
 description : ''
 author : nishkal
 tags : ['structures', 'api']
-cover: ~@public/g-images/api/structures.png
+cover: ~@buildAssets/api/structures.png
 ---
 
 # ContextMenuRef
