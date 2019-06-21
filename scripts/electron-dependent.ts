@@ -6,7 +6,8 @@ import { makeReleaseDir } from './make-release-dir2';
 
 const json = fs.readJsonSync('./scripts/__package.json');
 let version = json.version;
-const notes = fs.readFileSync('./scripts/__release-notes.md').toString();
+let versionsJson = JSON.parse(fs.readFileSync('./scripts/versions.json').toString());
+// const notes = fs.readFileSync('./scripts/__release-notes.md').toString();
 const bucketUrl = 'https://quark-release.quarkjs.io/stable';
 
 createReleaseNotes();
@@ -14,10 +15,10 @@ updateDownloadLinks();
 makeReleaseDir();
 
 function createReleaseNotes() {
-    let str = '';
-    str = str.concat('# Release Notes', '\n\n');
-    str = str.concat(notes);
-    fs.writeFileSync('./FAQ/release-notes.md', str);
+    // let str = '';
+    // str = str.concat('# Release Notes', '\n\n');
+    // str = str.concat(notes);
+    // fs.writeFileSync('./FAQ/release-notes.md', str);
 }
 
 async function updateDownloadLinks() {
@@ -46,9 +47,11 @@ async function updateDownloadLinks() {
         return bin.search(/(.zip|.msi)$/) !== -1;
     });
 
-    const preText = `<!-- Quark-${version}-start -->`;
-    const postText = `<!-- Quark-${version}-end -->`;
-    const substr = notes.substring(notes.indexOf(preText), notes.indexOf(postText));
+    
+    const substr = versionsJson[version];
+    // const preText = `<!-- Quark-${version}-start -->`;
+    // const postText = `<!-- Quark-${version}-end -->`;
+    // const substr = notes.substring(notes.indexOf(preText), notes.indexOf(postText));
     // console.log(json);
     const match = substr.match(/{(\n|.|\s)+}/)[0];
 

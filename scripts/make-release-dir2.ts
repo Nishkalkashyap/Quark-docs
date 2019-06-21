@@ -15,13 +15,22 @@ makeReleaseDir();
 export function makeReleaseDir() {
     let tempVersionNotes: any = {};
     badReleases.map((release) => {
-        tempVersionNotes[release] = `## Bad Release`;
+        const preText = `<!-- Quark-${release}-start -->`;
+        const postText = `<!-- Quark-${release}-end -->\n\n\n`;
+        
+        let str = '';
+        str = str.concat(preText, '\n');
+        str = str.concat(`## Bad Release`, '\n');
+        str = str.concat('<!-- ---------------------------------------------- -->', '\n');
+        str = str.concat(postText);
+        tempVersionNotes[release] = str;
     });
     tempVersionNotes = Object.assign(tempVersionNotes, versionNotes);
 
     let allVersionNotes: any = {};
     Object.keys(tempVersionNotes)
         .sort(compareVersions)
+        .reverse()
         .map((key) => {
             allVersionNotes[key] = tempVersionNotes[key];
         });
