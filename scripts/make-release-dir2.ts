@@ -8,8 +8,8 @@ const versions = [
     0.3
 ];
 const currentVersion = 0.3;
-const badReleases: string[] = JSON.parse(fs.readFileSync('./scripts/__broken-releases.json').toString());
-const versionNotes: { [version: string]: string } = JSON.parse(fs.readFileSync('./scripts/versions.json').toString());
+const badReleases: string[] = JSON.parse(fs.readFileSync('./version-assets/__broken-releases.json').toString());
+const versionNotes: { [version: string]: string } = JSON.parse(fs.readFileSync('./version-assets/__versions.json').toString());
 
 makeReleaseDir();
 export function makeReleaseDir() {

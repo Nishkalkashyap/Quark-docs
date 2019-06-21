@@ -4,10 +4,10 @@ import * as js from 'js-beautify';
 import fetch from 'node-fetch';
 import { makeReleaseDir } from './make-release-dir2';
 
-const json = fs.readJsonSync('./scripts/__package.json');
+const json = fs.readJsonSync('./version-assets/__package.json');
 let version = json.version;
-let versionsJson = JSON.parse(fs.readFileSync('./scripts/versions.json').toString());
-// const notes = fs.readFileSync('./scripts/__release-notes.md').toString();
+let versionsJson = JSON.parse(fs.readFileSync('./version-assets/__versions.json').toString());
+// const notes = fs.readFileSync('./version-assets/__release-notes.md').toString();
 const bucketUrl = 'https://quark-release.quarkjs.io/stable';
 
 createReleaseNotes();

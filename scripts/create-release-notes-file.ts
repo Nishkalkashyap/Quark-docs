@@ -11,8 +11,8 @@ let version: string;
 let currentNotes: string;
 let latestYMLText: string;
 let latestYML: any;
-// const releaseNotesPath = './scripts/__release-notes.md';
-const versionsJson = './scripts/versions.json';
+// const releaseNotesPath = './version-assets/__release-notes.md';
+const versionsJson = './version-assets/__versions.json';
 const bucketUrl = 'https://quark-release.quarkjs.io/stable';
 
 let win32_SHA: any;
@@ -24,8 +24,8 @@ const monthNames = ["January", "February", "March", "April", "May", "June",
 ];
 
 root().then(() => {
-    fs.writeFileSync('./scripts/__package.json', JSON.stringify(json, undefined, 4));
-    fs.writeFileSync('./scripts/__broken-releases.json', JSON.stringify(brokenReleaseJson, undefined, 4));
+    fs.writeFileSync('./version-assets/__package.json', JSON.stringify(json, undefined, 4));
+    fs.writeFileSync('./version-assets/__broken-releases.json', JSON.stringify(brokenReleaseJson, undefined, 4));
 }).catch(console.error);
 async function root() {
     await getRawContent();
@@ -48,7 +48,7 @@ async function getRawContent() {
 
 function gitDiff(): string {
     const current = JSON.parse(JSON.stringify(json));
-    const previous = fs.readJsonSync('./scripts/__package.json');
+    const previous = fs.readJsonSync('./version-assets/__package.json');
 
     const currentDeps = getImportantDeps(current);
     const previousDeps = getImportantDeps(previous);
