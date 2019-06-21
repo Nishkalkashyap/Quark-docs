@@ -43,7 +43,9 @@ sidebarDepth: 4
 
 
 <!-- Quark-0.3.8-start -->
-## Bad Release
+## Quark 0.3.8 - (Release skipped)
+!!! failure This version was never released in the stable channel because the insiders release was found to have major bugs.
+!!!
 <!-- ---------------------------------------------- -->
 <!-- Quark-0.3.8-end -->
 

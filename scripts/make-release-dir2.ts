@@ -17,10 +17,11 @@ export function makeReleaseDir() {
     badReleases.map((release) => {
         const preText = `<!-- Quark-${release}-start -->`;
         const postText = `<!-- Quark-${release}-end -->\n\n\n`;
-        
+
         let str = '';
         str = str.concat(preText, '\n');
-        str = str.concat(`## Bad Release`, '\n');
+        str = str.concat(`## Quark ${release} - (Release skipped)`, '\n');
+        str = str.concat(`!!! failure This version was never released in the stable channel because the insiders release was found to have major bugs.`, '\n', `!!!`, '\n');
         str = str.concat('<!-- ---------------------------------------------- -->', '\n');
         str = str.concat(postText);
         tempVersionNotes[release] = str;
