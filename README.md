@@ -3,7 +3,8 @@
 home: true
 heroImage: /images/icon-svg.svg
 heroText: Quark
-tagline: Platform to develope internet of things.
+# tagline: Platform to develope internet of things.
+tagline: This project is not ready for public consumption yet!!.
 actionText: Get Started →
 actionLink: /guide/intro.html
 features:
