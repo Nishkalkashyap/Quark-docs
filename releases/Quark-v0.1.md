@@ -23,7 +23,7 @@ sidebarDepth: 4
 * Added builds for *.tar.gz, *.deb and *.zip
 * Added shasum check table
 
-!!! info See SHA-512 Hashes
+!!! note See SHA-512 Hashes
 <DropDown>
 <ReleaseNotes :sha='{
     "Quark-linux-amd64-0.1.19.deb": "mOoXmJWxwtlVzhiG9V+/0gw5+rQgYbPsFsBNxbXSB6BoEvts0vN8nEc+BioyjpA5cN3Lx0VTyAEbm/mE/NZNNQ==",

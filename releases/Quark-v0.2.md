@@ -27,7 +27,7 @@ sidebarDepth: 4
 
 
 
-!!! info See SHA-512 Hashes
+!!! note See SHA-512 Hashes
 <DropDown>
 <ReleaseNotes :sha='{
     "Quark-win-0.2.17.exe": "sWjMF/sGIprcwjN0dRH9v7vL1mZw+1VJB/2w8fzYjekYGu2cCO3HFmkLI4bXKPIh7QWkK5Tz+ERmf1xhcx2Fhw==",
@@ -66,7 +66,7 @@ sidebarDepth: 4
 * Removed: `@squirtle/api@file`
 
 
-!!! info See SHA-512 Hashes
+!!! note See SHA-512 Hashes
 <DropDown>
 <ReleaseNotes :sha='{
     "Quark-linux-amd64-0.2.16.deb": "n9ARyZOJzgqNNESlv9+n3r8ebV4eomuWyUDHIzXaEPRp49dDLBOuPdPsln3IdiNl9XBqQI6mFuRFhlKn8D4wdg==",
@@ -88,7 +88,7 @@ sidebarDepth: 4
 * Fixed snippets default import error.
 * Fixed output-channel settings error.
 
-!!! info See SHA-512 Hashes
+!!! note See SHA-512 Hashes
 <DropDown>
 <ReleaseNotes :sha='{
     "Quark-linux-amd64-0.2.15.deb": "MpjTQ8zBfxvbzJF2YIsL5gF9VaZsD+goBmZRWJ2uC6rvhgm3xR+XRNyXWFlj+p8cwe0xYWcyi/3e0G8l4rSCAg==",
@@ -109,7 +109,7 @@ sidebarDepth: 4
 #### Bug fixes:
 * Wrong config.entry file name (data type) caused window to crash.
 
-!!! info See SHA-512 Hashes
+!!! note See SHA-512 Hashes
 <DropDown>
 <ReleaseNotes :sha='{
     "Quark-linux-amd64-0.2.14.deb": "XXFO9HDeFcohYGWUh5LXNulYMZcIkJQAeNeHl3nyjg98SPOGXIGCdRsJLJl89kzFwZNNV3+QZ9g93OrKsDa9Lw==",
@@ -145,7 +145,7 @@ sidebarDepth: 4
 * Updated: `@babel/core@7.4.4` (Previous: v7.4.3)
 
 
-!!! info See SHA-512 Hashes
+!!! note See SHA-512 Hashes
 <DropDown>
 <ReleaseNotes :sha='{
     "Quark-linux-amd64-0.2.13.deb": "D3lK/zbpB1f4OpuX+FOXwlc4S6QcspEHKwfv3a9X7WRkQQ2oAdnX0hZGs7EFGxFBcTFGZk2wM2MW+6uJrb8g+w==",
@@ -173,7 +173,7 @@ sidebarDepth: 4
 * Updated: `johnny-five@1.1.0` (Previous: v1.0.0)
 
 
-!!! info See SHA-512 Hashes
+!!! note See SHA-512 Hashes
 <DropDown>
 <ReleaseNotes :sha='{
     "Quark-linux-amd64-0.2.12.deb": "xbNI5nOFHmoOgvyiAmRPD5TaulNSW8NDwP9QwPz4+Zef+9mrV0lTrZsAbOtl/TLIHAyK+hkFXaEYe3zdKah4hg==",
@@ -209,7 +209,7 @@ sidebarDepth: 4
 * Added: `@babel/plugin-syntax-dynamic-import@7.2.0`
 
 
-!!! info See SHA-512 Hashes
+!!! note See SHA-512 Hashes
 <DropDown>
 <ReleaseNotes :sha='{
     "Quark-linux-amd64-0.2.11.deb": "k+qW1mxEi4B/IoEz7f/IKuuSIDGKL0nxNIEtGLHUGGLs+/wO+pFIiZEjsUziDGuTE8WrR1vuL3wD0yhDb/9F5g==",
@@ -233,7 +233,7 @@ sidebarDepth: 4
 #### Other changes
 * Added close dialog on browserWindow fail.
 
-!!! info See SHA-512 Hashes
+!!! note See SHA-512 Hashes
 <DropDown>
 <ReleaseNotes :sha='{
     "Quark-linux-amd64-0.2.10.deb": "1+4MSUXR2F2RxgL8XekmhhmCEM3RAu7QKnsVeaFmul0FuwvoEDPgNxRVbkDYBKBhKzlWysLE+Y8UnDz8q1fPNg==",
@@ -254,7 +254,7 @@ sidebarDepth: 4
 #### Features
 * Implemented asar packager and runtime.
 
-!!! info See SHA-512 Hashes
+!!! note See SHA-512 Hashes
 <DropDown>
 <ReleaseNotes :sha='{
     "Quark-linux-amd64-0.2.9.deb": "H7d3wQlT3Wn46akHCQfwUfZTGZViUsAGixTDDhPzAzYmGT1TjOBTMyLt86GRRsVrS1Bmy7+rCkaoQkXUwrblMw==",
@@ -283,7 +283,7 @@ sidebarDepth: 4
 #### Other changes
 * New project now starts in a folder.
 
-!!! info See SHA-512 Hashes
+!!! note See SHA-512 Hashes
 <DropDown>
 <ReleaseNotes :sha='{
     "Quark-linux-amd64-0.2.8.deb": "WO6KvjLahiRSn/X/g7IEjyxxn5uM0KqQqqZiivp31p7joVY3qx5bB1J3ZGtobZviZThkO0v2nW99AzZslY+fIg==",
@@ -304,7 +304,7 @@ sidebarDepth: 4
 #### Bug fixes:
 * Re-uploaded code signed binary.
 
-!!! info See SHA-512 Hashes
+!!! note See SHA-512 Hashes
 <DropDown>
 <ReleaseNotes :sha='{
     "Quark-linux-amd64-0.2.7.deb": "RfwNsA9Ym1ui9PUmSC2vpKr92vZBWzKNwtiP6hUkvdURI+xht2tGZHCD76sOQsaTt+lQTGVD+9ia1CJ4vxx/RQ==",
@@ -345,7 +345,7 @@ sidebarDepth: 4
 * Removed: `node-sass@4.11.0`
 
 
-!!! info See SHA-512 Hashes
+!!! note See SHA-512 Hashes
 <DropDown>
 <ReleaseNotes :sha='{
     "Quark-linux-amd64-0.2.6.deb": "OBb+45HFUpkCEpupsQdLi9TpWOBF29OnBy5QMzUzmpfS7XDYBmy4Rch4jNAqCI2WbmQgASb7AgSOi85JLG0Ryg==",
@@ -372,7 +372,7 @@ sidebarDepth: 4
 * fixed onDidRemoveView handle.
 * fixed file rename handle css.
 
-!!! info See SHA-512 Hashes
+!!! note See SHA-512 Hashes
 <DropDown>
 <ReleaseNotes :sha='{
     "Quark-linux-amd64-0.2.5.deb": "2zxEFLuJLw73gpwkbzQuehchueL1hr/Iqv+bRQV3hPASI5rQAwlg4X+qntj4BnhC/nJDmiktiqxbqDtz/ZtBLQ==",
@@ -406,7 +406,7 @@ sidebarDepth: 4
 * Added: `@babel/plugin-proposal-class-properties@7.4.4`
 
 
-!!! info See SHA-512 Hashes
+!!! note See SHA-512 Hashes
 <DropDown>
 <ReleaseNotes :sha='{
     "Quark-linux-amd64-0.2.4.deb": "+32veePlfwsn6MeA5GBm/eUYAL5qKLeEVTyTQM8bvQmeCBRBXIWBclne2R+t1qL3Fq78AFgnK+e/cr3LNUnpEQ==",
@@ -434,7 +434,7 @@ sidebarDepth: 4
 * Fixed window crash while adding extra libs to an opened editor.
 * Fixed window state restore handle.
 
-!!! info See SHA-512 Hashes
+!!! note See SHA-512 Hashes
 <DropDown>
 <ReleaseNotes :sha='{
     "Quark-linux-amd64-0.2.3.deb": "YhJOXf6dpf6UK1Kj5KlNbpUFMIHWbZpzk66EhMd00dgal5PRzl7+N1vJYpP9tMY1+Qsjk9isgwf7lgWuhdmsLw==",
@@ -465,7 +465,7 @@ sidebarDepth: 4
 * Added: `recursive-readdir@2.2.2`
 
 
-!!! info See SHA-512 Hashes
+!!! note See SHA-512 Hashes
 <DropDown>
 <ReleaseNotes :sha='{
     "Quark-linux-amd64-0.2.2.deb": "pi3hC2PxXrrYLdsZthqUgqhW52bA0oTa9AwNuRAU9XQr3WCWjMyAmbYUCtUz01lOAjqUmqjbRbKfiEtMPWvLjQ==",
@@ -507,7 +507,7 @@ sidebarDepth: 4
 * Added: `@babel/preset-env@7.4.3`
 
 
-!!! info See SHA-512 Hashes
+!!! note See SHA-512 Hashes
 <DropDown>
 <ReleaseNotes :sha='{
     "Quark-linux-amd64-0.2.1.deb": "G89YxF80AHLOvYYPlFiIQDx60P+vW+3WQETBoF6rYpQL9i/cdURcBESl5ABgsSuNHcZJf2CCf2MeFGjeDoeQLw==",
@@ -547,7 +547,7 @@ sidebarDepth: 4
 * Updated: `@babel/core@7.4.3` (Previous: v7.3.4)
 
 
-!!! info See SHA-512 Hashes
+!!! note See SHA-512 Hashes
 <DropDown>
 <ReleaseNotes :sha='{
     "Quark-linux-amd64-0.2.0.deb": "du19RF/Vgx3+1HPDohAGW36SaqVnR0JMHdZjRygdknCr7TejQ/PutkiUqnelB67dIfbMi5VjS8qIQ8pXnc1PYQ==",

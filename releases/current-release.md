@@ -23,7 +23,7 @@ sidebarDepth: 4
 
 
 
-!!! info See SHA-512 Hashes
+!!! note See SHA-512 Hashes
 <DropDown>
 <ReleaseNotes :sha='{
     "Quark-win-0.3.9.exe": "wMon85XEZhfbkMnzG74uqXe9OLQhgpZ+Tyj5ibdwIk2ijnT+xAAuFcl3ThcN0pupSc/9mzastNeX8njd0hk2Fw==",
@@ -64,7 +64,7 @@ sidebarDepth: 4
 
 
 
-!!! info See SHA-512 Hashes
+!!! note See SHA-512 Hashes
 <DropDown>
 <ReleaseNotes :sha='{
     "Quark-win-0.3.7.exe": "F98SjmtcU5/EoZMwo8Y6InrMu4yHwxWfEZjXXClbv/UOJ/2c0R+P/7Y184Xc7sNm8I/G7bloQhTtQdkIJcH3hw==",
@@ -88,7 +88,7 @@ sidebarDepth: 4
 
 
 
-!!! info See SHA-512 Hashes
+!!! note See SHA-512 Hashes
 <DropDown>
 <ReleaseNotes :sha='{
     "Quark-win-0.3.6.exe": "ZjUq0IO4a2NqrzR4Mt2DwKPBKk1s7RLY58lzWpNFTwhFEbdxRiaGz8rAY8be529rsUTRLErNTvFNZurHa9twPw==",
@@ -114,7 +114,7 @@ sidebarDepth: 4
 * Updated: `electron@^4.2.4` (Previous: v4.1.3)
 
 
-!!! info See SHA-512 Hashes
+!!! note See SHA-512 Hashes
 <DropDown>
 <ReleaseNotes :sha='{
     "Quark-win-0.3.5.exe": "Ds1dGug/xB+Gtl7W9TVFvznVzMynoUHI+bNHf+Ovv/nBwi3fziwWph4M3IT1tTSXDQv1xwr+G5RlITcnSW37vg==",
@@ -138,7 +138,7 @@ sidebarDepth: 4
 
 
 
-!!! info See SHA-512 Hashes
+!!! note See SHA-512 Hashes
 <DropDown>
 <ReleaseNotes :sha='{
     "Quark-win-0.3.4.exe": "xc84bp1QbLzq/DT3grUPbw971jEe51xH0lzzloYmmCg08Ihmw3FV+ScKy9rtk2GlAXJCM1A8Ax5OJiBwa4klbA==",
@@ -166,7 +166,7 @@ sidebarDepth: 4
 * Updated: `webpack@^4.34.0` (Previous: v^4.32.2)
 
 
-!!! info See SHA-512 Hashes
+!!! note See SHA-512 Hashes
 <DropDown>
 <ReleaseNotes :sha='{
     "Quark-win-0.3.3.exe": "YjYTFz/GsmxAfJJJ8MQ5uEPQ7NAY+Hoc96xWtXsfwzUuTkxxMy5bbSPepCI0EnCWC9la4jyak9ONESnIGT6Mjg==",
@@ -193,7 +193,7 @@ sidebarDepth: 4
 
 
 
-!!! info See SHA-512 Hashes
+!!! note See SHA-512 Hashes
 <DropDown>
 <ReleaseNotes :sha='{
     "Quark-win-0.3.2.exe": "yevyjvEynY+Q61RqkGk64Kj1fTGpofZLgUmUn68oULBqhtHl6FmlCpKw1CqUAL1MUP7S9vKhCbIgKGrQiIvG9A==",
@@ -219,7 +219,7 @@ sidebarDepth: 4
 * Removed: `electron-builder-squirrel-windows@^20.42.0`
 
 
-!!! info See SHA-512 Hashes
+!!! note See SHA-512 Hashes
 <DropDown>
 <ReleaseNotes :sha='{
     "Quark-win-0.3.1.exe": "HF3CEerww8IWFoF2bZtFND6HyvM+5M89TVVHsYZSDJIwfBdMosBQFm4GZNMVWUguzj8J3nQtXIEtWPYR0ULqfA==",
@@ -254,7 +254,7 @@ sidebarDepth: 4
 * Updated: `electron@4.1.3` (Previous: v^4.2.2)
 
 
-!!! info See SHA-512 Hashes
+!!! note See SHA-512 Hashes
 <DropDown>
 <ReleaseNotes :sha='{
     "Quark-win-0.3.0.exe": "5bKFlr/zI7aDPDohxZHMKodyoQlHt/99C1XTX7P/zo6+8PPWpNvUteJVes8o/RfwYbTGTmFYe9+GAN06Rvt5/w==",

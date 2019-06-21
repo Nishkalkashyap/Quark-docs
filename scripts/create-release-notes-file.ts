@@ -121,7 +121,7 @@ async function createShaHash(): Promise<string> {
     str = str.concat(`## Quark ${json.version} - ${monthNames[date.getMonth()]} ${date.getDate()}, ${date.getFullYear()}`, '\n\n');
     str = str.concat(currentNotes, '\n\n');
     str = str.concat(await gitDiff());
-    str = str.concat(`!!! info See SHA-512 Hashes`, '\n');
+    str = str.concat(`!!! note See SHA-512 Hashes`, '\n');
     str = str.concat(`<DropDown>`, '\n');
     str = str.concat(`<ReleaseNotes :sha='${js.js_beautify(JSON.stringify(obj))}' />`, '\n');
     str = str.concat(`</DropDown>`, '\n');
