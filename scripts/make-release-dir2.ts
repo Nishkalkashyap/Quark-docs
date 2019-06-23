@@ -2,12 +2,9 @@ import * as fs from 'fs-extra';
 import { getFrontmatterFromObject } from './util';
 import * as compareVersions from 'compare-versions';
 
-const versions = [
-    0.1,
-    0.2,
-    0.3
-];
-const currentVersion = 0.3;
+const versionsJson = JSON.parse(fs.readFileSync('./scripts/versions.json').toString());
+const versions = versionsJson.versions;
+const currentVersion = versionsJson.currentVersion;
 const badReleases: string[] = JSON.parse(fs.readFileSync('./version-assets/__broken-releases.json').toString());
 const versionNotes: { [version: string]: string } = JSON.parse(fs.readFileSync('./version-assets/__versions.json').toString());
 

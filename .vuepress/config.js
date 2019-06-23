@@ -225,6 +225,7 @@ module.exports = {
                 "nodejs.md"
             ],
             "/snippets/": [
+                "convert-existing-electron-app.md",
                 "cron-example-schedule.md",
                 "install-nodejs.md"
             ],
