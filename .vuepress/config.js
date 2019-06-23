@@ -231,6 +231,7 @@ module.exports = {
             ],
             "/releases/": [
                 "current-release.md",
+                "Quark-v0.3.md",
                 "Quark-v0.2.md",
                 "Quark-v0.1.md"
             ],
