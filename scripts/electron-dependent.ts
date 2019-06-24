@@ -6,10 +6,11 @@ import { makeReleaseDir } from './make-release-dir2';
 import { releaseVariables } from './util';
 
 const releaseVar: typeof releaseVariables['stable'] = releaseVariables[process.env.RELEASE_TYPE];
-const json = fs.readJsonSync('./version-assets/__package.json');
+const baseVerisonAssetsPath = `./version-assets/${releaseVar.bucketSubUrl}`;
+
+const json = fs.readJsonSync(`${baseVerisonAssetsPath}/__package.json`);
 let version = json.version;
-let versionsJson = JSON.parse(fs.readFileSync('./version-assets/__versions.json').toString());
-// const notes = fs.readFileSync('./version-assets/__release-notes.md').toString();
+let versionsJson = JSON.parse(fs.readFileSync(`${baseVerisonAssetsPath}/__versions.json`).toString());
 const bucketUrl = `https://quark-release.quarkjs.io/${releaseVar.bucketSubUrl}`;
 
 updateDownloadLinks();

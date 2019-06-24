@@ -1,12 +1,15 @@
 import * as fs from 'fs-extra';
-import { getFrontmatterFromObject } from './util';
+import { getFrontmatterFromObject, releaseVariables } from './util';
 import * as compareVersions from 'compare-versions';
+
+const releaseVar: typeof releaseVariables['stable'] = releaseVariables[process.env.RELEASE_TYPE];
+const baseVerisonAssetsPath = `./version-assets/${releaseVar.bucketSubUrl}`
 
 const versionsJson = JSON.parse(fs.readFileSync('./scripts/versions.json').toString());
 const versions = versionsJson.versions;
 const currentVersion = versionsJson.currentVersion;
-const badReleases: string[] = JSON.parse(fs.readFileSync('./version-assets/__broken-releases.json').toString());
-const versionNotes: { [version: string]: string } = JSON.parse(fs.readFileSync('./version-assets/__versions.json').toString());
+const badReleases: string[] = JSON.parse(fs.readFileSync(`${baseVerisonAssetsPath}/__broken-releases.json`).toString());
+const versionNotes: { [version: string]: string } = JSON.parse(fs.readFileSync(`${baseVerisonAssetsPath}/__versions.json`).toString());
 
 export function makeReleaseDir() {
     let tempVersionNotes: any = {};

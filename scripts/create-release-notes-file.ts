@@ -2,8 +2,10 @@ import * as fs from 'fs-extra';
 import * as YAML from 'yamljs';
 import * as js from 'js-beautify';
 import fetch from 'node-fetch';
-import { printConsoleStatus } from './util';
+import { printConsoleStatus, releaseVariables } from './util';
 import * as compareVersions from 'compare-versions';
+
+const releaseVar: typeof releaseVariables['stable'] = releaseVariables[process.env.RELEASE_TYPE];
 
 let json: any;
 let brokenReleaseJson: any;
@@ -11,9 +13,10 @@ let version: string;
 let currentNotes: string;
 let latestYMLText: string;
 let latestYML: any;
-// const releaseNotesPath = './version-assets/__release-notes.md';
-const versionsJson = './version-assets/__versions.json';
-const bucketUrl = 'https://quark-release.quarkjs.io/stable';
+
+const baseVerisonAssetsPath = `./version-assets/${releaseVar.bucketSubUrl}`
+const versionsJson = `${baseVerisonAssetsPath}/__versions.json`;
+const bucketUrl = `https://quark-release.quarkjs.io/${releaseVar.bucketSubUrl}`;
 
 let win32_SHA: any;
 let linux_SHA: any;
@@ -24,8 +27,8 @@ const monthNames = ["January", "February", "March", "April", "May", "June",
 ];
 
 root().then(() => {
-    fs.writeFileSync('./version-assets/__package.json', JSON.stringify(json, undefined, 4));
-    fs.writeFileSync('./version-assets/__broken-releases.json', JSON.stringify(brokenReleaseJson, undefined, 4));
+    fs.writeFileSync(`${baseVerisonAssetsPath}/__package.json`, JSON.stringify(json, undefined, 4));
+    fs.writeFileSync(`${baseVerisonAssetsPath}/__broken-releases.json`, JSON.stringify(brokenReleaseJson, undefined, 4));
 }).catch(console.error);
 async function root() {
     await getRawContent();
@@ -48,7 +51,7 @@ async function getRawContent() {
 
 function gitDiff(): string {
     const current = JSON.parse(JSON.stringify(json));
-    const previous = fs.readJsonSync('./version-assets/__package.json');
+    const previous = fs.readJsonSync(`${baseVerisonAssetsPath}/__package.json`);
 
     const currentDeps = getImportantDeps(current);
     const previousDeps = getImportantDeps(previous);
