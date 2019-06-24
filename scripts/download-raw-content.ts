@@ -7,11 +7,9 @@ import * as compareVersions from 'compare-versions';
 
 const releaseVar: typeof releaseVariables['stable'] = releaseVariables[process.env.RELEASE_TYPE];
 
-let json: any;
+let packageJson: any;
 let brokenReleaseJson: any;
-let version: string;
 let currentNotes: string;
-let latestYMLText: string;
 let latestYML: any;
 
 const baseVerisonAssetsPath = `./version-assets/${releaseVar.bucketSubUrl}`
@@ -27,7 +25,7 @@ const monthNames = ["January", "February", "March", "April", "May", "June",
 ];
 
 root().then(() => {
-    fs.writeFileSync(`${baseVerisonAssetsPath}/__package.json`, JSON.stringify(json, undefined, 4));
+    fs.writeFileSync(`${baseVerisonAssetsPath}/__package.json`, JSON.stringify(packageJson, undefined, 4));
     fs.writeFileSync(`${baseVerisonAssetsPath}/__broken-releases.json`, JSON.stringify(brokenReleaseJson, undefined, 4));
 }).catch(console.error);
 async function root() {
@@ -36,11 +34,11 @@ async function root() {
 }
 
 async function getRawContent() {
-    latestYMLText = await (await fetch(`${bucketUrl}/latest.yml`)).text();
-    json = JSON.parse(await (await fetch(`${bucketUrl}/package.json`)).text());
-    brokenReleaseJson = JSON.parse(await (await fetch(`${bucketUrl}/broken-releases.json`)).text());
+    const latestYMLText = await (await fetch(`${bucketUrl}/latest.yml`)).text();
     latestYML = YAML.parse(latestYMLText);
-    version = latestYML.version;
+
+    packageJson = JSON.parse(await (await fetch(`${bucketUrl}/package.json`)).text());
+    brokenReleaseJson = JSON.parse(await (await fetch(`${bucketUrl}/broken-releases.json`)).text());
     currentNotes = await (await fetch(`${bucketUrl}/current-release-notes.md`)).text();
 
     win32_SHA = JSON.parse(await (await fetch(`${bucketUrl}/win32-shasum.json`)).text());
@@ -50,7 +48,7 @@ async function getRawContent() {
 
 
 function gitDiff(): string {
-    const current = JSON.parse(JSON.stringify(json));
+    const current = JSON.parse(JSON.stringify(packageJson));
     const previous = fs.readJsonSync(`${baseVerisonAssetsPath}/__package.json`);
 
     const currentDeps = getImportantDeps(current);
@@ -106,22 +104,13 @@ async function createVersionJsonFile(): Promise<string> {
     });
 
     const date = new Date(latestYML.releaseDate);
-    // let baseReleaseNotes = fs.readFileSync(releaseNotesPath).toString();
 
-    const preText = `<!-- Quark-${json.version}-start -->`;
-    const postText = `<!-- Quark-${json.version}-end -->\n\n\n`;
-
-    // if (baseReleaseNotes.includes(json.version)) {
-    //     const start = baseReleaseNotes.indexOf(preText);
-    //     const end = baseReleaseNotes.indexOf(postText) + postText.length;
-
-    //     const substr = baseReleaseNotes.substring(start, end);
-    //     baseReleaseNotes = baseReleaseNotes.replace(substr, '');
-    // }
+    const preText = `<!-- Quark-${packageJson.version}-start -->`;
+    const postText = `<!-- Quark-${packageJson.version}-end -->\n\n\n`;
 
     let str = '';
     str = str.concat(preText, '\n');
-    str = str.concat(`## Quark ${json.version} - ${monthNames[date.getMonth()]} ${date.getDate()}, ${date.getFullYear()}`, '\n\n');
+    str = str.concat(`## Quark ${packageJson.version} - ${monthNames[date.getMonth()]} ${date.getDate()}, ${date.getFullYear()}`, '\n\n');
     str = str.concat(currentNotes, '\n\n');
     str = str.concat(await gitDiff());
     str = str.concat(`!!! note See SHA-512 Hashes`, '\n');
@@ -131,25 +120,13 @@ async function createVersionJsonFile(): Promise<string> {
     str = str.concat('!!!', '\n\n');
     str = str.concat('<!-- ---------------------------------------------- -->', '\n');
     str = str.concat(postText);
-    // str = str.concat(baseReleaseNotes);
-    // fs.writeFileSync(releaseNotesPath, str);
 
     const baseVersionsObj = JSON.parse(fs.readFileSync(versionsJson).toString());
-    baseVersionsObj[json.version] = str;
+    baseVersionsObj[packageJson.version] = str;
     let filteredObject: any = {};
     Object.keys(baseVersionsObj).sort(compareVersions).reverse().map((key) => { filteredObject[key] = baseVersionsObj[key] });
     fs.writeFileSync(versionsJson, JSON.stringify(filteredObject, undefined, 4));
 
-
-
     printConsoleStatus(`Release notes added successfully!`, 'success');
     return str;
-}
-
-interface IYAML {
-    version: number;
-    path: string;
-    sha512: string;
-    releaseDate: string;
-    files: { url: string; sha512: string; size: number; }[]
 }

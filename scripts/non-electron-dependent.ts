@@ -3,8 +3,7 @@ import * as Path from 'path';
 import * as recc from 'recursive-readdir';
 import { AllTags } from './types';
 import { themeConfig } from '../.vuepress/config';
-import { IFrontmatterData, getFrontmatterFromPath, capitalize, Frontmatter, randomIntFromInterval } from './util';
-import { reccursiveIgnoreFunction } from './check-files';
+import { IFrontmatterData, getFrontmatterFromPath, capitalize, Frontmatter, randomIntFromInterval, reccursiveIgnoreFunction } from './util';
 import * as sharp from 'sharp';
 
 var beautify = require('js-beautify').js;
