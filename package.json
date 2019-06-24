@@ -4,7 +4,7 @@
   "description": "Documentation for quark",
   "main": "index.js",
   "scripts": {
-    "prepare-release": "ts-node scripts/create-release-notes-file.ts && ts-node scripts/electron-dependent.ts",
+    "prepare-release": "ts-node scripts/create-release-notes-file.ts && ts-node scripts/electron-dependent.ts && npm run build",
     "tags": "ts-node scripts/non-electron-dependent.ts",
     "start": "npm run tags && vuepress dev -p 80",
     "qs": "vuepress dev -p 80",
@@ -44,6 +44,7 @@
     "fluent-ffmpeg": "^2.1.2",
     "fs-extra": "^7.0.1",
     "markdown-it-html5-embed": "^1.0.0",
+    "material-icon-theme": "^3.7.1",
     "node-sass": "^4.12.0",
     "open": "^6.1.0",
     "recursive-readdir": "^2.2.2",

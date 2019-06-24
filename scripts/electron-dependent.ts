@@ -10,16 +10,8 @@ let versionsJson = JSON.parse(fs.readFileSync('./version-assets/__versions.json'
 // const notes = fs.readFileSync('./version-assets/__release-notes.md').toString();
 const bucketUrl = 'https://quark-release.quarkjs.io/stable';
 
-createReleaseNotes();
 updateDownloadLinks();
 makeReleaseDir();
-
-function createReleaseNotes() {
-    // let str = '';
-    // str = str.concat('# Release Notes', '\n\n');
-    // str = str.concat(notes);
-    // fs.writeFileSync('./FAQ/release-notes.md', str);
-}
 
 async function updateDownloadLinks() {
     const monthNames = ["January", "February", "March", "April", "May", "June",
@@ -49,10 +41,6 @@ async function updateDownloadLinks() {
 
     
     const substr = versionsJson[version];
-    // const preText = `<!-- Quark-${version}-start -->`;
-    // const postText = `<!-- Quark-${version}-end -->`;
-    // const substr = notes.substring(notes.indexOf(preText), notes.indexOf(postText));
-    // console.log(json);
     const match = substr.match(/{(\n|.|\s)+}/)[0];
 
     let hashes = '';

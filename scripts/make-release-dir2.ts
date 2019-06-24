@@ -8,7 +8,6 @@ const currentVersion = versionsJson.currentVersion;
 const badReleases: string[] = JSON.parse(fs.readFileSync('./version-assets/__broken-releases.json').toString());
 const versionNotes: { [version: string]: string } = JSON.parse(fs.readFileSync('./version-assets/__versions.json').toString());
 
-makeReleaseDir();
 export function makeReleaseDir() {
     let tempVersionNotes: any = {};
     badReleases.map((release) => {
