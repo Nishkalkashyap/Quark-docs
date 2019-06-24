@@ -12,7 +12,7 @@
     "qs": "vuepress dev -p 80",
     "build": "npm run tags && vuepress build",
     "cloud-build": "npm run tags && vuepress build",
-    "post-build": "npx ts-node ./scripts/create-site-map.ts",
+    "post-build": "npx ts-node ./scripts/create-site-map.ts && npm run worker",
     "worker": "npx ts-node ./scripts/generate-service-worker.ts",
     "deploy-ci": "firebase deploy --token \"$FIREBASE_TOKEN\"",
     "bad": "npm run build && firebase deploy",

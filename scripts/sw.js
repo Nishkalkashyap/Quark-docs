@@ -4,7 +4,7 @@ workbox.routing.registerRoute(
         cacheName: 'google-fonts-webfonts',
         plugins: [
             new workbox.cacheableResponse.Plugin({
-                statuses: [0, 200],
+                statuses: [200],
             }),
             new workbox.expiration.Plugin({
                 maxAgeSeconds: 60 * 60 * 24 * 365,
@@ -21,18 +21,15 @@ workbox.routing.registerRoute(
     })
 );
 
+// https://developers.google.com/web/tools/workbox/guides/advanced-recipes#cached-av
 workbox.routing.registerRoute(
-    new RegExp('.(mp4)$'),
+    // new RegExp('.(mp4)$'),
+    /.*\.mp4/,//
     new workbox.strategies.CacheFirst({
         cacheName: 'videos',
         plugins: [
-            // new workbox.cacheableResponse.Plugin({
-            //     statuses: [0, 200],
-            // }),
-            new workbox.expiration.Plugin({
-                maxAgeSeconds: 60 * 60 * 24 * 365,
-                maxEntries: 30,
-            }),
+            new workbox.cacheableResponse.Plugin({ statuses: [200, 206] }),
+            new workbox.rangeRequests.Plugin(),
         ],
     })
 );
