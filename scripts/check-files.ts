@@ -50,7 +50,7 @@ function checkForVideoTagCrossOriginAttribute(path: string): boolean {
     const file = fs.readFileSync(path).toString();
     const videoTags = file.match(/<\s*video.+?>/g) || [];
     const result = videoTags.every((tag) => {
-        return tag.includes('crossOrigin="anonymous"');
+        return tag.includes('crossOrigin="anonymous"') && tag.includes('muted');
     });
     return result;;
 }   
