@@ -19,7 +19,7 @@ Quark is a cross-platform, integrated development environment for rapidly buildi
 
 Quark achieves this functionality by combining several set of tools in one single package and abstracting away the complexity to setup an environment for every single time you start a new project.
 
-<video muted autoplay loop style="max-width:100%; height:auto" name="media" poster="~@buildAssets/guide/hello-world-intro.png">
+<video muted autoplay loop style="max-width:100%; height:auto" name="media" poster="~@buildAssets/guide/hello-world-intro.png" crossOrigin="anonymous">
   <source src="~@buildAssets/guide/hello-world-intro.mp4" type="video/mp4">
   Your browser does not support the video tag.
 </video> 

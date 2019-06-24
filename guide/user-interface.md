@@ -26,7 +26,7 @@ Quark IDE comes with a simple and intuitive layout that maximizes the space prov
 ## Code Editor
 Quark comes bundled with [Monaco code editor](https://microsoft.github.io/monaco-editor/index.html) which is the same code editor used in VS Code. Monaco editor provides rich IntelliSense, validation and out of the box support for for HTML, CSS, SCSS, JSON and Javascript.
 
-<video muted autoplay loop style="max-width:100%; height:auto" name="media" poster="~@buildAssets/guide/user-interface/introduction.png">
+<video muted autoplay loop style="max-width:100%; height:auto" name="media" poster="~@buildAssets/guide/user-interface/introduction.png" crossOrigin="anonymous">
   <source src="~@buildAssets/guide/user-interface/introduction.mp4" type="video/mp4">
   Your browser does not support the video tag.
 </video> 
@@ -55,7 +55,7 @@ To open the terminal:
 * Navigate to main menu and select `Terminal > Fork Terminal`.
 * From the Command Palette (Ctrl+Shift+P), use the `Terminal: Fork Terminal` command.
 
-<video muted autoplay loop style="max-width:100%; height:auto" name="media" poster="~@buildAssets/guide/user-interface/terminal.png">
+<video muted autoplay loop style="max-width:100%; height:auto" name="media" poster="~@buildAssets/guide/user-interface/terminal.png" crossOrigin="anonymous">
   <source src="~@buildAssets/guide/user-interface/terminal.mp4" type="video/mp4">
   Your browser does not support the video tag.
 </video> 
@@ -85,7 +85,7 @@ You can change the scope of settings by selecting the appropriate option from th
 Workspace settings take priority over user settings.
 !!! 
 
-<video muted autoplay loop style="max-width:100%; height:auto" name="media" poster="~@buildAssets/guide/user-interface/settings.png">
+<video muted autoplay loop style="max-width:100%; height:auto" name="media" poster="~@buildAssets/guide/user-interface/settings.png" crossOrigin="anonymous">
   <source src="~@buildAssets/guide/user-interface/settings.mp4" type="video/mp4">
   Your browser does not support the video tag.
 </video> 
@@ -113,7 +113,7 @@ Note that changed settings have a marker besides them to help you identify them 
 
 * Multiple theme support.
 
-<video muted autoplay loop style="max-width:100%; height:auto" name="media" poster="~@buildAssets/guide/user-interface/themes.png">
+<video muted autoplay loop style="max-width:100%; height:auto" name="media" poster="~@buildAssets/guide/user-interface/themes.png" crossOrigin="anonymous">
   <source src="~@buildAssets/guide/user-interface/themes.mp4" type="video/mp4">
   Your browser does not support the video tag.
 </video> 
@@ -122,7 +122,7 @@ Note that changed settings have a marker besides them to help you identify them 
 
 * Inbuilt npm client to install node packages for your projects.
 
-<video muted autoplay loop style="max-width:100%; height:auto" name="media" poster="~@buildAssets/guide/user-interface/extensible.png">
+<video muted autoplay loop style="max-width:100%; height:auto" name="media" poster="~@buildAssets/guide/user-interface/extensible.png" crossOrigin="anonymous">
   <source src="~@buildAssets/guide/user-interface/extensible.mp4" type="video/mp4">
   Your browser does not support the video tag.
 </video> 
