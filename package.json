@@ -8,6 +8,7 @@
     "release-insiders" : "cross-env RELEASE_TYPE=insiders npm run prepare-release",
     "prepare-release": "ts-node scripts/download-raw-content.ts && ts-node scripts/electron-dependent.ts",
     "tags": "ts-node scripts/non-electron-dependent.ts",
+    "google": "git checkout google && git merge master && git push && git checkout master",
     "start": "npm run tags && vuepress dev -p 80",
     "qs": "vuepress dev -p 80",
     "build": "npm run tags && vuepress build",
