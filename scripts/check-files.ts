@@ -41,7 +41,7 @@ async function checkFiles() {
 }
 
 export function isValidFile(path: string): { isValid: boolean, errMsg: string } {
-    const check1 = path.endsWith('README.md') || path.match(/(style-guide|tags|devtime|release-notes)/) != null;
+    const check1 = path.endsWith('README.md') || path.match(/(style-guide|tags|devtime|release-notes|download-insiders.md)/) != null;
     if (check1) {
         return { isValid: check1, errMsg: 'Is ignored file.' };
     }
