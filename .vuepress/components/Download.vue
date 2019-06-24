@@ -1,59 +1,67 @@
 <template>
-  <div class="container">
-    <div class="platform">
-      <img src="/images/windows-logo.png" style="width:100px">
-      <button
-        class="download-button"
-        @click="openExternal(windows_main)"
-        :class="windows_main? 'download-enabled' : null"
-      >
-        <img class="download-svg" src="/images/download.svg">
-        <span class="platform-name">Windows</span>
-        <span class="platform-distro" style="display:inline;">(.exe)</span>
-        <span class="platform-distro">Windows 7, 8, 10</span>
-        <span class="coming-soon" v-if="!windows_main">Coming Soon</span>
-      </button>
-      <div class="other-downloads-heading">Other downloads</div>
-      <div v-for="bin in all_windows_downloads" class="other-downloads">
-        <span>{{getExtensionFromBinary(bin)}}</span>
-        <a :href="getLinkFromBinary(bin)" target="_blank">Download</a>
+  <div class="download-page-component">
+    <div class="container">
+      <div class="platform">
+        <img src="/images/windows-logo.png" style="width:100px">
+        <button
+          class="download-button"
+          @click="openExternal(windows_main)"
+          :class="windows_main? 'download-enabled' : null"
+        >
+          <img class="download-svg" src="/images/download.svg">
+          <span class="platform-name">Windows</span>
+          <span class="platform-distro" style="display:inline;">(.exe)</span>
+          <span class="platform-distro">Windows 7, 8, 10</span>
+          <span class="coming-soon" v-if="!windows_main">Coming Soon</span>
+        </button>
+        <div class="other-downloads-heading">Other downloads</div>
+        <div v-for="bin in all_windows_downloads" class="other-downloads">
+          <span>{{getExtensionFromBinary(bin)}}</span>
+          <a :href="getLinkFromBinary(bin)" target="_blank">Download</a>
+        </div>
+      </div>
+
+      <div class="platform">
+        <img src="/images/linux-logo.png" style="width:86px;height:100px;">
+        <button
+          class="download-button"
+          @click="openExternal(linux_main)"
+          :class="linux_main? 'download-enabled' : null"
+        >
+          <img class="download-svg" src="/images/download.svg">
+          <span class="platform-name">Linux</span>
+          <span class="platform-distro" style="display:inline;">(.AppImage)</span>
+          <span class="platform-distro">Debian, Ubuntu, Red Hat, Fedora</span>
+          <span class="coming-soon" v-if="!linux_main">Coming Soon</span>
+        </button>
+        <div class="other-downloads-heading">Other downloads</div>
+        <div v-for="bin in all_linux_downloads" class="other-downloads">
+          <span>{{getExtensionFromBinary(bin)}}</span>
+          <a :href="getLinkFromBinary(bin)" target="_blank">Download</a>
+        </div>
+      </div>
+
+      <div class="platform">
+        <img src="/images/apple-logo.svg">
+        <button
+          class="download-button"
+          @click="openExternal(mac)"
+          :class="mac? 'download-enabled' : null"
+        >
+          <img class="download-svg" src="/images/download.svg">
+          <span class="platform-name">Mac</span>
+          <span class="platform-distro" style="display:inline;">(.app)</span>
+          <span class="platform-distro">macOS 10.9+</span>
+          <span class="coming-soon" v-if="!mac">Coming Soon</span>
+        </button>
+        <span style="font-size:12px">
+          <a href="mailto:hello@nishkal.in?subject=Quark%20Build%20for%20Mac">Let us know</a> if you want to get it sooner!
+        </span>
       </div>
     </div>
-
-    <div class="platform">
-      <img src="/images/linux-logo.png" style="width:86px;height:100px;">
-      <button
-        class="download-button"
-        @click="openExternal(linux_main)"
-        :class="linux_main? 'download-enabled' : null"
-      >
-        <img class="download-svg" src="/images/download.svg">
-        <span class="platform-name">Linux</span>
-        <span class="platform-distro" style="display:inline;">(.AppImage)</span>
-        <span class="platform-distro">Debian, Ubuntu, Red Hat, Fedora</span>
-        <span class="coming-soon" v-if="!linux_main">Coming Soon</span>
-      </button>
-      <div class="other-downloads-heading">Other downloads</div>
-      <div v-for="bin in all_linux_downloads" class="other-downloads">
-        <span>{{getExtensionFromBinary(bin)}}</span>
-        <a :href="getLinkFromBinary(bin)" target="_blank">Download</a>
-      </div>
-    </div>
-
-    <div class="platform">
-      <img src="/images/apple-logo.svg">
-      <button
-        class="download-button"
-        @click="openExternal(mac)"
-        :class="mac? 'download-enabled' : null"
-      >
-        <img class="download-svg" src="/images/download.svg">
-        <span class="platform-name">Mac</span>
-        <span class="platform-distro" style="display:inline;">(.app)</span>
-        <span class="platform-distro">macOS 10.9+</span>
-        <span class="coming-soon" v-if="!mac">Coming Soon</span>
-      </button>
-      <span style="font-size:12px"><a href="mailto:hello@nishkal.in?subject=Quark%20Build%20for%20Mac">Let us know</a> if you want to get it sooner!</span>
+    <div class="post-content" v-if="channel == 'stable'">
+      <h3>Want new features sooner?</h3>
+      <span>Get the <router-link to="/download/insiders">Insiders build</router-link> instead.</span>
     </div>
   </div>
 </template>
@@ -227,5 +235,12 @@ export default {
     top: -15px;
     display: block;
   }
+}
+
+.post-content {
+  margin-top: -40px;
+  padding-bottom: 40px;
+  text-align: center;
+  background-color: var(--code-background);
 }
 </style>

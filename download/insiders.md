@@ -8,8 +8,9 @@ pageClass: download-page
 [![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/Nishkalkashyap/Quark-docs)
 | Meta                                            ||
 | -------------------    | -------------------------- |
+| 🆕 Release type:     | insiders            |
 | ⚡ Latest Version:     | 0.4.4            |
-| 🆕 Release Date:       | June 24 2019,  12:54:47 PM|
+| 📅 Release Date:       | June 24 2019,  12:54:47 PM|
 | [Release Notes](/releases/current-release.html)        ||
 
 <Download
