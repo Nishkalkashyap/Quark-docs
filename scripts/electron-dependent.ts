@@ -2,7 +2,7 @@ import * as fs from 'fs-extra';
 import * as YAML from 'yamljs';
 import * as js from 'js-beautify';
 import fetch from 'node-fetch';
-import { makeReleaseDir } from './make-release-dir2';
+import { makeReleaseDir } from './make-release-dir';
 import { releaseVariables } from './util';
 
 const releaseVar: typeof releaseVariables['stable'] = releaseVariables[process.env.RELEASE_TYPE];

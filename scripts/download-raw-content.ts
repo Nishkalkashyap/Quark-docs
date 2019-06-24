@@ -32,7 +32,7 @@ root().then(() => {
 }).catch(console.error);
 async function root() {
     await getRawContent();
-    await createShaHash().catch(console.error);
+    await createVersionJsonFile().catch(console.error);
 }
 
 async function getRawContent() {
@@ -97,7 +97,7 @@ function gitDiff(): string {
 }
 
 
-async function createShaHash(): Promise<string> {
+async function createVersionJsonFile(): Promise<string> {
 
     const obj = {} as any;
     const shaObj = Object.assign(win32_SHA, linux_SHA);
