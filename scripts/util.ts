@@ -86,7 +86,7 @@ export const releaseVariables: { [key in releaseType]: releaseInterface } = {
         bucketSubUrl: 'stable'
     },
     insiders: {
-        downloadFilePath: './download/download-insiders.md',
+        downloadFilePath: './download/insiders.md',
         bucketSubUrl: 'insiders'
     }
 }
