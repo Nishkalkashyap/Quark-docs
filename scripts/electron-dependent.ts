@@ -3,12 +3,14 @@ import * as YAML from 'yamljs';
 import * as js from 'js-beautify';
 import fetch from 'node-fetch';
 import { makeReleaseDir } from './make-release-dir2';
+import { releaseVariables } from './util';
 
+const releaseVar: typeof releaseVariables['stable'] = releaseVariables[process.env.RELEASE_TYPE];
 const json = fs.readJsonSync('./version-assets/__package.json');
 let version = json.version;
 let versionsJson = JSON.parse(fs.readFileSync('./version-assets/__versions.json').toString());
 // const notes = fs.readFileSync('./version-assets/__release-notes.md').toString();
-const bucketUrl = 'https://quark-release.quarkjs.io/stable';
+const bucketUrl = `https://quark-release.quarkjs.io/${releaseVar.bucketSubUrl}`;
 
 updateDownloadLinks();
 makeReleaseDir();
@@ -39,7 +41,7 @@ async function updateDownloadLinks() {
         return bin.search(/(.zip|.msi)$/) !== -1;
     });
 
-    
+
     const substr = versionsJson[version];
     const match = substr.match(/{(\n|.|\s)+}/)[0];
 
@@ -76,7 +78,7 @@ async function updateDownloadLinks() {
     str = str.concat('/>', '\n');
     str = str.concat(hashes);
 
-    fs.writeFileSync('./download/README.md', str);
+    fs.writeFileSync(releaseVar.downloadFilePath, str);
 }
 
 

@@ -73,3 +73,20 @@ export type Frontmatter = {
     description: string;
     cover: string;
 };
+
+type releaseType = 'stable' | 'insiders';
+interface releaseInterface {
+    downloadFilePath: string;
+    bucketSubUrl: releaseType;
+}
+
+export const releaseVariables: { [key in releaseType]: releaseInterface } = {
+    stable: {
+        downloadFilePath: './download/README.md',
+        bucketSubUrl: 'stable'
+    },
+    insiders: {
+        downloadFilePath: './download/download-insiders.md',
+        bucketSubUrl: 'insiders'
+    }
+}

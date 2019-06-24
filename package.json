@@ -4,6 +4,8 @@
   "description": "Documentation for quark",
   "main": "index.js",
   "scripts": {
+    "release-stable" : "cross-env RELEASE_TYPE=stable npm run prepare-release",
+    "release-insiders" : "cross-env RELEASE_TYPE=insiders npm run prepare-release",
     "prepare-release": "ts-node scripts/create-release-notes-file.ts && ts-node scripts/electron-dependent.ts && npm run build",
     "tags": "ts-node scripts/non-electron-dependent.ts",
     "start": "npm run tags && vuepress dev -p 80",
@@ -39,6 +41,7 @@
     "@types/single-line-log": "^1.1.0",
     "@types/table": "^4.0.5",
     "chalk": "^2.4.2",
+    "cross-env": "^5.2.0",
     "css-loader": "^2.1.0",
     "firebase-tools": "^6.7.1",
     "fluent-ffmpeg": "^2.1.2",
