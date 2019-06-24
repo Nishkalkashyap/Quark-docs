@@ -28,7 +28,7 @@ workbox.routing.registerRoute(
     new workbox.strategies.CacheFirst({
         cacheName: 'videos',
         plugins: [
-            new workbox.cacheableResponse.Plugin({ statuses: [200, 206] }),
+            new workbox.cacheableResponse.Plugin({ statuses: [200] }),
             new workbox.rangeRequests.Plugin(),
         ],
     })
