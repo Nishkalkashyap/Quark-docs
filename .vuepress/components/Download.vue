@@ -66,7 +66,8 @@ export default {
     "linux_other",
     "windows_main",
     "windows_other",
-    "mac"
+    "mac",
+    "channel"
   ],
   data: function() {
     const all_windows_downloads = JSON.parse(this.$props.windows_other);
@@ -94,7 +95,7 @@ export default {
       }
       const finalUrl = `https://quarkjs.io/download-count/?version=${
         this.$props.version
-      }&&binary=${bin}`;
+      }&&binary=${bin}&&channel=${this.$props.channel}`;
       return finalUrl;
     },
     openExternal: function(bin) {

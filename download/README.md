@@ -14,6 +14,7 @@ pageClass: download-page
 
 <Download
 version="0.4.1"
+channel="stable"
 linux_main='Quark-linux-x86_64-0.4.1.AppImage'
 linux_other='["Quark-linux-amd64-0.4.1.deb","Quark-linux-x64-0.4.1.tar.gz"]'
 windows_main='Quark-win-0.4.1.exe'

@@ -2,7 +2,7 @@ import * as fs from 'fs-extra';
 import { getFrontmatterFromObject, releaseVariables } from './util';
 import * as compareVersions from 'compare-versions';
 
-const releaseVar: typeof releaseVariables['stable'] = releaseVariables[process.env.RELEASE_TYPE];
+const releaseVar: typeof releaseVariables['stable'] = releaseVariables['stable'];
 const baseVerisonAssetsPath = `./version-assets/${releaseVar.bucketSubUrl}`
 
 const versionsJson = JSON.parse(fs.readFileSync('./scripts/versions.json').toString());

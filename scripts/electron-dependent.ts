@@ -69,6 +69,7 @@ async function updateDownloadLinks() {
 
     str = str.concat('<Download', '\n');
     str = str.concat(`version="${version}"`, '\n');
+    str = str.concat(`channel="${releaseVar.bucketSubUrl}"`, '\n');
 
     str = str.concat(`linux_main='${linuxMain}'`, '\n');
     str = str.concat(`linux_other='${JSON.stringify(linux_other_downloads)}'`, '\n');
