@@ -63,6 +63,10 @@
       <h3>Want new features sooner?</h3>
       <span>Get the <router-link to="/download/insiders">Insiders build</router-link> instead.</span>
     </div>
+    <div class="post-content" v-if="channel == 'insiders'">
+      <h3>You're almost there.</h3>
+      <span> To keep receiving latest updates, you need to change <router-link to="/">these settings</router-link> after installing the software.</span>
+    </div>
   </div>
 </template>
 
