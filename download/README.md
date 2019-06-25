@@ -3,16 +3,13 @@ pageClass: download-page
 ---
 
 # All Downloads
+<router-link to="/releases/current-release.html">Release Notes</router-link>
 [![Build Status](https://travis-ci.org/Nishkalkashyap/Quark-electron.svg?branch=master-all)](https://travis-ci.org/Nishkalkashyap/Quark-electron)
 [![Build Status](https://ci.appveyor.com/api/projects/status/e9n73kxva64pccwe/branch/master-all?svg=true)](https://ci.appveyor.com/project/Nishkalkashyap/quark-electron)
 [![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/Nishkalkashyap/Quark-docs)
-| Meta                                            ||
-| -------------------    | -------------------------- |
-| 🆕 Release type:     | stable            |
-| ⚡ Latest Version:     | 0.4.4            |
-| 📅 Release Date:       | June 24 2019,  12:54:47 PM|
-| [Release Notes](/releases/current-release.html)        ||
-
+| 🆕 Release type             | ⚡ Latest Version      | 📅 Release Date |
+| -------------------          | --------------------   | --------------- |
+| stable   | 0.4.4             | June 24 2019,  12:54:47 PM |
 <Download
 version="0.4.4"
 channel="stable"

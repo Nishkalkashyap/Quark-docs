@@ -1,5 +1,6 @@
 <template>
-  <span>{{label || $page.frontmatter.description}}</span>
+  <span v-html="(label || $page.frontmatter.description)"></span>
+  <!-- <span>{{label || $page.frontmatter.description}}</span> -->
 </template>
 
 <script>

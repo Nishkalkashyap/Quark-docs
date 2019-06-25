@@ -56,17 +56,25 @@ async function updateDownloadLinks() {
     let str = '';
     str = str.concat(`---`, '\n', 'pageClass: download-page', '\n', '---', '\n\n');
     str = str.concat(`# All Downloads`, '\n');
+    // str = str.concat(`<Header label="<a href='/releases/current-release.html'>Release Notes</a>"/>`, '\n');
+    str = str.concat(`<router-link to="/releases/current-release.html">Release Notes</router-link>`, '\n');
+
     str = str.concat(`[![Build Status](https://travis-ci.org/Nishkalkashyap/Quark-electron.svg?branch=master-all)](https://travis-ci.org/Nishkalkashyap/Quark-electron)`, '\n');
     str = str.concat(`[![Build Status](https://ci.appveyor.com/api/projects/status/e9n73kxva64pccwe/branch/master-all?svg=true)](https://ci.appveyor.com/project/Nishkalkashyap/quark-electron)`, '\n');
     // str = str.concat(`[![Known Vulnerabilities](https://snyk.io/test/github/Nishkalkashyap/Quark-electron/badge.svg)](https://snyk.io/test/github/Nishkalkashyap/Quark-electron)`, '\n');
     str = str.concat(`[![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/Nishkalkashyap/Quark-docs)`, '\n');
     // str = str.concat(`[![HitCount](http://hits.dwyl.io/Nishkalkashyap/Quark-docs.svg)](http://hits.dwyl.io/Nishkalkashyap/Quark-docs)`, '\n');
-    str = str.concat('| Meta                                            ||', '\n');
-    str = str.concat('| -------------------    | -------------------------- |', '\n');
-    str = str.concat(`| 🆕 Release type:     | ${releaseVar.bucketSubUrl}            |`, '\n');
-    str = str.concat(`| ⚡ Latest Version:     | ${version}            |`, '\n');
-    str = str.concat(`| 📅 Release Date:       | ${monthNames[date.getMonth()]} ${date.getDate()} ${date.getFullYear()},  ${date.toLocaleTimeString()}|`, '\n');
-    str = str.concat(`| [Release Notes](/releases/current-release.html)        ||`, '\n\n');
+
+    // str = str.concat('| Meta                                            ||', '\n');
+    // str = str.concat('| -------------------    | -------------------------- |', '\n');
+    // str = str.concat(`| 🆕 Release type:     | ${releaseVar.bucketSubUrl}            |`, '\n');
+    // str = str.concat(`| ⚡ Latest Version:     | ${version}            |`, '\n');
+    // str = str.concat(`| 📅 Release Date:       | ${monthNames[date.getMonth()]} ${date.getDate()} ${date.getFullYear()},  ${date.toLocaleTimeString()}|`, '\n');
+    // str = str.concat(`| [Release Notes](/releases/current-release.html)        ||`, '\n\n');
+
+    str = str.concat(`| 🆕 Release type             | ⚡ Latest Version      | 📅 Release Date |`, '\n');
+    str = str.concat('| -------------------          | --------------------   | --------------- |', '\n');
+    str = str.concat(`| ${releaseVar.bucketSubUrl}   | ${version}             | ${monthNames[date.getMonth()]} ${date.getDate()} ${date.getFullYear()},  ${date.toLocaleTimeString()} |`, '\n');
 
     str = str.concat('<Download', '\n');
     str = str.concat(`version="${version}"`, '\n');
