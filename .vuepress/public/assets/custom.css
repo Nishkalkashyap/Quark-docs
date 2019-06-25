@@ -26,22 +26,27 @@ th {
 }
 
 .download-page .release-notes {
-    content: 'Subscribe  to  updates';
-    /* font-family: $fontFamily !important; */
-    font-size: 10px;
     font-weight: 500;
-    position: relative;
-    top: -15px;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    /* background-color: $primaryDark; */
-    color: #ffffff;
+    margin-top: 20px;
+    background-color: var(--code-background);
     padding: 10px 15px 9px;
     border-radius: 4px;
-    box-shadow: rgba(0, 0, 0, 0.15) 0px -2px 0px 0px inset;
     font-size: 14px;
+    text-align: center;
 }
 
+.download-page .release-notes a {
+    color: var(--text-color--darker) !important;
+    font-weight: 900;
+    font-size: 16px;
+    font-family: var(--heading-font-family);
+}
+
+.build-status {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px 0px;
+}
 
 
 .no-sidebar-metacard-container .tags-container,

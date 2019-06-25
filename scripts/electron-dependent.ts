@@ -56,13 +56,10 @@ async function updateDownloadLinks() {
     let str = '';
     str = str.concat(`---`, '\n', 'pageClass: download-page', '\n', '---', '\n\n');
     str = str.concat(`# All Downloads`, '\n');
-    // str = str.concat(`<Header label="<a href='/releases/current-release.html'>Release Notes</a>"/>`, '\n');
-    str = str.concat(`<router-link to="/releases/current-release.html">Release Notes</router-link>`, '\n');
-
-    str = str.concat(`[![Build Status](https://travis-ci.org/Nishkalkashyap/Quark-electron.svg?branch=master-all)](https://travis-ci.org/Nishkalkashyap/Quark-electron)`, '\n');
-    str = str.concat(`[![Build Status](https://ci.appveyor.com/api/projects/status/e9n73kxva64pccwe/branch/master-all?svg=true)](https://ci.appveyor.com/project/Nishkalkashyap/quark-electron)`, '\n');
+    // str = str.concat(`[![Build Status](https://travis-ci.org/Nishkalkashyap/Quark-electron.svg?branch=master-all)](https://travis-ci.org/Nishkalkashyap/Quark-electron)`, '\n');
+    // str = str.concat(`[![Build Status](https://ci.appveyor.com/api/projects/status/e9n73kxva64pccwe/branch/master-all?svg=true)](https://ci.appveyor.com/project/Nishkalkashyap/quark-electron)`, '\n');
     // str = str.concat(`[![Known Vulnerabilities](https://snyk.io/test/github/Nishkalkashyap/Quark-electron/badge.svg)](https://snyk.io/test/github/Nishkalkashyap/Quark-electron)`, '\n');
-    str = str.concat(`[![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/Nishkalkashyap/Quark-docs)`, '\n');
+    // str = str.concat(`[![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/Nishkalkashyap/Quark-docs)`, '\n');
     // str = str.concat(`[![HitCount](http://hits.dwyl.io/Nishkalkashyap/Quark-docs.svg)](http://hits.dwyl.io/Nishkalkashyap/Quark-docs)`, '\n');
 
     // str = str.concat('| Meta                                            ||', '\n');
@@ -71,6 +68,12 @@ async function updateDownloadLinks() {
     // str = str.concat(`| ⚡ Latest Version:     | ${version}            |`, '\n');
     // str = str.concat(`| 📅 Release Date:       | ${monthNames[date.getMonth()]} ${date.getDate()} ${date.getFullYear()},  ${date.toLocaleTimeString()}|`, '\n');
     // str = str.concat(`| [Release Notes](/releases/current-release.html)        ||`, '\n\n');
+
+    str = str.concat(`\n\n<div class="build-status">`, '\n');
+    str = str.concat(`<a href="https://travis-ci.org/Nishkalkashyap/Quark-electron" target="_blank" rel="noopener noreferrer"><img src="https://travis-ci.org/Nishkalkashyap/Quark-electron.svg?branch=master-all" alt="Build Status"></a>`, '\n');
+    str = str.concat(`<a href="https://ci.appveyor.com/project/Nishkalkashyap/quark-electron" target="_blank" rel="noopener noreferrer"><img src="https://ci.appveyor.com/api/projects/status/e9n73kxva64pccwe/branch/master-all?svg=true" alt="Build Status"></a>`, '\n');
+    str = str.concat(`<a href="https://github.com/Nishkalkashyap/Quark-docs" target="_blank" rel="noopener noreferrer"><img src="https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat" alt="Build Status"></a>`, '\n\n');
+    str = str.concat(`</div>`, '\n\n');
 
     str = str.concat(`| 🆕 Release type             | ⚡ Latest Version      | 📅 Release Date |`, '\n');
     str = str.concat('| -------------------          | --------------------   | --------------- |', '\n');
@@ -86,7 +89,9 @@ async function updateDownloadLinks() {
     str = str.concat(`windows_main='${windowsMain}'`, '\n');
     str = str.concat(`windows_other='${JSON.stringify(windows_other_downloads)}'`, '\n');
 
-    str = str.concat('/>', '\n');
+    str = str.concat('/>', '\n\n');
+    str = str.concat(`<div class="release-notes"><router-link to="/releases/current-release.html">View Release Notes</router-link></div>`, '\n\n');
+
     str = str.concat(hashes);
 
     fs.writeFileSync(releaseVar.downloadFilePath, str);
