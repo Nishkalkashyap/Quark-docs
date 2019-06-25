@@ -6,6 +6,7 @@
   "scripts": {
     "release-stable" : "cross-env RELEASE_TYPE=stable npm run prepare-release",
     "release-insiders" : "cross-env RELEASE_TYPE=insiders npm run prepare-release",
+    "release-all" : "npm run release-stable && npm run release-insiders",
     "prepare-release": "ts-node scripts/download-raw-content.ts && ts-node scripts/electron-dependent.ts",
     "tags": "ts-node scripts/non-electron-dependent.ts",
     "google": "git checkout google && git merge master && git push && git checkout master",

@@ -15,6 +15,53 @@ sidebarDepth: 4
 
 [[toc]]
 
+<!-- Quark-0.4.4-start -->
+## Quark 0.4.4 - June 24, 2019
+
+#### Bug fixes:
+* Auto updates not working for insiders release. (Change in settings key from 'features' to 'general' caused the bug.)
+
+
+
+!!! note See SHA-512 Hashes
+<DropDown>
+<ReleaseNotes :sha='{
+    "Quark-win-0.4.4.exe": "s0tHUTsQANK9SG0HsqvUL/iWbbs0exxugvTQSIUZIlx+ytO4KetCrMEdGc7VR35OqKWDDc9X+pa+l5muSk+73Q==",
+    "Quark-win-x64-0.4.4.msi": "xHP5YCNGef9VsqRKCWy5EkzDUQEhWbgSIqAwGhERv8lv3wt5R8fkq9ItqkX4i7JRkIxadUDHh6dLeC9ujw4s3w==",
+    "Quark-win-x64-0.4.4.zip": "dUfoTskuEU+exqA5KVP0xLDucZpkdb+FEHPO5kF020AV3/L+1KBnJuBHEhF8cYlQG+3kkAvPEjFaFjRGLM6nUw==",
+    "Quark-linux-amd64-0.4.4.deb": "LELdjwjSbr41gmF60vbqyDVSoHXbr7RtP4mTcdyC65jNME40WpoczQnCcwVap1g2auvaq4xllUPKja0OarJOYA==",
+    "Quark-linux-x64-0.4.4.tar.gz": "2Gu0OkpDHtrhUpoj4+Y++mRIXYpCKt637BII/a7vNwDHOOGVutRz03OKOdx1NUjEaqQtRZ0lyLhfXUrqFhNQKw==",
+    "Quark-linux-x86_64-0.4.4.AppImage": "2mFmT5TFeSn0+Clj53VXQVJmBDZ8urnSvZhP8riTnch1qcuF6eRoLM4ZI931iohW/nuVHulD7gR9NEMDppwGnA=="
+}' />
+</DropDown>
+!!!
+
+<!-- ---------------------------------------------- -->
+<!-- Quark-0.4.4-end -->
+
+
+
+
+<!-- Quark-0.4.3-start -->
+## Quark 0.4.3 - (Release skipped)
+!!! failure This version was never released in the stable channel because the insiders release was found to have major bugs.
+!!!
+<!-- ---------------------------------------------- -->
+<!-- Quark-0.4.3-end -->
+
+
+
+
+<!-- Quark-0.4.2-start -->
+## Quark 0.4.2 - (Release skipped)
+!!! failure This version was never released in the stable channel because the insiders release was found to have major bugs.
+!!!
+<!-- ---------------------------------------------- -->
+<!-- Quark-0.4.2-end -->
+
+
+
+
 <!-- Quark-0.4.1-start -->
 ## Quark 0.4.1 - June 22, 2019
 
