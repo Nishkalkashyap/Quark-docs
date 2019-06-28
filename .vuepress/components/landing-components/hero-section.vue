@@ -23,6 +23,7 @@ export default {
 video {
   width: calc(860px - 40px);
   border-radius: 5px;
+  z-index: 1;
 
   position: absolute;
   top: 25%;
