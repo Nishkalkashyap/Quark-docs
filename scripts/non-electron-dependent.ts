@@ -135,6 +135,7 @@ function createReadmeFiles(paths: string[]) {
 async function updatePrimaryColor() {
     //has to be hex code
     const iconColor = '#020814';
+    // const iconColor = '#ffffff';
 
     //can be rgb
     // const accentColor = process.env.TRAVIS_EVENT_TYPE == 'cron' ? getRandomColor() : '#3880ff';

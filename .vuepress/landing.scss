@@ -1,10 +1,6 @@
-.custom-layout {
-    height: calc(100vh - 3.6rem);
-}
-
 .landing-page {
 
-    --text-color: #f4f4f4;
+    --text-color: #f4f4f4 !important;
     --line-rule-color: #343434;
     --text-color--darker: #f2f2f2;
     --text-color--dark: #ffffff;
@@ -35,5 +31,10 @@
 
     #algolia-search-input {
         display: none;
+    }
+    
+    p {
+        color: var(--text-color);
+        font-size: 16px !important;
     }
 }

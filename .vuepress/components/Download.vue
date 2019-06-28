@@ -59,11 +59,11 @@
         </span>
       </div>
     </div>
-    <div class="post-content" v-if="channel == 'stable'">
+    <div class="post-content" v-if="channel == 'stable' && !disable_post_content">
       <h3>Want new features sooner?</h3>
       <span>Get the <router-link to="/download/insiders">Insiders build</router-link> instead.</span>
     </div>
-    <div class="post-content" v-if="channel == 'insiders'">
+    <div class="post-content" v-if="channel == 'insiders' && !disable_post_content">
       <h3>You're almost there.</h3>
       <span> To keep receiving latest updates, you need to change <router-link to="/">these settings</router-link> after installing the software.</span>
     </div>
@@ -79,7 +79,8 @@ export default {
     "windows_main",
     "windows_other",
     "mac",
-    "channel"
+    "channel",
+    "disable_post_content"
   ],
   data: function() {
     const all_windows_downloads = JSON.parse(this.$props.windows_other);
