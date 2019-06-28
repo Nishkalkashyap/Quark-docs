@@ -20,7 +20,6 @@
 </template>
 
 <script>
-import * as platform from "platform";
 import DropDown from "./../DropDown";
 export default {
   data: () => {
@@ -29,7 +28,7 @@ export default {
     };
   },
   mounted: () => {
-    console.log(platform);
+    // console.log(platform);
   },
   methods: {
     getOS() {
