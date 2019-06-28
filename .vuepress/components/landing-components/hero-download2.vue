@@ -31,6 +31,7 @@ export default {};
   flex-direction: column;
   border: solid 1px var(--line-rule-color);
   border-radius: 20px;
+  min-width: 260px;
 }
 
 .box:last-child {
@@ -40,7 +41,7 @@ export default {};
   min-height: 30px;
   min-width: 50px;
   text-align: center;
-  padding: 16px;
+  padding: 20px;
   border-bottom: solid 1px var(--line-rule-color);
   // color: var(--accent-color);
   color: var(--text-color);
@@ -61,7 +62,7 @@ export default {};
     display: inline-block;
     position: absolute;
     left: 40px;
-    top: 40px;
+    top: 45px;
     width: 16px;
   }
 

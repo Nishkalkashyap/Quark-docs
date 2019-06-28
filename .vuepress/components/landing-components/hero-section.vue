@@ -5,6 +5,7 @@
       <p>{{upper}}</p>
       <slot name="image"></slot>
       <p>{{lower}}</p>
+      <router-link to="/download/">Learn more</router-link>
     </div>
   </section>
 </template>
@@ -18,7 +19,7 @@ export default {
 
 <style lang="scss" scoped>
 video {
-  max-width: calc(100% - 40px);
+  width: calc(100% - 40px);
   border-radius: 5px;
 
   position: absolute;
@@ -53,13 +54,43 @@ video {
 @media only screen and (max-width: 760px) {
   video {
     position: relative;
-    left: 0%;
-    margin-left: 0px;
+    left: 0% !important;
+    margin-left: 0px !important;
+    right: 0% !important;
+    margin-right: 0px !important;
     top: 5%;
+    margin: 0 auto !important;
   }
 
   .hero-section-container {
-    padding-right: 0px;
+    padding-right: 20px !important;
+    padding-left: 20px !important;
   }
+}
+
+h3 {
+  position: relative;
+}
+
+h3::before {
+  // border-top: solid 10px var(--accent-color);
+  border-top: solid 10px var(--text-color--dark);
+  content: "";
+  display: block;
+  position: absolute;
+  width: 80px;
+  top: 20px;
+}
+
+a {
+  display: inline-block;
+  padding: 0.5em 1em;
+  line-height: inherit;
+  font-size: inherit;
+  font-weight: 500;
+  text-decoration: none;
+  border-radius: 5px;
+  color: #ffffff;
+  background-color: var(--accent-color);
 }
 </style>
