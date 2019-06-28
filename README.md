@@ -1,6 +1,6 @@
 ---
-# home: false
-home: true
+home: false
+# home: true
 heroImage: /images/icon-svg.svg
 # heroText: Quark
 heroText: Lightning fast app creation.
@@ -17,6 +17,6 @@ actionLink: /guide/intro.html
 #   details: Compatible with Mac, Windows, and Linux, Quark projects run on all three platforms.
 pageClass: landing-page
 footer: MIT Licensed | Copyright © 2019-present Nishkal Kashyap
-# layout: Home4
+layout: Home4
 ---
-<Home4 />
+<!-- <Home4 /> -->
