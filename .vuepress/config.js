@@ -98,7 +98,7 @@ module.exports = {
         algolia: {
             apiKey: '817ac37fa301a4f7eeae2483156bcf24',
             indexName: 'quarkjs',
-            debug: true
+            debug: false
         },
         nav: [{
                 text: 'Guide',

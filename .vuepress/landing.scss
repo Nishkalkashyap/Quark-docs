@@ -1,3 +1,39 @@
 .custom-layout {
     height: calc(100vh - 3.6rem);
 }
+
+.landing-page {
+
+    --text-color: #f4f4f4;
+    --line-rule-color: #343434;
+    --text-color--darker: #f2f2f2;
+    --text-color--dark: #ffffff;
+    --text-color--lighter: #24282e;
+    --text-color--light: #161616;
+
+    background-color: #161616;
+
+    header.navbar,
+    div.links,
+    .nav-item a[href="/download/"] {
+        color: #ffffff;
+        background-color: #161616;
+    }
+
+    .nav-item a[href="/download/"] {
+        background-color: #161616 !important;
+        border-bottom-color: transparent !important;
+    }
+
+    header.navbar {
+        border-bottom: transparent;
+    }
+
+    header.navbar ul.nav-dropdown {
+        background-color: transparent;
+    }
+
+    #algolia-search-input {
+        display: none;
+    }
+}
