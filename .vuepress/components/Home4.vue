@@ -100,17 +100,9 @@ export default {
 
 .image-transition {
   transition: filter 2s;
-  filter: brightness(0.75) contrast(1) sepia(0) hue-rotate(-100deg)
-    saturate(5);
-  // filter: brightness(0.75) contrast(1) sepia(0.7) hue-rotate(-5deg)
-  //   saturate(3.5);
+  filter: brightness(0.75) contrast(1) sepia(1) hue-rotate(190deg) saturate(5);
   box-shadow: 0 20px 30px rgba(0, 0, 0, 0.5);
   border-radius: 5px;
-}
-
-.image-transition::before{
-  content: 'Hello';
-
 }
 
 .image-transition:hover {

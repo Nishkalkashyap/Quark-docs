@@ -3,7 +3,6 @@
     <div class="hero-section-container">
       <h3>{{heading}}</h3>
       <p>{{upper}}</p>
-      <!-- <img :src="image"> -->
       <slot name="image"></slot>
       <p>{{lower}}</p>
     </div>
