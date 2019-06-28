@@ -1,5 +1,5 @@
 <template>
-  <section class="hero-section-component" :class="side + '-side'">
+  <section class="hero-section-component landing-page-background" :class="side + '-side'">
     <div class="hero-section-container">
       <h3>{{heading}}</h3>
       <p>{{upper}}</p>

@@ -1,6 +1,7 @@
 <template>
 <div class="home4-component">
-    <div class="full-height flex-center first-container">
+<!-- <div class="home4-component"> -->
+    <div class="full-height flex-center first-container landing-page-background">
         <!-- <companyLogos /> -->
         <div class="image-container">
             <!-- <img src="~@buildAssets/guide/introduction.png" class="image-transition"> -->
@@ -70,6 +71,7 @@ export default {
 .full-height {
     height:100vh;
     width: 100%;
+    max-width: 100%;
 }
 
 .flex-center {

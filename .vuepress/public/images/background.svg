@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1200px" height="669px" viewBox="0 0 1200 669" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.5 (67469) - http://www.bohemiancoding.com/sketch -->
+    <title>index-teletype-graphic</title>
+    <desc>Created with Sketch.</desc>
+    <g id="New-Home" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Real-Time" transform="translate(0.000000, -564.000000)">
+            <g id="index-teletype-graphic" transform="translate(0.000000, 564.000000)">
+                <g id="Right">
+                    <g id="Split-Lines" opacity="0.244735054" transform="translate(0.000000, 589.000000)">
+                        <path d="M475,64 L499,64 L499,80 L475,80 L475,64 Z M323,64 L443,64 L443,80 L323,80 L323,64 Z M259,64 L291,64 L291,80 L259,80 L259,64 Z M163,64 L227,64 L227,80 L163,80 L163,64 Z M115,64 L131,64 L131,80 L115,80 L115,64 Z" id="Blue" fill="#659CC8"></path>
+                        <path d="M320,0 L368,0 L368,32 L320,32 L320,0 Z M240,0 L288,0 L288,32 L240,32 L240,0 Z M128,0 L208,0 L208,32 L128,32 L128,0 Z M80,0 L96,0 L96,32 L80,32 L80,0 Z M0,0 L48,0 L48,32 L0,32 L0,0 Z" id="Green" fill="#78AF9F"></path>
+                    </g>
+                    <g id="Split-Lines" opacity="0.0674818841" transform="translate(51.000000, 0.000000)">
+                        <path d="M474,112 L498,112 L498,160 L474,160 L474,112 Z M266,112 L442,112 L442,160 L266,160 L266,112 Z M138,112 L234,112 L234,160 L138,160 L138,112 Z M82,112 L106,112 L106,160 L82,160 L82,112 Z" id="Yellow" fill="#00bfa5"></path>
+                        <path d="M288,48 L312,48 L312,80 L288,80 L288,48 Z M160,48 L256,48 L256,80 L160,80 L160,48 Z M64,48 L128,48 L128,80 L64,80 L64,48 Z M0,48 L32,48 L32,80 L0,80 L0,48 Z" id="Orange" fill="#7044ff"></path>
+                        <path d="M416,1.0658141e-14 L448,1.0658141e-14 L448,16 L416,16 L416,1.0658141e-14 Z M224,1.0658141e-14 L384,1.0658141e-14 L384,16 L224,16 L224,1.0658141e-14 Z M176,1.0658141e-14 L192,1.0658141e-14 L192,16 L176,16 L176,1.0658141e-14 Z M80,1.0658141e-14 L144,1.0658141e-14 L144,16 L80,16 L80,1.0658141e-14 Z" id="Red" fill="#C13F21"></path>
+                    </g>
+                </g>
+                <g id="Left" transform="translate(925.500000, 334.500000) scale(-1, 1) translate(-925.500000, -334.500000) translate(651.000000, 0.000000)">
+                    <g id="Split-Lines" opacity="0.244735054" transform="translate(166.000000, 589.000000)">
+                        <path d="M323,64 L383,64 L383,80 L323,80 L323,64 Z M259,64 L291,64 L291,80 L259,80 L259,64 Z M163,64 L227,64 L227,80 L163,80 L163,64 Z M115,64 L131,64 L131,80 L115,80 L115,64 Z" id="Blue" fill="#659CC8"></path>
+                        <path d="M320,0 L368,0 L368,32 L320,32 L320,0 Z M240,0 L288,0 L288,32 L240,32 L240,0 Z M128,0 L208,0 L208,32 L128,32 L128,0 Z M80,0 L96,0 L96,32 L80,32 L80,0 Z M0,0 L48,0 L48,32 L0,32 L0,0 Z" id="Green" fill="#78AF9F"></path>
+                    </g>
+                    <g id="Split-Lines" opacity="0.0674818841" transform="translate(151.000000, 0.000000)">
+                        <path d="M266,112 L336,112 L336,160 L266,160 L266,112 Z M138,112 L234,112 L234,160 L138,160 L138,112 Z M82,112 L106,112 L106,160 L82,160 L82,112 Z" id="Yellow" fill="#00bfa5"></path>
+                        <path d="M288,48 L312,48 L312,80 L288,80 L288,48 Z M160,48 L256,48 L256,80 L160,80 L160,48 Z M64,48 L128,48 L128,80 L64,80 L64,48 Z M0,48 L32,48 L32,80 L0,80 L0,48 Z" id="Orange" fill="#7044ff"></path>
+                        <path d="M224,1.0658141e-14 L384,1.0658141e-14 L384,16 L224,16 L224,1.0658141e-14 Z M176,1.0658141e-14 L192,1.0658141e-14 L192,16 L176,16 L176,1.0658141e-14 Z M80,1.0658141e-14 L144,1.0658141e-14 L144,16 L80,16 L80,1.0658141e-14 Z" id="Red" fill="#C13F21"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

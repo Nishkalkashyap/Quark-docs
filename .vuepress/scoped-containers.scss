@@ -6,6 +6,7 @@
     align-items: center;
     display: flex;
     flex-direction: column;
+    position: relative;
 }
 
 .hero-section-component {
@@ -14,4 +15,21 @@
     max-width: 860px;
     display: flex;
     align-items: center;
+}
+
+.landing-page-background::before {
+    content: url('~@public/images/background.svg');
+    position: absolute;
+    left: 50%;
+    z-index:-200;
+    // background-image: url('~@public/images/background.svg');
+    // background-repeat: no-repeat;
+    // background-position-x: calc(50% + -845px);
+}
+
+.landing-page-background::after {
+    content: url('~@public/images/background.svg');
+    position: absolute;
+    right: 50%;
+    z-index:-200;
 }
