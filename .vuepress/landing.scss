@@ -35,25 +35,19 @@
     //     display: none;
     // }
 
-    div.home {
-        width: 100% !important;
-        max-width: 100%;
-        padding-left: 0px;
-        padding-right: 0px;
-        // box-sizing: border-box;;
-    }
-
     p {
         color: var(--text-color);
         font-size: 16px !important;
     }
 
     .hero {
-        height: calc(100vh - 56px) !important;
-        overflow: hidden;
+        text-align: center;
 
         img {
             margin-top: -20px;
+            max-width: 250px;
+            position: relative;
+            top: -40px;
         }
 
         h1 {
@@ -75,39 +69,52 @@
 
         p.action a {
             border-radius: 3px !important;
+            padding: 0.8rem 1.6rem;
+            background-color: var(--accent-color);
+            color: #ffffff;
+            cursor: pointer;
         }
     }
 
-    .landing-page-background,
-    .home .hero {
-        // background: linear-gradient(180deg,#121417 0,#06090d 100%);
-        background: linear-gradient(180deg, #ffffff 0, #f3f3f3 100%);
+    .landing-page-background {
+        // background: linear-gradient(180deg, #ffffff 0, #f3f3f3 100%);
+        // background: linear-gradient(to right, SlateBlue 0%, DeepSkyBlue 100%);
         width: 100%;
         display: flex;
         position: relative;
         justify-content: center;
         align-items: center;
-    }
-
-    .home .hero {
         flex-direction: column;
     }
 
-    .landing-page-background::before,
-    .home .hero::before {
+    .landing-page-background:nth-child(1) {
+        height: 100vh;
+    }
+
+    .landing-page-background:nth-child(2) {
+        clip-path: polygon(0px 0%, 100% 15%, 100% 100%, 0px 90%);
+        height: 120vh;
+        background: linear-gradient(to right, SlateBlue 0%, DeepSkyBlue 100%);
+    }
+
+    .landing-page-background:nth-child(3) {
+        clip-path: polygon(0px 10%, 100% 15%, 100% 100%, 0px 90%);
+        height: 120vh;
+        // background: linear-gradient(to right, #161719 0%, DeepSkyBlue 100%);
+        background: linear-gradient(to right, #161719 0%, #161719 100%);
+    }
+
+    .landing-page-background::before {
         content: url('~@public/images/background.svg');
         position: absolute;
         left: 50%;
-        // z-index:-1;
-        // background-image: url('~@public/images/background.svg');
-        // background-repeat: no-repeat;
-        // background-position-x: calc(50% + -845px);
+        z-index: -1;
     }
 
-    .landing-page-background::after,
-    .home .hero::after {
+    .landing-page-background::after {
         content: url('~@public/images/background.svg');
         position: absolute;
         right: 50%;
+        z-index: -1;
     }
 }

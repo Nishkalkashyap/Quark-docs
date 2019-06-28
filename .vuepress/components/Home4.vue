@@ -1,5 +1,6 @@
 <template>
 <div class="home4-component">
+    <heroTop />
     <!-- <div class="home4-component"> -->
     <div class="full-height first-container landing-page-background">
         <div class="first-container-wrapper flex-center">
@@ -59,12 +60,14 @@
 import companyLogos from "./landing-components/companyLogos";
 import heroDownload from "./landing-components/hero-download2";
 import heroSection from "./landing-components/hero-section";
+import heroTop from "./landing-components/hero-top";
 import Download from "./Download";
 export default {
     components: {
         companyLogos,
         heroDownload,
-        heroSection
+        heroSection,
+        heroTop
     }
 };
 </script>
