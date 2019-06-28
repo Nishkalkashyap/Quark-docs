@@ -1,0 +1,34 @@
+
+makeMeFly(duration=5s, delay=0s, negative=-50px, positive=50px)
+    animation-duration: duration;
+    animation-timing-function: ease-in-out;
+    animation-delay: delay;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-fill-mode: none;
+    animation-play-state: running;
+    animation-name: myMove;
+
+    @keyframes myMove {
+        0% {
+            -webkit-transform: translateY(negative);
+            -moz-transform: translateY(negative);
+            -o-transform: translateY(negative);
+        }
+
+        100% {
+            -webkit-transform: translateY(positive);
+            -moz-transform: translateY(positive);
+            -o-transform: translateY(positive);
+        }
+    }
+
+.landing-page-background:before,
+.landing-page-background:after
+    makeMeFly(18s)
+.landing-page-background video,
+.landing-page-background video
+    makeMeFly(10s, 3s)
+
+// .hero img
+    // makeMeFly(0.2s)
