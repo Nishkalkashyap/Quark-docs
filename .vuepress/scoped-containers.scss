@@ -12,16 +12,22 @@
 .hero-section-component {
     position: relative;
     height: 100vh;
-    max-width: 860px;
     display: flex;
     align-items: center;
 }
 
+.landing-page-background {
+    background: linear-gradient(180deg,#121417 0,#06090d 100%);
+    width: 100%;
+    display: flex;
+    position: relative;
+    justify-content: center;
+}
 .landing-page-background::before {
     content: url('~@public/images/background.svg');
     position: absolute;
     left: 50%;
-    z-index:-200;
+    // z-index:-200;
     // background-image: url('~@public/images/background.svg');
     // background-repeat: no-repeat;
     // background-position-x: calc(50% + -845px);

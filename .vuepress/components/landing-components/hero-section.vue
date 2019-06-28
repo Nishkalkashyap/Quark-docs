@@ -1,11 +1,13 @@
 <template>
   <section class="hero-section-component landing-page-background" :class="side + '-side'">
-    <div class="hero-section-container">
-      <h3>{{heading}}</h3>
-      <p>{{upper}}</p>
-      <slot name="image"></slot>
-      <p>{{lower}}</p>
-      <router-link to="/download/">Learn more</router-link>
+    <div class="hero-section-wrapper">
+      <div class="hero-section-container">
+        <h3>{{heading}}</h3>
+        <p>{{upper}}</p>
+        <slot name="image"></slot>
+        <p>{{lower}}</p>
+        <router-link to="/download/">Learn more</router-link>
+      </div>
     </div>
   </section>
 </template>
@@ -19,11 +21,15 @@ export default {
 
 <style lang="scss" scoped>
 video {
-  width: calc(100% - 40px);
+  width: calc(860px - 40px);
   border-radius: 5px;
 
   position: absolute;
   top: 25%;
+}
+
+.hero-section-wrapper {
+  max-width: 860px;
 }
 
 .hero-section-container {
