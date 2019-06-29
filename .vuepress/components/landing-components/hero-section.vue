@@ -90,6 +90,16 @@ h3::before {
   top: 20px;
 }
 
+// h3::after {
+//     content: "";
+//     min-width: 30px;
+//     height: 25px;
+//     position: absolute;
+//     top: 43px;
+//     background-repeat: no-repeat !important;
+//     background: url(~@buildAssets/landing-page-svgs/triangle.svg) 0% 0% / 25px;
+// }
+
 a {
   display: inline-block;
   padding: 0.5em 1em;
