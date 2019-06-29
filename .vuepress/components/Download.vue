@@ -71,26 +71,33 @@
 </template>
 
 <script>
+import stableJson from './../../version-assets/stable/__downloads.json';
+import insidersJson from './../../version-assets/insiders/__downloads.json';
 export default {
     props: [
-        "version",
-        "linux_main",
-        "linux_other",
-        "windows_main",
-        "windows_other",
+        // "version",
+        // "linux_main",
+        // "linux_other",
+        // "windows_main",
+        // "windows_other",
         "mac",
         "channel",
         "disable_post_content"
     ],
     data: function () {
-        const all_windows_downloads = JSON.parse(this.$props.windows_other);
-        all_windows_downloads.push(this.windows_main);
 
-        const all_linux_downloads = JSON.parse(this.$props.linux_other);
-        all_linux_downloads.push(this.linux_main);
+        const releaseJson = this.channel == 'stable' ? stableJson : insidersJson;
+        delete releaseJson.channel;
+
+        const all_windows_downloads = JSON.parse(releaseJson.windows_other);
+        all_windows_downloads.push(releaseJson.windows_main);
+
+        const all_linux_downloads = JSON.parse(releaseJson.linux_other);
+        all_linux_downloads.push(releaseJson.linux_main);
         return {
             all_windows_downloads,
-            all_linux_downloads
+            all_linux_downloads,
+            ...releaseJson
         };
 
         const obj = {
@@ -107,8 +114,8 @@ export default {
                 return;
             }
             const finalUrl = `https://quarkjs.io/download-count/?version=${
-        this.$props.version
-      }&&binary=${bin}&&channel=${this.$props.channel}`;
+        this.version
+      }&&binary=${bin}&&channel=${this.channel}`;
             return finalUrl;
         },
         openExternal: function (bin) {

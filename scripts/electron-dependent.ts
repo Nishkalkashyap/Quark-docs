@@ -2,6 +2,7 @@ import * as fs from 'fs-extra';
 import * as YAML from 'yamljs';
 import * as js from 'js-beautify';
 import fetch from 'node-fetch';
+import * as path from 'path';
 import { makeReleaseDir } from './make-release-dir';
 import { releaseVariables } from './util';
 
@@ -80,14 +81,14 @@ async function updateDownloadLinks() {
     str = str.concat(`| ${releaseVar.bucketSubUrl}   | ${version}             | ${monthNames[date.getMonth()]} ${date.getDate()} ${date.getFullYear()},  ${date.toLocaleTimeString()} |`, '\n');
 
     str = str.concat('<Download', '\n');
-    str = str.concat(`version="${version}"`, '\n');
+    // str = str.concat(`version="${version}"`, '\n');
     str = str.concat(`channel="${releaseVar.bucketSubUrl}"`, '\n');
 
-    str = str.concat(`linux_main='${linuxMain}'`, '\n');
-    str = str.concat(`linux_other='${JSON.stringify(linux_other_downloads)}'`, '\n');
+    // str = str.concat(`linux_main='${linuxMain}'`, '\n');
+    // str = str.concat(`linux_other='${JSON.stringify(linux_other_downloads)}'`, '\n');
 
-    str = str.concat(`windows_main='${windowsMain}'`, '\n');
-    str = str.concat(`windows_other='${JSON.stringify(windows_other_downloads)}'`, '\n');
+    // str = str.concat(`windows_main='${windowsMain}'`, '\n');
+    // str = str.concat(`windows_other='${JSON.stringify(windows_other_downloads)}'`, '\n');
 
     str = str.concat('/>', '\n\n');
     str = str.concat(`<div class="release-notes"><router-link to="/releases/current-release.html">View Release Notes</router-link></div>`, '\n\n');
@@ -95,6 +96,14 @@ async function updateDownloadLinks() {
     str = str.concat(hashes);
 
     fs.writeFileSync(releaseVar.downloadFilePath, str);
+    fs.writeFileSync(path.join(baseVerisonAssetsPath, '__downloads.json'), JSON.stringify({
+        version,
+        channel: releaseVar.bucketSubUrl,
+        linux_main: linuxMain,
+        linux_other: JSON.stringify(linux_other_downloads),
+        windows_main: windowsMain,
+        windows_other: JSON.stringify(windows_other_downloads)
+    }, undefined, 4));
 }
 
 

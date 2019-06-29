@@ -16,12 +16,7 @@ pageClass: download-page
 | -------------------          | --------------------   | --------------- |
 | insiders   | 0.4.8             | June 28 2019,  12:42:08 PM |
 <Download
-version="0.4.8"
 channel="insiders"
-linux_main='Quark-linux-x86_64-0.4.8.AppImage'
-linux_other='["Quark-linux-amd64-0.4.8.deb","Quark-linux-x64-0.4.8.tar.gz"]'
-windows_main='Quark-win-0.4.8.exe'
-windows_other='["Quark-win-x64-0.4.8.msi","Quark-win-x64-0.4.8.zip"]'
 />
 
 <div class="release-notes"><router-link to="/releases/current-release.html">View Release Notes</router-link></div>

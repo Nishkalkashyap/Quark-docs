@@ -16,12 +16,7 @@ pageClass: download-page
 | -------------------          | --------------------   | --------------- |
 | stable   | 0.4.7             | June 27 2019,  1:47:02 PM |
 <Download
-version="0.4.7"
 channel="stable"
-linux_main='Quark-linux-x86_64-0.4.7.AppImage'
-linux_other='["Quark-linux-amd64-0.4.7.deb","Quark-linux-x64-0.4.7.tar.gz"]'
-windows_main='Quark-win-0.4.7.exe'
-windows_other='["Quark-win-x64-0.4.7.msi","Quark-win-x64-0.4.7.zip"]'
 />
 
 <div class="release-notes"><router-link to="/releases/current-release.html">View Release Notes</router-link></div>
