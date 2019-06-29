@@ -2,7 +2,7 @@
 <div class="home4-component">
     <heroTop />
 
-    <div class="full-height first-container landing-page-background">
+    <!-- <div class="full-height first-container landing-page-background">
         <div class="first-container-wrapper flex-center">
             <div class="image-container">
                 <video
@@ -19,7 +19,7 @@
             </div>
             <heroDownload />
         </div>
-    </div>
+    </div> -->
 
     <heroSection side="left" heading="GitHub for Atom" upper="A text editor is at the core of a developer’s toolbox, but it doesn't usually work alone. Work with Git and GitHub directly from Atom with the GitHub package." lower="A text editor is at the core of a developer’s toolbox, but it doesn't usually work alone. Work with Git and GitHub directly from Atom with the GitHub package.">
         <video
@@ -66,7 +66,28 @@
       </video>
     </heroSection>
 
-    <Download disable_post_content="true" version="0.4.7" channel="stable" linux_main="Quark-linux-x86_64-0.4.7.AppImage" linux_other="[" Quark-linux-amd64-0.4.7.deb","Quark-linux-x64-0.4.7.tar.gz"]" windows_main="Quark-win-0.4.7.exe" windows_other="[" Quark-win-x64-0.4.7.msi","Quark-win-x64-0.4.7.zip"]" />
+    <!-- <div class="full-height first-container landing-page-background">
+        <div class="first-container-wrapper flex-center">
+            <div class="image-container">
+                <video
+            muted
+            autoplay
+            loop
+            name="media"
+            poster="~@buildAssets/guide/hello-world-intro.png"
+            crossorigin="anonymous"
+            class="image-transition"
+          >
+            <source src="~@buildAssets/guide/showcase/web-browser.mp4" type="video/mp4">Your browser does not support the video tag.
+          </video>
+            </div>
+            <heroDownload />
+        </div>
+    </div> -->
+
+    <div class="landing-page-background">
+        <Download disable_post_content="true" version="0.4.7" channel="stable" linux_main="Quark-linux-x86_64-0.4.7.AppImage" linux_other='[" Quark-linux-amd64-0.4.7.deb","Quark-linux-x64-0.4.7.tar.gz"]' windows_main="Quark-win-0.4.7.exe" windows_other='[" Quark-win-x64-0.4.7.msi","Quark-win-x64-0.4.7.zip"]' />
+    </div>
 
     <SWUpdatePopup :updateEvent="swUpdateEvent" />
 </div>
