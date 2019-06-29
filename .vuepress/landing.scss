@@ -106,6 +106,10 @@
 
     .downloads-container {
 
+        div.platform {
+            margin-bottom: 0px !important;
+        }
+
         button.download-enabled,
         span.coming-soon {
             background-color: $color;

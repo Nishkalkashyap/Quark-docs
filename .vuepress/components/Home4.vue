@@ -217,7 +217,7 @@ export default {
         text-align: center;
         top: 70px;
         position: relative;
-        margin-bottom: 150px !important;
+        margin-bottom: 80px !important;
         box-shadow: 0 20px 30px rgba(0, 0, 0, 0.5);
         // border-top-right-radius: 20px;
         // border-bottom-left-radius: 20px;
@@ -243,6 +243,7 @@ export default {
         z-index: -2;
         // stroke-width: 2 !important;
     }
+
     // svg {
     //     // height: 50px;
     //     height: 3em;
