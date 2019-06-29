@@ -84,4 +84,42 @@
         right: 50%;
         z-index: -1;
     }
+
+
+
+    // landing-page-download-section
+
+    .downloads-container {
+
+        $color=#f2d024; //ignore error
+
+        button.download-enabled,
+        span.coming-soon {
+            background-color: $color;
+        }
+
+        h1 {
+            color: $color !important;
+            // background-color: var(--text-color--darker);
+            background-color: #161719;
+            // padding-left: 100px !important;
+            // border-top: solid 10px $color;
+        }
+
+        button.download-enabled,
+        button.download-enabled span.platform-distro,
+        .other-downloads span,
+        .other-downloads-heading {
+            color: var(--text-color--darker) !important;
+        }
+
+        a {
+            color: $color;
+        }
+
+        svg {
+            stroke: $color;
+            fill: $color;
+        }
+    }
 }

@@ -85,8 +85,13 @@
         </div>
     </div> -->
 
-    <div class="landing-page-background">
+    <div class="landing-page-background downloads-container">
         <floaters side="right" />
+        <!-- <svg viewBox="0 0 30 44.58" class="download-svg">
+        <path d="M28.74,20.81H1.26a1.26,1.26,0,0,1-1-2L14.16.5a1.25,1.25,0,0,1,1-.5h0a1.24,1.24,0,0,1,1,.51L29.75,18.8a1.25,1.25,0,0,1-1,2ZM3.81,18.29H26.22L15.16,3.37Z" />
+        <path d="M28.74,42H1.26a1.28,1.28,0,0,1-1.13-.71A1.26,1.26,0,0,1,.26,40l13.9-18.29a1.28,1.28,0,0,1,1-.5h0a1.24,1.24,0,0,1,1,.51L29.75,40a1.26,1.26,0,0,1,.12,1.32A1.28,1.28,0,0,1,28.74,42ZM3.81,39.47H26.22L15.16,24.55Z" />
+        </svg> -->
+        <h1>All Downloads</h1>
         <Download disable_post_content="true" version="0.4.7" channel="stable" linux_main="Quark-linux-x86_64-0.4.7.AppImage" linux_other='[" Quark-linux-amd64-0.4.7.deb","Quark-linux-x64-0.4.7.tar.gz"]' windows_main="Quark-win-0.4.7.exe" windows_other='[" Quark-win-x64-0.4.7.msi","Quark-win-x64-0.4.7.zip"]' />
     </div>
 
@@ -177,6 +182,39 @@ export default {
 
     div.image-container:hover {
         filter: brightness(1) contrast(1) sepia(0) hue-rotate(0deg) saturate(1);
+    }
+}
+
+.downloads-container {
+    position: relative;
+
+    h1 {
+        // margin: 0px;
+        // background-color: var(--text-color--dark);
+        padding: 15px 25px;
+        border-radius: 4px;
+        text-align: center;
+        top: 70px;
+        position: relative;
+        margin-bottom: 100px !important;
+        // border-top: solid 10px var(--accent-color);
+    }
+
+    @media only screen and (max-width:600px) {
+        h1{
+            font-size: 36px !important;
+        }
+    }
+
+    svg {
+        // height: 50px;
+        height: 3em;
+        position: relative;
+        left: -160px;
+        // top: 90px;
+        top: 5.5em;
+        transform: rotate(180deg);
+        stroke-width: 2 !important;
     }
 }
 </style>
