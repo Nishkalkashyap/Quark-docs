@@ -207,8 +207,8 @@ export default {
         top: 70px;
         position: relative;
         margin-bottom: 100px !important;
-        border-top-right-radius: 20px;
-        border-bottom-left-radius: 20px;
+        // border-top-right-radius: 20px;
+        // border-bottom-left-radius: 20px;
         // border-top: solid 10px var(--accent-color);
     }
 
@@ -230,8 +230,9 @@ export default {
     }
 
     h3 {
-        border-top-right-radius: 10px;
-        border-bottom-left-radius: 10px;
+        // border-top-right-radius: 10px;
+        // border-bottom-left-radius: 10px;
+        border-radius: 2px;
         margin-bottom: 150px;
         padding: 10px 20px;
     }

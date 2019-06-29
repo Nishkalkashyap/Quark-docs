@@ -45,19 +45,21 @@
     }
 
     .landing-page-background:nth-child(5) {
-        clip-path: polygon(0px 10%, 100% 0%, 100% 100%, 0px 90%);
+        clip-path: polygon(0px 10%, 100% 0%, 100% 100%, 0px 100%);
         // height: 100vh;
         height: auto;
         min-height: 100vh;
         top: -42vh;
-        background: linear-gradient(to right, #38c172 0%, #a0d8f1 100%);
+        // background: linear-gradient(to right, #38c172 0%, #a0d8f1 100%);
+        background: linear-gradient(to right, #a0d8f1 0%, #6574cd 100%);
     }
 
     .landing-page-background:nth-child(6) {
         clip-path: polygon(0px 0%, 100% 5%, 100% 100%, 0px 100%);
-        height: 120vh;
+        // height: 120vh;
         top: -55vh;
-        background: linear-gradient(to right, #38c172 0%, #a0d8f1 100%);
+        // background: linear-gradient(to right, #38c172 0%, #a0d8f1 100%);
+        background: linear-gradient(to right, #a0d8f1 0%, #6574cd 100%);
     }
 
     @media only screen and (max-width:600px) {
@@ -74,7 +76,7 @@
         }
 
         .landing-page-background:nth-child(5) {
-            clip-path: polygon(0px 5%, 100% 2%, 100% 100%, 0px 97%);
+            clip-path: polygon(0px 5%, 100% 2%, 100% 100%, 0px 100%);
         }
 
         .landing-page-background:nth-child(6) {
@@ -100,9 +102,12 @@
 
     // landing-page-download-section
 
+    $color=#f2d024; //ignore error
+    // $color=#e9af32; //ignore error
+    $darkColor=#161719; //ignore error
+
     .downloads-container {
 
-        $color=#f2d024; //ignore error
 
         button.download-enabled,
         span.coming-soon {
@@ -110,15 +115,8 @@
         }
 
         h1 {
-            color: #161719 !important;
+            color: $darkColor !important;
             background-color: $color;
-
-            // color: $color !important;
-            // background-color: #161719;
-
-            // background-color: var(--text-color--darker);
-            // padding-left: 100px !important;
-            // border-top: solid 10px $color;
         }
 
         button.download-enabled,
@@ -142,7 +140,23 @@
             background-color: $color;
 
             a {
-                color: #161719;
+                color: $darkColor;
+            }
+        }
+    }
+
+    .hero-features-component {
+        margin-top: 50px;
+        h3 {
+            padding-top: 0px !important;
+        }
+
+        .feature {
+            background-color: $color;
+
+            h3,
+            p {
+                color: var(--text-color--darker);
             }
         }
     }

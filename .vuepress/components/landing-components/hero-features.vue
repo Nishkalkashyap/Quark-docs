@@ -36,6 +36,10 @@ export default {
                 {
                     heading: 'TypeScript',
                     text: 'Thanks to Monaco we show TypeScript autocompletions and diagnostics for TS sandboxes.'
+                },
+                {
+                    heading: 'TypeScript',
+                    text: 'Thanks to Monaco we show TypeScript autocompletions and diagnostics for TS sandboxes.'
                 }
             ]
         }
@@ -53,13 +57,14 @@ export default {
     justify-content: center;
 
     .feature {
-        min-width: 300px;
+        min-width: 360px;
         width: calc(50% - 80px);
         padding: 10px 20px;
         margin: 10px 20px;
         display: inline-block;
         box-sizing: border-box;
-        border: solid 2px red;;
+        border-radius: 5px;
+        box-shadow: 0 20px 30px rgba(0, 0, 0, 0.5);
     }
 }
 </style>
