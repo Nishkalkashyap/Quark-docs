@@ -33,6 +33,20 @@
         background: linear-gradient(to right, #78AF9F 0%, #659CC8 100%);
     }
 
+    @media only screen and (max-width:600px) {
+        .landing-page-background:nth-child(2) {
+            clip-path: polygon(0px 0%, 100% 5%, 100% 100%, 0px 100%);
+        }
+
+        .landing-page-background:nth-child(3) {
+            clip-path: polygon(0px 5%, 100% 0%, 100% 100%, 0px 100%);
+        }
+
+        .landing-page-background:nth-child(4) {
+            clip-path: polygon(0px 0%, 100% 5%, 100% 100%, 0px 100%);
+        }
+    }
+
     .landing-page-background::before {
         content: url('~@public/images/background.svg');
         position: absolute;
