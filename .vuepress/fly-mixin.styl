@@ -30,20 +30,20 @@ makeMeFly(duration=5s, delay=0s, negative=-50px, positive=50px)
 // .landing-page-background:after
 //     makeMeFly(18s, 0s)
 
-.landing-page-background video,
 .landing-page-background video
     makeMeFly(10s, 3s)
 
-.landing-page-background > img.logo,
 .landing-page-background > img.logo
     makeMeFly(12s, 0s, -20px)
 
+.landing-page-background .random-svgs-container
+    makeMeFly(6s, 0s, -20px, 20px)
+
+
 @media only screen and (max-width:600px) 
-    .landing-page-background video,
     .landing-page-background video
         makeMeFly(10s, 3s, -35px, 35px)
 
-    .landing-page-background > img.logo,
     .landing-page-background > img.logo
         makeMeFly(5s, 0s, -20px, 20px)
 

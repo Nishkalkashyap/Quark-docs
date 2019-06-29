@@ -9,12 +9,37 @@
             <router-link to="/download/">Learn more</router-link>
         </div>
     </div>
+    <div class="random-svgs-container">
+        <svg
+        class="random-svg"
+        v-for="svg in svgs"
+        v-html="svg.svg.shape"
+        :viewBox="svg.svg.viewBox"
+        :style="svg.style"
+      ></svg>
+    </div>
 </section>
 </template>
 
 <script>
+import _svgs from "./svg";
 export default {
-    props: ["side", "heading", "upper", "lower", "image"]
+    props: ["side", "heading", "upper", "lower", "image"],
+    data() {
+        const svgs = JSON.parse(JSON.stringify(_svgs));
+        if (this.side == "right") {
+            Object.keys(svgs).map(key => {
+                const left = svgs[key].style.left;
+                const right = svgs[key].style.right;
+
+                svgs[key].style.left = right;
+                svgs[key].style.right = left;
+            });
+        }
+        return {
+            svgs
+        };
+    }
 };
 </script>
 
@@ -40,18 +65,19 @@ video {
     // position: relative;
 }
 
-.hero-section-container::before {
-    content: '';
-    background: url("~@buildAssets/landing-page-svgs/upDown.svg");
-    background-repeat: repeat;
-    left: 0px;
-    top: 0px;
-    padding: 50px;
-    // width: calc(100% - 100px);
-    // height: 100%;
-    position: absolute;
-    z-index: -2;
-}
+// .hero-section-container::before {
+//   content: "";
+//   // background: url("~@buildAssets/landing-page-svgs/upDown.svg");
+//   // background: url("~@public/images/shapes-background.svg");
+//   background-repeat: repeat;
+//   left: 0px;
+//   top: 0px;
+//   padding: 50px;
+//   // width: calc(100% - 100px);
+//   // height: 100%;
+//   position: absolute;
+//   z-index: -2;
+// }
 
 .left-side {
     video {
@@ -72,10 +98,6 @@ video {
 
     .hero-section-container {
         padding-left: 450px;
-    }
-
-    .hero-section-container::before {
-        transform: scaleX(-1);
     }
 }
 
@@ -130,5 +152,18 @@ a {
     border-radius: 5px;
     color: #ffffff;
     background-color: var(--accent-color);
+}
+
+.random-svgs-container {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: calc(100% - 40px);
+    height: calc(100% - 40px);
+    margin: 20px;
+
+    .random-svg {
+        position: absolute;
+    }
 }
 </style>
