@@ -153,7 +153,7 @@ function getSvgs() {
     {
       svg: svgs.arrowUp,
       style: {
-        width: '60px',
+        width: '5%',
         top: 45 + '%',
         left: 10 + '%',
         stroke : colors['green'],
@@ -163,7 +163,7 @@ function getSvgs() {
     {
       svg: svgs.box,
       style: {
-        width: '25px',
+        width: '2%',
         top: 40 + '%',
         left: 15 + '%',
         stroke : colors['red'],
@@ -173,9 +173,10 @@ function getSvgs() {
     {
       svg: svgs.circle,
       style: {
-        width: '18rem',
+        // width: '18rem',
+        width: '20%',
         top: 10 + '%',
-        left: -15 + '%',
+        left: -16 + '%',
         stroke : colors['yellow'],
         fill : colors['yellow']
       }
@@ -183,7 +184,7 @@ function getSvgs() {
     {
       svg: svgs.circle,
       style: {
-        width: '40px',
+        width: '3%',
         top: 10 + '%',
         left: 0 + '%',
         stroke : colors['blue-grey'],
@@ -193,7 +194,7 @@ function getSvgs() {
     {
       svg: svgs.cross,
       style: {
-        width: '4rem',
+        width: '5%',
         top: 20 + '%',
         left: 10 + '%',
         stroke : colors['pink'],
@@ -204,10 +205,20 @@ function getSvgs() {
     {
       svg: svgs.hexa,
       style: {
-        width: '12rem',
+        width: '13%',
         top: 70 + '%',
         left: 0 + '%',
         stroke : colors['orange'],
+        fill : colors['transparent'],
+      }
+    },
+    {
+      svg: svgs.upDown,
+      style: {
+        width: '7%',
+        top: 83 + '%',
+        left: 30 + '%',
+        stroke : colors['purple'],
         fill : colors['transparent'],
       }
     }
