@@ -1,9 +1,9 @@
 <template>
-  <div class="download-page-component">
+<div class="download-page-component">
     <div class="container">
-      <div class="platform">
-        <img src="/images/windows-logo.png" style="width:100px">
-        <button
+        <div class="platform">
+            <img src="/images/windows-logo.png" style="width:100px">
+            <button
           class="download-button"
           @click="openExternal(windows_main)"
           :class="windows_main? 'download-enabled' : null"
@@ -14,16 +14,16 @@
           <span class="platform-distro">Windows 7, 8, 10</span>
           <span class="coming-soon" v-if="!windows_main">Coming Soon</span>
         </button>
-        <div class="other-downloads-heading">Other downloads</div>
-        <div v-for="bin in all_windows_downloads" class="other-downloads">
-          <span>{{getExtensionFromBinary(bin)}}</span>
-          <a :href="getLinkFromBinary(bin)" target="_blank">Download</a>
+            <div class="other-downloads-heading">Other downloads</div>
+            <div v-for="bin in all_windows_downloads" class="other-downloads">
+                <span>{{getExtensionFromBinary(bin)}}</span>
+                <a :href="getLinkFromBinary(bin)" target="_blank">Download</a>
+            </div>
         </div>
-      </div>
 
-      <div class="platform">
-        <img src="/images/linux-logo.png" style="width:86px;height:100px;">
-        <button
+        <div class="platform">
+            <img src="/images/linux-logo.png" style="width:86px;height:100px;">
+            <button
           class="download-button"
           @click="openExternal(linux_main)"
           :class="linux_main? 'download-enabled' : null"
@@ -34,16 +34,16 @@
           <span class="platform-distro">Debian, Ubuntu, Red Hat, Fedora</span>
           <span class="coming-soon" v-if="!linux_main">Coming Soon</span>
         </button>
-        <div class="other-downloads-heading">Other downloads</div>
-        <div v-for="bin in all_linux_downloads" class="other-downloads">
-          <span>{{getExtensionFromBinary(bin)}}</span>
-          <a :href="getLinkFromBinary(bin)" target="_blank">Download</a>
+            <div class="other-downloads-heading">Other downloads</div>
+            <div v-for="bin in all_linux_downloads" class="other-downloads">
+                <span>{{getExtensionFromBinary(bin)}}</span>
+                <a :href="getLinkFromBinary(bin)" target="_blank">Download</a>
+            </div>
         </div>
-      </div>
 
-      <div class="platform">
-        <img src="/images/apple-logo.svg">
-        <button
+        <div class="platform">
+            <img src="/images/apple-logo.svg">
+            <button
           class="download-button"
           @click="openExternal(mac)"
           :class="mac? 'download-enabled' : null"
@@ -54,198 +54,211 @@
           <span class="platform-distro">macOS 10.9+</span>
           <span class="coming-soon" v-if="!mac">Coming Soon</span>
         </button>
-        <span style="font-size:12px">
+            <span style="font-size:12px">
           <a href="mailto:hello@nishkal.in?subject=Quark%20Build%20for%20Mac">Let us know</a> if you want to get it sooner!
         </span>
-      </div>
+        </div>
     </div>
     <div class="post-content" v-if="channel == 'stable' && !disable_post_content">
-      <h3>Want new features sooner?</h3>
-      <span>Get the <router-link to="/download/insiders">Insiders build</router-link> instead.</span>
+        <h3>Want new features sooner?</h3>
+        <span>Get the <router-link to="/download/insiders">Insiders build</router-link> instead.</span>
     </div>
     <div class="post-content" v-if="channel == 'insiders' && !disable_post_content">
-      <h3>You're almost there.</h3>
-      <span> To keep receiving latest updates, you need to change <router-link to="/">these settings</router-link> after installing the software.</span>
+        <h3>You're almost there.</h3>
+        <span> To keep receiving latest updates, you need to change <router-link to="/">these settings</router-link> after installing the software.</span>
     </div>
-  </div>
+</div>
 </template>
 
 <script>
 export default {
-  props: [
-    "version",
-    "linux_main",
-    "linux_other",
-    "windows_main",
-    "windows_other",
-    "mac",
-    "channel",
-    "disable_post_content"
-  ],
-  data: function() {
-    const all_windows_downloads = JSON.parse(this.$props.windows_other);
-    all_windows_downloads.push(this.windows_main);
+    props: [
+        "version",
+        "linux_main",
+        "linux_other",
+        "windows_main",
+        "windows_other",
+        "mac",
+        "channel",
+        "disable_post_content"
+    ],
+    data: function () {
+        const all_windows_downloads = JSON.parse(this.$props.windows_other);
+        all_windows_downloads.push(this.windows_main);
 
-    const all_linux_downloads = JSON.parse(this.$props.linux_other);
-    all_linux_downloads.push(this.linux_main);
-    return {
-      all_windows_downloads,
-      all_linux_downloads
-    };
+        const all_linux_downloads = JSON.parse(this.$props.linux_other);
+        all_linux_downloads.push(this.linux_main);
+        return {
+            all_windows_downloads,
+            all_linux_downloads
+        };
 
-    const obj = {
-      image: "",
-      mainDownload: "",
-      platformName: "",
-      platformExt: "",
-      platformSupported: ""
-    };
-  },
-  methods: {
-    getLinkFromBinary: function(bin) {
-      if (!bin) {
-        return;
-      }
-      const finalUrl = `https://quarkjs.io/download-count/?version=${
+        const obj = {
+            image: "",
+            mainDownload: "",
+            platformName: "",
+            platformExt: "",
+            platformSupported: ""
+        };
+    },
+    methods: {
+        getLinkFromBinary: function (bin) {
+            if (!bin) {
+                return;
+            }
+            const finalUrl = `https://quarkjs.io/download-count/?version=${
         this.$props.version
       }&&binary=${bin}&&channel=${this.$props.channel}`;
-      return finalUrl;
-    },
-    openExternal: function(bin) {
-      if (!bin) {
-        return;
-      }
-      const link = this.getLinkFromBinary(bin);
-      if (typeof ga != "undefined") {
-        ga("send", "event", "Downloads", "download", link);
-      }
-      window.open(link);
-    },
-    getExtensionFromBinary: function(bin) {
-      if (bin.endsWith(".exe")) {
-        return ".exe";
-      }
-      if (bin.endsWith(".msi")) {
-        return ".msi";
-      }
-      if (bin.endsWith(".zip")) {
-        return ".zip";
-      }
-      if (bin.endsWith(".deb")) {
-        return ".deb";
-      }
-      if (bin.endsWith(".AppImage")) {
-        return ".appImage";
-      }
-      if (bin.endsWith(".tar.gz")) {
-        return ".tar.gz";
-      }
-      return bin;
+            return finalUrl;
+        },
+        openExternal: function (bin) {
+            if (!bin) {
+                return;
+            }
+            const link = this.getLinkFromBinary(bin);
+            if (typeof ga != "undefined") {
+                ga("send", "event", "Downloads", "download", link);
+            }
+            window.open(link);
+        },
+        getExtensionFromBinary: function (bin) {
+            if (bin.endsWith(".exe")) {
+                return ".exe";
+            }
+            if (bin.endsWith(".msi")) {
+                return ".msi";
+            }
+            if (bin.endsWith(".zip")) {
+                return ".zip";
+            }
+            if (bin.endsWith(".deb")) {
+                return ".deb";
+            }
+            if (bin.endsWith(".AppImage")) {
+                return ".appImage";
+            }
+            if (bin.endsWith(".tar.gz")) {
+                return ".tar.gz";
+            }
+            return bin;
+        }
     }
-  }
 };
 </script>
 
 <style lang="scss">
 .container {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  font-family: var(--heading-font-family);
-}
-.platform {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  min-width: 200px;
-  margin: 60px 12px;
-  img {
-    max-height: 100px !important;
-  }
-
-  .download-button {
-    font-family: var(--heading-font-family);
-    margin-top: 20px;
-    position: relative;
-    background-color: var(--text-color--darker);
-    color: var(--background-color);
-    cursor: not-allowed !important;
-    border: 0px;
-    padding: 10px 0px;
-    width: 220px;
-    cursor: pointer;
-    border-radius: 2px;
-
-    .download-svg {
-      width: 18px;
-    }
-
-    .platform-name {
-      padding-left: 20px;
-      font-size: 18px;
-      font-weight: 500;
-    }
-
-    .platform-distro {
-      display: block;
-      margin-top: 10px;
-      color: #cccccc;
-      font-size: 12px;
-      font-weight: 700;
-    }
-  }
-
-  .download-enabled {
-    cursor: pointer !important;
-    background-color: var(--accent-color);
-    color: var(--background-color) !important;
-  }
-
-  .download-enabled:hover {
-    // background-color: var(--ion-color-primary-tint);
-    box-shadow: 4px 4px 12px 4px rgba(0, 0, 0, 0.15);
-  }
-
-  .other-downloads-heading {
-    margin-top: 10px;
-    font-size: 16px;
-    font-weight: 700;
-  }
-
-  .other-downloads {
-    margin-top: 10px;
     display: flex;
-    width: 100%;
-    text-align: center;
-    justify-content: space-between;
+    justify-content: center;
+    flex-wrap: wrap;
+    font-family: var(--heading-font-family);
+}
 
-    span,
-    a {
-      display: inline-block;
-      width: 50%;
-      font-size: 14px;
-      font-weight: 500;
-    }
-    a {
-      cursor: pointer;
-    }
-  }
+.platform {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 200px;
+    margin: 60px 12px;
 
-  .coming-soon {
-    position: absolute;
-    background-color: var(--accent-color);
-    padding: 5px 5px;
-    border-radius: 3px;
-    right: -30px;
-    top: -15px;
-    display: block;
-  }
+    img {
+        max-height: 100px !important;
+    }
+
+    .download-button {
+        font-family: var(--heading-font-family);
+        margin-top: 20px;
+        position: relative;
+        background-color: var(--text-color--darker);
+        color: var(--background-color);
+        cursor: not-allowed !important;
+        border: 0px;
+        padding: 10px 0px;
+        width: 220px;
+        cursor: pointer;
+        border-radius: 2px;
+
+        .download-svg {
+            width: 18px;
+        }
+
+        .platform-name {
+            padding-left: 20px;
+            font-size: 18px;
+            font-weight: 500;
+        }
+
+        .platform-distro {
+            display: block;
+            margin-top: 10px;
+            color: #cccccc;
+            font-size: 12px;
+            font-weight: 700;
+        }
+    }
+
+    .download-enabled {
+        cursor: pointer !important;
+        background-color: var(--accent-color);
+        color: var(--background-color) !important;
+    }
+
+    .download-enabled:hover {
+        // background-color: var(--ion-color-primary-tint);
+        box-shadow: 4px 4px 12px 4px rgba(0, 0, 0, 0.15);
+    }
+
+    .other-downloads-heading {
+        margin-top: 10px;
+        font-size: 16px;
+        font-weight: 700;
+    }
+
+    .other-downloads {
+        margin-top: 10px;
+        display: flex;
+        width: 100%;
+        text-align: center;
+        justify-content: space-between;
+
+        span,
+        a {
+            display: inline-block;
+            width: 50%;
+            font-size: 14px;
+            font-weight: 500;
+        }
+
+        a {
+            cursor: pointer;
+        }
+    }
+
+    .coming-soon {
+        position: absolute;
+        background-color: var(--accent-color);
+        padding: 5px 5px;
+        border-radius: 3px;
+        right: -30px;
+        top: -15px;
+        display: block;
+    }
 }
 
 .post-content {
-  margin-top: -40px;
-  padding-bottom: 40px;
-  text-align: center;
-  background-color: var(--code-background);
+    margin-top: -40px;
+    padding-bottom: 40px;
+    text-align: center;
+    background-color: var(--code-background);
+}
+
+@media only screen and (max-width:600px) {
+    div.container {
+        margin-bottom: 20px;
+    }
+
+    div.platform {
+        margin-bottom: 0px !important;
+    }
 }
 </style>

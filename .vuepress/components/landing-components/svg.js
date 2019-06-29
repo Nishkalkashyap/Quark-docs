@@ -146,9 +146,101 @@ const colors = {
   'pink-lightest': '#ffebef',
 }
 
-var exportValue = getSvgs();
 
-function getSvgs() {
+export const darkSvgs = [
+  {
+    svg: svgs.arrowUp,
+    style: {
+      width: '2%',
+      top: 15 + '%',
+      left: 60 + '%',
+      stroke: colors['grey-darkest'],
+      fill: colors['grey-darkest']
+    }
+  },
+  {
+    svg: svgs.box,
+    style: {
+      width: '2.5%',
+      top: 35 + '%',
+      left: 85 + '%',
+      stroke: colors['grey-darkest'],
+      fill: colors['grey-darkest']
+    }
+  },
+  {
+    svg: svgs.circle,
+    style: {
+      width: '2%',
+      top: 10 + '%',
+      left: 90 + '%',
+      stroke: colors['grey-darkest'],
+      fill: colors['grey-darkest']
+    }
+  },
+  {
+    svg: svgs.cross,
+    style: {
+      width: '2%',
+      top: 85 + '%',
+      left: 85 + '%',
+      stroke: colors['grey-darkest'],
+      fill: colors['grey-darkest']
+    }
+  },
+  {
+    svg: svgs.hexa,
+    style: {
+      width: '2.5%',
+      top: 60 + '%',
+      left: 95 + '%',
+      stroke: colors['grey-darkest'],
+      fill: colors['transparent'],
+      strokeWidth: 3
+    }
+  },
+  {
+    svg: svgs.triangle,
+    style: {
+      width: '2.5%',
+      top: 15 + '%',
+      left: 40 + '%',
+      stroke: colors['grey-darkest'],
+      fill: colors['transparent'],
+      strokeWidth: 3
+    }
+  },
+  {
+    svg: svgs.upDown,
+    style: {
+      width: '2.5%',
+      top: 90 + '%',
+      left: 90 + '%',
+      stroke: colors['grey-darkest'],
+      fill: colors['grey-darkest']
+    }
+  }
+];
+
+const myColors = [
+  colors['blue'],
+  colors['indigo'],
+  colors['orange'],
+  colors['pink'],
+  colors['purple'],
+  colors['red-light'],
+  colors['teal'],
+  colors['orange-light'],
+  colors['yellow'],
+]
+
+function getRandomInt(min, max) {
+  min = Math.ceil(min);
+  max = Math.floor(max);
+  return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
+export function getSvgs() {
   return [
     {
       svg: svgs.arrowUp,
@@ -156,8 +248,8 @@ function getSvgs() {
         width: '5%',
         top: 45 + '%',
         left: 10 + '%',
-        stroke : colors['green'],
-        fill : colors['green']
+        stroke: colors['green'],
+        fill: colors['green']
       }
     },
     {
@@ -166,8 +258,8 @@ function getSvgs() {
         width: '2%',
         top: 40 + '%',
         left: 15 + '%',
-        stroke : colors['red'],
-        fill : colors['red']
+        stroke: colors['red'],
+        fill: colors['red']
       }
     },
     {
@@ -177,8 +269,8 @@ function getSvgs() {
         width: '20%',
         top: 10 + '%',
         left: -16 + '%',
-        stroke : colors['yellow'],
-        fill : colors['yellow']
+        stroke: colors['yellow'],
+        fill: colors['yellow']
       }
     },
     {
@@ -187,8 +279,8 @@ function getSvgs() {
         width: '3%',
         top: 10 + '%',
         left: 0 + '%',
-        stroke : colors['blue-grey'],
-        fill : colors['blue-grey']
+        stroke: colors['blue-grey'],
+        fill: colors['blue-grey']
       }
     },
     {
@@ -197,9 +289,9 @@ function getSvgs() {
         width: '5%',
         top: 20 + '%',
         left: 10 + '%',
-        stroke : colors['pink'],
+        stroke: colors['pink'],
         strokeWidth: 4,
-        fill : colors['transparent']
+        fill: colors['transparent']
       }
     },
     {
@@ -208,8 +300,8 @@ function getSvgs() {
         width: '13%',
         top: 70 + '%',
         left: 0 + '%',
-        stroke : colors['orange'],
-        fill : colors['transparent'],
+        stroke: colors['orange'],
+        fill: colors['transparent'],
       }
     },
     {
@@ -218,8 +310,8 @@ function getSvgs() {
         width: '7%',
         top: 83 + '%',
         left: 30 + '%',
-        stroke : colors['purple'],
-        fill : colors['transparent'],
+        stroke: colors['purple'],
+        fill: colors['transparent'],
       }
     },
     {
@@ -228,14 +320,16 @@ function getSvgs() {
         width: '4%',
         top: 10 + '%',
         left: 30 + '%',
-        stroke : colors['white'],
-        fill : colors['transparent'],
+        stroke: colors['white'],
+        fill: colors['transparent'],
       }
     }
-  ]
+  ].map((val) => {
+    const myColor = myColors[getRandomInt(0, 8)];
+    val.style.stroke = myColor;
+    if (val.style.fill != 'transparent') {
+      val.style.fill = myColor;
+    }
+    return val;
+  });
 }
-
-
-// export default svgs;
-// console.log(exportValue);
-export default exportValue;

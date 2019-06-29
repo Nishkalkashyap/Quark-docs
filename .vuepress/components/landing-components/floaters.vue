@@ -13,10 +13,13 @@
 </template>
 
 <script>
-import _svgs from "./svg";
+import {
+    darkSvgs,getSvgs
+} from "./svg";
 export default {
-    props: ['side'],
+    props: ["side"],
     data() {
+        const _svgs = getSvgs();
         const svgs = JSON.parse(JSON.stringify(_svgs));
         if (this.side == "right") {
             Object.keys(svgs).map(key => {
@@ -28,10 +31,10 @@ export default {
             });
         }
         return {
-            svgs
+            svgs: svgs.concat(darkSvgs)
         };
     }
-}
+};
 </script>
 
 <style lang="scss" scoped>

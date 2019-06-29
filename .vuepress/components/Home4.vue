@@ -86,6 +86,7 @@
     </div> -->
 
     <div class="landing-page-background">
+        <floaters side="right" />
         <Download disable_post_content="true" version="0.4.7" channel="stable" linux_main="Quark-linux-x86_64-0.4.7.AppImage" linux_other='[" Quark-linux-amd64-0.4.7.deb","Quark-linux-x64-0.4.7.tar.gz"]' windows_main="Quark-win-0.4.7.exe" windows_other='[" Quark-win-x64-0.4.7.msi","Quark-win-x64-0.4.7.zip"]' />
     </div>
 
@@ -100,13 +101,15 @@ import heroSection from "./landing-components/hero-section";
 import heroTop from "./landing-components/hero-top";
 import Download from "./Download";
 import SWUpdatePopup from "@default-theme/SWUpdatePopup.vue";
+import floaters from './landing-components/floaters';
 export default {
     components: {
         SWUpdatePopup,
         companyLogos,
         heroDownload,
         heroSection,
-        heroTop
+        heroTop,
+        floaters
     },
     data: () => {
         return {
