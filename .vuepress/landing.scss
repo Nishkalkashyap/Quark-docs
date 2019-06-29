@@ -55,9 +55,8 @@
 
     .landing-page-background:nth-child(6) {
         clip-path: polygon(0px 0%, 100% 3%, 100% 100%, 0px 100%);
-        // height: 100vh;
         top: -55vh;
-        margin-bottom: -150vh;
+        margin-bottom: -55vh;
         background: linear-gradient(to right, #a0d8f1 0%, #6574cd 100%);
     }
 
@@ -79,7 +78,7 @@
         }
 
         .landing-page-background:nth-child(6) {
-            clip-path: polygon(0px 0%, 100% 5%, 100% 100%, 0px 100%);
+            clip-path: polygon(0px 0%, 100% 2%, 100% 100%, 0px 100%);
         }
     }
 

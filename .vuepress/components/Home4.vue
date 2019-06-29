@@ -236,8 +236,8 @@ export default {
         // left: -160px;
         // top: 5.5em;
         transform: rotate(180deg);
-        bottom: 95vh;
-        position: relative;
+        bottom: 0vh;
+        position: absolute;
         fill: #6574cd99;
         stroke: #6574cd99;
         z-index: -2;
@@ -255,10 +255,9 @@ export default {
     // }
 
     h3 {
-        // border-top-right-radius: 10px;
-        // border-bottom-left-radius: 10px;
         border-radius: 2px;
-        margin-bottom: 150px;
+        margin-top: 60px;
+        margin-bottom: 50px;
         padding: 10px 20px;
     }
 }
