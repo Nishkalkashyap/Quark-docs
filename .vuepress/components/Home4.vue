@@ -85,6 +85,11 @@
         </div>
     </div>-->
 
+    <div class="landing-page-background">
+        <floaters side="left" />
+        <heroFeatures />
+    </div>
+
     <div class="landing-page-background downloads-container">
         <floaters side="right" />
         <!-- <svg viewBox="0 0 30 44.58" class="download-svg">
@@ -96,11 +101,6 @@
         <h3>
             <router-link to="/download/insiders">Or get the insiders release</router-link>
         </h3>
-    </div>
-
-    <div class="landing-page-background">
-        <floaters side="left" />
-        <heroFeatures />
     </div>
 
     <SWUpdatePopup :updateEvent="swUpdateEvent" />
@@ -206,7 +206,8 @@ export default {
         text-align: center;
         top: 70px;
         position: relative;
-        margin-bottom: 100px !important;
+        margin-bottom: 150px !important;
+        box-shadow: 0 20px 30px rgba(0, 0, 0, 0.5);
         // border-top-right-radius: 20px;
         // border-bottom-left-radius: 20px;
         // border-top: solid 10px var(--accent-color);
