@@ -19,7 +19,7 @@ import {
 export default {
     props: ["side"],
     data() {
-        const _svgs = getSvgs();
+        const _svgs = getSvgs().concat(darkSvgs);
         const svgs = JSON.parse(JSON.stringify(_svgs));
         if (this.side == "right") {
             Object.keys(svgs).map(key => {
@@ -31,7 +31,7 @@ export default {
             });
         }
         return {
-            svgs: svgs.concat(darkSvgs)
+            svgs: svgs
         };
     }
 };
