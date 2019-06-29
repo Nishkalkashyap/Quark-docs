@@ -98,6 +98,11 @@
         </h3>
     </div>
 
+    <div class="landing-page-background">
+        <floaters side="left" />
+        <heroFeatures />
+    </div>
+
     <SWUpdatePopup :updateEvent="swUpdateEvent" />
 </div>
 </template>
@@ -110,6 +115,7 @@ import heroTop from "./landing-components/hero-top";
 import Download from "./Download";
 import SWUpdatePopup from "@default-theme/SWUpdatePopup.vue";
 import floaters from "./landing-components/floaters";
+import heroFeatures from "./landing-components/hero-features";
 export default {
     components: {
         SWUpdatePopup,
@@ -117,7 +123,8 @@ export default {
         heroDownload,
         heroSection,
         heroTop,
-        floaters
+        floaters,
+        heroFeatures
     },
     data: () => {
         return {
