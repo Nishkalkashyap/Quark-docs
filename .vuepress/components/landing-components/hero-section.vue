@@ -21,7 +21,7 @@ export default {
 
 <style lang="scss" scoped>
 video {
-  width: calc(860px - 40px);
+  width: calc(100% - 40px);
   border-radius: 5px;
   z-index: 1;
 

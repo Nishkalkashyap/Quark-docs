@@ -1,12 +1,10 @@
 <template>
 <div class="home4-component">
     <heroTop />
-    <!-- <div class="home4-component"> -->
     <div class="full-height first-container landing-page-background">
         <div class="first-container-wrapper flex-center">
-            <!-- <companyLogos /> -->
             <div class="image-container">
-                <!-- <img src="~@buildAssets/guide/introduction.png" class="image-transition"> -->
+
                 <video
             muted
             autoplay
@@ -88,7 +86,7 @@ export default {
 }
 
 .first-container-wrapper {
-    width: 860px;
+    width: 100%;
     display: flex;
     justify-content: center;
 }
