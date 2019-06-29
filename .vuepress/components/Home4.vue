@@ -191,12 +191,14 @@ export default {
     h1 {
         // margin: 0px;
         // background-color: var(--text-color--dark);
-        padding: 15px 25px;
+        padding: 15px 35px;
         border-radius: 4px;
         text-align: center;
         top: 70px;
         position: relative;
         margin-bottom: 100px !important;
+        border-top-right-radius: 20px;
+        border-bottom-left-radius: 20px;
         // border-top: solid 10px var(--accent-color);
     }
 
