@@ -54,9 +54,10 @@
     }
 
     .landing-page-background:nth-child(6) {
-        clip-path: polygon(0px 0%, 100% 5%, 100% 100%, 0px 100%);
-        // height: 120vh;
+        clip-path: polygon(0px 0%, 100% 3%, 100% 100%, 0px 100%);
+        // height: 100vh;
         top: -55vh;
+        margin-bottom: -125vh;
         background: linear-gradient(to right, #a0d8f1 0%, #6574cd 100%);
     }
 
@@ -105,7 +106,6 @@
     $darkColor=#161719; //ignore error
 
     .downloads-container {
-
 
         button.download-enabled,
         span.coming-soon {

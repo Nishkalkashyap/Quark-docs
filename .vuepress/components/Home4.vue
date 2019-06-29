@@ -101,6 +101,17 @@
         <h3>
             <router-link to="/download/insiders">Or get the insiders release</router-link>
         </h3>
+
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 338.05" preserveAspectRatio="none">
+            <path>
+              <animate
+                attributeName="d"
+                values="M 0 100 Q 250 50 400 200 Q 550 350 800 300 L 800 0 L 0 0 L 0 100 Z;M 0 100 Q 200 150 400 200 Q 600 250 800 300 L 800 0 L 0 0 L 0 100 Z;M 0 100 Q 150 350 400 200 Q 650 50 800 300 L 800 0 L 0 0 L 0 100 Z"
+                repeatCount="indefinite"
+                dur="30s"
+              />
+            </path>
+          </svg>
     </div>
 
     <SWUpdatePopup :updateEvent="swUpdateEvent" />
@@ -220,15 +231,28 @@ export default {
     }
 
     svg {
-        // height: 50px;
-        height: 3em;
-        position: relative;
-        left: -160px;
-        // top: 90px;
-        top: 5.5em;
+        // height: 3em;
+        // position: relative;
+        // left: -160px;
+        // top: 5.5em;
         transform: rotate(180deg);
-        stroke-width: 2 !important;
+        top: -500px;
+        position: relative;
+        fill: #6574cd99;
+        stroke: #6574cd99;
+        z-index: -2;
+        // stroke-width: 2 !important;
     }
+    // svg {
+    //     // height: 50px;
+    //     height: 3em;
+    //     position: relative;
+    //     left: -160px;
+    //     // top: 90px;
+    //     top: 5.5em;
+    //     transform: rotate(180deg);
+    //     stroke-width: 2 !important;
+    // }
 
     h3 {
         // border-top-right-radius: 10px;
