@@ -126,8 +126,13 @@
             fill: $color;
         }
 
-        .container {
-            margin-bottom: 150px;
+        h3 {
+
+            background-color: $color;
+
+            a {
+                color: #161719;
+            }
         }
     }
 }

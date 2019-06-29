@@ -19,7 +19,7 @@
             </div>
             <heroDownload />
         </div>
-    </div> -->
+    </div>-->
 
     <heroSection side="left" heading="GitHub for Atom" upper="A text editor is at the core of a developer’s toolbox, but it doesn't usually work alone. Work with Git and GitHub directly from Atom with the GitHub package." lower="A text editor is at the core of a developer’s toolbox, but it doesn't usually work alone. Work with Git and GitHub directly from Atom with the GitHub package.">
         <video
@@ -32,7 +32,7 @@
         class="image-transition"
         slot="image"
       >
-        <source src="~@buildAssets/guide/showcase/web-browser.mp4" type="video/mp4">Your browser does not support the video tag.
+        <source src="~@buildAssets/guide/showcase/web-browser.mp4" type="video/mp4" />Your browser does not support the video tag.
       </video>
     </heroSection>
 
@@ -47,7 +47,7 @@
         class="image-transition"
         slot="image"
       >
-        <source src="~@buildAssets/guide/hello-world-intro.mp4" type="video/mp4">Your browser does not support the video tag.
+        <source src="~@buildAssets/guide/hello-world-intro.mp4" type="video/mp4" />Your browser does not support the video tag.
       </video>
     </heroSection>
 
@@ -62,7 +62,7 @@
         class="image-transition"
         slot="image"
       >
-        <source src="~@buildAssets/guide/showcase/web-browser.mp4" type="video/mp4">Your browser does not support the video tag.
+        <source src="~@buildAssets/guide/showcase/web-browser.mp4" type="video/mp4" />Your browser does not support the video tag.
       </video>
     </heroSection>
 
@@ -83,16 +83,19 @@
             </div>
             <heroDownload />
         </div>
-    </div> -->
+    </div>-->
 
     <div class="landing-page-background downloads-container">
         <floaters side="right" />
         <!-- <svg viewBox="0 0 30 44.58" class="download-svg">
         <path d="M28.74,20.81H1.26a1.26,1.26,0,0,1-1-2L14.16.5a1.25,1.25,0,0,1,1-.5h0a1.24,1.24,0,0,1,1,.51L29.75,18.8a1.25,1.25,0,0,1-1,2ZM3.81,18.29H26.22L15.16,3.37Z" />
         <path d="M28.74,42H1.26a1.28,1.28,0,0,1-1.13-.71A1.26,1.26,0,0,1,.26,40l13.9-18.29a1.28,1.28,0,0,1,1-.5h0a1.24,1.24,0,0,1,1,.51L29.75,40a1.26,1.26,0,0,1,.12,1.32A1.28,1.28,0,0,1,28.74,42ZM3.81,39.47H26.22L15.16,24.55Z" />
-        </svg> -->
+      </svg>-->
         <h1>All Downloads</h1>
         <Download disable_post_content="true" channel="stable" />
+        <h3>
+            <router-link to="/download/insiders">Or get the insiders release</router-link>
+        </h3>
     </div>
 
     <SWUpdatePopup :updateEvent="swUpdateEvent" />
@@ -106,7 +109,7 @@ import heroSection from "./landing-components/hero-section";
 import heroTop from "./landing-components/hero-top";
 import Download from "./Download";
 import SWUpdatePopup from "@default-theme/SWUpdatePopup.vue";
-import floaters from './landing-components/floaters';
+import floaters from "./landing-components/floaters";
 export default {
     components: {
         SWUpdatePopup,
@@ -202,7 +205,7 @@ export default {
         // border-top: solid 10px var(--accent-color);
     }
 
-    @media only screen and (max-width:600px) {
+    @media only screen and (max-width: 600px) {
         h1 {
             font-size: 36px !important;
         }
@@ -217,6 +220,13 @@ export default {
         top: 5.5em;
         transform: rotate(180deg);
         stroke-width: 2 !important;
+    }
+
+    h3 {
+        border-top-right-radius: 10px;
+        border-bottom-left-radius: 10px;
+        margin-bottom: 150px;
+        padding: 10px 20px;
     }
 }
 </style>
