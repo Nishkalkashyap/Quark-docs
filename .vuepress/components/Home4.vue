@@ -1,6 +1,7 @@
 <template>
 <div class="home4-component">
     <heroTop />
+
     <div class="full-height first-container landing-page-background">
         <div class="first-container-wrapper flex-center">
             <div class="image-container">
@@ -50,6 +51,7 @@
         <source src="~@buildAssets/guide/hello-world-intro.mp4" type="video/mp4">Your browser does not support the video tag.
       </video>
     </heroSection>
+
     <Download disable_post_content="true" version="0.4.7" channel="stable" linux_main="Quark-linux-x86_64-0.4.7.AppImage" linux_other='["Quark-linux-amd64-0.4.7.deb","Quark-linux-x64-0.4.7.tar.gz"]' windows_main="Quark-win-0.4.7.exe" windows_other='["Quark-win-x64-0.4.7.msi","Quark-win-x64-0.4.7.zip"]' />
 </div>
 </template>

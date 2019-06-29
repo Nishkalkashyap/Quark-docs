@@ -1,83 +1,6 @@
 .landing-page {
 
-    // --text-color: #f4f4f4 !important;
-    // --line-rule-color: #343434;
-    // --text-color--darker: #f2f2f2;
-    // --text-color--dark: #ffffff;
-    // --text-color--lighter: #24282e;
-    // --text-color--light: #161616;
-
-    // background-color: #161616;
-    // background: linear-gradient(180deg,#121417 0,#06090d 100%);
-
-    // header.navbar,
-    // div.links,
-    // .nav-item a[href="/download/"] {
-    //     color: #ffffff;
-    //     background-color: #121417;
-    // }
-
-    // .nav-item a[href="/download/"] {
-    //     background-color: #121417 !important;
-    //     border-bottom-color: transparent !important;
-    // }
-
-    // header.navbar {
-    //     border-bottom: transparent;
-    // }
-
-    // header.navbar ul.nav-dropdown {
-    //     // background-color: transparent;
-    //     color: var(--text-color--light);
-    // }
-
-    // #algolia-search-input {
-    //     display: none;
-    // }
-
-    p {
-        color: var(--text-color);
-        font-size: 16px !important;
-    }
-
-    .hero {
-        text-align: center;
-
-        img {
-            margin-top: -20px;
-            max-width: 250px;
-            position: relative;
-            top: -40px;
-        }
-
-        h1 {
-            margin-top: 0px;
-            margin-bottom: 10px !important;
-        }
-
-        p {
-            margin: 10px 0px !important;
-        }
-
-        p.description {
-            font-size: 22px !important;
-            max-width: 90% !important;
-            color: var(--text-color--light) !important;
-            margin-bottom: 20px !important;
-        }
-
-        p.action a {
-            border-radius: 3px !important;
-            padding: 0.8rem 1.6rem;
-            background-color: var(--accent-color);
-            color: #ffffff;
-            cursor: pointer;
-        }
-    }
-
     .landing-page-background {
-        // background: linear-gradient(180deg, #ffffff 0, #f3f3f3 100%);
-        // background: linear-gradient(to right, SlateBlue 0%, DeepSkyBlue 100%);
         width: 100%;
         display: flex;
         position: relative;
@@ -87,7 +10,7 @@
     }
 
     .landing-page-background:nth-child(1) {
-        height: 100vh;
+        height: calc(100vh - 56px);
     }
 
     .landing-page-background:nth-child(2) {
