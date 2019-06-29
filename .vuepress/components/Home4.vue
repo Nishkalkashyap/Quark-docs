@@ -92,7 +92,7 @@
         <path d="M28.74,42H1.26a1.28,1.28,0,0,1-1.13-.71A1.26,1.26,0,0,1,.26,40l13.9-18.29a1.28,1.28,0,0,1,1-.5h0a1.24,1.24,0,0,1,1,.51L29.75,40a1.26,1.26,0,0,1,.12,1.32A1.28,1.28,0,0,1,28.74,42ZM3.81,39.47H26.22L15.16,24.55Z" />
         </svg> -->
         <h1>All Downloads</h1>
-        <Download disable_post_content="true" version="0.4.7" channel="stable" linux_main="Quark-linux-x86_64-0.4.7.AppImage" linux_other='[" Quark-linux-amd64-0.4.7.deb","Quark-linux-x64-0.4.7.tar.gz"]' windows_main="Quark-win-0.4.7.exe" windows_other='[" Quark-win-x64-0.4.7.msi","Quark-win-x64-0.4.7.zip"]' />
+        <Download disable_post_content="true" channel="stable" />
     </div>
 
     <SWUpdatePopup :updateEvent="swUpdateEvent" />
@@ -203,7 +203,7 @@ export default {
     }
 
     @media only screen and (max-width:600px) {
-        h1{
+        h1 {
             font-size: 36px !important;
         }
     }

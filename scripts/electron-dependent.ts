@@ -50,7 +50,8 @@ async function updateDownloadLinks() {
     let hashes = '';
     hashes = hashes.concat(`!!! note See SHA-512 Hashes`, '\n');
     hashes = hashes.concat(`<DropDown>`, '\n');
-    hashes = hashes.concat(`<ReleaseNotes :sha='${js.js_beautify(JSON.stringify(JSON.parse(match)))}' />`, '\n');
+    // hashes = hashes.concat(`<ReleaseNotes :sha='${js.js_beautify(JSON.stringify(JSON.parse(match)))}' />`, '\n');
+    hashes = hashes.concat(`<ReleaseNotes channel="${releaseVar.bucketSubUrl}" />`, '\n');
     hashes = hashes.concat(`</DropDown>`, '\n');
     hashes = hashes.concat('!!!', '\n\n');
 
