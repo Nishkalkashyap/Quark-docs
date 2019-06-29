@@ -236,7 +236,7 @@ export default {
         // left: -160px;
         // top: 5.5em;
         transform: rotate(180deg);
-        top: -500px;
+        bottom: 95vh;
         position: relative;
         fill: #6574cd99;
         stroke: #6574cd99;
