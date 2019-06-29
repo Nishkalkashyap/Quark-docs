@@ -24,6 +24,16 @@
         height: 120vh;
         top: -12vh;
         background: linear-gradient(to right, #161719 0%, #161719 100%);
+
+        h3,
+        h3::before {
+            color: #ffffffdd;
+            border-top-color: #ffffffdd;
+        }
+
+        p {
+            color: #ffffffbb;
+        }
     }
 
     .landing-page-background:nth-child(4) {
@@ -31,6 +41,16 @@
         height: 100vh;
         top: -27vh;
         background: linear-gradient(to right, #78AF9F 0%, #659CC8 100%);
+
+        h3,
+        h3::before {
+            color: #161719dd;
+            border-top-color: #161719bb;
+        }
+
+        p {
+            color: #161719bb;
+        }
     }
 
     @media only screen and (max-width:600px) {
