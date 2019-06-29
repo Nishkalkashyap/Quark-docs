@@ -221,6 +221,16 @@ function getSvgs() {
         stroke : colors['purple'],
         fill : colors['transparent'],
       }
+    },
+    {
+      svg: svgs.triangle,
+      style: {
+        width: '4%',
+        top: 10 + '%',
+        left: 30 + '%',
+        stroke : colors['white'],
+        fill : colors['transparent'],
+      }
     }
   ]
 }

@@ -42,6 +42,7 @@ export default {
     width: calc(100% - 40px);
     height: calc(100% - 40px);
     margin: 20px;
+    z-index: -1;
 
     .random-svg {
         position: absolute;
