@@ -104,6 +104,7 @@ async function updateDownloadLinks() {
         windows_main: windowsMain,
         windows_other: JSON.stringify(windows_other_downloads)
     }, undefined, 4));
+    fs.writeFileSync(path.join(baseVerisonAssetsPath, '__shasum.json'), js.js_beautify(JSON.stringify(JSON.parse(match))))
 }
 
 

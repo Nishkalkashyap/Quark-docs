@@ -58,6 +58,6 @@ export default {
 }
 .height-container {
   transition: 0.2s max-height;
-  overflow-x: hidden !important;
+  // overflow-x: hidden !important;
 }
 </style>
