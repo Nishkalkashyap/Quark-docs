@@ -5,7 +5,6 @@
     <div class="full-height first-container landing-page-background">
         <div class="first-container-wrapper flex-center">
             <div class="image-container">
-
                 <video
             muted
             autoplay
@@ -67,7 +66,9 @@
       </video>
     </heroSection>
 
-    <Download disable_post_content="true" version="0.4.7" channel="stable" linux_main="Quark-linux-x86_64-0.4.7.AppImage" linux_other='["Quark-linux-amd64-0.4.7.deb","Quark-linux-x64-0.4.7.tar.gz"]' windows_main="Quark-win-0.4.7.exe" windows_other='["Quark-win-x64-0.4.7.msi","Quark-win-x64-0.4.7.zip"]' />
+    <Download disable_post_content="true" version="0.4.7" channel="stable" linux_main="Quark-linux-x86_64-0.4.7.AppImage" linux_other="[" Quark-linux-amd64-0.4.7.deb","Quark-linux-x64-0.4.7.tar.gz"]" windows_main="Quark-win-0.4.7.exe" windows_other="[" Quark-win-x64-0.4.7.msi","Quark-win-x64-0.4.7.zip"]" />
+
+    <SWUpdatePopup :updateEvent="swUpdateEvent" />
 </div>
 </template>
 
@@ -77,12 +78,28 @@ import heroDownload from "./landing-components/hero-download2";
 import heroSection from "./landing-components/hero-section";
 import heroTop from "./landing-components/hero-top";
 import Download from "./Download";
+import SWUpdatePopup from "@default-theme/SWUpdatePopup.vue";
 export default {
     components: {
+        SWUpdatePopup,
         companyLogos,
         heroDownload,
         heroSection,
         heroTop
+    },
+    data: () => {
+        return {
+            swUpdateEvent: null
+        };
+    },
+    mounted() {
+        this.$on("sw-updated", this.onSWUpdated);
+    },
+    methods: {
+        onSWUpdated(e) {
+            console.log(`Service Worker Updated`);
+            this.swUpdateEvent = e;
+        }
     }
 };
 </script>
