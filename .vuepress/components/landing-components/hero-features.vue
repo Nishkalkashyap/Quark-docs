@@ -55,7 +55,27 @@ export default {
                 {
                     svg: require('!!svg-inline-loader!./../../buildAssets/landing-page-svgs/npm-support.svg'),
                     heading: 'Npm Support',
-                    text: 'Think of any npm dependency you want to use, we probably support it! You can install a new dependency within seconds. '
+                    text: 'Think of any npm dependency you want to use, we probably support it! You can install a new dependency within seconds.'
+                },
+                {
+                    svg: require('!!svg-inline-loader!./../../buildAssets/landing-page-svgs/cross-platform.svg'),
+                    heading: 'Cross Platform',
+                    text: 'Compatible with Mac, Windows, and Linux, Electron apps build and run on three platforms.'
+                },
+                {
+                    svg: require('!!svg-inline-loader!./../../buildAssets/landing-page-svgs/multiple-themes.svg'),
+                    heading: 'Multiple Themes',
+                    text: 'Think of any npm dependency you want to use, we probably support it! You can install a new dependency within seconds.'
+                },
+                {
+                    svg: require('!!svg-inline-loader!./../../buildAssets/landing-page-svgs/web-technologies.svg'),
+                    heading: 'Web Technologies',
+                    text: 'Electron uses Chromium and Node.js so you can build your app with HTML, CSS, and JavaScript.'
+                },
+                {
+                    svg: require('!!svg-inline-loader!./../../buildAssets/landing-page-svgs/control-hardware.svg'),
+                    heading: 'Control Hardware',
+                    text: 'Electron uses Chromium and Node.js so you can build your app with HTML, CSS, and JavaScript.'
                 },
             ]
         }
