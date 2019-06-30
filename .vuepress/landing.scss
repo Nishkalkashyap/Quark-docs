@@ -123,6 +123,7 @@
         button.download-enabled,
         button.download-enabled span.platform-distro,
         .other-downloads span,
+        span.coming-soon,
         .other-downloads-heading {
             color: var(--text-color--darker) !important;
         }
@@ -131,9 +132,12 @@
             color: $color;
         }
 
-        svg {
-            stroke: $color;
-            fill: $color;
+        // svg {
+        //     stroke: $color;
+        //     fill: $color;
+        // }
+        img.download-svg {
+            display: none;
         }
 
         h3 {
@@ -158,6 +162,7 @@
             background-color: $color;
 
             h3,
+            .svg,
             p {
                 color: var(--text-color--darker);
             }
