@@ -66,15 +66,18 @@ makeMeFly(duration=5s, delay=0s, negative=-50px, positive=50px)
 
 
 makeMeRotate(duration=5s, delay=0s, deg1=0deg, deg2=359deg)
-    animation: duration linear 0s infinite normal none running myRotation;
+    $rand = myMove + random(10,1000000);
+    animation-name: $rand;
+    animation: duration linear delay infinite normal none running $rand;
+    animation-timing-function: ease-in-out;
 
-    @keyframes myRotation 
+    @keyframes {$rand} 
         from {
-            transform: rotate(0deg);
+            transform: rotate(deg1);
         }
         to {
-            transform: rotate(359deg);
+            transform: rotate(deg2);
         }
 
-// .landing-page-background .hero-section-container h3::after
-//     makeMeRotate(4s)
+.landing-page-background .random-svg.hexa
+    makeMeRotate(12s, 0s, 0deg, 360deg)

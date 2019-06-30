@@ -3,6 +3,7 @@
     <div class="random-svgs-container">
         <svg
         class="random-svg"
+        :class="svg.svg.className"
         v-for="svg in svgs"
         v-html="svg.svg.shape"
         :viewBox="svg.svg.viewBox"
