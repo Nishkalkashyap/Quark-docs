@@ -66,25 +66,6 @@
       </video>
     </heroSection>
 
-    <!-- <div class="full-height first-container landing-page-background">
-        <div class="first-container-wrapper flex-center">
-            <div class="image-container">
-                <video
-            muted
-            autoplay
-            loop
-            name="media"
-            poster="~@buildAssets/guide/hello-world-intro.png"
-            crossorigin="anonymous"
-            class="image-transition"
-          >
-            <source src="~@buildAssets/guide/showcase/web-browser.mp4" type="video/mp4">Your browser does not support the video tag.
-          </video>
-            </div>
-            <heroDownload />
-        </div>
-    </div>-->
-
     <div class="landing-page-background">
         <floaters side="left" />
         <heroFeatures />
