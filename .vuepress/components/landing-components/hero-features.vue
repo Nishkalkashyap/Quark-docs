@@ -4,6 +4,7 @@
         <h1>Everything you would expect</h1>
         <div class="features-container">
             <div class="feature" v-for="feature in features">
+                <div class="svg" v-html="feature.svg" v-if="feature.svg"></div>
                 <h3>{{feature.heading}}</h3>
                 <p>{{feature.text}}</p>
             </div>
@@ -17,27 +18,33 @@ export default {
     data() {
         return {
             features: [{
+                    svg: require('!!svg-inline-loader!./../../buildAssets/landing-page-svgs/key-binding.svg'),
                     heading: 'Keybindings and Quick Actions',
                     text: `Use Keybindings and Quick Actions to execute commonly used actions more quickly.`
                 },
                 {
+                    svg: require('!!svg-inline-loader!./../../buildAssets/landing-page-svgs/configuration-ui.svg'),
                     heading: 'Configuration UI',
                     text: `We show a UI for configuration files so you don't have to look up how the configuration is structured.`
                 },
                 {
+                    svg: require('!!svg-inline-loader!./../../buildAssets/landing-page-svgs/monaco-editor.svg'),
                     heading: 'Monaco Editor',
                     text: `We use the same editor as VSCode, which gives us "Go to Definition", "Replace Occurences" and more!`
                 },
                 {
+                    svg: require('!!svg-inline-loader!./../../buildAssets/landing-page-svgs/error-overlay.svg'),
                     heading: 'Error Overlay',
                     text: `We show a user friendly error overlay for every error, sometimes with suggestions on how to solve it.`
                 },
                 {
+                    svg: require('!!svg-inline-loader!./../../buildAssets/landing-page-svgs/typescript.svg'),
                     heading: 'TypeScript',
                     text: 'Thanks to Monaco we show TypeScript autocompletions and diagnostics for TS sandboxes.'
                 },
                 {
-                    heading: 'TypeScript',
+                    svg: require('!!svg-inline-loader!./../../buildAssets/landing-page-svgs/intrgrated-terminal.svg'),
+                    heading: 'Intrgrated Terminal',
                     text: 'Thanks to Monaco we show TypeScript autocompletions and diagnostics for TS sandboxes.'
                 }
             ]
@@ -86,6 +93,13 @@ h1 {
 
         h3 {
             padding-top: 0px !important;
+            margin-top: 15px !important;
+            margin-bottom: 15px !important;
+        }
+
+        .svg {
+            width: 32px;
+            margin-top: 15px !important;
         }
     }
 
