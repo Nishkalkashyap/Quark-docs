@@ -119,15 +119,15 @@ h1 {
 .features-container {
     display: flex;
     flex-wrap: wrap;
-    max-width: 860px;
+    max-width: 1260px;
     padding: 20px;
-    justify-content: center;
+    justify-content: space-around;
     text-align: initial;
     margin-bottom: 100px;
 
     .feature {
         min-width: 340px;
-        width: calc(50% - 80px);
+        width: calc(33% - 60px);
         padding: 10px 20px;
         margin: 10px 20px;
         display: inline-block;
