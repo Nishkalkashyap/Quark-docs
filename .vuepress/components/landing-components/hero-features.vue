@@ -46,7 +46,17 @@ export default {
                     svg: require('!!svg-inline-loader!./../../buildAssets/landing-page-svgs/intrgrated-terminal.svg'),
                     heading: 'Intrgrated Terminal',
                     text: 'Thanks to Monaco we show TypeScript autocompletions and diagnostics for TS sandboxes.'
-                }
+                },
+                {
+                    svg: require('!!svg-inline-loader!./../../buildAssets/landing-page-svgs/webpack-build.svg'),
+                    heading: 'Webpack Build',
+                    text: 'Thanks to Monaco we show TypeScript autocompletions and diagnostics for TS sandboxes.'
+                },
+                {
+                    svg: require('!!svg-inline-loader!./../../buildAssets/landing-page-svgs/npm-support.svg'),
+                    heading: 'Npm Support',
+                    text: 'Think of any npm dependency you want to use, we probably support it! You can install a new dependency within seconds. '
+                },
             ]
         }
     }
