@@ -60,7 +60,7 @@ export default {
                 {
                     svg: require('!!svg-inline-loader!./../../buildAssets/landing-page-svgs/cross-platform.svg'),
                     heading: 'Cross Platform',
-                    text: 'Compatible with Mac, Windows, and Linux, Electron apps build and run on three platforms.'
+                    text: 'Quark works across operating systems. Use it on OS X, Windows, or Linux.'
                 },
                 {
                     svg: require('!!svg-inline-loader!./../../buildAssets/landing-page-svgs/multiple-themes.svg'),
@@ -76,6 +76,21 @@ export default {
                     svg: require('!!svg-inline-loader!./../../buildAssets/landing-page-svgs/control-hardware.svg'),
                     heading: 'Control Hardware',
                     text: 'Electron uses Chromium and Node.js so you can build your app with HTML, CSS, and JavaScript.'
+                },
+                {
+                    svg: require('!!svg-inline-loader!./../../buildAssets/landing-page-svgs/find-and-replace.svg'),
+                    heading: 'Find and replace',
+                    text: 'Find, preview, and replace text as you type in a file or across all your projects.'
+                },
+                {
+                    svg: require('!!svg-inline-loader!./../../buildAssets/landing-page-svgs/smart-autoCompletion.svg'),
+                    heading: 'Smart autocompletion',
+                    text: 'Find, preview, and replace text as you type in a file or across all your projects.'
+                },
+                {
+                    svg: require('!!svg-inline-loader!./../../buildAssets/landing-page-svgs/under-the-hood.svg'),
+                    heading: 'Under the hood',
+                    text: 'Find, preview, and replace text as you type in a file or across all your projects.'
                 },
             ]
         }
