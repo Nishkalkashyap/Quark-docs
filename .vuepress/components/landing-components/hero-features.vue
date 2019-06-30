@@ -82,10 +82,15 @@ h1 {
         box-sizing: border-box;
         border-radius: 5px;
         box-shadow: 0 20px 30px rgba(0, 0, 0, 0.5);
+        transition: transform 0.2s;
 
         h3 {
             padding-top: 0px !important;
         }
+    }
+
+    .feature:hover {
+        transform: translateY(-5px);
     }
 }
 </style>
