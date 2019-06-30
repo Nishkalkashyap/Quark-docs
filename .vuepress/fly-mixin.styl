@@ -1,3 +1,6 @@
+random(a,b)
+  return math(math(0, 'random')*(b - a + 1) + a, 'floor')
+
 
 makeMeFly(duration=5s, delay=0s, negative=-50px, positive=50px)
     animation-duration: duration;
@@ -7,24 +10,28 @@ makeMeFly(duration=5s, delay=0s, negative=-50px, positive=50px)
     animation-direction: alternate;
     animation-fill-mode: none;
     animation-play-state: running;
-    animation-name: myMove;
-
-    @keyframes myMove {
-        0% {
+    $rand = myMove + random(10,1000000);
+    animation-name: $rand;
+    @keyframes {$rand}
+        0% 
+            transform: translateY(negative);
+            // transform: translateY(- + negative);
             -webkit-transform: translateY(negative);
+            // -webkit-transform: translateY(- + negative);
             -moz-transform: translateY(negative);
+            // -moz-transform: translateY(- + negative);
             -o-transform: translateY(negative);
-        }
-
-        100% {
+            // -o-transform: translateY(- + negative);
+        100% 
+            transform: translateY(positive);
             -webkit-transform: translateY(positive);
             -moz-transform: translateY(positive);
             -o-transform: translateY(positive);
-        }
-    }
+        
+    
 
-.landing-page-background:before
-,.landing-page-background:after
+.landing-page-background:before,
+.landing-page-background:after
     makeMeFly(12s, 0s, -90px, 90px)
 
 // .landing-page-background:after
@@ -33,25 +40,28 @@ makeMeFly(duration=5s, delay=0s, negative=-50px, positive=50px)
 .landing-page-background video
     makeMeFly(10s, 3s)
 
-.landing-page-background > img.logo
+.landing-page-background img.logo
     makeMeFly(6s, 0s, -20px)
 
-.landing-page-background .random-svgs-container
-    makeMeFly(6s, 0s, -20px, 20px)
+.landing-page-background.hero  h1
+    makeMeFly(6s, 0s, -20px, 15px)
 
-.landing-page-background.downloads-container h1,
-.landing-page-background h1,
+.landing-page-background .random-svgs-container
+    makeMeFly(8s, 0s, -40px, 40px)
+
+.landing-page-background .hero-features-component h1,
 .landing-page-background .hero-features-component .features-container,
+.landing-page-background.downloads-container h1,
+.landing-page-background.downloads-container h3,
 .landing-page-background .download-page-component .container
-.landing-page-background.downloads-container h3
     makeMeFly(8s, 0s, -20px, 20px)
 
 
 @media only screen and (max-width:600px) 
     .landing-page-background video
-        makeMeFly(10s, 3s, -35px, 35px)
+        makeMeFly(10s, 3s, -20px, 30px)
 
-    .landing-page-background > img.logo
+    .landing-page-background img.logo
         makeMeFly(6s, 0s, 0px, 55px)
 
 

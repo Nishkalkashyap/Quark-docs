@@ -50,11 +50,12 @@ export default {
 h1 {
     padding: 15px 20px;
     display: inline-block;
-    text-align: center;
     border-radius: 4px;
     font-size: 36px !important;
     text-align: center;
     box-shadow: 0 20px 30px rgba(0, 0, 0, 0.5);
+    max-width: calc(100% - 100px);
+    box-sizing: border-box;
 }
 
 @media only screen and (max-width: 600px) {
@@ -73,7 +74,7 @@ h1 {
     margin-bottom: 100px;
 
     .feature {
-        min-width: 360px;
+        min-width: 340px;
         width: calc(50% - 80px);
         padding: 10px 20px;
         margin: 10px 20px;
