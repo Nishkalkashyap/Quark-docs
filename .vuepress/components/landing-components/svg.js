@@ -9,14 +9,14 @@ var svgs = {
       />`
     ),
     viewBox: '0 0 30 30',
-    className : 'triangle'
+    className: 'triangle'
   },
   circle: {
     shape: (
       `<path d="M15,30A15,15,0,1,1,30,15,15,15,0,0,1,15,30ZM15,6.23A8.77,8.77,0,1,0,23.77,15,8.77,8.77,0,0,0,15,6.23Z" />`
     ),
     viewBox: '0 0 30 30',
-    className : 'circle'
+    className: 'circle'
   },
   arrowUp: {
     shape: (
@@ -24,7 +24,7 @@ var svgs = {
         <path d="M28.74,42H1.26a1.28,1.28,0,0,1-1.13-.71A1.26,1.26,0,0,1,.26,40l13.9-18.29a1.28,1.28,0,0,1,1-.5h0a1.24,1.24,0,0,1,1,.51L29.75,40a1.26,1.26,0,0,1,.12,1.32A1.28,1.28,0,0,1,28.74,42ZM3.81,39.47H26.22L15.16,24.55Z" />`
     ),
     viewBox: '0 0 30 42',
-    className : 'arrowUp'
+    className: 'arrowUp'
   },
   upDown: {
     shape: (
@@ -32,14 +32,14 @@ var svgs = {
         <path d="M14.83,20.82h0a1.28,1.28,0,0,1-1-.52L.25,2a1.27,1.27,0,0,1,2-1.51L14.84,17.45,27.73.5a1.26,1.26,0,0,1,2,1.53L15.84,20.32A1.28,1.28,0,0,1,14.83,20.82Z" />`
     ),
     viewBox: '0 0 30 44.58',
-    className : 'upDown'
+    className: 'upDown'
   },
   box: {
     shape: (
       `      <path d="M28,2V28H2V2H28m.13-2H1.88A1.88,1.88,0,0,0,0,1.88V28.13A1.88,1.88,0,0,0,1.88,30H28.13A1.87,1.87,0,0,0,30,28.13V1.88A1.88,1.88,0,0,0,28.13,0Z" />
 `    ),
     viewBox: '0 0 30 30',
-    className : 'box'
+    className: 'box'
   },
   hexa: {
     shape: (
@@ -50,7 +50,7 @@ var svgs = {
       />`
     ),
     viewBox: '0 0 30 30',
-    className : 'hexa'
+    className: 'hexa'
   },
   cross: {
     shape: (
@@ -60,7 +60,7 @@ var svgs = {
       />`
     ),
     viewBox: '0 0 100 100',
-    className : 'cross'
+    className: 'cross'
   },
 }
 
