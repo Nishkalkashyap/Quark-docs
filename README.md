@@ -17,5 +17,5 @@ actionLink: /guide/intro.html
 #   details: Compatible with Mac, Windows, and Linux, Quark projects run on all three platforms.
 pageClass: landing-page
 footer: MIT Licensed | Copyright © 2019-present Nishkal Kashyap
-layout: Home
+layout: Landing
 ---
