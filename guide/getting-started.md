@@ -26,8 +26,10 @@ You need to download and install the Quark IDE for your PC from [here.](/downloa
 ![Landing Page](~@buildAssets/guide/getting-started/start-new-project.png =300x)
 
   3.  After entering the project name, click on 'Create' button.
+
 ![Landing Page](~@buildAssets/guide/getting-started/enter-project-name.png)
-  4.  If the project was created successfully, you will be prompted to open the project. Click on __"Open Project"__.
+
+  1.  If the project was created successfully, you will be prompted to open the project. Click on __"Open Project"__.
 
 ![Landing Page](~@buildAssets/guide/getting-started/open-project.png =300x)
 
