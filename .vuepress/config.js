@@ -181,6 +181,7 @@ module.exports = {
                 "setup.md",
                 "quark-ide.md",
                 "getting-started.md",
+                "hello-world-app.md",
                 "showcase.md"
             ],
             "/references/": [

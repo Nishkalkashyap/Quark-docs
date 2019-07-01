@@ -1,5 +1,5 @@
 ---
-description : 'This guide shows you how to build and run a simple Quark applet.'
+description : 'This guide shows you how to build and run a simple Quark applet. The aim of this guide is to help you give an overview of the development workflow.'
 author : nishkal
 tags : ['guide']
 cover : ~@buildAssets/guide/getting-started.png
@@ -8,7 +8,7 @@ cover : ~@buildAssets/guide/getting-started.png
 # Getting Started
 <Header />
 
-#### Estimated completion time : Less than 5 minutes.
+##### Estimated completion time : Less than 5 minutes.
 
 [[toc]]
 
@@ -17,10 +17,10 @@ The official guide assumes intermediate level knowledge of HTML, CSS, and JavaSc
 <!-- Before you begin, it is recommended that your development environment an npm package manager. Although, it is not strictly required to complete this guide. -->
 
 ## Steps
-### Step 1: Installing the Quark IDE
+#### Step 1: Installing the Quark IDE
 You need to download and install the Quark IDE for your PC from [here.](/download/)
 
-### Step 2: Starting a new Project
+#### Step 2: Starting a new Project
   1.  After installing Quark, open the IDE.
   2.  You will be shown a welcome screen. Click on __"Start a new Project"__
 
@@ -30,11 +30,11 @@ You need to download and install the Quark IDE for your PC from [here.](/downloa
 
 ![Landing Page](~@buildAssets/guide/getting-started/enter-project-name.png)
 
-  1.  If the project was created successfully, you will be prompted to open the project. Click on __"Open Project"__.
+  4.  If the project was created successfully, you will be prompted to open the project. Click on __"Open Project"__.
 
 ![Landing Page](~@buildAssets/guide/getting-started/open-project.png =300x)
 
-### Step 3: Navigating through the IDE
+#### Step 3: Navigating through the IDE
   1. After opening the project your view may look something like this.
 
 
@@ -46,7 +46,7 @@ You need to download and install the Quark IDE for your PC from [here.](/downloa
 
 ![An image](~@buildAssets/guide/intro/setup-editor.png)
 
-### Step 4: Writing your Code.
+#### Step 4: Writing your Code.
 
   1. Notice that our file already has one line of code, that prints a console message. We'll keep this tutorial to only one line of code.
   2. Let us change the console message to "Hello World, I'm Quark". Your code should now look like this.
@@ -55,9 +55,8 @@ You need to download and install the Quark IDE for your PC from [here.](/downloa
 console.log("Hello World, I'm Quark");
 ```
 
-### Step 5: Building the applet
+#### Step 5: Building the applet
 
-  <!-- 1. To build the sketch, open the command palette __(defaults to "ctrl+shift+p")__. And select the build command. Your view now should look something like this. -->
   1. To build the applet, press the __build__ button at the bottom right corner of the IDE.
 
 ![Build](~@buildAssets/guide/intro/build.png)
@@ -68,7 +67,7 @@ console.log("Hello World, I'm Quark");
 
   4. As visible in the output, our build was successful, now lets run the applet.
 
-### Step 6: Running the applet
+#### Step 6: Running the applet
 
   1. To run the applet, press the __run__ button at the bottom right corner _(adjacent to the build button)_ of the IDE.
   2. This should run our applet and a new window will pop open like so.
@@ -78,7 +77,7 @@ console.log("Hello World, I'm Quark");
   3. Notice the console message printed in the devtools output channel. This shows that our code ran properly.
 
 #### The entire process could be summarized in the following video.
-We create a new project, build the project, and run the project, __all within 15 seconds!!__
+We create a new project, build the project, and run the project. __All of which can be done within 15 seconds!!__
 
 <video muted autoplay loop style="max-width:100%; height:auto" name="media" poster="~@buildAssets/getting-started/project-start-demo.jpg" crossOrigin="anonymous">
   <source src="~@buildAssets/getting-started/project-start-demo.mp4" type="video/mp4">
