@@ -30,7 +30,9 @@ root().then(() => {
 }).catch(console.error);
 async function root() {
     await getRawContent();
-    await createVersionJsonFile().catch(console.error);
+    await createVersionJsonFile().catch((e) => {
+        throw Error(e);
+    });
 }
 
 async function getRawContent() {
@@ -50,6 +52,12 @@ async function getRawContent() {
 function gitDiff(): string {
     const current = JSON.parse(JSON.stringify(packageJson));
     const previous = fs.readJsonSync(`${baseVerisonAssetsPath}/__package.json`);
+
+    if (current.version == previous.version) {
+        printConsoleStatus(`Previous version is equal to current version`, 'danger');
+        process.exit(1);
+        // throw Error(`Previous version is equal to current version`);
+    }
 
     const currentDeps = getImportantDeps(current);
     const previousDeps = getImportantDeps(previous);
