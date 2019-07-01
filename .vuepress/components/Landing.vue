@@ -2,7 +2,7 @@
 <div class="home4-component">
     <heroTop />
 
-    <heroSection side="left" heading="GitHub for Atom" upper="A text editor is at the core of a developer’s toolbox, but it doesn't usually work alone. Work with Git and GitHub directly from Atom with the GitHub package." lower="A text editor is at the core of a developer’s toolbox, but it doesn't usually work alone. Work with Git and GitHub directly from Atom with the GitHub package.">
+    <heroSection side="left" heading="New genre of desktop applications" upper="Built to power a whole new genre of desktop applications">
         <video
         muted
         autoplay

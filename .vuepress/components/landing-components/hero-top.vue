@@ -3,7 +3,7 @@
     <div class="hero landing-page-background">
         <img src="/images/icon-svg.svg" alt="hero" class="logo">
         <h1>Lightning fast app creation.</h1>
-        <p class="description">Quark Studio is a powerful app builder that delivers a smooth developer experience for teams building with Ionic. Get started with the fastest and easiest way to create award-winning cross-platform apps, from a single tool.</p>
+        <p class="description">Quark Studio is a cross-platform, integrated development environment for rapidly building - functional , utility applets written in HTML, CSS and JavaScript with native desktop app like capabilities.</p>
         <p class="action">
             <router-link to="/guide/intro.html" class="nav-link action-button">Get Started →</router-link>
         </p>
