@@ -81,7 +81,7 @@ Once Quark releases in beta phase, it will follow [semver](https://semver.org/).
 
 ## Next Steps
 Once you have installed Quark, these topics will help you learn more about Quark:
-* [User Interface](/guide/user-interface.md): A quick orientation to Quark.
+* [User Interface](/guide/quark-ide.md): A quick orientation to Quark.
 * [Getting Started](/guide/getting-started.md): A "Hello World" example to get you started with Quark.
 * [References](/references/app.md): Learn how to use the Quark API.
 * [FAQs](/FAQ/glossary.md): Frequently Asked Questions.
