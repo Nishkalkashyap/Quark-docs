@@ -179,7 +179,7 @@ module.exports = {
             "/guide/": [
                 "intro.md",
                 "setup.md",
-                "user-interface.md",
+                "quark-ide.md",
                 "getting-started.md",
                 "showcase.md"
             ],
