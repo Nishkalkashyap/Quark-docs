@@ -12,7 +12,8 @@ cover : ~@buildAssets/guide/getting-started.png
 
 [[toc]]
 
-<!-- ## Prerequisites -->
+## Prerequisites
+The official guide assumes intermediate level knowledge of HTML, CSS, and JavaScript. 
 <!-- Before you begin, it is recommended that your development environment an npm package manager. Although, it is not strictly required to complete this guide. -->
 
 ## Steps
