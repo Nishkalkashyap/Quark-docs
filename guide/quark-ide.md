@@ -1,14 +1,14 @@
 ---
-description : 'fdsfds fdsfds'
+description : 'At the heart of Quark IDE is a code editor.'
 author : nishkal
 tags : ['guide']
 cover : ~@buildAssets/guide/quark-ide.png
 ---
 
-# User Interface and Features
+# Quark development environment
 At the heart of Quark IDE is a code editor. Like many other code editors, Quark adopts a common user interface and layout of an explorer on the left showing all of the files and folders in your project, an editor on the right showing contents of the file you've opened.
 
-The entire user interface is inspired by the very popular VS Code editor.
+The entire user interface is inspired by the very popular code editor, Microsoft's Visual Studio Code.
 
 ![UI Overview](~@buildAssets/guide/quark-ide/ui-overview.png)
 

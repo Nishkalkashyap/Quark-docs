@@ -39,10 +39,10 @@ Since every applet is essentially some bundled javascript code, Quark applets ar
 
 <!-- Under the hood, Quark achieves this functionality by combining several set of tools in one single package and abstracting away the complexity to setup an environment for every single time you start a new project. -->
 
-## The integrated development environment.
+## Quark development environment.
 Quark applications are built using it's integrated development environment that include a text editor and a code compiler. It enables the creation of applications within a carefully designed set of constraints. 
 
-Some of the [features](/guide/quark-ide.md) of Quark IDE include `smart auto completion`, `go to definition`, `find and replace`, `built in package manager`, `typescript support`. 
+Some of the [features](/guide/quark-ide.md) of Quark IDE include - smart auto completion, go to definition, find and replace,typescript support, built in package manager and code compiler.
 
 <!-- ## Workflow
 
@@ -119,7 +119,7 @@ Once Quark releases in beta phase, it will follow [semver](https://semver.org/).
 ## First Steps
 To get the most out of Quark, start by reviewing a few introductory topics:
 * [Setting up the environment](/guide/setup.md) : Learn how to install Quark and get up and running within minutes.
-* [User Interface](/guide/quark-ide.md): Get to know how to navigate through the user interface.
+* [Quark IDE](/guide/quark-ide.md): Get to know how to navigate through the Quark development environment.
 * [Showcase](/guide/showcase.md): View example projects made with Quark.
 
 

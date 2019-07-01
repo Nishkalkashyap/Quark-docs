@@ -34,7 +34,7 @@ We recommend:
 
 Alternatively, you can also download a Zip archive, extract it and run Quark from there. On the downside, you will need to manually update Quark for each release.
 
-!!! info NOTE
+!!! warning NOTE
 It is recommended that you download the setup file(`Quark-win-x64-${version}.exe`) instead of the zip archive, since auto-updates are only supported via the .exe file.
 
 If you're prompted by Quark, accept the newest update and it will be installed (you won't need to do anything else to get the latest bits).
@@ -50,7 +50,7 @@ Quark for linux is officially distributed as an AppImage.
 
 Alternatively, you can also download the .tar.gz archive, extract it and run Quark from there. On the downside, you will need to manually update Quark for each release.
 
-!!! info NOTE
+!!! warning NOTE
 It is recommended that you download the setup file(`Quark-linux-x86_64-${version}.AppImage`) instead of the .tar.gz archive, since auto-updates are only supported via the .AppImage file.
 !!!
 
@@ -69,8 +69,8 @@ A handful of features within Quark require network communication to work, such a
 If you are behind a firewall which needs to whitelist domains used by Quark, here's the list of hostnames you should allow communication to go through:
 
 * __`quarkjs.io`__
+* __`release.quarkjs.io`__
 * __`social.quarkjs.io`__
-* __`storage.googleapis.com`__
 * __`npmjs.org`__
 
 ## Updates
@@ -81,7 +81,7 @@ Once Quark releases in beta phase, it will follow [semver](https://semver.org/).
 
 ## Next Steps
 Once you have installed Quark, these topics will help you learn more about Quark:
-* [User Interface](/guide/quark-ide.md): A quick orientation to Quark.
+* [Quark IDE](/guide/quark-ide.md): A quick orientation to Quark IDE.
 * [Getting Started](/guide/getting-started.md): A "Hello World" example to get you started with Quark.
 * [References](/references/app.md): Learn how to use the Quark API.
 * [FAQs](/FAQ/glossary.md): Frequently Asked Questions.
