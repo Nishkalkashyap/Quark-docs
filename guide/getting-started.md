@@ -1,21 +1,19 @@
 ---
-description : 'Welcome to Quark. Quark is a flexible software sketchbook that helps you rapidly create functional softwares for your prototypal projects.'
+description : 'This guide shows you how to build and run a simple Quark applet.'
 author : nishkal
 tags : ['guide']
 cover : ~@buildAssets/guide/getting-started.png
 ---
 
 # Getting Started
-Welcome to Quark. Quark is a flexible software sketchbook that helps you rapidly create functional softwares for your prototypal projects.
-
-This guide shows you how to build and run a simple quark sketch. You'll use the [Quark IDE](/guide/quark-ide.md) to create and build your sketches.
+<Header />
 
 #### Estimated completion time : Less than 5 minutes.
 
 [[toc]]
 
-## Prerequisites
-Before you begin, it is recommended that your development environment an npm package manager. Although, it is not strictly required to complete this guide.
+<!-- ## Prerequisites -->
+<!-- Before you begin, it is recommended that your development environment an npm package manager. Although, it is not strictly required to complete this guide. -->
 
 ## Steps
 ### Step 1: Installing the Quark IDE
@@ -23,9 +21,15 @@ You need to download and install the Quark IDE for your PC from [here.](/downloa
 
 ### Step 2: Starting a new Project
   1.  After installing Quark, open the IDE.
-  2.  You will be shown a welcome screen, click on __"Start a new Project"__.
+  2.  You will be shown a welcome screen. Click on __"Start a new Project"__
+
+![Landing Page](~@buildAssets/guide/getting-started/start-new-project.png =300x)
+
   3.  After entering the project name, click on 'Create' button.
+![Landing Page](~@buildAssets/guide/getting-started/enter-project-name.png)
   4.  If the project was created successfully, you will be prompted to open the project. Click on __"Open Project"__.
+
+![Landing Page](~@buildAssets/guide/getting-started/open-project.png =300x)
 
 ### Step 3: Navigating through the IDE
   1. After opening the project your view may look something like this.
@@ -48,23 +52,23 @@ You need to download and install the Quark IDE for your PC from [here.](/downloa
 console.log("Hello World, I'm Quark");
 ```
 
-### Step 5: Building the sketch
+### Step 5: Building the applet
 
-  1. To build the sketch, open the command palette __(defaults to "ctrl+shift+p")__. And select the build command. Your view now should look something like this.
+  <!-- 1. To build the sketch, open the command palette __(defaults to "ctrl+shift+p")__. And select the build command. Your view now should look something like this. -->
+  1. To build the applet, press the __build__ button at the bottom right corner of the IDE.
 
 ![Build](~@buildAssets/guide/intro/build.png)
 
-  1. Hit the enter key to run the build.
   2. To check the build logs, go to the Output section in Menu bar and select __"Build: Focus"__. This will focus on the build logs output channel.
 
 ![Build](~@buildAssets/guide/intro/build-focus.png)
 
-  4. As visible in the output, out build was successful, now lets run out sketch.
+  4. As visible in the output, out build was successful, now lets run out applet.
 
-### Step 6: Running the sketch
+### Step 6: Running the applet
 
-  1. To run the sketch, open the commands panel and select __"Run"__.
-  2. This should run our sketch and a new window will pop open like so.
+  1. To run the applet, press the __run__ button at the bottom right corner _(adjacent to the build button)_ of the IDE.
+  2. This should run our applet and a new window will pop open like so.
 
 ![Build](~@buildAssets/guide/intro/run.png)
 

@@ -15,6 +15,11 @@ cover : ~@buildAssets/guide/introduction.png
 ## What is Quark ?
 Quark is a cross-platform, __integrated development environment__ and a __Javascript runtime__ for rapidly building - functional, utility applications written in HTML, CSS and JavaScript with native desktop app like capabilities.
 
+<video muted autoplay loop style="max-width:100%; height:auto" name="media" poster="~@buildAssets/guide/hello-world-intro.png" crossOrigin="anonymous">
+  <source src="~@buildAssets/guide/hello-world-intro.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video> 
+
 Every application built with Quark is essentially some bundled Javascript code that is executed within the context of a __global runtime environment__ _(also provided by Quark)_. 
 
 Since these applications are dependent on this global execution context provided by Quark and have a direct dependency on the software itself, we call these applications __Quark Applets__.
@@ -40,7 +45,7 @@ Since every applet is essentially some bundled javascript code, Quark applets ar
 <!-- Under the hood, Quark achieves this functionality by combining several set of tools in one single package and abstracting away the complexity to setup an environment for every single time you start a new project. -->
 
 ## Quark development environment.
-Quark applications are built using it's integrated development environment that include a text editor and a code compiler. It enables the creation of applications within a carefully designed set of constraints. 
+Quark applications are built using it's integrated development environment that, at the very least, include a text editor and a code compiler. It enables the creation of applications within a carefully designed set of constraints. 
 
 Some of the [features](/guide/quark-ide.md) of Quark IDE include - smart auto completion, go to definition, find and replace,typescript support, built in package manager and code compiler.
 
