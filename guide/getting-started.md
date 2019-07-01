@@ -63,7 +63,7 @@ console.log("Hello World, I'm Quark");
 
 ![Build](~@buildAssets/guide/intro/build-focus.png)
 
-  4. As visible in the output, out build was successful, now lets run out applet.
+  4. As visible in the output, our build was successful, now lets run the applet.
 
 ### Step 6: Running the applet
 
@@ -72,7 +72,15 @@ console.log("Hello World, I'm Quark");
 
 ![Build](~@buildAssets/guide/intro/run.png)
 
-  3. Notice the console message printed in the devtools output channel. This proves that our code ran properly.
+  3. Notice the console message printed in the devtools output channel. This shows that our code ran properly.
+
+#### The entire process could be summarized in the following video.
+We create a new project, build the project, and run the project, __all within 15 seconds!!__
+
+<video muted autoplay loop style="max-width:100%; height:auto" name="media" poster="~@buildAssets/getting-started/project-start-demo.jpg" crossOrigin="anonymous">
+  <source src="~@buildAssets/getting-started/project-start-demo.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video> 
 
 ## Next Steps
 Of course this is not all Quark has to offer, checkout the tutorials to learn mode advanced concepts.
