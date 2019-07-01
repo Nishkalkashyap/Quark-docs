@@ -85,13 +85,18 @@ export default {
                 {
                     svg: require('!!svg-inline-loader!./../../buildAssets/landing-page-svgs/smart-autoCompletion.svg'),
                     heading: 'Smart autocompletion',
-                    text: 'Find, preview, and replace text as you type in a file or across all your projects.'
+                    text: 'Quark helps you write code faster with a smart and flexible autocomplete.'
                 },
                 {
                     svg: require('!!svg-inline-loader!./../../buildAssets/landing-page-svgs/under-the-hood.svg'),
                     heading: 'Under the hood',
-                    text: 'Find, preview, and replace text as you type in a file or across all your projects.'
+                    text: 'Quark is a desktop application built with HTML, JavaScript, CSS, and Node.js integration. It runs on Electron, a framework for building cross platform apps using web technologies.'
                 },
+                {
+                    svg: require('!!svg-inline-loader!./../../buildAssets/landing-page-svgs/nodejs.svg'),
+                    heading: 'Nodejs',
+                    text: 'Find, preview, and replace text as you type in a file or across all your projects.'
+                }
             ]
         }
     }
