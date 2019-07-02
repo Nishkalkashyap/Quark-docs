@@ -62,3 +62,32 @@ view.onDidConnectElement = () => {
 
 view.focus();
 ```
+
+#### Using import/export statements
+```jsx
+// headline.js
+function Headline() {
+    const greeting = 'Hello Functional Component!';
+    return <h1 style={{ margin: '0px' }}>{greeting}</h1>;
+}
+
+export default Headline;
+```
+```jsx
+// setup.js
+import { render } from 'react-dom';
+import Headline from './import-export/headline';
+
+function App() {
+    return <Headline />;
+}
+
+const view = quark.views.createTabsView('React view');
+view.onDidConnectElement = () => {
+    view.element.style.backgroundColor = '#f0f0f0';
+    view.element.style.height = '100%';
+    render(<App />, view.element);
+};
+
+view.focus();
+

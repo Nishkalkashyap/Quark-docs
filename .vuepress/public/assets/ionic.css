@@ -3,7 +3,7 @@
     --accent-color-rgb: 56, 128, 255;
     --background: #ffffff;
     --code-background: #f5f7fa;
-    --code-color: var(--text-color--dark);
+    /* --code-color: #4e5b6a; */
     --code-font-family: "SFMono-Regular", "Roboto Mono", Consolas, "Liberation Mono", Menlo, Courier, monospace;
 
     --font-family: system-ui, sans-serif;
@@ -124,9 +124,13 @@ pre {
 
 pre code {
     background-color: transparent !important;
-    color: inherit !important;
     padding: 0;
     white-space: inherit;
+}
+
+p code {
+    color: var(--text-color--dark) !important;
+    color: var(--accent-color) !important;
 }
 
 table {

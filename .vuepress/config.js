@@ -1,5 +1,4 @@
 const path = require('path');
-
 const AllTags = require('./../scripts/types').AllTags;
 
 module.exports = {
@@ -84,6 +83,8 @@ module.exports = {
             md.use(require("markdown-it-admonition"));
             md.use(require('markdown-it-task-lists'));
             md.use(require('markdown-it-multimd-table'));
+            console.log(require('markdown-it-mermaid').default, typeof require('markdown-it-mermaid').default);
+            md.use(require('markdown-it-mermaid').default);
         }
     },
     themeConfig: {
