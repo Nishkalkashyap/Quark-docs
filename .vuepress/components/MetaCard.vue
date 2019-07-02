@@ -130,6 +130,7 @@ div.padding {
       padding-bottom: 20px;
       padding-top: 10px;
       color: var(--text-color--dark);
+      display: flex;
       cursor: pointer;
       span {
         display: inline-block;
@@ -138,6 +139,8 @@ div.padding {
 
       img {
         width: 20px;
+        height: 20px;
+        margin-right: 10px;
         display: inline-block;
         border: solid 1px var(--text-color--dark);
         border-radius: 200px;
