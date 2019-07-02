@@ -78,7 +78,7 @@
 
 <script>
 import companyLogos from "./landing-components/companyLogos";
-import heroDownload from "./landing-components/hero-download2";
+import heroDownload from "./landing-components/hero-download";
 import heroSection from "./landing-components/hero-section";
 import heroTop from "./landing-components/hero-top";
 import Download from "./Download";
