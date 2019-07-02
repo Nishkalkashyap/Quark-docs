@@ -8,8 +8,8 @@ import * as sharp from 'sharp';
 
 var beautify = require('js-beautify').js;
 
-const sidebars = ['guide', 'references', 'structures', 'FAQ', 'tags', 'snippets', 'releases'];
-const readmefiles = ['guide', 'references', 'structures', 'FAQ', 'snippets', 'releases'];
+const sidebars = ['guide', 'references', 'structures', 'FAQ', 'tags', 'snippets', 'releases', 'libraries'];
+const readmefiles = ['guide', 'references', 'structures', 'FAQ', 'snippets', 'releases', 'libraries'];
 
 const SNIPPETS_BASE_PATH = './snippets';
 const TAGS_BASE_PATH = './tags';

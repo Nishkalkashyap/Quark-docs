@@ -2,7 +2,6 @@
 description : 'In this guide we are going to create a simple hello world application. The aim of this guide is to walk you through the core concepts and show you how to consume the Quark API'
 author : nishkal
 tags : ['guide']
-cover : ~@buildAssets/guide/getting-started.png
 ---
 
 # Hello world app

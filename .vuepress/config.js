@@ -123,6 +123,10 @@ module.exports = {
                         text: 'Structures',
                         link: '/structures/'
                         // link: '/structures/view-provider.html'
+                    }, {
+                        text: 'Libraries',
+                        link: '/libraries/'
+                        // link: '/structures/view-provider.html'
                     }
                     // {
                     //     text: 'Style Guide',
@@ -239,6 +243,9 @@ module.exports = {
             ],
             "/all/": [
                 ""
+            ],
+            "/libraries/": [
+                "intro.md"
             ]
         }
     },
