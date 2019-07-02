@@ -231,9 +231,9 @@ module.exports = {
                 "nodejs.md"
             ],
             "/snippets/": [
-                "using-reactjs.md",
                 "convert-existing-electron-app.md",
                 "cron-example-schedule.md",
+                "configuring-build.md",
                 "install-nodejs.md"
             ],
             "/releases/": [
