@@ -49,3 +49,11 @@ Creates a quick view pannel. Similar to the one used by commands.
 * arguments
   * name `string`
 * returns [`IQuickPick`](/)
+<!-- 
+### util.createVueWebComponent(name, data, createElement)
+Creates a vuejs web component.
+* arguments
+  * name `string`
+  * data `Vue.ComponentOptions<any>`
+  * createElement `boolean`
+* returns `undefined | HTMLElement` -->
