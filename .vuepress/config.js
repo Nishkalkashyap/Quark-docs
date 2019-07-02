@@ -232,9 +232,7 @@ module.exports = {
             ],
             "/snippets/": [
                 "convert-existing-electron-app.md",
-                "cron-example-schedule.md",
-                "configuring-build.md",
-                "install-nodejs.md"
+                "configuring-build.md"
             ],
             "/releases/": [
                 "current-release.md",
