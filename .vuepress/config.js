@@ -247,7 +247,8 @@ module.exports = {
             ],
             "/libraries/": [
                 "intro.md",
-                "react-js.md"
+                "react-js.md",
+                "vue-js.md"
             ]
         }
     },

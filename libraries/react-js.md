@@ -1,5 +1,5 @@
 ---
-description : 'React is a javascript library for building user interfaces. In this section we will explore how we can use React to create views in our project.'
+description : 'React is a javascript library for building user interfaces. Examples below describe how you can use React to create views in your project.'
 author : nishkal
 tags : []
 ---
@@ -8,16 +8,17 @@ tags : []
 
 <Header />
 
-[[toc]]
+<!-- [[toc]] -->
 
 <!-- !!! warning Note
 This is not a tutorial of the library React itself, but a tutorial on how to consume the library in a Quark project. To learn more about React, read the [official docs from here.](https://reactjs.org/)
 !!! -->
 
-## Creating Views
+<!-- ## Creating Views -->
 
-### Using a react functional component.
+<!-- ### Using a react functional component. -->
 
+#### Creating and using a react functional component.
 ```jsx
 // setup.js
 import { render } from 'react-dom';
@@ -76,7 +77,7 @@ export default Headline;
 ```jsx
 // setup.js
 import { render } from 'react-dom';
-import Headline from './import-export/headline';
+import Headline from './headline';
 
 function App() {
     return <Headline />;
@@ -90,4 +91,29 @@ view.onDidConnectElement = () => {
 };
 
 view.focus();
+```
+
+#### Creating react class components
+```jsx
+import { render } from 'react-dom';
+import Headline from './import-export/headline';
+import React from 'react';
+
+class App extends React.Component {
+    render() {
+        return (
+            <h1 style={{ margin: '0px' }}>{this.props.greeting}</h1>
+        );
+    }
+}
+
+const view = quark.views.createTabsView('React view');
+view.onDidConnectElement = () => {
+    view.element.style.backgroundColor = '#f0f0f0';
+    view.element.style.height = '100%';
+    render(<App greeting = 'Hello Functional Component!' />, view.element);
+};
+
+view.focus();
+```
 
