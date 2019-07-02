@@ -121,7 +121,7 @@ import './index.css';
 
 Here, we are importing the html template from the `index.html` file. Behind the scenes, this import statement is handled by the webpack's `raw-loader`, which return the raw content of the html file.
 
-In the second statement, we are importing the index.css file. behind the scenes, this import statement is handled by the webpack's `css-loader` and `style-loader`. The effect of this import statement is that these styles are automatically injected in the DOM.
+In the second statement, we are importing the index.css file. Behind the scenes, this import statement is handled by the webpack's `css-loader` and `style-loader`. The effect of this import statement is that these styles are automatically injected in the DOM.
 
 __2. Creating the view__
 ```js
