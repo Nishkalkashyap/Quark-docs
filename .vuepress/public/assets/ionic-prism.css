@@ -80,9 +80,12 @@ pre[class*="language-"] {
 .token.selector,
 .token.char,
 .token.function,
-.token.builtin,
-.token.inserted {
+.token.builtin{
     color: #ff6810 !important;
+}
+
+.token.inserted {
+    color: #10dc60 !important;
 }
 
 .token.operator,

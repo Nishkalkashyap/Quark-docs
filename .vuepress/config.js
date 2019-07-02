@@ -125,7 +125,7 @@ module.exports = {
                         // link: '/structures/view-provider.html'
                     }, {
                         text: 'Libraries',
-                        link: '/libraries/'
+                        link: '/libraries/intro.html'
                         // link: '/structures/view-provider.html'
                     }
                     // {
@@ -245,7 +245,8 @@ module.exports = {
                 ""
             ],
             "/libraries/": [
-                "intro.md"
+                "intro.md",
+                "react-js.md"
             ]
         }
     },
