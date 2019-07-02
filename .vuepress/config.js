@@ -248,7 +248,8 @@ module.exports = {
             "/libraries/": [
                 "intro.md",
                 "react-js.md",
-                "vue-js.md"
+                "vue-js.md",
+                "serialport.md"
             ]
         }
     },
