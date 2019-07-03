@@ -49,6 +49,14 @@ Creates a quick view pannel. Similar to the one used by commands.
 * arguments
   * name `string`
 * returns [`IQuickPick`](/)
+
+### util.createSnackbar(message[, type, duration])
+Creates a snackbar notification.
+* arguments
+  * message `string`
+  * type `'danger' | 'success' | 'warning' | 'info'`
+  * duration `number`
+* returns [`SnackbarItem`](/structures/SnackbarItem.md)
 <!-- 
 ### util.createVueWebComponent(name, data, createElement)
 Creates a vuejs web component.

@@ -207,6 +207,7 @@ module.exports = {
                 "button-field.md",
                 "context-menu-ref.md",
                 "ICommand.md",
+                "SnackbarItem.md",
                 "icon.md",
                 "IKeyBindingRegister.md",
                 "input-field.md",

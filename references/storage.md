@@ -9,6 +9,8 @@ cover : ~@buildAssets/api/references.png
 <Header/>
 [[toc]]
 
+<!-- add usage examples here -->
+
 ### inMemory
 Store temporary data in memory while your code is running. As soon as the window is closed, all data is lost. The data may or may not be JSON serializable.
 * see [MemoryStore](/structures/MemoryStore.md) 
