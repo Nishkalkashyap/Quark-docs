@@ -24,7 +24,9 @@
     "open": "ts-node scripts/open-links.ts",
     "vid": "ts-node ./scripts/convert-videos.ts",
     "ssn": "ts-node ./scripts/send-build-notification.ts",
-    "loc": "bash -c 'cloc $(git ls-files)'"
+    "loc": "bash -c 'cloc $(git ls-files)'",
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
   },
   "keywords": [
     "quark"
@@ -89,6 +91,8 @@
     "typescript": "^3.4.5",
     "webpack-dev-middleware": "^3.6.0",
     "workbox-build": "^4.3.1",
-    "yamljs": "^0.3.0"
-  }
+    "yamljs": "^0.3.0",
+    "snyk": "^1.189.0"
+  },
+  "snyk": true
 }
