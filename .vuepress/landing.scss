@@ -47,13 +47,12 @@
     $primaryColor = #a0d8f1;
     $primaryColorTrans = #6574cd99;
     $secondaryColor = #6574cd;
-    
-    // $primaryColor = #ff5f6d;
-    // $primaryColorTrans = #ff5f6d99;
-    // $secondaryColor = #ffc371;
 
-    $color=#e9af32; //ignore error
+    $color1=#e9af32; //ignore error
+    $color2=#e9af32; //ignore error
+
     $darkColor=#161719; //ignore error
+    $gradient = linear-gradient(45deg, $color1 0%, $color2 100%);
 
     .landing-page-background:nth-child(5) {
         clip-path: polygon(0px 20vh, 100% 0%, 100% 100%, 0px 100%);
@@ -123,12 +122,12 @@
 
         button.download-enabled,
         span.coming-soon {
-            background-color: $color;
+            background: $gradient;
         }
 
         h1 {
             color: $darkColor !important;
-            background-color: $color;
+            background: $gradient;
         }
 
         button.download-enabled,
@@ -140,7 +139,7 @@
         }
 
         a {
-            color: $color;
+            color: $color1;
         }
 
         img.download-svg {
@@ -149,7 +148,7 @@
 
         h3 {
 
-            background-color: $color;
+            background: $gradient;
 
             a {
                 color: $darkColor;
@@ -161,12 +160,12 @@
         margin-top: 50px;
 
         h1 {
-            background-color: $color;
+            background: $gradient;
             color: var(--text-color--darker);
         }
 
         .feature {
-            background-color: $color;
+            background: $gradient;
 
             h3,
             .svg,
