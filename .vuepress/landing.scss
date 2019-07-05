@@ -44,20 +44,36 @@
         background: linear-gradient(to right, #161719 0%, #161719 100%);
     }
 
+    $primaryColor = #a0d8f1;
+    $primaryColorTrans = #a0d8f199;
+    $secondaryColor = #6574cd;
+
+    $color=#e9af32; //ignore error
+    $darkColor=#161719; //ignore error
+
+    // $primaryColor = #ff5f6d;
+    // $primaryColorTrans = #ff5f6d99;
+    // $secondaryColor = #ffc371;
+
     .landing-page-background:nth-child(5) {
         clip-path: polygon(0px 20vh, 100% 0%, 100% 100%, 0px 100%);
         // height: 100vh;
         height: auto;
         min-height: 110vh;
         top: -55vh;
-        background: linear-gradient(to right, #a0d8f1 0%, #6574cd 100%);
+        background: linear-gradient(to right, $primaryColor 0%, $secondaryColor 100%);
     }
 
     .landing-page-background:nth-child(6) {
         clip-path: polygon(0px 0%, 100% 0%, 100% 100%, 0px 100%);
         top: -62vh;
         margin-bottom: -62vh;
-        background: linear-gradient(to right, #a0d8f1 0%, #6574cd 100%);
+        background: linear-gradient(to right, $primaryColor 0%, $secondaryColor 100%);
+    }
+
+    .downloads-container svg {
+        fill: $primaryColorTrans;
+        stroke: $primaryColorTrans;
     }
 
     @media only screen and (max-width:600px) {
@@ -102,9 +118,8 @@
 
     // $color=#1e1e1e; //ignore error
     // $color=#f2d024; //ignore error
-    $color=#e9af32; //ignore error
-
-    $darkColor=#161719; //ignore error
+    // $color=#e9af32; //ignore error
+    // $darkColor=#161719; //ignore error
 
     .downloads-container {
 
@@ -134,10 +149,6 @@
             color: $color;
         }
 
-        // svg {
-        //     stroke: $color;
-        //     fill: $color;
-        // }
         img.download-svg {
             display: none;
         }

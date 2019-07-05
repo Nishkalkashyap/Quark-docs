@@ -185,8 +185,8 @@ export default {
         transform: rotate(180deg);
         bottom: 0vh;
         position: absolute;
-        fill: #6574cd99;
-        stroke: #6574cd99;
+        // fill: #6574cd99;
+        // stroke: #6574cd99;
         z-index: -2;
     }
 
