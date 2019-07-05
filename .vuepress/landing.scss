@@ -47,13 +47,13 @@
     $primaryColor = #a0d8f1;
     $primaryColorTrans = #a0d8f199;
     $secondaryColor = #6574cd;
-
-    $color=#e9af32; //ignore error
-    $darkColor=#161719; //ignore error
-
+    
     // $primaryColor = #ff5f6d;
     // $primaryColorTrans = #ff5f6d99;
     // $secondaryColor = #ffc371;
+
+    $color=#e9af32; //ignore error
+    $darkColor=#161719; //ignore error
 
     .landing-page-background:nth-child(5) {
         clip-path: polygon(0px 20vh, 100% 0%, 100% 100%, 0px 100%);
@@ -115,12 +115,6 @@
 
 
     // landing-page-download-section
-
-    // $color=#1e1e1e; //ignore error
-    // $color=#f2d024; //ignore error
-    // $color=#e9af32; //ignore error
-    // $darkColor=#161719; //ignore error
-
     .downloads-container {
 
         div.platform {
