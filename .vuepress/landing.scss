@@ -52,7 +52,8 @@
 
     $color1=#e9af32;
     $color2=#ffa31b;
-    $darkColor=#161719;
+    // $darkColor=#161719;
+    $darkColor=var(--text-color--darker);
 
     $gradient=linear-gradient(45deg, $color1 30%, $color2 100%);
 
