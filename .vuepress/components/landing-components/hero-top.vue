@@ -3,7 +3,7 @@
     <div class="hero landing-page-background">
         <img src="/images/icon-svg.svg" alt="hero" class="logo">
         <h1>Lightning fast app creation.</h1>
-        <p class="description">Quark Studio is a cross-platform, integrated development environment for rapidly building - functional , utility applets written in HTML, CSS and JavaScript with native desktop app like capabilities.</p>
+        <p class="description">Quark is a <strong>general purpose software tool</strong> specifically designed to help you create projects written in HTML, CSS and JavaScript with native desktop app like capabilities.</p>
         <p class="action">
             <router-link to="/guide/intro.html" class="nav-link action-button">Get Started →</router-link>
         </p>
