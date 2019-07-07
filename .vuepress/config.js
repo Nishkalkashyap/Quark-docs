@@ -125,7 +125,7 @@ module.exports = {
                         link: '/structures/'
                         // link: '/structures/view-provider.html'
                     }, {
-                        text: 'Libraries',
+                        text: 'Using libraries',
                         link: '/libraries/intro.html'
                         // link: '/structures/view-provider.html'
                     }
