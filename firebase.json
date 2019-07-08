@@ -19,11 +19,19 @@
     "cleanUrls": false,
     "trailingSlash": false,
     "headers": [{
-      "source": "**/*.@(jpg|jpeg|gif|png|mp4)",
-      "headers": [{
-        "key": "Cache-Control",
-        "value": "max-age=1209600"
-      }]
-    }]
+        "source": "**/*.@(jpg|jpeg|gif|png|mp4)",
+        "headers": [{
+          "key": "Cache-Control",
+          "value": "max-age=1209600"
+        }]
+      },
+      {
+        "source": "**/!(*worker).js",
+        "headers": [{
+          "key": "Cache-Control",
+          "value": "max-age=1209600"
+        }]
+      }
+    ]
   }]
 }
