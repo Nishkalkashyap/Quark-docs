@@ -1,5 +1,6 @@
 const path = require('path');
 const AllTags = require('./../scripts/types').AllTags;
+const manifest = require('./../.vuepress/public/pwa/manifest.json');
 
 module.exports = {
     title: 'Quark',
@@ -18,6 +19,12 @@ module.exports = {
                     a.appendChild(r);
                 })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
         `
+        ],
+        [
+            'meta', {
+                name: 'theme-color',
+                content: manifest.theme_color
+            }
         ],
         [
             'link', {
