@@ -22,14 +22,14 @@
         "source": "**/*.@(jpg|jpeg|gif|png|mp4)",
         "headers": [{
           "key": "Cache-Control",
-          "value": "max-age=1209600"
+          "value": "max-age=2592000"
         }]
       },
       {
         "source": "**/!(*worker).js",
         "headers": [{
           "key": "Cache-Control",
-          "value": "max-age=1209600"
+          "value": "max-age=2592000"
         }]
       }
     ]
