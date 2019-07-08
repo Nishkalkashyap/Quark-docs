@@ -1,7 +1,7 @@
 <template>
 <div class="floaters-component">
-    <div class="random-svgs-container" ref="containerElement" :class="{'can-show' : canShow}">
-        <svg class="random-svg" :class="[svg.svg.className, side]" v-for="svg in svgs" v-html="svg.svg.shape" :viewBox="svg.svg.viewBox" :style="svg.style" />
+    <div class="random-svgs-container" ref="containerElement">
+        <svg v-if="canShow" class="random-svg" :class="[svg.svg.className, side]" v-for="svg in svgs" v-html="svg.svg.shape" :viewBox="svg.svg.viewBox" :style="svg.style" />
     </div>
 </div>
 </template>
@@ -42,11 +42,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-
-.random-svgs-container.can-show {
-    opacity: 1;
-}
-
 .random-svgs-container {
     position: absolute;
     left: 0px;
@@ -55,7 +50,6 @@ export default {
     height: calc(100% - 40px);
     margin: 20px;
     z-index: -1;
-    opacity: 0;
 
     .random-svg {
         position: absolute;
