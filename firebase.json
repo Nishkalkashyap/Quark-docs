@@ -31,6 +31,13 @@
           "key": "Cache-Control",
           "value": "max-age=2592000"
         }]
+      },
+      {
+        "source": "**/*.@(woff|woff2|css)",
+        "headers": [{
+          "key": "Cache-Control",
+          "value": "max-age=2592000"
+        }]
       }
     ]
   }]
