@@ -21,6 +21,20 @@ workbox.routing.registerRoute(
     })
 );
 
+workbox.routing.registerRoute(
+    /^https:\/\/google-analytics\.com/,
+    new workbox.strategies.StaleWhileRevalidate({
+        cacheName: 'google-analytics',
+    })
+);
+
+workbox.routing.registerRoute(
+    /^https:\/\/static\.hotjat\.com/,
+    new workbox.strategies.StaleWhileRevalidate({
+        cacheName: 'hotjar',
+    })
+);
+
 // https://developers.google.com/web/tools/workbox/guides/advanced-recipes#cached-av
 workbox.routing.registerRoute(
     // new RegExp('.(mp4)$'),
