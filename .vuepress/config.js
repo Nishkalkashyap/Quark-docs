@@ -112,83 +112,83 @@ module.exports = {
             debug: false
         },
         nav: [{
-            text: 'Guide',
-            link: '/guide/intro.md'
-        },
-        {
-            text: 'Tags',
-            items: Object.keys(AllTags).map((tag) => {
-                return {
-                    text: tag,
-                    link: `/tags/${tag}.html`
-                }
-            })
-        },
-        {
-            text: 'API',
-            items: [{
-                text: 'References',
-                link: '/references/'
-                // link: '/references/app.html'
-            }, {
-                text: 'Structures',
-                link: '/structures/'
-                // link: '/structures/view-provider.html'
-            }, {
-                text: 'Using libraries',
-                link: '/libraries/intro.html'
-                // link: '/structures/view-provider.html'
-            }
-                // {
-                //     text: 'Style Guide',
-                //     link: '/guide/intro.html'
-                // }
-            ]
-        },
-        {
-            text: 'More',
-            items: [{
-                text: 'All Docs',
-                link: '/all/'
+                text: 'Guide',
+                link: '/guide/intro.md'
             },
             {
-                text: 'All Tags',
-                link: '/tags/'
+                text: 'Tags',
+                items: Object.keys(AllTags).map((tag) => {
+                    return {
+                        text: tag,
+                        link: `/tags/${tag}.html`
+                    }
+                })
             },
             {
-                text: 'FAQ',
-                link: '/FAQ/glossary.html'
-            },
-            {
-                text: 'Snippets',
-                link: '/snippets/'
-            },
-            {
-                text: 'Release notes',
-                link: '/releases/current-release.html'
-            },
-            {
-                text: 'Links',
+                text: 'API',
                 items: [{
-                    text: 'Services status',
-                    link: 'https://status.quarkjs.io'
-                },
-                {
-                    text: 'Social',
-                    link: 'https://social.quarkjs.io/'
-                },
-                {
-                    text: 'GitHub',
-                    link: 'https://github.com/Nishkalkashyap/Quark-docs'
-                }
+                        text: 'References',
+                        link: '/references/'
+                        // link: '/references/app.html'
+                    }, {
+                        text: 'Structures',
+                        link: '/structures/'
+                        // link: '/structures/view-provider.html'
+                    }, {
+                        text: 'Using libraries',
+                        link: '/libraries/intro.html'
+                        // link: '/structures/view-provider.html'
+                    }
+                    // {
+                    //     text: 'Style Guide',
+                    //     link: '/guide/intro.html'
+                    // }
                 ]
+            },
+            {
+                text: 'More',
+                items: [{
+                        text: 'All Docs',
+                        link: '/all/'
+                    },
+                    {
+                        text: 'All Tags',
+                        link: '/tags/'
+                    },
+                    {
+                        text: 'FAQ',
+                        link: '/FAQ/glossary.html'
+                    },
+                    {
+                        text: 'Snippets',
+                        link: '/snippets/'
+                    },
+                    {
+                        text: 'Release notes',
+                        link: '/releases/current-release.html'
+                    },
+                    {
+                        text: 'Links',
+                        items: [{
+                                text: 'Services status',
+                                link: 'https://status.quarkjs.io'
+                            },
+                            {
+                                text: 'Social',
+                                link: 'https://social.quarkjs.io/'
+                            },
+                            {
+                                text: 'GitHub',
+                                link: 'https://github.com/Nishkalkashyap/Quark-docs'
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                text: 'Download',
+                link: '/download/'
             }
-            ]
-        },
-        {
-            text: 'Download',
-            link: '/download/'
-        }
         ],
         sidebar: {
             "/guide/": [
