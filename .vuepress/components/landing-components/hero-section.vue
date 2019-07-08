@@ -3,9 +3,9 @@
     <div class="hero-section-wrapper">
         <div class="hero-section-container">
             <h3>{{heading}}</h3>
-            <p>{{upper}}</p>
+            <p v-html="upper"></p>
             <slot name="image"></slot>
-            <p>{{lower}}</p>
+            <p v-html="lower"></p>
             <router-link to="/download/">Learn more</router-link>
         </div>
     </div>

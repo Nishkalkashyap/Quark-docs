@@ -17,18 +17,18 @@
       </video>
     </heroSection>
 
-    <heroSection side="right" heading="GitHub for Atom" upper="A text editor is at the core of a developer’s toolbox, but it doesn't usually work alone. Work with Git and GitHub directly from Atom with the GitHub package." lower="A text editor is at the core of a developer’s toolbox, but it doesn't usually work alone. Work with Git and GitHub directly from Atom with the GitHub package.">
+    <heroSection side="right" heading="Rapid project development" upper="And by rapid, we mean RAPID ⚡. You can create, build and run an application, all <strong>under 15 seconds !!</strong>" lower="Quark is designed from ground up, for rapid prototyping and development of projects. This means that projects built with Quark are quick to setup, build and share.">
         <video
         muted
         autoplay
         loop
         name="media"
-        poster="~@buildAssets/guide/hello-world-intro.png"
+        poster="~@buildAssets/getting-started/project-start-demo.jpg"
         crossorigin="anonymous"
         class="image-transition"
         slot="image"
       >
-        <source src="~@buildAssets/guide/hello-world-intro.mp4" type="video/mp4" />Your browser does not support the video tag.
+        <source src="~@buildAssets/getting-started/project-start-demo.mp4" type="video/mp4" />Your browser does not support the video tag.
       </video>
     </heroSection>
 
