@@ -1,6 +1,6 @@
 <template>
 <section class="hero-section-component landing-page-background" :class="side + '-side'">
-    <div class="hero-section-wrapper">
+    <div class="hero-section-wrapper" ref="containerElement" :class="{'can-show' : canShow}">
         <div class="hero-section-container">
             <h3>{{heading}}</h3>
             <p v-html="upper"></p>
@@ -9,22 +9,40 @@
             <router-link to="/download/">Learn more</router-link>
         </div>
     </div>
-    <floaters :side="side"/>
+    <floaters :side="side" />
 </section>
 </template>
 
 <script>
 import floaters from "./floaters";
+import {
+    isInViewport
+} from './util';
 export default {
     props: ["side", "heading", "upper", "lower", "image"],
-    components : {
+    components: {
         floaters
+    },
+    data() {
+        return {
+            canShow: true
+        }
+    },
+    mounted() {
+        window.addEventListener('scroll', () => {
+            this.canShow = isInViewport(this.$refs.containerElement);
+        });
     }
 };
 </script>
 
 <style lang="scss" scoped>
+.can-show video {
+    opacity: 1;
+}
+
 video {
+    opacity: 0;
     width: calc(100% - 40px);
     max-width: 800px;
     border-radius: 5px;
@@ -44,20 +62,6 @@ video {
     padding: 20px;
     // position: relative;
 }
-
-// .hero-section-container::before {
-//   content: "";
-//   // background: url("~@buildAssets/landing-page-svgs/upDown.svg");
-//   // background: url("~@public/images/shapes-background.svg");
-//   background-repeat: repeat;
-//   left: 0px;
-//   top: 0px;
-//   padding: 50px;
-//   // width: calc(100% - 100px);
-//   // height: 100%;
-//   position: absolute;
-//   z-index: -2;
-// }
 
 .left-side {
     video {

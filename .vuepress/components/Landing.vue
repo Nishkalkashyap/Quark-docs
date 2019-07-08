@@ -134,7 +134,7 @@ export default {
 }
 
 .image-transition {
-    transition: filter 2s;
+    transition: filter 2s, opacity 0.3s;
     filter: brightness(0.7) contrast(1) sepia(1) hue-rotate(140deg) saturate(1.5);
     box-shadow: 0 20px 30px rgba(0, 0, 0, 0.5);
     border-radius: 5px;
