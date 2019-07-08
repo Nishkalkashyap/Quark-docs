@@ -3,7 +3,7 @@
     "author": "Nishkal Kashyap <hello@nishkal.in>",
     "email": "hello@nishkal.in",
     "homepage": "https://quarkjs.io",
-    "version": "0.5.0",
+    "version": "0.5.1",
     "description": "Software sketchbook for rapid prototyping and development of your projects.",
     "main": "index.js",
     "bin": "index.js",
@@ -92,7 +92,7 @@
     "devDependencies": {
         "@google-cloud/storage": "^2.5.0",
         "@octokit/rest": "^16.28.2",
-        "@quarkjs/api": "^0.1.10",
+        "@quarkjs/api": "^0.1.11",
         "@types/auto-launch": "^5.0.1",
         "@types/chart.js": "^2.7.54",
         "@types/dotenv": "^6.1.1",

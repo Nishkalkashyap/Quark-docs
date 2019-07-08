@@ -1,8 +1,8 @@
 {
-    "version": "0.5.0",
+    "version": "0.5.1",
     "channel": "insiders",
-    "linux_main": "Quark-linux-x86_64-0.5.0.AppImage",
-    "linux_other": "[\"Quark-linux-amd64-0.5.0.deb\",\"Quark-linux-x64-0.5.0.tar.gz\"]",
-    "windows_main": "Quark-win-0.5.0.exe",
-    "windows_other": "[\"Quark-win-x64-0.5.0.msi\",\"Quark-win-x64-0.5.0.zip\"]"
+    "linux_main": "Quark-linux-x86_64-0.5.1.AppImage",
+    "linux_other": "[\"Quark-linux-amd64-0.5.1.deb\",\"Quark-linux-x64-0.5.1.tar.gz\"]",
+    "windows_main": "Quark-win-0.5.1.exe",
+    "windows_other": "[\"Quark-win-x64-0.5.1.msi\",\"Quark-win-x64-0.5.1.zip\"]"
 }
