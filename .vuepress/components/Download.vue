@@ -22,7 +22,7 @@
         </div>
 
         <div class="platform">
-            <img src="/images/linux-logo.png" style="width:86px;height:100px;">
+            <img src="/images/linux-logo.png" style="width:83px;height:100px;">
             <button
           class="download-button"
           @click="openExternal(linux_main)"
