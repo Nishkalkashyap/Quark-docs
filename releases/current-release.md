@@ -15,6 +15,40 @@ sidebarDepth: 4
 
 [[toc]]
 
+<!-- Quark-0.5.1-start -->
+## Quark 0.5.1 - July 8, 2019
+
+#### Bug fixes:
+* Fixed: Editor executing paste command twice.
+* Fixed: command not getting removed from command Palette on dispose issue.
+
+#### Breaking:
+* Removed: `keyBindings` namespace from global quark object.
+
+#### Features:
+* Added: `addKeybindingCondition` function in `command` namespace
+
+
+
+!!! note See SHA-512 Hashes
+<DropDown>
+<ReleaseNotes :sha='{
+    "Quark-win-0.5.1.exe": "8D3K03Se11NP4FqcO1dun975PrKt+ogUSm/B+xnOgm4C6CPHrDtdV6ltbIhhlIOgCZc0CvFSa7IA7OpdGeYJAQ==",
+    "Quark-win-x64-0.5.1.msi": "GkvzmnJD9+sVmmIMYSN0DERXKKWqM0/GU75yvf1WdW062W5zxSDWvKdtKAGMiQdrter0crsbRhhVlOPF5zT+fg==",
+    "Quark-win-x64-0.5.1.zip": "0aRXGyRW2JATbbkqFA/9A7pQXEUua8yoEv1U+85UgMl9aoRNbb9uo1Or9FAtE5inz3di8hOOvXNgNR+hrTWs8w==",
+    "Quark-linux-amd64-0.5.1.deb": "9NZDINUko98fAS6o1CRDEzkAmUa+5Aknb+hXZNjLZZhZRNLDs7oqgUlLHiy4I0iZNXbdE1eibfSrOT7LFPQTZg==",
+    "Quark-linux-x64-0.5.1.tar.gz": "QkGXr7SG1XlDSudS7yzQARwDPI4lpJvpYYYDX5wiWDq9bxSZI/JHGzMPhVFT5VsDRito+vcuTymMRB97PIehpw==",
+    "Quark-linux-x86_64-0.5.1.AppImage": "FwSC78EFIokphq8NxOIUOTOeErMSu3MfCsQIPOOMsJlHEldQugZGgPhRqKoEQUyZ5wS5SNW0R92lzAMinR9jbg=="
+}' />
+</DropDown>
+!!!
+
+<!-- ---------------------------------------------- -->
+<!-- Quark-0.5.1-end -->
+
+
+
+
 <!-- Quark-0.5.0-start -->
 ## Quark 0.5.0 - July 3, 2019
 
