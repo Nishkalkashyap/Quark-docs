@@ -1,5 +1,5 @@
 ---
-description : 'Convert existing electron app to Quark app. In this guide, we are going to load an existing electron application into a webview and also bundle the application as a Quark applet.'
+description : 'Convert existing electron app to a Quark sketch. In this guide, we are going to load an existing electron application into a webview and also bundle the application as a Quark sketch.'
 author : nishkal
 tags : ['nodejs', 'javascript']
 ---
