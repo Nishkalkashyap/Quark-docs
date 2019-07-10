@@ -51,6 +51,11 @@ Here are the following things you can do in explorer:
 #### Virtual File System
 One of the unique capabilities of Quark is that is uses virtual file system, sometimes also referred to as in-memory file system. That means all the code that you write and files you create inside the IDE are virtual files with no foot print on your real file system. This is done to make sharing a project as easy as sharing a single file.
 
+#### Quick Open
+If you press `Ctrl+p` a search box will open. This will let you quickly search and open any file in your project by typing the name of the file.
+
+![An image](~@buildAssets/quick-open.png =450x)
+
 ## Command Palette
 If you press `Ctrl+Shift+P` while focused in an editor pane, the command palette will pop up. This is a search driven menu that gives you access to just about any major task that is possible in Quark. Instead of clicking around all the application menus to look for something, you can press `Ctrl+Shift+P` and search for the command.
 
@@ -123,18 +128,24 @@ Note that changed settings have a marker besides them to help you identify them 
 !!!
 
 
-## Themes
-
-* Multiple theme support.
+#### Changing the theme
+You can change the theme by changing the setting `Editor > Basic Settings > Theme of Editor`.
 
 <video muted autoplay loop style="max-width:100%; height:auto" name="media" poster="~@buildAssets/guide/quark-ide/themes.png" crossOrigin="anonymous">
   <source src="~@buildAssets/guide/quark-ide/themes.mp4" type="video/mp4">
   Your browser does not support the video tag.
 </video> 
 
-## Extensible
+## Changing default keyBindings
+You can change the default keybindings for the commands. 
+1. Press `Ctrl+k` to open the keybinding editing panel.
+2. Click on the edit icon to the left of the command you want to change keybinding for.
+3. Enter the key combination and press enter to accept.
 
-* Inbuilt npm client to install node packages for your projects.
+![](~@buildAssets/key-binding-component.png)
+
+## Installing node packages
+Use the inbuilt npm client to install node packages for your projects. Simply type the name of the package and click `install` on the package that you want to install.
 
 <video muted autoplay loop style="max-width:100%; height:auto" name="media" poster="~@buildAssets/guide/quark-ide/extensible.png" crossOrigin="anonymous">
   <source src="~@buildAssets/guide/quark-ide/extensible.mp4" type="video/mp4">
