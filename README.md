@@ -1,19 +1,17 @@
-# Quark
+# The Repository
 
 [![Build Status](https://travis-ci.org/Nishkalkashyap/Quark-electron.svg?branch=master-all)](https://travis-ci.org/Nishkalkashyap/Quark-electron)
 [![Build Status](https://ci.appveyor.com/api/projects/status/e9n73kxva64pccwe/branch/master-all?svg=true)](https://ci.appveyor.com/project/Nishkalkashyap/quark-electron)
 [![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/Nishkalkashyap/Quark-docs)
 
 
-## The Repository
-
-This repo is the development repo for the [Quark](https://quarkjs.io) product.
+This repo contains the website and documentation for the [Quark](https://quarkjs.io) product.
 
 ## Quark
 
 ![Hello World](./images/hello-world.gif)
 
-Quark is a cross-platform, integrated development environment for rapidly building - functional , prototypal projects, written in HTML, CSS and JavaScript with native desktop app like capabilities.
+Quark is a general purpose software tool specifically designed to help you create projects written in HTML, CSS and JavaScript with native desktop app like capabilities.
 
 ## Goals
 
