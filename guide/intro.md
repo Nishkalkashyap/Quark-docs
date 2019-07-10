@@ -44,8 +44,8 @@ We use some witchcraft behind the scenes to make this happen. But you don't need
 #### Web Technologies
 Sketches are built using web technologies like HTML, CSS and Javascript. If you can build a website, you already know how to build a sketch.
 
-#### Power of Node.js
-Your sketches have access to all the powers of [Node.js](https://nodejs.org). Think of anything you can do with node, you can do here!
+#### Power of Electron 💪
+Behind the scenes, we use [electron's renderer process](https://electronjs.org/docs/tutorial/application-architecture) as the run-time for your sketches. This means, that you have access to all of the Node.js and Electron's renderer process API's in your sketch.
 
 #### Cross Platform
 Another advantage of using web technologies is that your sketches are Compatible with Mac, Windows, and Linux and run on all three platforms. __Write once, run everywhere!__
