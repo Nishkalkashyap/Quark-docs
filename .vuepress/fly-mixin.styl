@@ -1,7 +1,6 @@
 random(a,b)
   return math(math(0, 'random')*(b - a + 1) + a, 'floor')
 
-
 makeMeFly(duration=5s, delay=0s, negative=-50px, positive=50px)
     animation-duration: duration;
     animation-timing-function: ease-in-out;
@@ -42,7 +41,7 @@ makeMeRotate(duration=5s, delay=0s, deg1=0deg, deg2=359deg)
             transform: rotate(deg2);
         }
         
-    
+
 @media only screen and (min-width:450px) 
     .landing-page-background:before,
     .landing-page-background:after
@@ -51,23 +50,33 @@ makeMeRotate(duration=5s, delay=0s, deg1=0deg, deg2=359deg)
     .landing-page-background video
         makeMeFly(10s, 3s)
 
-    .landing-page-background img.logo
-        makeMeFly(6s, 0s, -20px)
-
-    .landing-page-background.hero  h1
-        makeMeFly(6s, 0s, -20px, 15px)
-
     .landing-page-background .random-svgs-container
         makeMeFly(8s, 0s, -40px, 40px)
 
-    .landing-page-background .hero-features-component h1,
-    .landing-page-background .hero-features-component .features-container,
-    .landing-page-background.downloads-container h1,
-    .landing-page-background.downloads-container h3,
-    .landing-page-background .download-page-component .container
-        makeMeFly(8s, 0s, -20px, 20px)
+.landing-page-background img.logo
+    makeMeFly(6s, 0s, -20px)
+
+.landing-page-background.hero  h1
+    makeMeFly(6s, 0s, -20px, 15px)
+
+
+.landing-page-background .hero-features-component h1,
+.landing-page-background .hero-features-component .features-container,
+.landing-page-background.downloads-container h1,
+.landing-page-background.downloads-container h3,
+.landing-page-background .download-page-component .container
+    makeMeFly(8s, 0s, -20px, 20px)
+
+
+@media only screen and (max-width:600px) and (min-width:450px)
+    .landing-page-background video
+        makeMeFly(10s, 3s, -20px, 30px)
+
+    .landing-page-background img.logo
+        makeMeFly(6s, 0s, 0px, 55px)
 
 .landing-page-background .random-svg.hexa
     makeMeRotate(12s, 0s, 0deg, 360deg)
+
 .landing-page-background .random-svg.triangle
     makeMeRotate(10s, 0s, 0deg, 360deg)
