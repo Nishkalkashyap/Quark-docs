@@ -71,11 +71,11 @@ async function updateDownloadLinks() {
     // str = str.concat(`| 📅 Release Date:       | ${monthNames[date.getMonth()]} ${date.getDate()} ${date.getFullYear()},  ${date.toLocaleTimeString()}|`, '\n');
     // str = str.concat(`| [Release Notes](/releases/current-release.html)        ||`, '\n\n');
 
-    str = str.concat(`\n\n<div class="build-status">`, '\n');
-    str = str.concat(`<a href="https://travis-ci.org/Nishkalkashyap/Quark-electron" target="_blank" rel="noopener noreferrer"><img src="https://travis-ci.org/Nishkalkashyap/Quark-electron.svg?branch=master-all" alt="Build Status"></a>`, '\n');
-    str = str.concat(`<a href="https://ci.appveyor.com/project/Nishkalkashyap/quark-electron" target="_blank" rel="noopener noreferrer"><img src="https://ci.appveyor.com/api/projects/status/e9n73kxva64pccwe/branch/master-all?svg=true" alt="Build Status"></a>`, '\n');
-    str = str.concat(`<a href="https://github.com/Nishkalkashyap/Quark-docs" target="_blank" rel="noopener noreferrer"><img src="https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat" alt="Build Status"></a>`, '\n\n');
-    str = str.concat(`</div>`, '\n\n');
+    // str = str.concat(`\n\n<div class="build-status">`, '\n');
+    // str = str.concat(`<a href="https://travis-ci.org/Nishkalkashyap/Quark-electron" target="_blank" rel="noopener noreferrer"><img src="https://travis-ci.org/Nishkalkashyap/Quark-electron.svg?branch=master-all" alt="Build Status"></a>`, '\n');
+    // str = str.concat(`<a href="https://ci.appveyor.com/project/Nishkalkashyap/quark-electron" target="_blank" rel="noopener noreferrer"><img src="https://ci.appveyor.com/api/projects/status/e9n73kxva64pccwe/branch/master-all?svg=true" alt="Build Status"></a>`, '\n');
+    // str = str.concat(`<a href="https://github.com/Nishkalkashyap/Quark-docs" target="_blank" rel="noopener noreferrer"><img src="https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat" alt="Build Status"></a>`, '\n\n');
+    // str = str.concat(`</div>`, '\n\n');
 
     str = str.concat(`| 🆕 Release type             | ⚡ Latest Version      | 📅 Release Date |`, '\n');
     str = str.concat('| -------------------          | --------------------   | --------------- |', '\n');
