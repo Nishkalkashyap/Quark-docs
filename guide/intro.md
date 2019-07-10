@@ -68,7 +68,7 @@ Quark applications are built using it's __integrated development environment__ t
 
 Some of the [features](/guide/quark-ide.md) of Quark IDE include - smart auto completion, "go to definition", find and replace,typescript support, built in package manager and code compiler. -->
 
-## Goals
+<!-- ## Goals
 
 #### Rapid application development
 Projects build with Quark should be easy, quick to setup and share.
@@ -77,7 +77,7 @@ Projects build with Quark should be easy, quick to setup and share.
 Projects build with Quark should run on all platforms such as Windows, Linux and Mac, sharing the same code base.
 
 #### Simplicity
-Quark is built with simplicity in mind, so that creating projects with Quark is enjoyable, easy to learn, and accessible to just about anyone with basic programming skills.
+Quark is built with simplicity in mind, so that creating projects with Quark is enjoyable, easy to learn, and accessible to just about anyone with basic programming skills. -->
 
 
 <!--  -->
@@ -91,7 +91,7 @@ Once Quark releases in beta phase, it will follow [semver](https://semver.org/).
 ## First Steps
 To get the most out of Quark, start by reviewing a few introductory topics:
 * [Setting up the environment](/guide/setup.md) : Learn how to install Quark and get up and running within minutes.
-* [Quark IDE](/guide/quark-ide.md): Get to know how to navigate through the Quark development environment.
+* [Quark development environment](/guide/quark-ide.md): Get to know how to navigate through the Quark IDE.
 * [Showcase](/guide/showcase.md): View example projects made with Quark.
 
 

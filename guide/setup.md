@@ -43,7 +43,6 @@ If you're prompted by Quark, accept the newest update and it will be installed (
 ## Linux
 
 #### Installation
-Quark for linux is officially distributed as an AppImage.
 * Download Quark for Linux from the [download](/download/) page.
 * Once it is downloaded, add the _execute_ permissions to the downloaded file (`Quark-linux-x86_64-${version}.AppImage`).
 * Run the appImage to start Quark.
