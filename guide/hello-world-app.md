@@ -18,7 +18,7 @@ The project that we are finally going to build, will look something like this
 </video> 
 
 ### Create a new Project
-Just like we did it in [previous tutorial](/guide/getting-started.md), create a new project.
+Just like we did it in [previous module](/guide/getting-started.md), create a new project.
 
 ![Landing Page](~@buildAssets/guide/getting-started/start-new-project.png =300x)
 

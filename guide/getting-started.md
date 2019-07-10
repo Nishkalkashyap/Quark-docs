@@ -1,5 +1,5 @@
 ---
-description : 'This guide shows you how to build and run a simple Quark applet. The aim of this guide is to help you give an overview of the development workflow.'
+description : 'This guide shows you how to build and run a simple sketch. The aim of this guide is to help you give an overview of the development workflow.'
 author : nishkal
 tags : ['guide']
 cover : ~@buildAssets/guide/getting-started.png
@@ -55,9 +55,9 @@ You need to download and install the Quark IDE for your PC from [here.](/downloa
 console.log("Hello World, I'm Quark");
 ```
 
-#### Step 5: Building the applet
+#### Step 5: Building the sketch
 
-  1. To build the applet, press the __build__ button at the bottom right corner of the IDE.
+  1. To build the sketch, press the __build__ button at the bottom right corner of the IDE.
 
 ![Build](~@buildAssets/guide/intro/build.png)
 
@@ -65,12 +65,12 @@ console.log("Hello World, I'm Quark");
 
 ![Build](~@buildAssets/guide/intro/build-focus.png)
 
-  4. As visible in the output, our build was successful, now lets run the applet.
+  4. As visible in the output, our build was successful, now lets run the sketch.
 
-#### Step 6: Running the applet
+#### Step 6: Running the sketch
 
-  1. To run the applet, press the __run__ button at the bottom right corner _(adjacent to the build button)_ of the IDE.
-  2. This should run our applet and a new window will pop open like so.
+  1. To run the sketch, press the __run__ button at the bottom right corner _(adjacent to the build button)_ of the IDE.
+  2. This should run our sketch and a new window will pop open like so.
 
 ![Build](~@buildAssets/guide/intro/run.png)
 
