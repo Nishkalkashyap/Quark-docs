@@ -13,93 +13,60 @@ cover : ~@buildAssets/guide/introduction.png
 [[toc]]
 
 ## What is Quark ?
-Quark is a cross-platform, __integrated development environment__ and a __Javascript runtime__ for rapidly building - functional, utility applications written in HTML, CSS and JavaScript with native desktop app like capabilities.
+Quark is a __general purpose software__ tool specifically designed to help you create projects written in HTML, CSS and JavaScript with native desktop app like capabilities.
 
 <video muted autoplay loop style="max-width:100%; height:auto" name="media" poster="~@buildAssets/guide/hello-world-intro.png" crossOrigin="anonymous">
   <source src="~@buildAssets/guide/hello-world-intro.mp4" type="video/mp4">
   Your browser does not support the video tag.
 </video> 
 
-Every application built with Quark is essentially some bundled Javascript code that is executed within the context of a __global runtime environment__ _(also provided by Quark)_. 
+<div style="padding-top:50px"></div>
 
-Since these applications are dependent on this global execution context provided by Quark and have a direct dependency on the software itself, we call these applications __Quark Applets__.
+## How does it work? 🤯
+<!-- Simply Said: Quark comes with an __integrated development environment(IDE)__ and a __JavaScript run-time__. You write your code in the IDE and press a button to build your project. That's all! The IDE automatically takes care of transpiling and bundling your project and emits a single output file which you can "double-click" on to open and run your project. We call these output files, __"sketches"__. -->
+Simply Said: Quark comes with an __integrated development environment(IDE)__ and a __JavaScript run-time__. You write your code in the IDE and press a button to build your project. That's all! The IDE automatically takes care of building your project and emits a single output file which you can "double-click" on to open and run your project. We call these output files, __"sketches"__.
 
-These __Quark Applets__ can be used to power a whole new genre of sharable - utility applications, developer tools and personal projects that are written with web technologies and yet have native desktop app like capabilities.
 
-## Features of Quark Applets
+_See the process in action -_
+
+<video muted autoplay loop style="max-width:100%; height:auto" name="media" poster="~@buildAssets/getting-started/project-start-demo.jpg" crossOrigin="anonymous">
+  <source src="~@buildAssets/getting-started/project-start-demo.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video> 
+
+<div style="padding-top:50px"></div>
+
+## Quark Sketches 🎨
+Quark is built on top of the [Electron framework](https://electronjs.org). Your sketches are nothing more or less than __full fledged electron apps__. The only difference here is that they just weigh a __few kilobytes__ instead of __hundreds of megabytes.__
+
+We use some witchcraft behind the scenes to make this happen. But you don't need to care about all that stuff, just write your application logic, build the project and you're good to go. Here are some of the key features of Quark sketches-
 
 #### Web Technologies
-Quark applets are built using web technologies like HTML, CSS and Javascript. If you can build a website, you can build an applet.
+Sketches are built using web technologies like HTML, CSS and Javascript. If you can build a website, you already know how to build a sketch.
+
+#### Power of Node.js
+Your sketches have access to all the powers of [Node.js](https://nodejs.org). Think of anything you can do with node, you can do here!
 
 #### Cross Platform
-Another advantage of using web technologies is that Quark applets are Compatible with Mac, Windows, and Linux and run on all three platforms.
+Another advantage of using web technologies is that your sketches are Compatible with Mac, Windows, and Linux and run on all three platforms. __Write once, run everywhere!__
 
-#### Easy to build
-Thanks to the powerful Quark IDE which makes compiling, building and running a project as easy as pressing a button.
+#### Unopinionated
+Anything you like, any way you like, in any style. We have out-of-the-box support for modern JavaScript, React.js, Vue.js and Typescript. Take your pick!
 
+#### Powerful build system
+Thanks to the powerful Quark IDE which makes transpiling, bundling and running a project as easy as pressing a button.
+
+
+<!-- 
 #### Small in size
-Since every applet is essentially some bundled javascript code, Quark applets are very small in size, usually varying from a few kilobytes to a few megabytes.
-
-<!-- Quark allows you to make multiple dashboards with native app like capabilities without actully building an app -->
+Since every sketch is essentially some bundled javascript code, they are very small in size, usually varying from a few kilobytes to a few megabytes. -->
 
 <!-- Under the hood, Quark achieves this functionality by combining several set of tools in one single package and abstracting away the complexity to setup an environment for every single time you start a new project. -->
 
-## Quark development environment.
-Quark applications are built using it's integrated development environment that, at the very least, include a text editor and a code compiler. It enables the creation of applications within a carefully designed set of constraints. 
+<!-- ## Quark development environment.
+Quark applications are built using it's __integrated development environment__ that, at the very least, include a text editor and a code compiler. It enables the creation of applications within a carefully designed set of constraints. 
 
-Some of the [features](/guide/quark-ide.md) of Quark IDE include - smart auto completion, go to definition, find and replace,typescript support, built in package manager and code compiler.
-
-<!-- ## Workflow
-
-#### A simple workflow in Quark IDE might look something like this:
-* You write your application code in the text editor
-
-<video muted autoplay loop style="max-width:100%; height:auto" name="media" poster="~@buildAssets/guide/hello-world-intro.png" crossOrigin="anonymous">
-  <source src="~@buildAssets/guide/hello-world-intro.mp4" type="video/mp4">
-  Your browser does not support the video tag.
-</video> 
-
-These are the set of tool merged together in Quark:-
-
-1. __A Code Editor__ - This is the place where you write your code. It uses the same code editor that powers the [VS Code](https://code.visualstudio.com/).
-2. __A Build System__ - This is the place that builds and bundles all your code into a single file _(*.build.qrk)_ that can be run withing the __Quark runtime environment__. This is done by the popular [webpack](https://webpack.js.org/) bundler pre-installed inside Quark.
-3. __Runtime Environment__ - This is an [Electron](https://electronjs.org) [renderer process](https://electronjs.org/docs/tutorial/application-architecture#main-and-renderer-processes) which executes the build file emitted by the build system. Within the runtime environment, you have access to all the Quark API. -->
-
-<!-- ## Understanding through an analogy
-If the above description was too much to grasp, here is an analogy that will help you understand what Quark is. Here, we consider an example of developing an Android application:-
-
-1. So let's say you are developing an android application. Even a beginner to programming would understand that you need a place to write your code. That is provided by Android in the form of [Android Studio](https://developer.android.com/studio). This is the official integrated development environment by Android to build your android applications.
-2. So now you've written your code and need to build your project, this is done by the magical android __build system__ inside the Android studio that takes all your code and outputs a single file manifested as a __*.apk__ file.
-3. This __*.apk__ file is then executed inside of an Android device or an emulator which we can also call a  __runtime environment__ for the *.apk file.
-
-#### In the same sense, let us replicate all the three steps above and see how the process compares with Quark.
-
-1. Just like you write your code in android studio, in the same sence your write your code in the Quark IDE.
-2. Now all your code is bundled together by Quark and a single __*.build.qrk__ file is emitted.
-3. This __*.build.qrk__ file can then be run within the Quark __runtime environment__. 
-
-
-| Project Type        |    IDE Used    | Output file type |                 Runtime Environment                 |
-| ------------------- | :------------: | :--------------: | :-------------------------------------------------: |
-| **Android Project** | Android Studio |      *.apk       |            Android emulator/ Android OS             |
-| **Quark Project**   |   Quark IDE    |   *.build.qrk    | [Electron](https://electronjs.org) Renderer Process |
-
-
-!!! note Note
-This is in no way a comparison between Android studio and Quark. The above example is only to illustrate and compare the process of app development both the IDE's.
-!!!  -->
-
-
-<!-- ## Why does this project exists?
-Initially, the aim of the project was to make programming more accessible to students and budding engineers who do not necessarily want to dig deep into a lower level programming language like C/C++/Java, but would want to learn to code in an easy to use, multi-purpose programming language that would help them build their projects and at the same time bring them into a coding environment.
-
-The idea was to provide them with a set of tools in one single package, that abstracts away the complexity of setting up the environment so that they could directly jump into writing code and building projects.
-
-Later, it was realized that by merging some more set of tools together, Quark could also be used by well established programmers to build their prototypal projects. -->
-
-<!-- Initially, the aim of the project was to provide students and budding engineers new to coding with a set of tools  -->
-
-
+Some of the [features](/guide/quark-ide.md) of Quark IDE include - smart auto completion, "go to definition", find and replace,typescript support, built in package manager and code compiler. -->
 
 ## Goals
 
