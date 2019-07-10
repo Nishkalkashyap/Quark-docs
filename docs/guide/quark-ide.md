@@ -3,6 +3,7 @@ description : "This guide describes some of the main features of the Quark devel
 author : nishkal
 tags : ['guide']
 cover : ~@buildAssets/guide/quark-ide.png
+pageClass: small-heading-page
 ---
 
 

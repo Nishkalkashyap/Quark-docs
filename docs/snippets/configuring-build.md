@@ -19,7 +19,8 @@ Create a `webpack.config.js` file at the root of your project. e.g.
 └─ webpack.config.js
 ```
 
-##### Add config
+##### Add webpack config
+[Config reference](https://webpack.js.org)
 ```js
 // webpack.config.js
 module.exports = {
