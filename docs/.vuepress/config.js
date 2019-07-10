@@ -1,6 +1,7 @@
 const path = require('path');
 const AllTags = require('./../scripts/types').AllTags;
 const manifest = require('./../.vuepress/public/pwa/manifest.json');
+var CaseSensitivePathsPlugin = require('case-sensitive-paths-webpack-plugin');
 
 module.exports = {
     title: 'Quark',
@@ -269,6 +270,7 @@ module.exports = {
         config.resolve.alias['@vuepress'] = path.resolve('./.vuepress');
         config.resolve.alias['@scripts'] = path.resolve('./scripts');
         config.resolve.alias['@buildAssets'] = path.resolve('./.vuepress/buildAssets');
+        config.plugins.push(new CaseSensitivePathsPlugin({ debug: false }));
     }
     // configureWebpack: {
     //     entry: {
