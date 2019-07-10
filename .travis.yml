@@ -1,0 +1,35 @@
+sudo: required
+dist: trusty
+language: node_js
+cache:
+- npm
+notifications:
+  slack:
+    secure: ymYswTlnKqLE/s8fbI3EJ4iRPPn3Jqr7YYJOnIFaDUpI3COD8Qce3VJ1barYTF1HVW9sfm95VSnYes7JajgQSf8YHzohIarxPDvTJTN3FvKH0c+7b32reBLHbiWbK5T1dnT6OAQ1GNeXMOsBZHxdkMeIIbRQdwUGO4qlt4X0RGcsZjhY7zZhrp+4ACb0r6eaGAUEaJpkVkSor1M3WUmY848aw1UMvBuioaYWTrX8KLGAaKfIxrnNSQnNUVCMcBQqzSsJTcdifD9oZFJoCu00oGrR9x+Yk6Iw8gEolwXuTWcNI2pgN2IFfzKOJFRWdOKoSmaOV39MJY4Y/Wy+Ht51ig4wYKBBYO+NqcJ0QYItRO7hde/hb2rHaONpAjDkrEIMqN/TlIBOFXfFCJvXfFi5uksappYRWcYeKiXVaxVXloqMt8Do+fXyw2x67QLJ3Kkb9FgK3ur6WO0FLIwy7jA+wkINgzlQjYD8Iu2QRvbGmnyL5xlph8MBouLrDb90aDRQEvFZ76kAjs43o2rVDmWQtsvgrKK2ZaUsoYzigu2j78PFN0Hbi4NFLe8oHV6upC7ymPwuCt2Z4H2Fh2B73X6BdKTtRWfn69Wx/954FK5lkHQ5JH+KiTXSGtH4fe4GxOPwlMG7D1+w9Xlq5J8LeN4cKZCL4fUnPZIrR8A04gi0ImI=
+  email:
+    on_success: never
+    on_failure: change
+matrix:
+  include:
+  - os: linux
+    node_js: lts/*
+before_install:
+- cd docs
+- openssl aes-256-cbc -K $encrypted_e001d8d331d4_key -iv $encrypted_e001d8d331d4_iv
+  -in cloud-storage-key.json.enc -out cloud-storage-key.json -d
+- npm i -g firebase-tools
+install:
+- npm install
+script:
+- npm run cloud-build
+- npm run post-build
+deploy:
+  provider: firebase
+  token:
+    secure: LF/KYTxiB8tcvwpBlg5z0W/BHk868uTZGLDFgD48ajEM7rRMBmKrPlZx9tV8xFCHsXEmBTGThDGXGzvPZsXD6m8kSM+fRZuf5Hz97R2aFYwwi0HpE/mtbBedClhDCxX2hA8/2fJ9avitjXGCf3ZrBBYJ55du0pf55iQyybQAtgZV3AMbtcUg5NZZvTGm4L2xfCLUtloAw7YnpYDndtfEa/1Mne0rYP+aQTN/NgL9xTK2uDeLqi2HHH9wWjg2X16DfiQzeB24v9pv/AgfIk0X0gEi1NpdQwpmS2zYJzl0Re9J9npxWajUCSmHv1Mi5pKypxudTi5Pn6VcDydfdE3/4gJx7KHXjueyzpGaCkM3GhsJbggEWWE2gOcEyNB98TLNl/v5nM2zjEPxOytkwgHGgNZEc7xFV4BTnujQLaGdhtzHdxP4Joqd4YmRPTgD2MpqtLnm+H9aXs1D8gkpJ0US2AunqZYdUGoodI/YNhUeJBzZtEcZFhv2gtYjuAHsCqAUgBqYZyb7ai6CbOSuGgBAbvwOGXrLdS/X/nlXVgN4plNHrbR9h8I63GH2KyR6jiG/rH0x1M0CpvMsEddUzynXTVXLkJiEHpuCj9F6AHe1sy1cp/ZUH+c2nnQh5lXTasrCCZCnx4u+BHgjTd2qzcWOX273Syhn6paLpwcL/AndMbU=
+  project: diy-mechatronics
+  local_dir: "./.vuepress/dist"
+  skip_cleanup: true
+env:
+  global:
+    secure: tuHY+rHarKQ2vz5NBUWGqNbWM65Nkd6blCGCQPwA2mwSpFj6P34sjPeBfP/ugtLX93oBXs3upkRFgdjwELYO82TC+0guRkvP+fQVqHCkkhvZkgZwbixTVbiryS1/TRffjY94tB3gRhaTT4rlk1f7pCskSVNo9xMMSrl67DV8iodbjnlXai+FI6TLmipX20pda3Ln3dA2HuOOk2CPf6b5BZeR5W6VQkWoPye+EX3zQSIu3zNwwbwyQIRQ7QOHNbpBcvHMexSYuJaqxZwSybg+8uMokNaP7rxy5cSnibveP20KzUkwK06fms6q7Wi3KZhcCqq3bc0Pv4JY95wQJe07rux5Vh9ri/Ss4ozckXAP2Af88nR6Xchke0bFCjfHMZ5Q7glfh5WqE6B+x8N13lSSUt4zEE7/LTnJpShIe8EfRB+ZP3c/VvMfnokbEJWpx/KHYiOhoHVBPUZUbs6Sy7SyHo7XX7XRDXKhNLC/f5YrS8sec5pZfz9aRnM+7IAsjJTIwmrK50E8q9UIDnlx1qLm6j+6k0JHIi3OQLwessXVJthScWon0XOwkza4x+QN1QbhE/Io/12Hc2I1h974IAMad+jMGgqOKImnzIRqr9aA68jllU4WpuF66jYC/CyTk2NKgpjD6HFA7YzP6wZRXg2vk1480FGm/59CvvRVpRA/hgg=
