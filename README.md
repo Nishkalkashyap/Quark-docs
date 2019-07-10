@@ -1,6 +1,6 @@
 # The Repository
 
-[![Build Status](https://travis-ci.org/Nishkalkashyap/Quark-docs.svg?branch=master-all)](https://travis-ci.org/Nishkalkashyap/Quark-docs)
+[![Build Status](https://travis-ci.org/Nishkalkashyap/Quark-docs.svg?branch=master)](https://travis-ci.org/Nishkalkashyap/Quark-docs)
 [![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/Nishkalkashyap/Quark-docs)
 
 
