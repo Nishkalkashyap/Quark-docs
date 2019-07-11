@@ -1,4 +1,9 @@
 export function isInViewport(el) {
+
+    if (!el) {
+        return true;
+    }
+
     var rect = el.getBoundingClientRect();
 
     return rect.bottom > 0 &&

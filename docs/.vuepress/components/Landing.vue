@@ -14,7 +14,7 @@
         </video>
     </heroSection>
 
-    <heroSection side="left" heading="GitHub for Atom" upper="A text editor is at the core of a developer’s toolbox, but it doesn't usually work alone. Work with Git and GitHub directly from Atom with the GitHub package." lower="A text editor is at the core of a developer’s toolbox, but it doesn't usually work alone. Work with Git and GitHub directly from Atom with the GitHub package.">
+    <heroSection side="left" heading="Everything you would expect" upper="A text editor is at the core of a developer’s toolbox, but it doesn't usually work alone. Work with Git and GitHub directly from Atom with the GitHub package." lower="A text editor is at the core of a developer’s toolbox, but it doesn't usually work alone. Work with Git and GitHub directly from Atom with the GitHub package.">
         <video muted autoplay loop name="media" poster="~@buildAssets/guide/hello-world-intro.png" crossorigin="anonymous" class="image-transition" slot="image">
             <source src="~@buildAssets/guide/showcase/web-browser.mp4" type="video/mp4" />Your browser does not support the video tag.
         </video>
