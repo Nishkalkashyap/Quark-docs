@@ -24,7 +24,9 @@ Quark is a __general purpose software__ tool specifically designed to help you c
 
 ## How does it work? 🤯
 <!-- Simply Said: Quark comes with an __integrated development environment(IDE)__ and a __JavaScript runtime__. You write your code in the IDE and press a button to build your project. That's all! The IDE automatically takes care of transpiling and bundling your project and emits a single output file which you can "double-click" on to open and run your project. We call these output files, __"sketches"__. -->
-Simply Said: Quark comes with an __integrated development environment(IDE)__ and a __JavaScript runtime__. You write your code in the IDE and press a button to build your project. That's all! The IDE automatically takes care of building your project and emits a single output file which you can "double-click" on to open and run your project. We call these output files, __"sketches"__.
+Simply Said: Quark comes with an __integrated development environment(IDE)__ and a __JavaScript runtime__. You write your code in the IDE and press a button to build your project. That's all! 
+
+The IDE automatically takes care of building your project and emits a single output file which you can "double-click" on to open and run your project. We call these output files, __"sketches"__.
 
 
 _See the process in action -_
