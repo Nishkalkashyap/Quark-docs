@@ -2,49 +2,22 @@
 <div class="home4-component">
     <heroTop />
 
-    <heroSection side="left" heading="New genre of desktop applications" upper="Built to power a whole new genre of desktop applications">
-        <video
-        muted
-        autoplay
-        loop
-        name="media"
-        poster="~@buildAssets/guide/hello-world-intro.png"
-        crossorigin="anonymous"
-        class="image-transition"
-        slot="image"
-      >
-        <source src="~@buildAssets/guide/showcase/web-browser.mp4" type="video/mp4" />Your browser does not support the video tag.
-      </video>
+    <heroSection side="right" heading="Rapid project development" upper="And by rapid, we mean RAPID ⚡. You can create, build and run an application, all <strong>under 15 seconds !!</strong>" lower="Quark is designed from ground up, for rapid prototyping and development of projects. This means that projects built with Quark are quick to setup, build and share.">
+        <video muted autoplay loop name="media" poster="~@buildAssets/getting-started/project-start-demo.jpg" crossorigin="anonymous" class="image-transition" slot="image">
+            <source src="~@buildAssets/getting-started/project-start-demo.mp4" type="video/mp4" />Your browser does not support the video tag.
+        </video>
     </heroSection>
 
-    <heroSection side="right" heading="Rapid project development" upper="And by rapid, we mean RAPID ⚡. You can create, build and run an application, all <strong>under 15 seconds !!</strong>" lower="Quark is designed from ground up, for rapid prototyping and development of projects. This means that projects built with Quark are quick to setup, build and share.">
-        <video
-        muted
-        autoplay
-        loop
-        name="media"
-        poster="~@buildAssets/getting-started/project-start-demo.jpg"
-        crossorigin="anonymous"
-        class="image-transition"
-        slot="image"
-      >
-        <source src="~@buildAssets/getting-started/project-start-demo.mp4" type="video/mp4" />Your browser does not support the video tag.
-      </video>
+    <heroSection side="left" heading="New genre of desktop applications" upper="Built to power a whole new genre of desktop applications">
+        <video muted autoplay loop name="media" poster="~@buildAssets/guide/hello-world-intro.png" crossorigin="anonymous" class="image-transition" slot="image">
+            <source src="~@buildAssets/guide/showcase/web-browser.mp4" type="video/mp4" />Your browser does not support the video tag.
+        </video>
     </heroSection>
 
     <heroSection side="left" heading="GitHub for Atom" upper="A text editor is at the core of a developer’s toolbox, but it doesn't usually work alone. Work with Git and GitHub directly from Atom with the GitHub package." lower="A text editor is at the core of a developer’s toolbox, but it doesn't usually work alone. Work with Git and GitHub directly from Atom with the GitHub package.">
-        <video
-        muted
-        autoplay
-        loop
-        name="media"
-        poster="~@buildAssets/guide/hello-world-intro.png"
-        crossorigin="anonymous"
-        class="image-transition"
-        slot="image"
-      >
-        <source src="~@buildAssets/guide/showcase/web-browser.mp4" type="video/mp4" />Your browser does not support the video tag.
-      </video>
+        <video muted autoplay loop name="media" poster="~@buildAssets/guide/hello-world-intro.png" crossorigin="anonymous" class="image-transition" slot="image">
+            <source src="~@buildAssets/guide/showcase/web-browser.mp4" type="video/mp4" />Your browser does not support the video tag.
+        </video>
     </heroSection>
 
     <div class="landing-page-background">
@@ -62,14 +35,9 @@
 
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 338.05" preserveAspectRatio="none">
             <path>
-              <animate
-                attributeName="d"
-                values="M 0 100 Q 250 50 400 200 Q 550 350 800 300 L 800 0 L 0 0 L 0 100 Z;M 0 100 Q 200 150 400 200 Q 600 250 800 300 L 800 0 L 0 0 L 0 100 Z;M 0 100 Q 150 350 400 200 Q 650 50 800 300 L 800 0 L 0 0 L 0 100 Z"
-                repeatCount="indefinite"
-                dur="30s"
-              />
+                <animate attributeName="d" values="M 0 100 Q 250 50 400 200 Q 550 350 800 300 L 800 0 L 0 0 L 0 100 Z;M 0 100 Q 200 150 400 200 Q 600 250 800 300 L 800 0 L 0 0 L 0 100 Z;M 0 100 Q 150 350 400 200 Q 650 50 800 300 L 800 0 L 0 0 L 0 100 Z" repeatCount="indefinite" dur="30s" />
             </path>
-          </svg>
+        </svg>
     </div>
 
     <SWUpdatePopup :updateEvent="swUpdateEvent" />
