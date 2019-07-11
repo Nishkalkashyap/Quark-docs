@@ -3,10 +3,9 @@ pageClass: download-page
 ---
 
 # All Downloads
-
 | 🆕 Release type             | ⚡ Latest Version      | 📅 Release Date |
 | -------------------          | --------------------   | --------------- |
-| stable   | 0.5.1             | July 8 2019,  12:58:16 PM |
+| stable   | 0.5.2             | July 11 2019,  1:14:58 AM |
 <Download
 channel="stable"
 />
