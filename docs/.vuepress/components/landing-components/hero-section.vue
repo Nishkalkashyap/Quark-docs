@@ -6,7 +6,7 @@
             <p v-html="upper"></p>
             <slot name="image"></slot>
             <p v-html="lower"></p>
-            <router-link to="/download/">Learn more</router-link>
+            <router-link :to="(learnMoreLink || '/download/')">Learn more</router-link>
         </div>
     </div>
     <floaters :side="side" />
@@ -19,7 +19,7 @@ import {
     isInViewport
 } from './util';
 export default {
-    props: ["side", "heading", "upper", "lower", "image"],
+    props: ["side", "heading", "upper", "lower", "image", "learnMoreLink"],
     components: {
         floaters
     },
