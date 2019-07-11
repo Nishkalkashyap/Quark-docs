@@ -2,19 +2,19 @@
 <div class="home4-component">
     <heroTop />
 
-    <heroSection side="right" heading="Rapid project development" upper="And by rapid, we mean RAPID ⚡. You can create, build and run an application, all <strong>under 15 seconds !!</strong>" lower="Quark is designed from ground up, for rapid prototyping and development of projects. This means that projects built with Quark are quick to setup, build and share.">
-        <video muted autoplay loop name="media" poster="~@buildAssets/getting-started/project-start-demo.jpg" crossorigin="anonymous" class="image-transition" slot="image">
-            <source src="~@buildAssets/getting-started/project-start-demo.mp4" type="video/mp4" />Your browser does not support the video tag.
-        </video>
-    </heroSection>
-
-    <heroSection side="left" heading="New genre of desktop applications" upper="Built to power a whole new genre of desktop applications">
+    <heroSection side="left" heading="Software sketchbook for your projects" upper="Quark helps you create software sketches written in HTML, CSS and JavaScript with native desktop app like capabilities." lower="We provide you with all the tools and a canvas to help you make your art.">
         <video muted autoplay loop name="media" poster="~@buildAssets/guide/hello-world-intro.png" crossorigin="anonymous" class="image-transition" slot="image">
             <source src="~@buildAssets/guide/showcase/web-browser.mp4" type="video/mp4" />Your browser does not support the video tag.
         </video>
     </heroSection>
 
-    <heroSection side="left" heading="Power of Electron 💪" upper="Behind the scenes, we use electron's renderer process as the runtime for your sketches." lower="This means, that you have access to all of the Node.js and Electron's renderer process API's in your sketch.">
+    <heroSection side="right" heading="Blazing fast app creation ⚡" upper="There is no greater buzzkill than having to configure build tools and development environment before you can start hammering out a cool project or test a new idea." lower="Quark is designed from ground up, for rapid prototyping and development of projects. This means that projects built with Quark are quick to setup, build and share.">
+        <video muted autoplay loop name="media" poster="~@buildAssets/getting-started/project-start-demo.jpg" crossorigin="anonymous" class="image-transition" slot="image">
+            <source src="~@buildAssets/getting-started/project-start-demo.mp4" type="video/mp4" />Your browser does not support the video tag.
+        </video>
+    </heroSection>
+
+    <heroSection side="left" heading="Power of Electron 💪" upper="Built on top of the electron framework. Behind the scenes, Quark uses electron's renderer process as the runtime for your sketches." lower="This means, that you have access to all of the Node.js and Electron's renderer process API's in your sketch.">
         <video muted autoplay loop name="media" poster="~@buildAssets/guide/hello-world-intro.png" crossorigin="anonymous" class="image-transition" slot="image">
             <source src="~@buildAssets/guide/showcase/web-browser.mp4" type="video/mp4" />Your browser does not support the video tag.
         </video>
