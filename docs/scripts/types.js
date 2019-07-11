@@ -12,7 +12,7 @@ exports.AllTags = reverse({
     nodejs: {
         background: 'var(--text-color--dark)',
         color: '#90c53f',
-        description: `Node.js is an open-source, cross-platform JavaScript run-time environment that executes JavaScript code outside of a browser.`
+        description: `Node.js is an open-source, cross-platform JavaScript runtime environment that executes JavaScript code outside of a browser.`
     },
     structures: {
         background: '#ffffff',

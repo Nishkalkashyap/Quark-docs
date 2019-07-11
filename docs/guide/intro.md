@@ -23,8 +23,8 @@ Quark is a __general purpose software__ tool specifically designed to help you c
 <div style="padding-top:50px"></div>
 
 ## How does it work? 🤯
-<!-- Simply Said: Quark comes with an __integrated development environment(IDE)__ and a __JavaScript run-time__. You write your code in the IDE and press a button to build your project. That's all! The IDE automatically takes care of transpiling and bundling your project and emits a single output file which you can "double-click" on to open and run your project. We call these output files, __"sketches"__. -->
-Simply Said: Quark comes with an __integrated development environment(IDE)__ and a __JavaScript run-time__. You write your code in the IDE and press a button to build your project. That's all! The IDE automatically takes care of building your project and emits a single output file which you can "double-click" on to open and run your project. We call these output files, __"sketches"__.
+<!-- Simply Said: Quark comes with an __integrated development environment(IDE)__ and a __JavaScript runtime__. You write your code in the IDE and press a button to build your project. That's all! The IDE automatically takes care of transpiling and bundling your project and emits a single output file which you can "double-click" on to open and run your project. We call these output files, __"sketches"__. -->
+Simply Said: Quark comes with an __integrated development environment(IDE)__ and a __JavaScript runtime__. You write your code in the IDE and press a button to build your project. That's all! The IDE automatically takes care of building your project and emits a single output file which you can "double-click" on to open and run your project. We call these output files, __"sketches"__.
 
 
 _See the process in action -_
@@ -45,7 +45,7 @@ We use some witchcraft behind the scenes to make this happen. But you don't need
 Sketches are built using web technologies like HTML, CSS and Javascript. If you can build a website, you already know how to build a sketch.
 
 #### Power of Electron 💪
-Behind the scenes, we use [electron's renderer process](https://electronjs.org/docs/tutorial/application-architecture) as the run-time for your sketches. This means, that you have access to all of the Node.js and Electron's renderer process API's in your sketch.
+Behind the scenes, we use [electron's renderer process](https://electronjs.org/docs/tutorial/application-architecture) as the runtime for your sketches. This means, that you have access to all of the Node.js and Electron's renderer process API's in your sketch.
 
 #### Cross Platform
 Another advantage of using web technologies is that your sketches are Compatible with Mac, Windows, and Linux and run on all three platforms. __Write once, run everywhere!__
