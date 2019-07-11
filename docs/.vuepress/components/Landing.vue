@@ -18,7 +18,7 @@
         crossorigin="anonymous"
         class="image-transition"
         slot="image"
-        style="filter: brightness(0.7) contrast(1) sepia(1) hue-rotate(180deg) saturate(1.5)"
+        style="filter: brightness(0.7) contrast(1) sepia(2) hue-rotate(180deg) saturate(5.5)"
       >
         <source src="~@buildAssets/guide/showcase/system-monitor.mp4" type="video/mp4" />Your browser does not support the video tag.
       </video>

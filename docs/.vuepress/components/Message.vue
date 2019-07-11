@@ -2,7 +2,7 @@
 <div class="message-component">
     <div class="container" v-if="!this.isDismissed">
         <span>
-            Note: This project is currently under active development and things may not work as expected. 🤯
+            Note: This project is currently under active development. Documentation is incomplete and things may not work as expected. 🤯
         </span>
         <div @click="dismiss()" class="button">Dismiss</div>
     </div>
