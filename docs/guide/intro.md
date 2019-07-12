@@ -39,9 +39,15 @@ _See the process in action -_
 <div style="padding-top:50px"></div>
 
 ## Quark Sketches 🎨
-Quark is built on top of the [Electron framework](https://electronjs.org). Your sketches are nothing more or less than __full fledged electron apps__. The only difference here is that they just weigh a __few kilobytes__ instead of __hundreds of megabytes.__
+Quark is built on top of the [Electron framework](https://electronjs.org). Your sketches provide you with all the capabilities of __full fledged electron apps__. The difference here is that they just weigh a __few kilobytes__ instead of __hundreds of megabytes.__
 
-We use some witchcraft behind the scenes to make this happen. But you don't need to care about all that stuff, just write your application logic, build the project and you're good to go. Here are some of the key features of Quark sketches-
+We achieve this functionality by using a __shared JavaScript runtime__ for all your sketches. This runtime, in most cases, accounts for almost 99% of the weight of an electron app. This leaves us with the actual application logic, which usually only weighs a few kilobytes.
+
+The only caveat here is that because of this shared runtime, your sketches have a direct dependency on the Quark software itself to provide for the runtime. Hence we call these projects built with Quark __"sketches" and not applications.__
+
+What this means for you is that you can potentially have hundreds of sketches on your machine providing the functionality as that of full fledged electron apps, while consuming the resources equivalent to only one app!
+
+<!-- We use some witchcraft behind the scenes to make this happen. But you don't need to care about all that stuff, just write your application logic, build the project and you're good to go. Here are some of the key features of Quark sketches- -->
 
 #### Web Technologies
 Sketches are built using web technologies like HTML, CSS and Javascript. If you can build a website, you already know how to build a sketch.
