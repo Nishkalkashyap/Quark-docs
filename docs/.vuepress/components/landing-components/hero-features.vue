@@ -43,8 +43,8 @@ export default {
                     text: 'Thanks to Monaco Editor we have out of the box support for Typescript autocompletions and diagnostics.'
                 },
                 {
-                    svg: require('!!svg-inline-loader!./../../buildAssets/landing-page-svgs/intrgrated-terminal.svg'),
-                    heading: 'Intrgrated Terminal',
+                    svg: require('!!svg-inline-loader!./../../buildAssets/landing-page-svgs/integrated-terminal.svg'),
+                    heading: 'Integrated Terminal',
                     text: 'The integrated terminal stays in the bottom of your editor while you work, making it super convenient to use.'
                 },
                 {

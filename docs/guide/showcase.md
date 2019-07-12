@@ -57,7 +57,7 @@ cover : ~@buildAssets/guide/showcase.png
 </video> 
 
 ## Web Browser
-* Web browser with multiple split view support.
+* Web browser with multiple tabs, split view support. __(Written under 200 lines of code!!)__
 
 <video muted autoplay loop style="max-width:100%; height:auto" name="media" poster="~@buildAssets/guide/showcase/web-browser.png" crossOrigin="anonymous">
   <source src="~@buildAssets/guide/showcase/web-browser.mp4" type="video/mp4">
