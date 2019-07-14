@@ -40,32 +40,32 @@ module.exports = {
                 href: '/images/icon.png'
             },
         ],
-        [
-            'script', {
-                src: '/__/firebase/6.0.2/firebase-app.js',
-                type: 'text/javascript',
-                rel: "preconnect"
-            }
-        ],
-        [
-            'script', {
-                src: '/__/firebase/init.js',
-                type: 'text/javascript',
-                rel: "preconnect"
-            }
-        ],
-        [
-            'script', {
-                src: '/__/firebase/6.0.2/firebase-performance.js',
-                type: 'text/javascript',
-                rel: "preconnect"
-            }
-        ],
-        [
-            'script', {}, `
-                var perf = firebase.performance();
-        `
-        ],
+        // [
+        //     'script', {
+        //         src: '/__/firebase/6.0.2/firebase-app.js',
+        //         type: 'text/javascript',
+        //         rel: "preconnect"
+        //     }
+        // ],
+        // [
+        //     'script', {
+        //         src: '/__/firebase/init.js',
+        //         type: 'text/javascript',
+        //         rel: "preconnect"
+        //     }
+        // ],
+        // [
+        //     'script', {
+        //         src: '/__/firebase/6.0.2/firebase-performance.js',
+        //         type: 'text/javascript',
+        //         rel: "preconnect"
+        //     }
+        // ],
+        // [
+        //     'script', {}, `
+        //         var perf = firebase.performance();
+        // `
+        // ],
         // ['script', {
         //     src: '/assets/anime.min.js',
         //     type: 'text/javascript'
