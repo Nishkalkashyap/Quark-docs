@@ -7,15 +7,6 @@
       "**/.*",
       "**/node_modules/**"
     ],
-    "rewrites": [{
-        "source": "/download-count/**",
-        "function": "downloadCount"
-      },
-      {
-        "source": "/crash-reporter/**",
-        "function": "crashReporter"
-      }
-    ],
     "cleanUrls": false,
     "trailingSlash": false,
     "headers": [{

@@ -20,6 +20,8 @@ async function uploadFileToBucket() {
     });
     const bucket = storage.bucket(bucketName);
 
+    await bucket.deleteFiles();
+
     const files = await recc('./');
     const promises = files.map(async (_file) => {
         const file = _file.replace(/\\/g, '/');
@@ -27,11 +29,15 @@ async function uploadFileToBucket() {
             gzip: true,
             public: true,
             destination: file,
-            metadata: {
-                cacheControl: 'public, max-age=31536000',
-            }
+            // metadata: {
+            //     // cacheControl: 'public, max-age=31536000',
+            // }
         });
     });
     await Promise.all(promises);
     printConsoleStatus(`Uploaded all files`, 'success');
 }
+
+// function getCacheControlForFile(file : string){
+//     if(file.match(/\.(jpg|jpeg|gif|png|mp4)$/))
+// }
