@@ -17,6 +17,7 @@
     "post-build": "npx ts-node ./scripts/create-site-map.ts && npm run worker",
     "worker": "npx ts-node ./scripts/generate-service-worker.ts",
     "deploy-ci": "firebase deploy --token \"$FIREBASE_TOKEN\"",
+    "deploy-to-bucket": "ts-node ./scripts/cloud-storage-hosting.ts",
     "bad": "npm run build && firebase deploy",
     "test": "npm run build",
     "check": "ts-node ./scripts/check-files.ts",

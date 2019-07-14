@@ -3,15 +3,15 @@ import * as recc from 'recursive-readdir';
 import { printConsoleStatus } from './util';
 import * as path from 'path';
 
-const bucketName = 'quark-www.quarkjs.io';
-// const bucketName = 'quarkjs.io';
+// const bucketName = 'quark-www.quarkjs.io';
+const bucketName = 'quarkjs.io';
 const folder = './.vuepress/dist';
 process.env.GOOGLE_APPLICATION_CREDENTIALS = path.resolve('./cloud-storage-key.json');
 process.chdir(folder);
 
 uploadFileToBucket().catch((err) => {
     console.error(err);
-    throw Error(`Error uploading files`);
+    process.exit(1);
 });
 
 async function uploadFileToBucket() {

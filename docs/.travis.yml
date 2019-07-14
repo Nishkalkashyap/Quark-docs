@@ -22,6 +22,7 @@ install:
 script:
 - npm run cloud-build
 - npm run post-build
+- npm run deploy-to-bucket
 deploy:
   provider: firebase
   token:
