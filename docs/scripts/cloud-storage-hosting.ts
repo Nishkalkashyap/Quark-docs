@@ -34,6 +34,7 @@ async function uploadFileToBucket() {
                 cacheControl: `public, max-age=${getCacheControlForFile(file)}`,
             }
         });
+        return f;
     });
     await Promise.all(promises);
     printConsoleStatus(`Uploaded all files`, 'success');
