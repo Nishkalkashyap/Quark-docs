@@ -2,17 +2,40 @@ import { Storage } from '@google-cloud/storage';
 import * as recc from 'recursive-readdir';
 import { printConsoleStatus } from './util';
 import * as path from 'path';
+import fetch from 'node-fetch';
+import * as dotenv from 'dotenv';
+dotenv.config({ path: '.env' });
 
-// const bucketName = 'quark-www.quarkjs.io';
+
+// purgeCache();
+async function purgeCache() {
+    const result = await fetch(`https://api.cloudflare.com/client/v4/zones/7d5732fab88b05cc381a9479ad89a090/purge_cache`, {
+        method: 'post',
+        headers: {
+            'X-Auth-Email': 'kashyapnishkal@gmail.com',
+            'X-Auth-Key': process.env.CLOUD_FLARE_API_KEY,
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+            purge_everything: true
+        })
+    });
+    console.log(await result.text());
+}
+
 const bucketName = 'quarkjs.io';
 const folder = './.vuepress/dist';
 process.env.GOOGLE_APPLICATION_CREDENTIALS = path.resolve('./cloud-storage-key.json');
 process.chdir(folder);
 
-uploadFileToBucket().catch((err) => {
-    console.error(err);
-    process.exit(1);
-});
+uploadFileToBucket()
+    .then(() => {
+        purgeCache();
+    })
+    .catch((err) => {
+        console.error(err);
+        process.exit(1);
+    });
 
 async function uploadFileToBucket() {
     const storage = new Storage({
@@ -45,7 +68,8 @@ function getCacheControlForFile(file: string) {
     // html max-age 3600
 
     // cache service-worker
-    if (file.match(/service-worker\.js/)) {
+    if (file.match(/.+service-worker\.js/)) {
+        console.log('Service worker cache set to zero');
         return 0;
     }
 
