@@ -21,6 +21,7 @@
     "bad": "npm run build && firebase deploy",
     "test": "npm run build",
     "check": "ts-node ./scripts/check-files.ts",
+    "cache": "ts-node ./scripts/purge-cache.ts",
     "server": "cd ./.vuepress/dist && http-server -p 80",
     "open": "ts-node scripts/open-links.ts",
     "vid": "ts-node ./scripts/convert-videos.ts",
