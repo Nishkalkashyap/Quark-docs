@@ -60,5 +60,6 @@ function getCacheControlForFile(file: string) {
         return 2592000;
     }
 
-    return 3600;
+    // return 3600;
+    return 7200;
 }
