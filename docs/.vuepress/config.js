@@ -231,7 +231,8 @@ module.exports = {
             ],
             "/FAQ/": [
                 "glossary.md",
-                "license.md"
+                "license.md",
+                "about.md"
             ],
             "/tags/": [
                 "references.md",
