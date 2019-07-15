@@ -171,7 +171,7 @@ module.exports = {
                     {
                         text: 'Links',
                         items: [{
-                                text: 'Services status',
+                                text: 'Status page',
                                 link: 'https://status.quarkjs.io'
                             },
                             {

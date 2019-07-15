@@ -21,7 +21,7 @@ async function uploadFileToBucket() {
 
     const bucket = storage.bucket(bucketName);
     await bucket.deleteFiles();
-    
+
     const files = await recc('./');
     const promises = files.map(async (_file) => {
         const file = _file.replace(/\\/g, '/');
@@ -43,20 +43,24 @@ async function uploadFileToBucket() {
 function getCacheControlForFile(file: string) {
     // html max-age 3600
     // html max-age 3600
-    
+
+    // cache service-worker
+    if (file.match(/service-worker\.js/)) {
+        return 0;
+    }
+
+    // cache images
     if (file.match(/\.(jpg|jpeg|gif|png|mp4)$/)) {
         return 2592000;
     }
 
+    // cache javascript
     if (file.match(/assets\/js.+(js)$/)) {
         return 2592000;
     }
 
+    // cache assets
     if (file.match(/\.(woff|woff2|css)$/)) {
-        return 2592000;
-    }
-
-    if (file.match(/\.+worker.js/)) {
         return 2592000;
     }
 
