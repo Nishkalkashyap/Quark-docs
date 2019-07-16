@@ -273,7 +273,8 @@ module.exports = {
             "/examples/": [
                 "prices.md",
                 "activity-monitor.md",
-                "hash.md"
+                "hash.md",
+                "mirror.md"
             ]
         }
     },
