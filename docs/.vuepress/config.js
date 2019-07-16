@@ -119,7 +119,7 @@ module.exports = {
             },
             {
                 text: 'Examples',
-                link: '/examples/'
+                link: '/examples/activity-monitor.md'
             },
             {
                 text: 'Tags',
@@ -271,6 +271,7 @@ module.exports = {
                 "serialport.md"
             ],
             "/examples/": [
+                "prices.md",
                 "activity-monitor.md",
                 "hash.md"
             ]

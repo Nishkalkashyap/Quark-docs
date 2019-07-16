@@ -13,7 +13,7 @@ sidebarDepth: 2
 
 ##### The project that we are finally going to build, will look something like this:
 
-![screenshot](~@buildAssets/examples-activity-monitor.png =300x)
+![screenshot](~@buildAssets/examples-activity-monitor.png =400x)
 
 !!! note
 This project could be found [here.](https://github.com/Nishkalkashyap/Quark-samples/tree/master/examples/activity-monitor)
