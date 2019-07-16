@@ -117,6 +117,10 @@ module.exports = {
                 link: '/guide/intro.md'
             },
             {
+                text: 'Examples',
+                link: '/examples/'
+            },
+            {
                 text: 'Tags',
                 items: Object.keys(AllTags).map((tag) => {
                     return {
@@ -264,6 +268,9 @@ module.exports = {
                 "react-js.md",
                 "vue-js.md",
                 "serialport.md"
+            ],
+            "/examples/": [
+                "activity-monitor.md"
             ]
         }
     },

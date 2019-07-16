@@ -92,6 +92,7 @@ structures/README.md
 all/README.md
 releases/README.md
 libraries/README.md
+examples/README.md
 
 .vuepress/public/g-images/
 cloud-storage-key.json
