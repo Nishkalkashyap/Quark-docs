@@ -260,6 +260,7 @@ module.exports = {
             ],
             "/libraries/": [
                 "intro.md",
+                "electron-js.md",
                 "react-js.md",
                 "vue-js.md",
                 "serialport.md"
