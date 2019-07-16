@@ -271,7 +271,8 @@ module.exports = {
                 "serialport.md"
             ],
             "/examples/": [
-                "activity-monitor.md"
+                "activity-monitor.md",
+                "hash.md"
             ]
         }
     },
