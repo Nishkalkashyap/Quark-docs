@@ -12,3 +12,5 @@ tags : ['javascript']
 
 The project that we are finally going to build, will look something like this
 
+![Landing Page](~@buildAssets/examples-activity-monitor.png =300x)
+

@@ -2,6 +2,7 @@ const path = require('path');
 const AllTags = require('./../scripts/types').AllTags;
 const manifest = require('./../.vuepress/public/pwa/manifest.json');
 var CaseSensitivePathsPlugin = require('case-sensitive-paths-webpack-plugin');
+var ImageminPlugin = require('imagemin-webpack-plugin').default
 
 module.exports = {
     title: 'Quark',
@@ -275,12 +276,22 @@ module.exports = {
         }
     },
     configureWebpack: (config) => {
+        // const inlineLimit = 10000;//10 kb
+        const inlineLimit = 100000000; //10 kb
+
+
         config.resolve.alias['@public'] = path.resolve('./.vuepress/public');
         config.resolve.alias['@vuepress'] = path.resolve('./.vuepress');
         config.resolve.alias['@scripts'] = path.resolve('./scripts');
         config.resolve.alias['@buildAssets'] = path.resolve('./.vuepress/buildAssets');
         config.plugins.push(new CaseSensitivePathsPlugin({
             debug: false
+        }));
+        config.plugins.push(new ImageminPlugin({
+            disable: process.env.NODE_ENV !== 'production', // Disable during development
+            pngquant: {
+                quality: '40-50'
+            }
         }));
     }
     // configureWebpack: {

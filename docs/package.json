@@ -51,6 +51,7 @@
     "firebase-tools": "^6.7.1",
     "fluent-ffmpeg": "^2.1.2",
     "fs-extra": "^7.0.1",
+    "imagemin-webpack-plugin": "^2.4.2",
     "markdown-it-html5-embed": "^1.0.0",
     "material-icon-theme": "^3.7.1",
     "node-sass": "^4.12.0",
