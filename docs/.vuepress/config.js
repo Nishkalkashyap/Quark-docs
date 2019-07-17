@@ -290,12 +290,12 @@ module.exports = {
         config.plugins.push(new CaseSensitivePathsPlugin({
             debug: false
         }));
-        config.plugins.push(new ImageminPlugin({
-            disable: process.env.NODE_ENV !== 'production', // Disable during development
-            pngquant: {
-                quality: '40-50'
-            }
-        }));
+        // config.plugins.push(new ImageminPlugin({
+        //     disable: process.env.NODE_ENV !== 'production', // Disable during development
+        //     pngquant: {
+        //         quality: '40-50'
+        //     }
+        // }));
     }
     // configureWebpack: {
     //     entry: {
