@@ -271,8 +271,8 @@ module.exports = {
                 "serialport.md"
             ],
             "/examples/": [
-                "prices.md",
                 "activity-monitor.md",
+                "prices.md",
                 "hash.md",
                 "mirror.md"
             ]
