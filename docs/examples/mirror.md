@@ -11,7 +11,7 @@ sidebarDepth: 2
 
 [[toc]]
 
-!!! note
+!!! note Note
 This project could be found [here.](https://github.com/Nishkalkashyap/Quark-samples/tree/master/examples/mirror)
 !!!
 

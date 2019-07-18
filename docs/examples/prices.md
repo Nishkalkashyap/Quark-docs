@@ -15,7 +15,7 @@ sidebarDepth: 2
 
 ![screenshot](~@buildAssets/examples-price.png =400x)
 
-!!! note
+!!! note Note
 This project could be found [here.](https://github.com/Nishkalkashyap/Quark-samples/tree/master/examples/prices)
 !!!
 
