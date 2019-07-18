@@ -45,8 +45,8 @@ function getCacheControlForFile(file: string) {
     // html max-age 3600
 
     // cache service-worker
-    if (file.match(/.+service-worker\.js/)) {
-        console.log('Service worker cache set to zero');
+    if (file.match(/.+worker\.js/)) {
+        printConsoleStatus(`Service worker cache set to zero: ${file}`, 'info');
         return 0;
     }
 
