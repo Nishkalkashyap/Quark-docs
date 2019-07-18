@@ -12,7 +12,7 @@ sidebarDepth: 2
 [[toc]]
 
 !!! note Note
-This project could be found [here.](https://github.com/Nishkalkashyap/Quark-samples/tree/master/examples/mirror)
+The complete project could be found [here](https://github.com/Nishkalkashyap/Quark-samples/tree/master/examples/mirror) on the github repo.
 !!!
 
 ## Create a new Project

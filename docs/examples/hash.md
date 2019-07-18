@@ -16,7 +16,7 @@ sidebarDepth: 2
 ![screenshot](~@buildAssets/examples-hash.png =500x)
 
 !!! note Note
-This project could be found [here.](https://github.com/Nishkalkashyap/Quark-samples/tree/master/examples/hash)
+The complete project could be found [here](https://github.com/Nishkalkashyap/Quark-samples/tree/master/examples/hash) on the github repo.
 !!!
 
 ## Create a new Project
