@@ -9,7 +9,7 @@
     </div>
     <div
       class="height-container"
-      :style="{'max-height' : isOpen? (maxHeight || '600px') : '0px', 'overflow-y' : isOpen? 'auto' : 'hidden', 'overflow-x' : 'hidden'}"
+      :style="{'max-height' : isOpen? (maxHeight || '600px') : '0px', 'overflow-y' : isOpen? 'auto' : 'hidden'}"
     >
       <slot></slot>
     </div>
