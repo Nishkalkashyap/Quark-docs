@@ -250,6 +250,7 @@ module.exports = {
                 "nodejs.md"
             ],
             "/snippets/": [
+                "auto-update.md",
                 "convert-existing-electron-app.md",
                 "configuring-build.md"
             ],

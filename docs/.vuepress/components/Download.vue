@@ -59,7 +59,7 @@
     </div>
     <div class="post-content" v-if="channel == 'insiders' && !disable_post_content">
         <h3>You're almost there.</h3>
-        <span> To keep receiving latest updates, you need to change <router-link to="/">these settings</router-link> after installing the software.</span>
+        <span> To keep receiving latest updates, you need to change <router-link to="/snippets/auto-update.html#selecting-the-release-channel">these settings</router-link> after installing the software.</span>
     </div>
 </div>
 </template>
