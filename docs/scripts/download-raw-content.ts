@@ -53,11 +53,11 @@ function gitDiff(): string {
     const current = JSON.parse(JSON.stringify(packageJson));
     const previous = fs.readJsonSync(`${baseVerisonAssetsPath}/__package.json`);
 
-    if (current.version == previous.version) {
-        printConsoleStatus(`Previous version is equal to current version`, 'danger');
-        process.exit(1);
-        // throw Error(`Previous version is equal to current version`);
-    }
+    // if (current.version == previous.version) {
+    //     printConsoleStatus(`Previous version is equal to current version`, 'danger');
+    //     process.exit(1);
+    //     // throw Error(`Previous version is equal to current version`);
+    // }
 
     const currentDeps = getImportantDeps(current);
     const previousDeps = getImportantDeps(previous);
@@ -104,6 +104,14 @@ function gitDiff(): string {
 
 
 async function createVersionJsonFile(): Promise<string> {
+
+    const current = JSON.parse(JSON.stringify(packageJson));
+    const previous = fs.readJsonSync(`${baseVerisonAssetsPath}/__package.json`);
+
+    if (current.version == previous.version) {
+        printConsoleStatus(`Previous version is equal to current version. Not creating versions.json file.`, 'warning');
+        return;
+    }
 
     const obj = {} as any;
     const shaObj = Object.assign(win32_SHA, linux_SHA);
