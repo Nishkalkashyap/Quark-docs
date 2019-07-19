@@ -176,5 +176,5 @@ setLastMeasureTimes(os.cpus());
 ```
 
 ## Build and run the sketch
-* Press the `build` button at the bottorm right side of the status bar. (Or use `ctrl + shift + b`)
-* Press the `run` button at the bottorm right side of the status bar. (Or use `ctrl + r`)
+* Press the `build` button at the bottorm right side of the status bar. (Or use `ctrl + shift + b`).
+* Press the `run` button at the bottorm right side of the status bar. (Or use `ctrl + r`).
