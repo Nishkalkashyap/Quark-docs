@@ -29,18 +29,24 @@ async function updateDownloadLinks() {
 
     const win32_SHA = JSON.parse(await (await fetch(`${bucketUrl}/win32-shasum.json`)).text());
     const linux_SHA = JSON.parse(await (await fetch(`${bucketUrl}/linux-shasum.json`)).text());
+    const darwin_SHA = JSON.parse(await (await fetch(`${bucketUrl}/darwin-shasum.json`)).text());
 
-    const binaries = Object.keys(win32_SHA).concat(Object.keys(linux_SHA));
+    const binaries = Object.keys(win32_SHA).concat(Object.keys(linux_SHA)).concat(Object.keys(darwin_SHA));
 
     const linuxMain = binaries.find((bin) => { return bin.endsWith('.AppImage') });
     const windowsMain = binaries.find((bin) => { return bin.endsWith('.exe') });
+    const darwinMain = binaries.find((bin) => { return bin.endsWith('.dmg') });
 
     const linux_other_downloads = binaries.filter((bin) => {
         return bin.search(/(.deb|.tar.gz)$/) !== -1;
     });
 
     const windows_other_downloads = binaries.filter((bin) => {
-        return bin.search(/(.zip|.msi)$/) !== -1;
+        return bin.search(/(win.+zip|.msi)$/) !== -1;
+    });
+
+    const darwin_other_downloads = binaries.filter((bin) => {
+        return bin.search(/(mac.+zip)$/) !== -1;
     });
 
 
@@ -103,7 +109,9 @@ async function updateDownloadLinks() {
         linux_main: linuxMain,
         linux_other: JSON.stringify(linux_other_downloads),
         windows_main: windowsMain,
-        windows_other: JSON.stringify(windows_other_downloads)
+        windows_other: JSON.stringify(windows_other_downloads),
+        darwin_main: darwinMain,
+        darwin_other: JSON.stringify(darwin_other_downloads)
     }, undefined, 4));
     fs.writeFileSync(path.join(baseVerisonAssetsPath, '__shasum.json'), js.js_beautify(JSON.stringify(JSON.parse(match))))
 }

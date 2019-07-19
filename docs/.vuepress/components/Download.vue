@@ -3,18 +3,14 @@
     <div class="container">
         <div class="platform">
             <img src="/images/windows-logo.png" style="width:100px">
-            <button
-          class="download-button"
-          @click="openExternal(windows_main)"
-          :class="windows_main? 'download-enabled' : null"
-        >
-          <img class="download-svg" src="/images/download.svg">
-          <span class="platform-name">Windows</span>
-          <span class="platform-distro" style="display:inline;">(.exe)</span>
-          <span class="platform-distro">Windows 7, 8, 10</span>
-          <span class="coming-soon" v-if="!windows_main">Coming Soon</span>
-        </button>
-            <div class="other-downloads-heading">Other downloads</div>
+            <button class="download-button" @click="openExternal(windows_main)" :class="windows_main? 'download-enabled' : null">
+                <img class="download-svg" src="/images/download.svg">
+                <span class="platform-name">Windows</span>
+                <span class="platform-distro" style="display:inline;">(.exe)</span>
+                <span class="platform-distro">Windows 7, 8, 10</span>
+                <span class="coming-soon" v-if="!windows_main">Coming Soon</span>
+            </button>
+            <div class="other-downloads-heading" v-if="all_windows_downloads.length">Other downloads</div>
             <div v-for="bin in all_windows_downloads" class="other-downloads">
                 <span>{{getExtensionFromBinary(bin)}}</span>
                 <a :href="getLinkFromBinary(bin)" target="_blank">Download</a>
@@ -23,18 +19,14 @@
 
         <div class="platform">
             <img src="/images/linux-logo.png" style="width:83px;height:100px;">
-            <button
-          class="download-button"
-          @click="openExternal(linux_main)"
-          :class="linux_main? 'download-enabled' : null"
-        >
-          <img class="download-svg" src="/images/download.svg">
-          <span class="platform-name">Linux</span>
-          <span class="platform-distro" style="display:inline;">(.AppImage)</span>
-          <span class="platform-distro">Debian, Ubuntu, Red Hat, Fedora</span>
-          <span class="coming-soon" v-if="!linux_main">Coming Soon</span>
-        </button>
-            <div class="other-downloads-heading">Other downloads</div>
+            <button class="download-button" @click="openExternal(linux_main)" :class="linux_main? 'download-enabled' : null">
+                <img class="download-svg" src="/images/download.svg">
+                <span class="platform-name">Linux</span>
+                <span class="platform-distro" style="display:inline;">(.AppImage)</span>
+                <span class="platform-distro">Debian, Ubuntu, Red Hat, Fedora</span>
+                <span class="coming-soon" v-if="!linux_main">Coming Soon</span>
+            </button>
+            <div class="other-downloads-heading" v-if="all_linux_downloads.length">Other downloads</div>
             <div v-for="bin in all_linux_downloads" class="other-downloads">
                 <span>{{getExtensionFromBinary(bin)}}</span>
                 <a :href="getLinkFromBinary(bin)" target="_blank">Download</a>
@@ -43,20 +35,22 @@
 
         <div class="platform">
             <img src="/images/apple-logo.svg">
-            <button
-          class="download-button"
-          @click="openExternal(mac)"
-          :class="mac? 'download-enabled' : null"
-        >
-          <img class="download-svg" src="/images/download.svg">
-          <span class="platform-name">Mac</span>
-          <span class="platform-distro" style="display:inline;">(.app)</span>
-          <span class="platform-distro">macOS 10.9+</span>
-          <span class="coming-soon" v-if="!mac">Coming Soon</span>
-        </button>
-            <span style="font-size:12px">
-          <a href="mailto:hello@nishkal.in?subject=Quark%20Build%20for%20Mac">Let us know</a> if you want to get it sooner!
-        </span>
+            <button class="download-button" @click="openExternal(darwin_main)" :class="darwin_main? 'download-enabled' : null">
+                <img class="download-svg" src="/images/download.svg">
+                <span class="platform-name">Mac</span>
+                <!-- <span class="platform-distro" style="display:inline;">(.app)</span> -->
+                <span class="platform-distro" style="display:inline;">(.dmg)</span>
+                <span class="platform-distro">macOS 10.9+</span>
+                <span class="coming-soon" v-if="!darwin_main">Coming Soon</span>
+            </button>
+            <div class="other-downloads-heading" v-if="all_darwin_downloads.length">Other downloads</div>
+            <div v-for="bin in all_darwin_downloads" class="other-downloads">
+                <span>{{getExtensionFromBinary(bin)}}</span>
+                <a :href="getLinkFromBinary(bin)" target="_blank">Download</a>
+            </div>
+            <span style="font-size:12px" v-if="!darwin_main">
+                <a href="mailto:hello@nishkal.in?subject=Quark%20Build%20for%20Mac">Let us know</a> if you want to get it sooner!
+            </span>
         </div>
     </div>
     <div class="post-content" v-if="channel == 'stable' && !disable_post_content">
@@ -80,7 +74,7 @@ export default {
         // "linux_other",
         // "windows_main",
         // "windows_other",
-        "mac",
+        // "mac",
         "channel",
         "disable_post_content"
     ],
@@ -89,14 +83,23 @@ export default {
         const releaseJson = this.channel == 'stable' ? stableJson : insidersJson;
         delete releaseJson.channel;
 
+        releaseJson.darwin_main = releaseJson.darwin_main || '';
+
         const all_windows_downloads = JSON.parse(releaseJson.windows_other);
         all_windows_downloads.push(releaseJson.windows_main);
 
         const all_linux_downloads = JSON.parse(releaseJson.linux_other);
         all_linux_downloads.push(releaseJson.linux_main);
+
+        const all_darwin_downloads = JSON.parse(releaseJson.darwin_other || JSON.stringify([]));
+        if (releaseJson.darwin_main) {
+            all_darwin_downloads.push(releaseJson.darwin_main);
+        }
+
         return {
             all_windows_downloads,
             all_linux_downloads,
+            all_darwin_downloads,
             ...releaseJson
         };
 
@@ -148,6 +151,10 @@ export default {
             }
             if (bin.endsWith(".tar.gz")) {
                 return ".tar.gz";
+            }
+
+            if (bin.endsWith(".dmg")) {
+                return ".dmg";
             }
             return bin;
         }
