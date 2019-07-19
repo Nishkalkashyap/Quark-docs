@@ -49,7 +49,8 @@
                 <a :href="getLinkFromBinary(bin)" target="_blank">Download</a>
             </div>
             <span style="font-size:12px" v-if="!darwin_main">
-                <a href="mailto:hello@nishkal.in?subject=Quark%20Build%20for%20Mac">Let us know</a> if you want to get it sooner!
+                <!-- <a href="mailto:hello@nishkal.in?subject=Quark%20Build%20for%20Mac">Let us know</a> if you want to get it sooner! -->
+                Currently available in <router-link to="/download/insiders">Insiders build</router-link>
             </span>
         </div>
     </div>
