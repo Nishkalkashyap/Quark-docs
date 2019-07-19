@@ -13,7 +13,11 @@ sidebarDepth: 2
 
 ##### The project that we are finally going to build, will look something like this:
 
-![screenshot](~@buildAssets/examples-activity-monitor.png =400x)
+
+<video muted autoplay loop style="max-width:400px; height:auto" name="media" poster="~@buildAssets/examples-activity-monitor.png" crossOrigin="anonymous">
+  <source src="~@buildAssets/examples-activity-monitor.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video> 
 
 !!! note Note
 The complete project could be found [here](https://github.com/Nishkalkashyap/Quark-samples/tree/master/examples/activity-monitor) on the github repo.
