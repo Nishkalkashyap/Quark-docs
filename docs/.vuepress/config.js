@@ -174,6 +174,10 @@ module.exports = {
                         link: '/releases/current-release.html'
                     },
                     {
+                        text: 'About',
+                        link: '/FAQ/about.html'
+                    },
+                    {
                         text: 'Links',
                         items: [{
                                 text: 'Status page',
