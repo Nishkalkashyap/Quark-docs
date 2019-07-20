@@ -248,6 +248,7 @@ module.exports = {
                 "about.md"
             ],
             "/tags/": [
+                "arduino.md",
                 "references.md",
                 "api.md",
                 "faq.md",
