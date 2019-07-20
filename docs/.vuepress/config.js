@@ -273,6 +273,7 @@ module.exports = {
             ],
             "/examples/": [
                 "activity-monitor.md",
+                "arduino-dashboard.md",
                 "prices.md",
                 "hash.md",
                 "mirror.md"

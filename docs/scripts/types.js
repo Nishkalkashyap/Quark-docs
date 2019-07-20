@@ -17,26 +17,31 @@ exports.AllTags = reverse({
     structures: {
         background: '#ffffff',
         color: '#ff5252',
-        description: `Arduino is an open-source hardware and software company, project and user community that designs and manufactures single-board microcontrollers.`
+        description: `Data structures used in the API.`
     },
     references: {
         background: '#ffffff',
         color: '#3880ff',
-        description: `Arduino is an open-source hardware and software company, project and user community that designs and manufactures single-board microcontrollers.`
+        description: `API Reference Overview for Quark API.`
     },
     api: {
         background: '#ffffff',
         color: '#6675e0',
-        description: `Arduino is an open-source hardware and software company, project and user community that designs and manufactures single-board microcontrollers.`
+        description: `Quark API is a set of JavaScript APIs that you can invoke in your sketches.`
     },
     guide: {
         background: '#ffffff',
         color: '#a481d5',
-        description: `Arduino is an open-source hardware and software company, project and user community that designs and manufactures single-board microcontrollers.`
+        description: `Outline. Download and install Quark. See an overview of the user interface.`
     },
     faq: {
         background: '#ffffff',
         color: '#6675e0',
+        description: `A common questions section as needed for specific topics. We've captured items here that don't fit in the other topics.`
+    },
+    arduino: {
+        background: '#00979d',
+        color: '#ffffff',
         description: `Arduino is an open-source hardware and software company, project and user community that designs and manufactures single-board microcontrollers.`
     }
 });
