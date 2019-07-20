@@ -179,13 +179,17 @@ module.exports = {
                                 text: 'Status page',
                                 link: 'https://status.quarkjs.io'
                             },
+                            // {
+                            //     text: 'Social',
+                            //     link: 'https://social.quarkjs.io/'
+                            // },
                             {
-                                text: 'Social',
-                                link: 'https://social.quarkjs.io/'
+                                text: 'GitHub: Docs',
+                                link: 'https://github.com/Nishkalkashyap/Quark-docs'
                             },
                             {
-                                text: 'GitHub',
-                                link: 'https://github.com/Nishkalkashyap/Quark-docs'
+                                text: 'GitHub: Examples',
+                                link: 'https://github.com/Nishkalkashyap/Quark-samples'
                             }
                         ]
                     }

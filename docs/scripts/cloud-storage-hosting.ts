@@ -20,7 +20,7 @@ async function uploadFileToBucket() {
     });
 
     const bucket = storage.bucket(bucketName);
-    await bucket.deleteFiles();
+    // await bucket.deleteFiles();
 
     const files = await recc('./');
     const promises = files.map(async (_file) => {
