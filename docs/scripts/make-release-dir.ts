@@ -16,13 +16,21 @@ export function makeReleaseDir() {
     const insidersVersionNotes: { [version: string]: string } = JSON.parse(fs.readFileSync(`./version-assets/insiders/__versions.json`).toString());
 
     badReleases.map((release) => {
+        const faliure = String().concat(`!!! failure This version was never released in the stable channel because the insiders release was found to have major bugs.`, '\n', `!!!`, '\n');
+
+        if (insidersVersionNotes[release]) {
+            const str = insidersVersionNotes[release].replace('####', String().concat(faliure, '\n\n', '####'));
+            tempVersionNotes[release] = str;
+            return;
+        }
+
         const preText = `<!-- Quark-${release}-start -->`;
         const postText = `<!-- Quark-${release}-end -->\n\n\n`;
 
         let str = '';
         str = str.concat(preText, '\n');
         str = str.concat(`## Quark ${release} - (Release skipped)`, '\n');
-        str = str.concat(`!!! failure This version was never released in the stable channel because the insiders release was found to have major bugs.`, '\n', `!!!`, '\n');
+        str = str.concat(faliure);
         // console.log(key, release, !!insidersVersionNotes[key]);
         // str = str.concat(insidersVersionNotes[release] || '');
         str = str.concat('<!-- ---------------------------------------------- -->', '\n');

@@ -15,6 +15,100 @@ sidebarDepth: 4
 
 [[toc]]
 
+<!-- Quark-0.5.5-start -->
+## Quark 0.5.5 - July 19, 2019
+
+#### Features:
+* Added MacOS builds (.dmg and .zip).
+
+#### Bug fixes:
+* fixed: commands were getting removed from quickView on opening files.
+
+#### Dependencies:
+* Added: `electron-notarize@^0.1.1`
+
+
+!!! note See SHA-512 Hashes
+<DropDown>
+<ReleaseNotes :sha='{
+    "Quark-win-0.5.5.exe": "Ric6rDRHsARGxga3godhIprA7Vd4Ehvl6meOlE11pByOTTtxkZ0bKSECNbWy5PK7/9UZw64v3LVHEOP0Lt4uTQ==",
+    "Quark-win-x64-0.5.5.msi": "cMiGfTsYX9npLQmVedYHpJfxdceKFk6onABv2PcdIoVOWRerdSi9+gKqVxE1hzmMkE9EIP8yPiMrhSSDLR8OrQ==",
+    "Quark-win-x64-0.5.5.zip": "49YjtyBFkvD851mbinuXc9lGT5tcVcUjkU4bTxAgaVouGrP+V9g3UOVtD3Z90vAmnAPVh18TkWc9EPglD3LgiA==",
+    "Quark-linux-amd64-0.5.5.deb": "wZjjapAvLrIxZK6tLIx2P/YrvdvtFSiPBxc/GsMpArATzRUU+qgY80EGzP8e5quxXDtrmNWwaQiT9yPLRo1Qmw==",
+    "Quark-linux-x64-0.5.5.tar.gz": "0sIKo4VjmXW0vhoBs6SGxNlSj+7maZKDq/X5XsnD2GMvAiwGiJ8ZY/UZ2vOjoMqpAoygGhU/dNyM2ImxWhQrrQ==",
+    "Quark-linux-x86_64-0.5.5.AppImage": "mhccL5WtasQ5kqDnoJqT6/MkamaPBw9QI+jxpCyBeYwQDbgtG9rKGmK8jE85j+S1sUPItLOHhvUjYK1H86dBXQ=="
+}' />
+</DropDown>
+!!!
+
+<!-- ---------------------------------------------- -->
+<!-- Quark-0.5.5-end -->
+
+
+
+
+<!-- Quark-0.5.4-start -->
+## Quark 0.5.4 - July 14, 2019
+
+!!! failure This version was never released in the stable channel because the insiders release was found to have major bugs.
+!!!
+
+
+#### Bug fixes:
+* Commands were getting removed from quick view on opening editor.
+
+
+
+!!! note See SHA-512 Hashes
+<DropDown>
+<ReleaseNotes :sha='{
+    "Quark-win-0.5.4.exe": "Ck12bG/lByxG4AOI+ShlilDrPXCBHqAUpXLwrVRenJRMxNgxgrabcTslUKbu0k21r/CsnKPwwDhAye7j4f7GNQ==",
+    "Quark-win-x64-0.5.4.msi": "JeCGo5x8pzeCIVahRqqbHiP/E2ZCPbfXKZdsNYFX5kn/ohYhDqjHARyTDQk6rQ608hKl1s9bjCj5rcb9o/2tBQ==",
+    "Quark-win-x64-0.5.4.zip": "Rnt/4Wb4YNZu9GJXEKXPak+Jb0SqkW8NLLbB/jIa+ugMENegsG8808zbDe4ZqxkMM9jphIn3J2IYoE81oYu9bQ==",
+    "Quark-linux-amd64-0.5.4.deb": "xSjOJpJS4/LX6mqiiuXJp4rByuKx2RnqwkapDyBbAwCPfBj+271Z9M9HFVxRIFkBBeMc6VT5EXzTzLhFIx2P2Q==",
+    "Quark-linux-x64-0.5.4.tar.gz": "nfrpO6Wsudn1MTVMH0f1kmv4phd3O4l8R81jl2F412sO3VNxNI+J8htZ3/m56bdeu5E7oKh6Xe2zHBCEyhxvoQ==",
+    "Quark-linux-x86_64-0.5.4.AppImage": "0f+xFislEPKStCTnMfVXJCgax1vOW30+JQLUR8COMJVXo07Pnd/Ug4HfZzIIerOycat4XVWNlaVY/CIaUbc/dQ=="
+}' />
+</DropDown>
+!!!
+
+<!-- ---------------------------------------------- -->
+<!-- Quark-0.5.4-end -->
+
+
+
+
+<!-- Quark-0.5.3-start -->
+## Quark 0.5.3 - July 11, 2019
+
+!!! failure This version was never released in the stable channel because the insiders release was found to have major bugs.
+!!!
+
+
+#### Bug fixes:
+* Removed auto-launcher. Was not respecting user input.
+
+
+
+!!! note See SHA-512 Hashes
+<DropDown>
+<ReleaseNotes :sha='{
+    "Quark-win-0.5.3.exe": "1xApGQ+0PvxYthjSv8lqRa1820ogfshnHILZIYcbWiLTIujuiuyMRsPkuJCYWuOo8a7CDK3sqE/4VIbPsgnqvA==",
+    "Quark-win-x64-0.5.3.msi": "wXJzxOXMjwSadUOZ7giAhkDt+ZhWbrm4zV7GkbxSDzUPRJZS/ft9BxYuCWPwstTMkegYOINDvI45vBkgly7Org==",
+    "Quark-win-x64-0.5.3.zip": "MzjJB27EEEXn4ZF9oVOqNlH1Q+FoMRsbC6rKWaqxZp88/FUMryn59uoPO0Z25YQ8Hp92CE6PeY59sA0WjTlpEQ==",
+    "Quark-linux-amd64-0.5.3.deb": "Bpwus7qxFUKNef0wy5H0/OdnaFN9pbyqX/8SyQ0WIdbpo8rBry8QDVW1WlXdyOx2546AE8GESCDtB9bIKMZgKg==",
+    "Quark-linux-x64-0.5.3.tar.gz": "xHI7tNvyLucDzWkuDzS5IRtvfSYa/5v36yxacWCjJFzzCBlgkG/PcrBax7cd8xEffV7CNdJZEZe9i6yPWaqizQ==",
+    "Quark-linux-x86_64-0.5.3.AppImage": "Arf+73qMqTyFG3CS0zSgfo0zTWKOW5wmQZPbRaIgrFEkgYSZCkqezi4sgM8oQLqSiPJiLzhwsLEFvoOSNBEmdA=="
+}' />
+</DropDown>
+!!!
+
+<!-- ---------------------------------------------- -->
+<!-- Quark-0.5.3-end -->
+
+
+
+
 <!-- Quark-0.5.2-start -->
 ## Quark 0.5.2 - July 11, 2019
 

@@ -1,8 +1,10 @@
 {
-    "version": "0.5.2",
+    "version": "0.5.5",
     "channel": "stable",
-    "linux_main": "Quark-linux-x86_64-0.5.2.AppImage",
-    "linux_other": "[\"Quark-linux-amd64-0.5.2.deb\",\"Quark-linux-x64-0.5.2.tar.gz\"]",
-    "windows_main": "Quark-win-0.5.2.exe",
-    "windows_other": "[\"Quark-win-x64-0.5.2.msi\",\"Quark-win-x64-0.5.2.zip\"]"
+    "linux_main": "Quark-linux-x86_64-0.5.5.AppImage",
+    "linux_other": "[\"Quark-linux-amd64-0.5.5.deb\",\"Quark-linux-x64-0.5.5.tar.gz\"]",
+    "windows_main": "Quark-win-0.5.5.exe",
+    "windows_other": "[\"Quark-win-x64-0.5.5.msi\",\"Quark-win-x64-0.5.5.zip\"]",
+    "darwin_main": "Quark-mac-0.5.5.dmg",
+    "darwin_other": "[\"Quark-mac-0.5.5.zip\"]"
 }
