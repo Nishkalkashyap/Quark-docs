@@ -188,6 +188,10 @@ module.exports = {
                             //     link: 'https://social.quarkjs.io/'
                             // },
                             {
+                                text: 'GitHub: Build',
+                                link: 'https://github.com/Nishkalkashyap/Quark-electron'
+                            },
+                            {
                                 text: 'GitHub: Docs',
                                 link: 'https://github.com/Nishkalkashyap/Quark-docs'
                             },
