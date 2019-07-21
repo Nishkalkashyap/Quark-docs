@@ -6,7 +6,7 @@ var ImageminPlugin = require('imagemin-webpack-plugin').default
 
 module.exports = {
     title: 'Quark',
-    description: 'IoT Framework',
+    description: 'Quark is a general purpose software tool specifically designed to help you create projects written in HTML, CSS and JavaScript with native desktop app like capabilities.',
     ga: 'UA-112064718-3',
     serviceWorker: true,
     head: [
