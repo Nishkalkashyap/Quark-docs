@@ -15,6 +15,36 @@ sidebarDepth: 4
 
 [[toc]]
 
+<!-- Quark-0.5.6-start -->
+## Quark 0.5.6 - July 22, 2019
+
+#### Minor Changes:
+* Added: Telemetry
+* Added: Telemetry settings and privacy settings
+
+#### 🚀 Dependencies:
+* Added: `uuid@^3.3.2`
+
+
+!!! note See SHA-512 Hashes
+<DropDown>
+<ReleaseNotes :sha='{
+    "Quark-win-0.5.6.exe": "+YmOQn6iJ37A9jqqigxuhuk34JxNArOjHIE74AhNCnW6AYziXbfA8dOji6/MO4+3IdCfC/z6m993Fe3qIg11fw==",
+    "Quark-win-x64-0.5.6.msi": "NQjBk82fgugjUQ4CYter3pcBHo3GReUBjy1o5pWxbEy9XOqX6hrdZazv50jTQXgqWaejnJYY3AiSNEeGdEmJjg==",
+    "Quark-win-x64-0.5.6.zip": "M/xuRnnLXpC0o6oTzp4NeZUdAQnlSDFJp3rnasuMRGn6C0zBny8zjVnf0A4bqxtIP4Nu9VoS4GLHrc0/NJBQSA==",
+    "Quark-linux-amd64-0.5.6.deb": "nIAlR6B2XzTYDkSuHQBXhBGnviEAUWYJ/lAHK9DwG7A1Bp2T1sHvFMVpIbWMCSuq2w3TV6gtdhSoYsq4pmoVJQ==",
+    "Quark-linux-x64-0.5.6.tar.gz": "H/75KXjbAFSkMq9F2suW1Jmi4hgXL9vVdEy+gWFPlzBkiicYEHuo8FUtmyrInWaffjX1qIWfHIKXHd3v47Lnog==",
+    "Quark-linux-x86_64-0.5.6.AppImage": "nOHDXj13QH5puBUxLvN7xWnn1iCQKTndnB+UKfw9AG2AgRUXn6Ui6h3Kv6xpvX9PZzKx+Kc9f3GY2sZ1xWE6sA=="
+}' />
+</DropDown>
+!!!
+
+<!-- ---------------------------------------------- -->
+<!-- Quark-0.5.6-end -->
+
+
+
+
 <!-- Quark-0.5.5-start -->
 ## Quark 0.5.5 - July 19, 2019
 
