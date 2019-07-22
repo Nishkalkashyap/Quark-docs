@@ -1,7 +1,7 @@
 {
     "name": "Quark",
     "short_name": "Quark",
-    "theme_color": "#3880ff",
+    "theme_color": "#055af9",
     "background_color": "#ffffff",
     "display": "standalone",
     "Scope": "/",
