@@ -81,10 +81,23 @@ export function makeReleaseDir() {
                 sidebarDepth: '4'
             });
             fs.ensureFileSync(`./releases/current-release.md`);
+            str = replaceAndAppEmoji(str);
             fs.writeFileSync(`./releases/current-release.md`, frontmatter.concat('\n\n', str));
         } else {
             fs.ensureFileSync(`./releases/Quark-v${versions[index]}.md`);
+            str = replaceAndAppEmoji(str);
             fs.writeFileSync(`./releases/Quark-v${versions[index]}.md`, frontmatter.concat('\n\n', str));
         }
     });
+
+    function replaceAndAppEmoji(str: string) {
+        str = str.replace(/Bug\s*Fixes/ig, '🐞 Bug Fixes');
+        str = str.replace(/Updated/ig, '⬆️ Updated');
+        // str = str.replace(/Fixed/ig, '⛑️ Fixed');
+        str = str.replace(/Fixed/ig, '🚑 Fixed');
+        str = str.replace(/Breaking/ig, '💔 Breaking');
+        str = str.replace(/Features/ig, '🎉 Features');
+        str = str.replace(/Dependencies/ig, '🚀 Dependencies');
+        return str;
+    }
 }

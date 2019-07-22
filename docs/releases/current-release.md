@@ -18,13 +18,13 @@ sidebarDepth: 4
 <!-- Quark-0.5.5-start -->
 ## Quark 0.5.5 - July 19, 2019
 
-#### Features:
+#### 🎉 Features:
 * Added MacOS builds (.dmg and .zip).
 
-#### Bug fixes:
-* fixed: commands were getting removed from quickView on opening files.
+#### 🐞 Bug Fixes:
+* 🚑 Fixed: commands were getting removed from quickView on opening files.
 
-#### Dependencies:
+#### 🚀 Dependencies:
 * Added: `electron-notarize@^0.1.1`
 
 
@@ -54,7 +54,7 @@ sidebarDepth: 4
 !!!
 
 
-#### Bug fixes:
+#### 🐞 Bug Fixes:
 * Commands were getting removed from quick view on opening editor.
 
 
@@ -85,7 +85,7 @@ sidebarDepth: 4
 !!!
 
 
-#### Bug fixes:
+#### 🐞 Bug Fixes:
 * Removed auto-launcher. Was not respecting user input.
 
 
@@ -115,17 +115,17 @@ sidebarDepth: 4
 #### Minor Changes:
 * Mainly dependency updates.
 
-#### Dependencies:
-* Updated: `@babel/core@^7.5.4` (Previous: v^7.4.5)
-* Updated: `@babel/plugin-proposal-class-properties@^7.5.0` (Previous: v^7.4.4)
-* Updated: `@babel/plugin-proposal-object-rest-spread@^7.5.4` (Previous: v^7.4.4)
-* Updated: `@babel/preset-env@^7.5.4` (Previous: v^7.4.5)
-* Updated: `electron-updater@^4.0.14` (Previous: v^4.0.6)
-* Updated: `fs-extra@^8.1.0` (Previous: v^8.0.1)
-* Updated: `npm@^6.10.0` (Previous: v^6.9.2)
-* Updated: `typescript@^3.5.3` (Previous: v^3.5.2)
-* Updated: `webpack@^4.35.3` (Previous: v^4.35.0)
-* Updated: `electron@^4.2.6` (Previous: v^4.2.5)
+#### 🚀 Dependencies:
+* ⬆️ Updated: `@babel/core@^7.5.4` (Previous: v^7.4.5)
+* ⬆️ Updated: `@babel/plugin-proposal-class-properties@^7.5.0` (Previous: v^7.4.4)
+* ⬆️ Updated: `@babel/plugin-proposal-object-rest-spread@^7.5.4` (Previous: v^7.4.4)
+* ⬆️ Updated: `@babel/preset-env@^7.5.4` (Previous: v^7.4.5)
+* ⬆️ Updated: `electron-updater@^4.0.14` (Previous: v^4.0.6)
+* ⬆️ Updated: `fs-extra@^8.1.0` (Previous: v^8.0.1)
+* ⬆️ Updated: `npm@^6.10.0` (Previous: v^6.9.2)
+* ⬆️ Updated: `typescript@^3.5.3` (Previous: v^3.5.2)
+* ⬆️ Updated: `webpack@^4.35.3` (Previous: v^4.35.0)
+* ⬆️ Updated: `electron@^4.2.6` (Previous: v^4.2.5)
 
 
 !!! note See SHA-512 Hashes
@@ -150,14 +150,14 @@ sidebarDepth: 4
 <!-- Quark-0.5.1-start -->
 ## Quark 0.5.1 - July 8, 2019
 
-#### Bug fixes:
-* Fixed: Editor executing paste command twice.
-* Fixed: command not getting removed from command Palette on dispose issue.
+#### 🐞 Bug Fixes:
+* 🚑 Fixed: Editor executing paste command twice.
+* 🚑 Fixed: command not getting removed from command Palette on dispose issue.
 
-#### Breaking:
+#### 💔 Breaking:
 * Removed: `keyBindings` namespace from global quark object.
 
-#### Features:
+#### 🎉 Features:
 * Added: `addKeybindingCondition` function in `command` namespace
 
 
@@ -184,18 +184,18 @@ sidebarDepth: 4
 <!-- Quark-0.5.0-start -->
 ## Quark 0.5.0 - July 3, 2019
 
-#### Bug fixes:
-* Fixed: Context menu not updating on language change.
-* Fixed: Keybindings not getting removed when associated command is disposed.
-* Fixed: Keybindings triggers random actions inside monaco-editor issue.
-* Fixed: ASAR packager issue. (cannot pack single file)
+#### 🐞 Bug Fixes:
+* 🚑 Fixed: Context menu not updating on language change.
+* 🚑 Fixed: Keybindings not getting removed when associated command is disposed.
+* 🚑 Fixed: Keybindings triggers random actions inside monaco-editor issue.
+* 🚑 Fixed: ASAR packager issue. (cannot pack single file)
 
 #### Other changes:
 * New files created are automatically opened in the editor.
 * Editor is now automatically focused when file is opened.
 * Added select-next and select-previous tabs bindings.
 
-#### Breaking:
+#### 💔 Breaking:
 * Removed: `createVueWebComponent` method from quark.util object.
 
 

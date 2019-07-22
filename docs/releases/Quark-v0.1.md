@@ -19,7 +19,7 @@ sidebarDepth: 4
 ## Quark 0.1.19 - April 20, 2019
 
 #### Minor Changes:
-* Fixed windows nsis installer issue.
+* 🚑 Fixed windows nsis installer issue.
 * Added builds for *.tar.gz, *.deb and *.zip
 * Added shasum check table
 

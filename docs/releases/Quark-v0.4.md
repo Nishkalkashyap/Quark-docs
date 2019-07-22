@@ -18,15 +18,15 @@ sidebarDepth: 4
 <!-- Quark-0.4.8-start -->
 ## Quark 0.4.8 - June 28, 2019
 
-#### Bug Fixes:
-* Fixed asar packager build failing error.
+#### 🐞 Bug Fixes:
+* 🚑 Fixed asar packager build failing error.
 
-#### Dependencies:
-* Updated: `npm@^6.9.2` (Previous: v^6.9.0)
-* Updated: `styled-components@^4.3.2` (Previous: v^4.2.0)
-* Updated: `webpack@^4.35.0` (Previous: v^4.34.0)
-* Updated: `electron@^4.2.5` (Previous: v^4.2.4)
-* Updated: `electron-builder@^20.44.4` (Previous: v^20.41.0)
+#### 🚀 Dependencies:
+* ⬆️ Updated: `npm@^6.9.2` (Previous: v^6.9.0)
+* ⬆️ Updated: `styled-components@^4.3.2` (Previous: v^4.2.0)
+* ⬆️ Updated: `webpack@^4.35.0` (Previous: v^4.34.0)
+* ⬆️ Updated: `electron@^4.2.5` (Previous: v^4.2.4)
+* ⬆️ Updated: `electron-builder@^20.44.4` (Previous: v^20.41.0)
 
 
 !!! note See SHA-512 Hashes
@@ -51,9 +51,9 @@ sidebarDepth: 4
 <!-- Quark-0.4.7-start -->
 ## Quark 0.4.7 - June 27, 2019
 
-#### Bug fixes:
-* Fixed file change on open issue. (File used to change just by opening and viewing contents).
-* Fixed "AppMainProcessData" data-structure.
+#### 🐞 Bug Fixes:
+* 🚑 Fixed file change on open issue. (File used to change just by opening and viewing contents).
+* 🚑 Fixed "AppMainProcessData" data-structure.
 
 
 
@@ -79,7 +79,7 @@ sidebarDepth: 4
 <!-- Quark-0.4.6-start -->
 ## Quark 0.4.6 - June 25, 2019
 
-#### Features:
+#### 🎉 Features:
 * Added github releases.
 
 
@@ -106,8 +106,8 @@ sidebarDepth: 4
 <!-- Quark-0.4.5-start -->
 ## Quark 0.4.5 - June 25, 2019
 
-#### Bug fixes:
-* Fixed 'leaveAppRunningOnWindowClose' and 'launchAppOnLogin' settings bug. (Changing settings did not changed behaviour).
+#### 🐞 Bug Fixes:
+* 🚑 Fixed 'leaveAppRunningOnWindowClose' and 'launchAppOnLogin' settings bug. (Changing settings did not changed behaviour).
 
 
 
@@ -133,8 +133,8 @@ sidebarDepth: 4
 <!-- Quark-0.4.4-start -->
 ## Quark 0.4.4 - June 24, 2019
 
-#### Bug fixes:
-* Auto updates not working for insiders release. (Change in settings key from 'features' to 'general' caused the bug.)
+#### 🐞 Bug Fixes:
+* Auto updates not working for insiders release. (Change in settings key from '🎉 Features' to 'general' caused the bug.)
 
 
 
@@ -180,9 +180,9 @@ sidebarDepth: 4
 <!-- Quark-0.4.1-start -->
 ## Quark 0.4.1 - June 22, 2019
 
-#### Bug fixes:
-* Fixed tray icon missing error.
-* Fixed third-party-notice missing error.
+#### 🐞 Bug Fixes:
+* 🚑 Fixed tray icon missing error.
+* 🚑 Fixed third-party-notice missing error.
 
 
 

@@ -18,8 +18,8 @@ sidebarDepth: 4
 <!-- Quark-0.3.9-start -->
 ## Quark 0.3.9 - June 17, 2019
 
-#### Bug fixes:
-* Fixed drag not working issue. (from dependency angular-split).
+#### 🐞 Bug Fixes:
+* 🚑 Fixed drag not working issue. (from dependency angular-split).
 
 
 
@@ -55,12 +55,12 @@ sidebarDepth: 4
 <!-- Quark-0.3.7-start -->
 ## Quark 0.3.7 - June 15, 2019
 
-#### Features
+#### 🎉 Features
 * Added clipboard readHTML and writeHTML functions.
 
 #### Other changes
-* Updated test scripts.
-* Updated default runtime theme.
+* ⬆️ Updated test scripts.
+* ⬆️ Updated default runtime theme.
 
 
 
@@ -83,8 +83,8 @@ sidebarDepth: 4
 <!-- Quark-0.3.6-start -->
 ## Quark 0.3.6 - June 15, 2019
 
-#### Features
-* Fixed textmate-tokens issue. [TMThemes are not working properly #5](https://github.com/NeekSandhu/monaco-textmate/issues/5)
+#### 🎉 Features
+* 🚑 Fixed textmate-tokens issue. [TMThemes are not working properly #5](https://github.com/NeekSandhu/monaco-textmate/issues/5)
 
 
 
@@ -107,11 +107,11 @@ sidebarDepth: 4
 <!-- Quark-0.3.5-start -->
 ## Quark 0.3.5 - June 15, 2019
 
-#### Features
+#### 🎉 Features
 * Removed window on-did-load handle. Window is now shown open by default.
 
-#### Dependencies:
-* Updated: `electron@^4.2.4` (Previous: v4.1.3)
+#### 🚀 Dependencies:
+* ⬆️ Updated: `electron@^4.2.4` (Previous: v4.1.3)
 
 
 !!! note See SHA-512 Hashes
@@ -133,8 +133,8 @@ sidebarDepth: 4
 <!-- Quark-0.3.4-start -->
 ## Quark 0.3.4 - June 14, 2019
 
-#### Bug fixes:
-* Fixed allow downgrade bug.
+#### 🐞 Bug Fixes:
+* 🚑 Fixed allow downgrade bug.
 
 
 
@@ -161,9 +161,9 @@ sidebarDepth: 4
 * Partially added crash reporter.
 * Dependency updates.
 
-#### Dependencies:
-* Updated: `typescript@^3.5.2` (Previous: v^3.4.5)
-* Updated: `webpack@^4.34.0` (Previous: v^4.32.2)
+#### 🚀 Dependencies:
+* ⬆️ Updated: `typescript@^3.5.2` (Previous: v^3.4.5)
+* ⬆️ Updated: `webpack@^4.34.0` (Previous: v^4.32.2)
 
 
 !!! note See SHA-512 Hashes
@@ -188,7 +188,7 @@ sidebarDepth: 4
 #### Other changes
 * removed quit and install dialog on auto-update.
 
-#### Features
+#### 🎉 Features
 * added auto-update settings selector in view.
 
 
@@ -215,7 +215,7 @@ sidebarDepth: 4
 #### Other changes
 * Testing auto-updates for cloud-releaes.
 
-#### Dependencies:
+#### 🚀 Dependencies:
 * Removed: `electron-builder-squirrel-windows@^20.42.0`
 
 
@@ -238,20 +238,20 @@ sidebarDepth: 4
 <!-- Quark-0.3.0-start -->
 ## Quark 0.3.0 - June 14, 2019
 
-#### Bug fixes:
-* fixed slow devtools open and reload issue.
+#### 🐞 Bug Fixes:
+* 🚑 Fixed slow devtools open and reload issue.
 
 #### Other changes
 * added branch master-all.
 * added cloudflare CDN in front of release channel.
 * First fully cloud-built release. 💃 💃
 
-#### Breaking:
+#### 💔 Breaking:
 * old auto-updates will stop working.
 
-#### Dependencies:
-* Updated: `electron-store@^3.3.0` (Previous: v^3.2.0)
-* Updated: `electron@4.1.3` (Previous: v^4.2.2)
+#### 🚀 Dependencies:
+* ⬆️ Updated: `electron-store@^3.3.0` (Previous: v^3.2.0)
+* ⬆️ Updated: `electron@4.1.3` (Previous: v^4.2.2)
 
 
 !!! note See SHA-512 Hashes
