@@ -47,8 +47,6 @@ The only caveat here is that because of this shared runtime, your sketches have 
 
 What this means for you is that you can potentially have hundreds of sketches on your machine providing the functionality as that of full fledged electron apps, while consuming the resources equivalent to only one app!
 
-<!-- We use some witchcraft behind the scenes to make this happen. But you don't need to care about all that stuff, just write your application logic, build the project and you're good to go. Here are some of the key features of Quark sketches- -->
-
 #### Web Technologies
 Sketches are built using web technologies like HTML, CSS and Javascript. If you can build a website, you already know how to build a sketch.
 
@@ -72,12 +70,6 @@ Since every sketch is essentially some bundled javascript code, they are very sm
 <!-- Under the hood, Quark achieves this functionality by combining several set of tools in one single package and abstracting away the complexity to setup an environment for every single time you start a new project. -->
 
 <!-- ## Quark development environment.
-Quark applications are built using it's __integrated development environment__ that, at the very least, include a text editor and a code compiler. It enables the creation of applications within a carefully designed set of constraints. 
-
-Some of the [features](/guide/quark-ide.md) of Quark IDE include - smart auto completion, "go to definition", find and replace,typescript support, built in package manager and code compiler. -->
-
-<!-- ## Goals
-
 #### Rapid application development
 Projects build with Quark should be easy, quick to setup and share.
 
@@ -104,8 +96,5 @@ To get the most out of Quark, start by reviewing a few introductory topics:
 
 
 
-<!-- ## Join the Community
-To learn more, follow our [social network](https://social.quarkjs.io). You can also ask questions and open issues on our [GitHub repo](https://github.com/Nishkalkashyap/Quark-docs).-->
-
-
-<!-- Android Studio is the official integrated development environment for Google's Android operating system, built on JetBrains' IntelliJ IDEA software and designed specifically for Android development. It is available for download on Windows, macOS and Linux based operating systems. -->
+## Join the Community
+To learn more, follow our [social network](https://social.quarkjs.io). You can also ask questions and open issues on our [GitHub repo](https://github.com/Nishkalkashyap/Quark-electron).
