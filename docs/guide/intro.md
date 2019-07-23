@@ -105,7 +105,7 @@ To get the most out of Quark, start by reviewing a few introductory topics:
 
 
 <!-- ## Join the Community
-To learn more, follow our [social network](https://social.quarkjs.io). You can also ask questions and open issues on our [GitHub repo](https://github.com/Nishkalkashyap/Quark-docs). -->
+To learn more, follow our [social network](https://social.quarkjs.io). You can also ask questions and open issues on our [GitHub repo](https://github.com/Nishkalkashyap/Quark-docs).-->
 
 
 <!-- Android Studio is the official integrated development environment for Google's Android operating system, built on JetBrains' IntelliJ IDEA software and designed specifically for Android development. It is available for download on Windows, macOS and Linux based operating systems. -->
