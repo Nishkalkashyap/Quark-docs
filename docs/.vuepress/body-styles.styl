@@ -77,7 +77,7 @@ body {
     header.navbar span.site-name {
         color:var(--text-color--dark);
     }
-    
+
     header.navbar span.site-name::after {
         content: '(beta)';
         font-size: 10px;
@@ -151,6 +151,7 @@ body {
             position: absolute;
             right: -50px;
             top: 55px;
+            padding: 0px !important;
 
             li a {
                 font-size: 14px;
@@ -171,8 +172,7 @@ body {
     header.navbar div.dropdown-wrapper:hover {
         ul.nav-dropdown {
             max-height: 600px;
-            padding: 20px 50px;
-            padding: 20px 50px;
+            padding: 20px 50px !important;
             border-width: 1px;
             border-color: var(--line-rule-color);
             opacity: 1;
