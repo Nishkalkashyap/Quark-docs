@@ -15,6 +15,44 @@ sidebarDepth: 4
 
 [[toc]]
 
+<!-- Quark-0.5.7-start -->
+## Quark 0.5.7 - July 29, 2019
+
+#### Minor Changes:
+* Mainly dependency updates.
+
+#### 🚀 Dependencies:
+* ⬆️ Updated: `@babel/core@^7.5.5` (Previous: v^7.5.4)
+* ⬆️ Updated: `@babel/plugin-proposal-class-properties@^7.5.5` (Previous: v^7.5.0)
+* ⬆️ Updated: `@babel/plugin-proposal-object-rest-spread@^7.5.5` (Previous: v^7.5.4)
+* ⬆️ Updated: `@babel/preset-env@^7.5.5` (Previous: v^7.5.4)
+* ⬆️ Updated: `electron-updater@^4.1.2` (Previous: v^4.0.14)
+* ⬆️ Updated: `johnny-five@^1.2.0` (Previous: v^1.1.0)
+* ⬆️ Updated: `npm@^6.10.2` (Previous: v^6.10.0)
+* ⬆️ Updated: `vue-loader@^15.7.1` (Previous: v^15.7.0)
+* ⬆️ Updated: `webpack@^4.38.0` (Previous: v^4.35.3)
+* ⬆️ Updated: `electron@^4.2.8` (Previous: v^4.2.6)
+
+
+!!! note See SHA-512 Hashes
+<DropDown>
+<ReleaseNotes :sha='{
+    "Quark-win-0.5.7.exe": "zAwWw4mqqcn0z3db3PfG8pn5+acI/wg3vEJBu3tW0QGvOCDOvWr/WYz8Emn5PsrZ1oyzVrH54kpCNvSN29X6Vg==",
+    "Quark-win-x64-0.5.7.msi": "WNNFBy6ziwZAfpOxtcmgNvHtan3/fcaEtJQ/Y48jN7xhCnSR0RLR37qWbDmU8OV6nsKikPvH94Q+FoMmb2/ttQ==",
+    "Quark-win-x64-0.5.7.zip": "fkdCLLzHOzYYmnLmQBgdUBtSUBToSbhxi/A/ZqxlBdzMSOsjoyHg09zF7v3rfqwuqRwIIR4VIQkWID5PBIroQg==",
+    "Quark-linux-amd64-0.5.7.deb": "rRISHJ1uamUUHJjv7pwSltINRNRYbfq9Vhi5Ng5dmvJmUnJlbFU35ZXqqvpFFlayzCRWl7ck4sBmhLKpawHYug==",
+    "Quark-linux-x64-0.5.7.tar.gz": "MDGqKOEE4JpQNq5HrLjNAbyEA8hg1X7AJP285YjmMdfnXk1VpGWcNxfp3i3GrF5uY8EfExyjsjV/S3Djaf+dlw==",
+    "Quark-linux-x86_64-0.5.7.AppImage": "rKj+j+Fp2PxaTJY7fkIzJhUwn76S6rZN6UW7T5VQ28mLFFWfyq+BdOPSfH8iuPXqwwa+lrcJnDnMXikos456Jg=="
+}' />
+</DropDown>
+!!!
+
+<!-- ---------------------------------------------- -->
+<!-- Quark-0.5.7-end -->
+
+
+
+
 <!-- Quark-0.5.6-start -->
 ## Quark 0.5.6 - July 22, 2019
 
