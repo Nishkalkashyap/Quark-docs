@@ -121,15 +121,15 @@ module.exports = {
             text: 'Examples',
             link: '/examples/activity-monitor.md'
         },
-        {
-            text: 'Tags',
-            items: Object.keys(AllTags).map((tag) => {
-                return {
-                    text: tag,
-                    link: `/tags/${tag}.html`
-                }
-            })
-        },
+        // {
+        //     text: 'Tags',
+        //     items: Object.keys(AllTags).map((tag) => {
+        //         return {
+        //             text: tag,
+        //             link: `/tags/${tag}.html`
+        //         }
+        //     })
+        // },
         {
             text: 'API',
             items: [{
@@ -174,15 +174,14 @@ module.exports = {
                 link: '/releases/current-release.html'
             },
             {
-                items: [
-                    {
-                        text: 'Terms of service',
-                        link: '/FAQ/terms-of-service.html'
-                    },
-                    {
-                        text: 'About',
-                        link: '/FAQ/about.html'
-                    },
+                items: [{
+                    text: 'Terms of service',
+                    link: '/FAQ/terms-of-service.html'
+                },
+                {
+                    text: 'About',
+                    link: '/FAQ/about.html'
+                },
 
                 ]
             },
@@ -211,6 +210,10 @@ module.exports = {
                 ]
             }
             ]
+        },
+        {
+            text: 'App store',
+            link: 'https://dash.quarkjs.io'
         },
         {
             text: 'Download',
