@@ -114,111 +114,111 @@ module.exports = {
             debug: false
         },
         nav: [{
-            text: 'Guide',
-            link: '/guide/intro.md'
-        },
-        {
-            text: 'Examples',
-            link: '/examples/activity-monitor.md'
-        },
-        // {
-        //     text: 'Tags',
-        //     items: Object.keys(AllTags).map((tag) => {
-        //         return {
-        //             text: tag,
-        //             link: `/tags/${tag}.html`
-        //         }
-        //     })
-        // },
-        {
-            text: 'API',
-            items: [{
-                text: 'References',
-                link: '/references/'
-                // link: '/references/app.html'
-            }, {
-                text: 'Structures',
-                link: '/structures/'
-                // link: '/structures/view-provider.html'
-            }, {
-                text: 'Using libraries',
-                link: '/libraries/intro.html'
-                // link: '/structures/view-provider.html'
-            }
-                // {
-                //     text: 'Style Guide',
-                //     link: '/guide/intro.html'
-                // }
-            ]
-        },
-        {
-            text: 'More',
-            items: [{
-                text: 'All Docs',
-                link: '/all/'
+                text: 'Guide',
+                link: '/guide/intro.md'
             },
             {
-                text: 'All Tags',
-                link: '/tags/'
+                text: 'Examples',
+                link: '/examples/activity-monitor.md'
             },
+            // {
+            //     text: 'Tags',
+            //     items: Object.keys(AllTags).map((tag) => {
+            //         return {
+            //             text: tag,
+            //             link: `/tags/${tag}.html`
+            //         }
+            //     })
+            // },
             {
-                text: 'FAQ',
-                link: '/FAQ/glossary.html'
-            },
-            {
-                text: 'Snippets',
-                link: '/snippets/'
-            },
-            {
-                text: 'Release notes',
-                link: '/releases/current-release.html'
-            },
-            {
+                text: 'API',
                 items: [{
-                    text: 'Terms of service',
-                    link: '/FAQ/terms-of-service.html'
-                },
-                {
-                    text: 'About',
-                    link: '/FAQ/about.html'
-                },
+                        text: 'References',
+                        link: '/references/'
+                        // link: '/references/app.html'
+                    }, {
+                        text: 'Structures',
+                        link: '/structures/'
+                        // link: '/structures/view-provider.html'
+                    }, {
+                        text: 'Using libraries',
+                        link: '/libraries/intro.html'
+                        // link: '/structures/view-provider.html'
+                    }
+                    // {
+                    //     text: 'Style Guide',
+                    //     link: '/guide/intro.html'
+                    // }
+                ]
+            },
+            {
+                text: 'More',
+                items: [{
+                        text: 'All Docs',
+                        link: '/all/'
+                    },
+                    {
+                        text: 'All Tags',
+                        link: '/tags/'
+                    },
+                    {
+                        text: 'FAQ',
+                        link: '/FAQ/glossary.html'
+                    },
+                    {
+                        text: 'Snippets',
+                        link: '/snippets/'
+                    },
+                    {
+                        text: 'Release notes',
+                        link: '/releases/current-release.html'
+                    },
+                    {
+                        items: [{
+                                text: 'Terms of service',
+                                link: '/FAQ/terms-of-service.html'
+                            },
+                            {
+                                text: 'About',
+                                link: '/FAQ/about.html'
+                            },
 
+                        ]
+                    },
+                    {
+                        text: 'Links',
+                        items: [{
+                                text: 'Status page',
+                                link: 'https://status.quarkjs.io'
+                            },
+                            // {
+                            //     text: 'Social',
+                            //     link: 'https://social.quarkjs.io/'
+                            // },
+                            {
+                                text: 'GitHub: Build',
+                                link: 'https://github.com/Nishkalkashyap/Quark-electron'
+                            },
+                            {
+                                text: 'GitHub: Docs',
+                                link: 'https://github.com/Nishkalkashyap/Quark-docs'
+                            },
+                            {
+                                text: 'GitHub: Examples',
+                                link: 'https://github.com/Nishkalkashyap/Quark-samples'
+                            }
+                        ]
+                    }
                 ]
             },
             {
-                text: 'Links',
-                items: [{
-                    text: 'Status page',
-                    link: 'https://status.quarkjs.io'
-                },
-                // {
-                //     text: 'Social',
-                //     link: 'https://social.quarkjs.io/'
-                // },
-                {
-                    text: 'GitHub: Build',
-                    link: 'https://github.com/Nishkalkashyap/Quark-electron'
-                },
-                {
-                    text: 'GitHub: Docs',
-                    link: 'https://github.com/Nishkalkashyap/Quark-docs'
-                },
-                {
-                    text: 'GitHub: Examples',
-                    link: 'https://github.com/Nishkalkashyap/Quark-samples'
-                }
-                ]
+                text: 'App store',
+                link: 'https://dash.quarkjs.io'
+            },
+            {
+                text: 'Download',
+                link: '/download/'
             }
-            ]
-        },
-        {
-            text: 'App store',
-            link: 'https://dash.quarkjs.io'
-        },
-        {
-            text: 'Download',
-            link: '/download/'
-        }
         ],
         sidebar: {
             "/guide/": [
