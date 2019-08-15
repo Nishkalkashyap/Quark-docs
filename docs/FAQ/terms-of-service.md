@@ -1,3 +1,9 @@
+---
+description : "Terms of service"
+author : nishkal
+tags : ['faq']
+sidebarDepth: 2
+---
 
 # Terms of Service
 
