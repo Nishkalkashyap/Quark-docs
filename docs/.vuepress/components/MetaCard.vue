@@ -98,7 +98,7 @@ div.padding {
   div.padding {
     flex-basis: 100%;
     max-width: 100%;
-    padding: 10px 50px;
+    padding: 10px 10px;
   }
 }
 
