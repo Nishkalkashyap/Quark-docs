@@ -1,10 +1,10 @@
 {
-    "version": "0.5.7",
+    "version": "0.5.8",
     "channel": "insiders",
-    "linux_main": "Quark-linux-x86_64-0.5.7.AppImage",
-    "linux_other": "[\"Quark-linux-amd64-0.5.7.deb\",\"Quark-linux-x64-0.5.7.tar.gz\"]",
-    "windows_main": "Quark-win-0.5.7.exe",
-    "windows_other": "[\"Quark-win-x64-0.5.7.msi\",\"Quark-win-x64-0.5.7.zip\"]",
-    "darwin_main": "Quark-mac-0.5.7.dmg",
-    "darwin_other": "[\"Quark-mac-0.5.7.zip\"]"
+    "linux_main": "Quark-linux-x86_64-0.5.8.AppImage",
+    "linux_other": "[\"Quark-linux-amd64-0.5.8.deb\",\"Quark-linux-x64-0.5.8.tar.gz\"]",
+    "windows_main": "Quark-win-0.5.8.exe",
+    "windows_other": "[\"Quark-win-x64-0.5.8.msi\",\"Quark-win-x64-0.5.8.zip\"]",
+    "darwin_main": "Quark-mac-0.5.8.dmg",
+    "darwin_other": "[\"Quark-mac-0.5.8.zip\"]"
 }
