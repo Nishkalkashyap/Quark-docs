@@ -15,6 +15,47 @@ sidebarDepth: 4
 
 [[toc]]
 
+<!-- Quark-0.5.8-start -->
+## Quark 0.5.8 - August 21, 2019
+
+#### 🐞 Bug Fixes:
+* 🚑 Fixed MacOS app notarization bug.
+
+#### Other changes:
+* Dependency updates.
+
+#### 🚀 Dependencies:
+* ⬆️ Updated: `electron-log@^3.0.7` (Previous: v^3.0.5)
+* ⬆️ Updated: `johnny-five@^1.3.0` (Previous: v^1.2.0)
+* ⬆️ Updated: `markdown-loader@^5.1.0` (Previous: v^5.0.0)
+* ⬆️ Updated: `npm@^6.10.3` (Previous: v^6.10.2)
+* ⬆️ Updated: `react@^16.9.0` (Previous: v^16.8.6)
+* ⬆️ Updated: `react-dom@^16.9.0` (Previous: v^16.8.6)
+* ⬆️ Updated: `stylus@^0.54.6` (Previous: v^0.54.5)
+* ⬆️ Updated: `uuid@^3.3.3` (Previous: v^3.3.2)
+* ⬆️ Updated: `webpack@^4.39.2` (Previous: v^4.38.0)
+* ⬆️ Updated: `electron@^4.2.9` (Previous: v^4.2.8)
+
+
+!!! note See SHA-512 Hashes
+<DropDown>
+<ReleaseNotes :sha='{
+    "Quark-win-0.5.8.exe": "faVWmBNHtmmSgg8IM1NoM27jPpNODni/hf8INIOVVssJC1w5mfpCdXyDMe9IK3mugwFgHD7PPKYmNj5u0Qu0DA==",
+    "Quark-win-x64-0.5.8.msi": "d2cGNXLMu28N0TnRwiO9sE9NgVJM0xs1CtZIFnmKQfmAC3eyfiFGxpZJKafSYbwhJNYChyE0n0VGOOAAVauwpA==",
+    "Quark-win-x64-0.5.8.zip": "WT/bHsrzJyh2nCFnfj56touHu3QN2wpZXy5Zd80nmJMLXqwf9ScldE9YLxU2gF4FW7nu3OWwAq+/nDA6FRpR6g==",
+    "Quark-linux-amd64-0.5.8.deb": "VcSntRIpodtiQMeyEXxM3SLyWR17vQgrq0F8P/k2mht0zWJ5X0oxmRf5CJCSEgVjEgWdPO/a6eCntkl6XOwGNw==",
+    "Quark-linux-x64-0.5.8.tar.gz": "CQTqFzVsrw4vUlOw74RcMsWlg/OahArj2TSL0LGWVGWKxt4ZCKEfpJL9YtBey0d3f8AN3sTGHBsc4CwgKzE9cQ==",
+    "Quark-linux-x86_64-0.5.8.AppImage": "FJhrt7uaJYokrRJWH2bDyGM5QtYU6lk3GENwdGFdXpNrGaBSP0rJ5FYqJDNAgKg8Q1Q49zK9hEzSwHEhdpk/Gg=="
+}' />
+</DropDown>
+!!!
+
+<!-- ---------------------------------------------- -->
+<!-- Quark-0.5.8-end -->
+
+
+
+
 <!-- Quark-0.5.7-start -->
 ## Quark 0.5.7 - July 29, 2019
 
