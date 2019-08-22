@@ -6,7 +6,8 @@
             <p v-html="upper"></p>
             <slot name="image"></slot>
             <p v-html="lower"></p>
-            <router-link :to="(learnMoreLink || '/download/')">Learn more</router-link>
+            <a :href="(learnMoreLink || '/download/')" v-if="(learnMoreLink ||'').startsWith('https')" target="_blank">Learn more</a>
+            <router-link :to="(learnMoreLink || '/download/')" v-if="!(learnMoreLink ||'').startsWith('https')">Learn more</router-link>
         </div>
     </div>
     <floaters :side="side" />
