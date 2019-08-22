@@ -2,33 +2,32 @@
   <div class="home4-component">
     <heroTop />
 
-    <heroSection
-      side="left"
-      heading="Software sketchbook for your projects"
-      upper="Quark helps you create <strong>software sketches</strong> written in HTML, CSS and JavaScript with native desktop app like capabilities."
-      lower="We provide you with all the tools and a canvas to help you make your art."
-      learnMoreLink="/guide/intro.html"
+     <heroSection
+      side="right"
+      heading="Power of Electron 💪"
+      upper="Built on top of the electron framework. Behind the scenes, Quark uses electron's renderer process as the runtime for your applications."
+      lower="This means, that you have access to all of the Node.js and Electron's renderer process API's in your app."
     >
       <video
         muted
         autoplay
         loop
         name="media"
-        poster="~@buildAssets/guide/showcase/system-monitor.png"
+        poster="~@buildAssets/guide/hello-world-intro.png"
         crossorigin="anonymous"
         class="image-transition"
         slot="image"
         style="filter: brightness(0.7) contrast(1) sepia(2) hue-rotate(180deg) saturate(5.5)"
       >
-        <source src="~@buildAssets/guide/showcase/system-monitor.mp4" type="video/mp4" />Your browser does not support the video tag.
+        <source src="~@buildAssets/guide/hello-world-intro.mp4" type="video/mp4" />Your browser does not support the video tag.
       </video>
     </heroSection>
 
-    <heroSection
-      side="right"
-      heading="Blazing fast app creation ⚡"
+     <heroSection
+      side="left"
+      heading="Quark development environment ⚡"
       upper="There is no greater buzzkill than having to configure build tools and development environment before you can start hammering out a cool project or test a new idea."
-      lower="<strong>Quark development environment</strong> is designed from ground up, for rapid prototyping and development of projects. This means that projects built with Quark are quick to setup, build and share."
+      lower="<strong>Quark development environment</strong> is designed from ground up, for rapid prototyping and development of your applications. This means that apps built with Quark are quick to setup, build and share."
       learnMoreLink="/guide/quark-ide.html"
     >
       <video
@@ -46,24 +45,45 @@
     </heroSection>
 
     <heroSection
-      side="left"
-      heading="Power of Electron 💪"
-      upper="Built on top of the electron framework. Behind the scenes, Quark uses electron's renderer process as the runtime for your sketches."
-      lower="This means, that you have access to all of the Node.js and Electron's renderer process API's in your sketch."
+      side="right"
+      heading="Quark Appstore"
+      upper="Discover and share Quark apps. Find all the best community-made resources."
+      lower="The <strong>App Store</strong> is the best place to discover and download Quark apps for yout Mac, Windows or Linux machine."
+      learnMoreLink="https://dash.quarkjs.io"
     >
       <video
         muted
         autoplay
         loop
         name="media"
-        poster="~@buildAssets/guide/hello-world-intro.png"
+        poster="~@buildAssets/guide/showcase/system-monitor.png"
         crossorigin="anonymous"
         class="image-transition"
         slot="image"
       >
-        <source src="~@buildAssets/guide/showcase/web-browser.mp4" type="video/mp4" />Your browser does not support the video tag.
+        <source src="~@buildAssets/guide/showcase/system-monitor.mp4" type="video/mp4" />Your browser does not support the video tag.
       </video>
     </heroSection>
+    <!-- <heroSection
+      side="right"
+      heading="Software sketchbook for your projects"
+      upper="Quark helps you create <strong>software sketches</strong> written in HTML, CSS and JavaScript with native desktop app like capabilities."
+      lower="We provide you with all the tools and a canvas to help you make your art."
+      learnMoreLink="/guide/intro.html"
+    >
+      <video
+        muted
+        autoplay
+        loop
+        name="media"
+        poster="~@buildAssets/guide/showcase/system-monitor.png"
+        crossorigin="anonymous"
+        class="image-transition"
+        slot="image"
+      >
+        <source src="~@buildAssets/guide/showcase/system-monitor.mp4" type="video/mp4" />Your browser does not support the video tag.
+      </video>
+    </heroSection> -->
 
     <div class="landing-page-background">
       <floaters side="left" />

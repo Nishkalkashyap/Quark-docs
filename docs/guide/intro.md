@@ -13,7 +13,7 @@ cover : ~@buildAssets/guide/introduction.png
 [[toc]]
 
 ## What is Quark ?
-Quark is a __general purpose software__ tool specifically designed to help you create projects written in HTML, CSS and JavaScript with native desktop app like capabilities.
+Quark is a __general purpose software__ tool specifically designed to help you create projects written in HTML, CSS and JavaScript with native desktop app like capabilities. Quark apps run on Mac, Windows, and Linux from a single codebase.
 
 <video muted autoplay loop style="max-width:100%; height:auto" name="media" poster="~@buildAssets/guide/hello-world-intro.png" crossOrigin="anonymous">
   <source src="~@buildAssets/guide/hello-world-intro.mp4" type="video/mp4">
@@ -37,10 +37,12 @@ _See the process in action -_
   Your browser does not support the video tag.
 </video> 
 
+##### In the example above, we create a Quark project, built the project and run the project. All done under 15 seconds!.
+
 <div style="padding-top:50px"></div>
 
-## Quark Sketches 🎨
-Quark is built on top of the [Electron framework](https://electronjs.org). Your sketches provide you with all the capabilities of __full fledged electron apps__. The difference here is that they just weigh a __few kilobytes__ instead of __hundreds of megabytes.__
+## Quark Apps (or Sketches) 🎨
+We call apps built with Quark, Sketches. Quark itself is built on top of the [Electron framework](https://electronjs.org). Your sketches provide you with all the capabilities of __full fledged electron apps__. The difference here is that they just weigh a __few kilobytes__ instead of __hundreds of megabytes.__
 
 We achieve this functionality by using a __shared JavaScript runtime__ for all your sketches. This runtime, in most cases, accounts for almost 99% of the weight of an electron app. This leaves us with the actual application logic, which usually only weighs a few kilobytes.
 
@@ -49,15 +51,15 @@ The only caveat here is that because of this shared runtime, your sketches have 
 What this means for you is that you can potentially have hundreds of sketches on your machine providing the functionality as that of full fledged electron apps, while consuming the resources equivalent to only one app!
 
 #### Web Technologies
-Sketches are built using web technologies like HTML, CSS and Javascript. If you can build a website, you already know how to build a sketch.
+Quark apps are built using web technologies like HTML, CSS and Javascript. If you can build a website, you already know how to build a Quark app.
 
-#### Power of Electron 💪
-Behind the scenes, we use [electron's renderer process](https://electronjs.org/docs/tutorial/application-architecture) as the runtime for your sketches. This means, that you have access to all of the Node.js and Electron's renderer process API's in your sketch.
-
-#### Cross Platform
+#### Cross Platform 🧬
 Another advantage of using web technologies is that your sketches are Compatible with Mac, Windows, and Linux and run on all three platforms. __Write once, run everywhere!__
 
-#### Unopinionated
+#### Power of Electron 💪
+Behind the scenes, we use [electron's renderer process](https://electronjs.org/docs/tutorial/application-architecture) as the runtime for your Quark apps. This means, that you have access to all of the Node.js and Electron's renderer process API's in your app.
+
+#### Unopinionated 🏅
 Anything you like, any way you like, in any style. We have out-of-the-box support for modern JavaScript, React.js, Vue.js and Typescript. Take your pick!
 
 #### Powerful build system
@@ -83,11 +85,11 @@ Quark is built with simplicity in mind, so that creating projects with Quark is 
 
 <!--  -->
 
-<!-- ## Releases
-Quark releases frequently. We release when there are significant bug fixes, new APIs or are updating versions of Electron or Node.js. -->
+## Releases
+Quark releases frequently. We release when there are significant bug fixes, new APIs or are updating versions of Electron or Node.js.
 
-<!-- ## Versioning
-Once Quark releases in beta phase, it will follow [semver](https://semver.org/). Before that no gurantees are made that the API will be changed in a backwards compatible way. -->
+## Versioning
+Once Quark releases in beta phase, it will follow [semver](https://semver.org/). Before that no gurantees are made that the API will be changed in a backwards compatible way.
 
 ## First Steps
 To get the most out of Quark, start by reviewing a few introductory topics:
@@ -96,6 +98,5 @@ To get the most out of Quark, start by reviewing a few introductory topics:
 * [Showcase](/guide/showcase.md): View example projects made with Quark.
 
 
-
-## Join the Community
-To learn more, follow our [social network](https://social.quarkjs.io). You can also ask questions and open issues on our [GitHub repo](https://github.com/Nishkalkashyap/Quark-electron).
+<!-- ## Join the Community
+To learn more, follow our [social network](https://social.quarkjs.io). You can also ask questions and open issues on our [GitHub repo](https://github.com/Nishkalkashyap/Quark-electron). -->
