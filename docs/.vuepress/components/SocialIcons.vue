@@ -19,6 +19,10 @@ export default {
                 {
                     svg: require("!!svg-inline-loader!@buildAssets/signature/github.svg"),
                     link: "https://github.com/nishkalkashyap"
+                },
+                {
+                    svg: require("!!svg-inline-loader!@buildAssets/signature/website.svg"),
+                    link: "https://nishkal.in"
                 }
             ]
         };
