@@ -23,6 +23,10 @@ export default {
                 {
                     svg: require("!!svg-inline-loader!@buildAssets/signature/website.svg"),
                     link: "https://nishkal.in"
+                },
+                {
+                    svg: require("!!svg-inline-loader!@buildAssets/signature/mail.svg"),
+                    link: "mailto:hello@nishkal.in?subject=Hey%20Nishkal,"
                 }
             ]
         };
