@@ -67,20 +67,6 @@ module.exports = {
         //         var perf = firebase.performance();
         // `
         // ],
-        // ['script', {
-        //     src: '/assets/anime.min.js',
-        //     type: 'text/javascript'
-        // }]
-        // ['script', {
-        //     src: 'https://unpkg.com/ionicons@4.5.5/dist/ionicons.js'
-        // }],
-        // ['script', {
-        //     src: "https://unpkg.com/@ionic/core@latest/dist/ionic.js"
-        // }],
-        // ['link', {
-        //     href: "https://unpkg.com/@ionic/core@latest/css/ionic.bundle.css",
-        //     rel: "stylesheet"
-        // }]
     ],
     markdown: {
         config: md => {
