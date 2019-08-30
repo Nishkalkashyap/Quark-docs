@@ -7,8 +7,10 @@ export default ({
     // siteData // site metadata
 }) => {
     router.addRoutes(json);
+    addAnalytics(router, 'UA-112064718-3');
+}
 
-    const GA_ID = 'UA-112064718-3';
+function addAnalytics(router, GA_ID) {
     if (process.env.NODE_ENV === 'production' && GA_ID && typeof window !== 'undefined') {
         (function (i, s, o, g, r, a, m) {
             i['GoogleAnalyticsObject'] = r
@@ -23,13 +25,15 @@ export default ({
             m.parentNode.insertBefore(a, m)
         })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga')
 
-        ga('create', GA_ID, 'auto')
-        ga('set', 'anonymizeIp', true)
-        ga('send', 'pageview')
+        ga('create', GA_ID, 'auto');
+        ga('set', 'anonymizeIp', true);
+        ga('send', 'pageview');
+        console.log('up');
 
         router.afterEach(function (to) {
-            ga('set', 'page', to.fullPath)
-            ga('send', 'pageview')
-        })
+            console.log('down');
+            ga('set', 'page', to.fullPath);
+            ga('send', 'pageview');
+        });
     }
 }
