@@ -28,8 +28,12 @@ function addAnalytics(router, GA_ID) {
         ga('create', GA_ID, 'auto');
         ga('set', 'anonymizeIp', true);
 
+        let previous;
         router.afterEach(function (to) {
-            ga('send', 'pageview', to.fullPath);
+            if (previous != to.path) {
+                previous = to.path;
+                ga('send', 'pageview', to.path);
+            }
         });
     }
 }
