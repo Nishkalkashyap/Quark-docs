@@ -202,6 +202,10 @@ module.exports = {
                 link: 'https://dash.quarkjs.io'
             },
             {
+                text: 'GitHub',
+                link: 'https://github.com/Nishkalkashyap/Quark-electron'
+            },
+            {
                 text: 'Download',
                 link: '/download/'
             }
