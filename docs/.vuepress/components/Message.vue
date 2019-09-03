@@ -2,8 +2,8 @@
 <div class="message-component">
     <div class="container" v-if="!this.isDismissed">
         <span>
-            <!-- Note: This project is currently under active development. Documentation is incomplete and things may not work as expected. 🤯 -->
-            Note: Announcing Quark appstore. Discover and share Quark projects and all the best community-made resources. ⚡
+            Note: This project is currently under active development. Documentation is incomplete and things may not work as expected. 🤯
+            <!-- Note: Announcing Quark appstore. Discover and share Quark projects and all the best community-made resources. ⚡ -->
         </span>
         <div @click="clickHandle()" class="button">Visit</div>
         <div @click="dismiss()" class="button">Dismiss</div>
@@ -31,13 +31,13 @@ export default {
 
 <style lang="scss" scoped>
 .container {
-    // $bgColor: var(--text-color--dark);
-    // color: #ffffff;
-    // background: linear-gradient(to right, #fec042 0%,#ff7246 100%);
-
-    $bgColor: #000;
+    $bgColor: var(--text-color--dark);
     color: #ffffff;
-    background: linear-gradient(to right, #00c6ff 0%, #0072ff 100%);
+    background: linear-gradient(to right, #fec042 0%,#ff7246 100%);
+
+    // $bgColor: #000;
+    // color: #ffffff;
+    // background: linear-gradient(to right, #00c6ff 0%, #0072ff 100%);
 
     border-left: solid 3px $bgColor;
     border-right: solid 3px $bgColor;
