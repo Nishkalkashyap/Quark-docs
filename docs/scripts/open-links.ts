@@ -21,7 +21,8 @@ const links = [
     "https://valentin-hervieu.fr",
     "http://anenth.js.org",
     "http://nyaganti.com/",
-    "http://bogas04.github.io"
+    "http://bogas04.github.io",
+    "https://www.ispoljaric.com"
 ]
 
 

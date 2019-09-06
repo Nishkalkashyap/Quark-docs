@@ -14,6 +14,11 @@ export default {
                     title : 'GitHub'
                 },
                 {
+                    svg: require("!!svg-inline-loader!@buildAssets/signature/linkedin.svg"),
+                    link: "https://www.linkedin.com/in/nishkalkashyap/",
+                    title : 'LinkedIn'
+                },
+                {
                     svg: require("!!svg-inline-loader!@buildAssets/signature/twitter.svg"),
                     link: "https://twitter.com/nishkalkashyap",
                     title : 'Twitter'
