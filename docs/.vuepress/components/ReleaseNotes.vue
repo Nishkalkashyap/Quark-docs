@@ -39,13 +39,16 @@ table {
     border-top: 0px;
     box-sizing: border-box;
 
+    margin: 10px 10px;
+    width: calc(100% - 20px);
+
     td.item-name {
         min-width: 200px;
+        text-align: center !important;
     }
 
     th,
     td {
-        text-align: left !important;
         padding: 5px;
     }
 }
