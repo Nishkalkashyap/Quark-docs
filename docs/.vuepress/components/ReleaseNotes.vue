@@ -8,7 +8,7 @@
     </thead>
     <tbody>
         <tr v-for="(value, key) in shasum">
-            <td>{{key}}</td>
+            <td class="item-name">{{key}}</td>
             <td>{{value}}</td>
         </tr>
     </tbody>
@@ -38,5 +38,15 @@ table {
     margin: 0px;
     border-top: 0px;
     box-sizing: border-box;
+
+    td.item-name {
+        min-width: 200px;
+    }
+
+    th,
+    td {
+        text-align: left !important;
+        padding: 5px;
+    }
 }
 </style>
