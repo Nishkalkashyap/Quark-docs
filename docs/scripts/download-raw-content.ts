@@ -18,6 +18,7 @@ const bucketUrl = `https://quark-release.quarkjs.io/${releaseVar.bucketSubUrl}`;
 
 let win32_SHA: any;
 let linux_SHA: any;
+let darwin_SHA: any;
 
 
 const monthNames = ["January", "February", "March", "April", "May", "June",
@@ -45,6 +46,7 @@ async function getRawContent() {
 
     win32_SHA = JSON.parse(await (await fetch(`${bucketUrl}/win32-shasum.json`)).text());
     linux_SHA = JSON.parse(await (await fetch(`${bucketUrl}/linux-shasum.json`)).text());
+    darwin_SHA = JSON.parse(await (await fetch(`${bucketUrl}/linux-shasum.json`)).text());
 }
 
 
@@ -114,7 +116,7 @@ async function createVersionJsonFile(): Promise<string> {
     }
 
     const obj = {} as any;
-    const shaObj = Object.assign(win32_SHA, linux_SHA);
+    const shaObj = Object.assign(win32_SHA, linux_SHA, darwin_SHA);
     Object.keys(shaObj).map((key) => {
         obj[key] = shaObj[key];
     });
@@ -128,7 +130,7 @@ async function createVersionJsonFile(): Promise<string> {
     str = str.concat(preText, '\n');
     str = str.concat(`## Quark ${packageJson.version} - ${monthNames[date.getMonth()]} ${date.getDate()}, ${date.getFullYear()}`, '\n\n');
     str = str.concat(currentNotes, '\n\n');
-    str = str.concat(await gitDiff());
+    str = str.concat(gitDiff());
     str = str.concat(`!!! note See SHA-512 Hashes`, '\n');
     str = str.concat(`<DropDown>`, '\n');
     str = str.concat(`<ReleaseNotes :sha='${js.js_beautify(JSON.stringify(obj))}' />`, '\n');
