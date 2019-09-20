@@ -46,7 +46,7 @@ async function getRawContent() {
 
     win32_SHA = JSON.parse(await (await fetch(`${bucketUrl}/win32-shasum.json`)).text());
     linux_SHA = JSON.parse(await (await fetch(`${bucketUrl}/linux-shasum.json`)).text());
-    darwin_SHA = JSON.parse(await (await fetch(`${bucketUrl}/linux-shasum.json`)).text());
+    darwin_SHA = JSON.parse(await (await fetch(`${bucketUrl}/darwin-shasum.json`)).text());
 }
 
 
