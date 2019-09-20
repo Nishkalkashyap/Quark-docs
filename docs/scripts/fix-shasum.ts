@@ -7,7 +7,9 @@ import * as compareVersions from 'compare-versions';
 import { makeReleaseDir } from './make-release-dir';
 
 const bucketUrl = `https://quark-release.quarkjs.io`;
-const versionFilePath = './version-assets/insiders/__versions.json';
+const insiders_versionFilePath = './version-assets/insiders/__versions.json';
+const stable_versionFilePath = './version-assets/stable/__versions.json';
+const badReleases: string[] = JSON.parse(fs.readFileSync(`./version-assets/insiders/__broken-releases.json`).toString());
 
 const bucketName = 'quark-release.quarkjs.io';
 process.env.GOOGLE_APPLICATION_CREDENTIALS = path.resolve('./cloud-storage-key.json');
@@ -21,24 +23,37 @@ const bucket = storage.bucket(bucketName);
 
 root().catch(console.error);
 async function root() {
-    const versionJson = JSON.parse(fs.readFileSync(versionFilePath).toString());
-    const allReleasedVersions = Object.keys(versionJson);
+    const insiders_versionJson = JSON.parse(fs.readFileSync(insiders_versionFilePath).toString());
+    const stable_versionJson = JSON.parse(fs.readFileSync(stable_versionFilePath).toString());
+    
+    const allReleasedVersions = Object.keys(insiders_versionJson);
 
-    const newObject = {} as any;
+    const insidersObject = {} as any;
+    const stableObject = {} as any;
     const promises = allReleasedVersions.map(async (version, index) => {
         // if (index > 2) {
         //     return;
         // }
         const fix = await fixForVersion(version);
-        newObject[version] = fix;
         console.log(`Fixed version: ${version}`);
+
+        insidersObject[version] = fix;
+        if(!badReleases.includes(version) && stable_versionJson[version]){
+            stableObject[version] = fix;
+        }
     });
     await Promise.all(promises);
 
-    const filteredObject: any = {};
-    Object.keys(newObject).sort(compareVersions).reverse().map((key) => { filteredObject[key] = newObject[key] });
-    fs.writeFileSync(versionFilePath, JSON.stringify(filteredObject, undefined, 4));
-    makeReleaseDir();
+    const insiders_filteredObject: any = {};
+    const stable_filteredObject: any = {};
+    
+    Object.keys(insidersObject).sort(compareVersions).reverse().map((key) => { insiders_filteredObject[key] = insidersObject[key] });
+    Object.keys(stableObject).sort(compareVersions).reverse().map((key) => { stable_filteredObject[key] = stableObject[key] });
+
+    fs.writeFileSync(insiders_versionFilePath, JSON.stringify(insiders_filteredObject, undefined, 4));
+    fs.writeFileSync(stable_versionFilePath, JSON.stringify(stable_filteredObject, undefined, 4));
+    
+    // makeReleaseDir();
 
     async function fixForVersion(version: string) {
         try {
@@ -49,10 +64,10 @@ async function root() {
             const shaObj = Object.assign({}, win32_SHA, linux_SHA, darwin_SHA);
 
             const newNotes = `<ReleaseNotes :sha='${js.js_beautify(JSON.stringify(shaObj))}' />`;
-            const newString = (versionJson[version] as string).replace(/<ReleaseNotes :sha=[\w\W]+' \/>/, newNotes);
+            const newString = (insiders_versionJson[version] as string).replace(/<ReleaseNotes :sha=[\w\W]+' \/>/, newNotes);
             return newString;
         } catch (err) {
-            return versionJson[version];
+            return insiders_versionJson[version];
         }
     }
 }
