@@ -4,6 +4,7 @@ import * as js from 'js-beautify';
 import * as path from 'path';
 import { Storage } from '@google-cloud/storage';
 import * as compareVersions from 'compare-versions';
+import { makeReleaseDir } from './make-release-dir';
 
 const bucketUrl = `https://quark-release.quarkjs.io`;
 const versionFilePath = './version-assets/insiders/__versions.json';
@@ -37,6 +38,7 @@ async function root() {
     const filteredObject: any = {};
     Object.keys(newObject).sort(compareVersions).reverse().map((key) => { filteredObject[key] = newObject[key] });
     fs.writeFileSync(versionFilePath, JSON.stringify(filteredObject, undefined, 4));
+    makeReleaseDir();
 
     async function fixForVersion(version: string) {
         try {
