@@ -37,5 +37,6 @@ export default {
 table {
     margin: 0px;
     border-top: 0px;
+    box-sizing: border-box;
 }
 </style>
