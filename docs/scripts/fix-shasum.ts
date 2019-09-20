@@ -25,7 +25,7 @@ root().catch(console.error);
 async function root() {
     const insiders_versionJson = JSON.parse(fs.readFileSync(insiders_versionFilePath).toString());
     const stable_versionJson = JSON.parse(fs.readFileSync(stable_versionFilePath).toString());
-    
+
     const allReleasedVersions = Object.keys(insiders_versionJson);
 
     const insidersObject = {} as any;
@@ -38,7 +38,7 @@ async function root() {
         console.log(`Fixed version: ${version}`);
 
         insidersObject[version] = fix;
-        if(!badReleases.includes(version) && stable_versionJson[version]){
+        if (!badReleases.includes(version) && stable_versionJson[version]) {
             stableObject[version] = fix;
         }
     });
@@ -46,14 +46,14 @@ async function root() {
 
     const insiders_filteredObject: any = {};
     const stable_filteredObject: any = {};
-    
+
     Object.keys(insidersObject).sort(compareVersions).reverse().map((key) => { insiders_filteredObject[key] = insidersObject[key] });
     Object.keys(stableObject).sort(compareVersions).reverse().map((key) => { stable_filteredObject[key] = stableObject[key] });
 
     fs.writeFileSync(insiders_versionFilePath, JSON.stringify(insiders_filteredObject, undefined, 4));
     fs.writeFileSync(stable_versionFilePath, JSON.stringify(stable_filteredObject, undefined, 4));
-    
-    // makeReleaseDir();
+
+    process.env.forceUpdate ? makeReleaseDir() : '';
 
     async function fixForVersion(version: string) {
         try {
