@@ -19,9 +19,12 @@
 import stableShasum from './../../version-assets/stable/__shasum.json';
 import insidersShasum from './../../version-assets/insiders/__shasum.json';
 export default {
-    props: ["channel"],
+    props: ["channel", "sha"],
     data: function () {
-        const sha = this.channel == 'stable' ? stableShasum : insidersShasum;
+        let sha = this.channel == 'stable' ? stableShasum : insidersShasum;
+        if (this.sha) {
+            sha = this.sha;
+        }
         return {
             shasum: sha,
             isOpen: false
