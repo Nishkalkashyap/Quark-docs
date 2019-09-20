@@ -45,7 +45,9 @@ sidebarDepth: 4
     "Quark-win-x64-0.5.8.zip": "WT/bHsrzJyh2nCFnfj56touHu3QN2wpZXy5Zd80nmJMLXqwf9ScldE9YLxU2gF4FW7nu3OWwAq+/nDA6FRpR6g==",
     "Quark-linux-amd64-0.5.8.deb": "VcSntRIpodtiQMeyEXxM3SLyWR17vQgrq0F8P/k2mht0zWJ5X0oxmRf5CJCSEgVjEgWdPO/a6eCntkl6XOwGNw==",
     "Quark-linux-x64-0.5.8.tar.gz": "CQTqFzVsrw4vUlOw74RcMsWlg/OahArj2TSL0LGWVGWKxt4ZCKEfpJL9YtBey0d3f8AN3sTGHBsc4CwgKzE9cQ==",
-    "Quark-linux-x86_64-0.5.8.AppImage": "FJhrt7uaJYokrRJWH2bDyGM5QtYU6lk3GENwdGFdXpNrGaBSP0rJ5FYqJDNAgKg8Q1Q49zK9hEzSwHEhdpk/Gg=="
+    "Quark-linux-x86_64-0.5.8.AppImage": "FJhrt7uaJYokrRJWH2bDyGM5QtYU6lk3GENwdGFdXpNrGaBSP0rJ5FYqJDNAgKg8Q1Q49zK9hEzSwHEhdpk/Gg==",
+    "Quark-mac-0.5.8.zip": "iCaCzsYFwCIN9VYHLEYchVFwTxylrz0bPQ4AlQ6MpPWZzsWZRHe4WNQhDLsQ+GN8o1z3pAT35Eqj4k1uN0U57g==",
+    "Quark-mac-0.5.8.dmg": "76aW1Fld816STb7LmpBQKIh9eomeaZi8CWS0IzJlWgDyKQ2c3a5a4nK26sDlNr9uqHO2aOwfILbG99bQQ01yaw=="
 }' />
 </DropDown>
 !!!
@@ -83,7 +85,9 @@ sidebarDepth: 4
     "Quark-win-x64-0.5.7.zip": "fkdCLLzHOzYYmnLmQBgdUBtSUBToSbhxi/A/ZqxlBdzMSOsjoyHg09zF7v3rfqwuqRwIIR4VIQkWID5PBIroQg==",
     "Quark-linux-amd64-0.5.7.deb": "rRISHJ1uamUUHJjv7pwSltINRNRYbfq9Vhi5Ng5dmvJmUnJlbFU35ZXqqvpFFlayzCRWl7ck4sBmhLKpawHYug==",
     "Quark-linux-x64-0.5.7.tar.gz": "MDGqKOEE4JpQNq5HrLjNAbyEA8hg1X7AJP285YjmMdfnXk1VpGWcNxfp3i3GrF5uY8EfExyjsjV/S3Djaf+dlw==",
-    "Quark-linux-x86_64-0.5.7.AppImage": "rKj+j+Fp2PxaTJY7fkIzJhUwn76S6rZN6UW7T5VQ28mLFFWfyq+BdOPSfH8iuPXqwwa+lrcJnDnMXikos456Jg=="
+    "Quark-linux-x86_64-0.5.7.AppImage": "rKj+j+Fp2PxaTJY7fkIzJhUwn76S6rZN6UW7T5VQ28mLFFWfyq+BdOPSfH8iuPXqwwa+lrcJnDnMXikos456Jg==",
+    "Quark-mac-0.5.7.zip": "ppnbnfM8p2v40LVvJ/V8+rL7la4/WZzUwOF1jil9WeWEwRl7anQUzttxNhzsgt6ILGCtYCEsnT9plSMzpksPdw==",
+    "Quark-mac-0.5.7.dmg": "t58Ujy3daGreQfK3OHcAqjF1iR90tMfhHjKO06xYwr45MCTejF01ErGsE5YpmQEkDmN3g2A6bj+uxv3nlqfpIw=="
 }' />
 </DropDown>
 !!!
@@ -113,7 +117,9 @@ sidebarDepth: 4
     "Quark-win-x64-0.5.6.zip": "M/xuRnnLXpC0o6oTzp4NeZUdAQnlSDFJp3rnasuMRGn6C0zBny8zjVnf0A4bqxtIP4Nu9VoS4GLHrc0/NJBQSA==",
     "Quark-linux-amd64-0.5.6.deb": "nIAlR6B2XzTYDkSuHQBXhBGnviEAUWYJ/lAHK9DwG7A1Bp2T1sHvFMVpIbWMCSuq2w3TV6gtdhSoYsq4pmoVJQ==",
     "Quark-linux-x64-0.5.6.tar.gz": "H/75KXjbAFSkMq9F2suW1Jmi4hgXL9vVdEy+gWFPlzBkiicYEHuo8FUtmyrInWaffjX1qIWfHIKXHd3v47Lnog==",
-    "Quark-linux-x86_64-0.5.6.AppImage": "nOHDXj13QH5puBUxLvN7xWnn1iCQKTndnB+UKfw9AG2AgRUXn6Ui6h3Kv6xpvX9PZzKx+Kc9f3GY2sZ1xWE6sA=="
+    "Quark-linux-x86_64-0.5.6.AppImage": "nOHDXj13QH5puBUxLvN7xWnn1iCQKTndnB+UKfw9AG2AgRUXn6Ui6h3Kv6xpvX9PZzKx+Kc9f3GY2sZ1xWE6sA==",
+    "Quark-mac-0.5.6.zip": "zbqTVJb8PCgD5pIrlIwHzMVahkFzqEUEQdK462wvY0sYcucmBiXZJ3pc3OJcA3m4D44uS/MrA5Lh91gTi7K13w==",
+    "Quark-mac-0.5.6.dmg": "/Xo6McamqdjKNLc5MKAcv71P9pPkn3Fy4NViizby1a4AZOYnhu1mh1Mms5sQswa7gs0AeyFXyd19wnBNQM1ROA=="
 }' />
 </DropDown>
 !!!
@@ -145,7 +151,9 @@ sidebarDepth: 4
     "Quark-win-x64-0.5.5.zip": "49YjtyBFkvD851mbinuXc9lGT5tcVcUjkU4bTxAgaVouGrP+V9g3UOVtD3Z90vAmnAPVh18TkWc9EPglD3LgiA==",
     "Quark-linux-amd64-0.5.5.deb": "wZjjapAvLrIxZK6tLIx2P/YrvdvtFSiPBxc/GsMpArATzRUU+qgY80EGzP8e5quxXDtrmNWwaQiT9yPLRo1Qmw==",
     "Quark-linux-x64-0.5.5.tar.gz": "0sIKo4VjmXW0vhoBs6SGxNlSj+7maZKDq/X5XsnD2GMvAiwGiJ8ZY/UZ2vOjoMqpAoygGhU/dNyM2ImxWhQrrQ==",
-    "Quark-linux-x86_64-0.5.5.AppImage": "mhccL5WtasQ5kqDnoJqT6/MkamaPBw9QI+jxpCyBeYwQDbgtG9rKGmK8jE85j+S1sUPItLOHhvUjYK1H86dBXQ=="
+    "Quark-linux-x86_64-0.5.5.AppImage": "mhccL5WtasQ5kqDnoJqT6/MkamaPBw9QI+jxpCyBeYwQDbgtG9rKGmK8jE85j+S1sUPItLOHhvUjYK1H86dBXQ==",
+    "Quark-mac-0.5.5.zip": "2T3kbgp9Ru7aUCbgPtVIpBVZCecopl2gcmcjOTcWV+1WwQCzMPaSh3lyySPiRm06CTl4wGQAiMwv3bPUXPQeuA==",
+    "Quark-mac-0.5.5.dmg": "JNdVlXpO1DF5B6UAconyLMplZq9cpPk0ncnlLBR3OqcHXC+DGNgckcZg3izjWAImQOVvGK5MHOaOoOPyAIEtdw=="
 }' />
 </DropDown>
 !!!
@@ -207,7 +215,9 @@ sidebarDepth: 4
     "Quark-win-x64-0.5.3.zip": "MzjJB27EEEXn4ZF9oVOqNlH1Q+FoMRsbC6rKWaqxZp88/FUMryn59uoPO0Z25YQ8Hp92CE6PeY59sA0WjTlpEQ==",
     "Quark-linux-amd64-0.5.3.deb": "Bpwus7qxFUKNef0wy5H0/OdnaFN9pbyqX/8SyQ0WIdbpo8rBry8QDVW1WlXdyOx2546AE8GESCDtB9bIKMZgKg==",
     "Quark-linux-x64-0.5.3.tar.gz": "xHI7tNvyLucDzWkuDzS5IRtvfSYa/5v36yxacWCjJFzzCBlgkG/PcrBax7cd8xEffV7CNdJZEZe9i6yPWaqizQ==",
-    "Quark-linux-x86_64-0.5.3.AppImage": "Arf+73qMqTyFG3CS0zSgfo0zTWKOW5wmQZPbRaIgrFEkgYSZCkqezi4sgM8oQLqSiPJiLzhwsLEFvoOSNBEmdA=="
+    "Quark-linux-x86_64-0.5.3.AppImage": "Arf+73qMqTyFG3CS0zSgfo0zTWKOW5wmQZPbRaIgrFEkgYSZCkqezi4sgM8oQLqSiPJiLzhwsLEFvoOSNBEmdA==",
+    "Quark-mac-0.5.3.zip": "TgdRZiDETA9GXDBfAJbuMPcVhBfCOHq/Y/8TOKcH57CgAd8NRqltIeB65MwSD1zq1eXHkFInBPN//rGDQodxjQ==",
+    "Quark-mac-0.5.3.dmg": "3924DYtSsQAtTZ5Va8ISa+XiZo9mclgkCzBP0owS9rWo2554dsbXvKRP3weIsq6ZoEjOtO1euOhHZqj/eQuUYg=="
 }' />
 </DropDown>
 !!!
@@ -240,9 +250,9 @@ sidebarDepth: 4
 !!! note See SHA-512 Hashes
 <DropDown>
 <ReleaseNotes :sha='{
-    "Quark-win-0.5.2.exe": "TgMlXuj2CnCvHd6mRfyaQmNek1BdbVf5MzHDTHnieij06fJutvZSCCqD6r6yLJs2/VnIdOo2kfA6m43plMNb+Q==",
-    "Quark-win-x64-0.5.2.msi": "PiuBnptq5A+a6dUXMqmqHsffQzQHaDR569eXkn+3rEqIdra/r5qOPv16yp7ZGgjsZb0z8BU6DogwxbBSV4e3fQ==",
-    "Quark-win-x64-0.5.2.zip": "N1d/f4OXlXvHr5m9vrW8PkzstjaRhNbHWlv9C2gexsevFnZyxV3yM96GBPcb3khdYqRHQ3MY1QkMReYhc1Yp9A==",
+    "Quark-win-0.5.2.exe": "8Ty6uDG3jfQXn3BBmh6/mJcVDGWgrZ9qGoGIj8W1o3Heezn4g1dIKE5PiAaYFdzm7KCvdC+k8NK+5FkudKrG7g==",
+    "Quark-win-x64-0.5.2.msi": "C+g85w2fCdqAxBQ/BW3BdNYzuzRSicnPPQ+dCjhxR+EEXla+7i/GtTM4KUg9ommFFCkl7Qk30QGXFzgM/S8Kjw==",
+    "Quark-win-x64-0.5.2.zip": "1oPGWDU547RZuFx4Yz4V6RTE61QvYw12JgVX2+q4QFPrzD5jukL5Mv+MFTaeugDuWxtkbKb5fVa5ByioMk0vRg==",
     "Quark-linux-amd64-0.5.2.deb": "QgjM2tri9MWbjlbTlRuV4h5a8u/eR7nNmQV3O+kNjofT1sktUw9X74xCn8qeSoEpZRmCp3MMOCNeOR4SIIWHxw==",
     "Quark-linux-x64-0.5.2.tar.gz": "A6H7Yl4yiOP3eBmVwH4YSCzTSYhZoYcv34H3M/FnOWot/eVolBJsFtgK1kwbflBj49jgEXIez1ArASiaAAF2yA==",
     "Quark-linux-x86_64-0.5.2.AppImage": "eVmKffTXNsEYivBUrBHT2SzNwW0DjDXIEfQ/IlaNtN2whI3gu25FzJIAbau4scs7FBRzDUNirndmleCcDK3hcQ=="

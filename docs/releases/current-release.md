@@ -39,7 +39,9 @@ sidebarDepth: 4
     "Quark-win-x64-0.6.0.zip": "oAS8pFl7lv2DgbCYfqEz5tlTScdHSqHHAeCXhRgXgk/F6XL2vRQf3gVkOLToeiZ/ZLI0gWnNj4Pp4irjzMcYnA==",
     "Quark-linux-amd64-0.6.0.deb": "BAZjDcCArt34O9EEHCc+bTA4gE9qhHPsNg+lRYEfiR7b0wk7qYtr6PKgJpL4h8iI+yhgrPiZhXsA92R8aLG/Vw==",
     "Quark-linux-x64-0.6.0.tar.gz": "MAGyg6i1+WQBfBV580WfHDEThzcZSnwOr72ZVJzyTLG0yOzvIuJ6SzQdN76WlagIfSe9MRjWPcorePxOLdUboA==",
-    "Quark-linux-x86_64-0.6.0.AppImage": "vVdH9WIA2aenGUNU1+ju0wC+uIx/f7XL0Z2YwOFoMByGo+j/Wy7beo2rkag4ZKgBWPwploGYquEeKvMjttnTOA=="
+    "Quark-linux-x86_64-0.6.0.AppImage": "vVdH9WIA2aenGUNU1+ju0wC+uIx/f7XL0Z2YwOFoMByGo+j/Wy7beo2rkag4ZKgBWPwploGYquEeKvMjttnTOA==",
+    "Quark-mac-0.6.0.zip": "tJsownWDBsZwEDG6IUZndoWSKl4xR2xWGCQZYLMnW7IbhfIDQY941ngY8vMdo56aypGslW4mdTHUxnV4qRlhOw==",
+    "Quark-mac-0.6.0.dmg": "Gsu8Q1XbxgmyQT77h+EKLNMsg02D2h3ZR8sApt5hxOnqg14HG533L52wRxtEeiX/PROnC/e1B12vch+kEnq0wQ=="
 }' />
 </DropDown>
 !!!
