@@ -33,7 +33,7 @@ export default {
 };
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 table {
     margin: 0px;
     border-top: 0px;
