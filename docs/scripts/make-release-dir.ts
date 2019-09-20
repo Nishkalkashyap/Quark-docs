@@ -11,6 +11,8 @@ const currentVersion = versionsJson.currentVersion;
 const badReleases: string[] = JSON.parse(fs.readFileSync(`${baseVerisonAssetsPath}/__broken-releases.json`).toString());
 const versionNotes: { [version: string]: string } = JSON.parse(fs.readFileSync(`${baseVerisonAssetsPath}/__versions.json`).toString());
 
+process.env.forceMakeReleaseDir ? makeReleaseDir() : '';
+
 export function makeReleaseDir() {
     let tempVersionNotes: any = {};
     const insidersVersionNotes: { [version: string]: string } = JSON.parse(fs.readFileSync(`./version-assets/insiders/__versions.json`).toString());

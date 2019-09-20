@@ -53,8 +53,6 @@ async function root() {
     fs.writeFileSync(insiders_versionFilePath, JSON.stringify(insiders_filteredObject, undefined, 4));
     fs.writeFileSync(stable_versionFilePath, JSON.stringify(stable_filteredObject, undefined, 4));
 
-    process.env.forceUpdate ? makeReleaseDir() : '';
-
     async function fixForVersion(version: string) {
         try {
             const win32_SHA = JSON.parse((await bucket.file(`Quark-insiders-${version}/win32-shasum.json`).download())[0].toString());
