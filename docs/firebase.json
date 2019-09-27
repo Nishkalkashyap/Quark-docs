@@ -8,7 +8,7 @@
       "**/node_modules/**"
     ],
     "rewrites": [{
-      "source": "/GetDashboardStats/**",
+      "source": "**",
       "function": "GetDashboardStats"
     }],
     "cleanUrls": false,
