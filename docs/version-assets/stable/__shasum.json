@@ -1,8 +1,10 @@
 {
-    "Quark-win-0.6.0.exe": "yKOqM5twYGXDsC7w14NypwEzdRYxWNxrIqf+nKpGQlrpSN9jvYUJbkndCY7NR7nQHhNAfSGHrV2neBsHQcQU3g==",
-    "Quark-win-x64-0.6.0.msi": "Jm2r1NzNkphW+swsTBWcGO9ugeh1SR1jNbdCgQMCcA446O3Rf149kvLJv9FTAfWDavyN81guBewN7hANqwBYvQ==",
-    "Quark-win-x64-0.6.0.zip": "oAS8pFl7lv2DgbCYfqEz5tlTScdHSqHHAeCXhRgXgk/F6XL2vRQf3gVkOLToeiZ/ZLI0gWnNj4Pp4irjzMcYnA==",
-    "Quark-linux-amd64-0.6.0.deb": "BAZjDcCArt34O9EEHCc+bTA4gE9qhHPsNg+lRYEfiR7b0wk7qYtr6PKgJpL4h8iI+yhgrPiZhXsA92R8aLG/Vw==",
-    "Quark-linux-x64-0.6.0.tar.gz": "MAGyg6i1+WQBfBV580WfHDEThzcZSnwOr72ZVJzyTLG0yOzvIuJ6SzQdN76WlagIfSe9MRjWPcorePxOLdUboA==",
-    "Quark-linux-x86_64-0.6.0.AppImage": "vVdH9WIA2aenGUNU1+ju0wC+uIx/f7XL0Z2YwOFoMByGo+j/Wy7beo2rkag4ZKgBWPwploGYquEeKvMjttnTOA=="
+    "Quark-win-0.6.2.exe": "AxbhzSej8eL76UDOnRNCRyP2GiaP4tYltbhZXAi6A7JlEBH7jVBz+PXDTqoCAXx8NAAxkK8imOcgIjA2HMVQ5g==",
+    "Quark-win-x64-0.6.2.msi": "WYKOCuJsmqiJ5B4FRg362ozllzOmB0oaBW7nawJY9dcH53di7W9MU/FVMUx+HV7zqxV5lRhlu5G2xVnwsJh37A==",
+    "Quark-win-x64-0.6.2.zip": "a/skPj9QuzDJxFVaInj/G7v6ruiznZZV/84vWBPS3T/gX+IUNPDrNvUZ4i2Rxtpu4TNzi5JAN6NKM5YmYSUZZw==",
+    "Quark-linux-amd64-0.6.2.deb": "eJNcvSNoV7sfruJXMEV3ZwTeYpjMC96nqRX+CbK7J9nSNyGvG3V40BVSRfUY1R1uPTEypvdODV5V/5VJlUC46A==",
+    "Quark-linux-x64-0.6.2.tar.gz": "67qa3hLh9cX2tAvOBxKBWk/S13mx+c3ifIVNaTBH4zOh6TJveGcmcB44raVxBZKCL9rvup/v9MF6pTm/KfH49w==",
+    "Quark-linux-x86_64-0.6.2.AppImage": "gt6AmiJt68U96cTD8b7cBBJY3oKiRPLGVlPFaHme4mt/de8hfyHnS9hV713lIlv06rmHASYwYl5viQ8WVEf9Og==",
+    "Quark-mac-0.6.2.zip": "Uq4Z5Kn6x4LILe+n5mLcAR53ZJqkEnPt3McdajYpZaL87hlljbPPUGavGteC8WUJNOISwj60FchQ2VjlVMtRHA==",
+    "Quark-mac-0.6.2.dmg": "NLc9hpiDTooV27GjadlWAr6ewMRRKmb5W6fNWJz31GdUC/hixkABO6jm3SFrxZ5+GloNxhPXEdBkLtnesqeoZg=="
 }
