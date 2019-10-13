@@ -117,8 +117,8 @@ export default {
             if (!bin) {
                 return;
             }
-            const triggerUrl = `https://us-central1-diy-mechatronics.cloudfunctions.net/downloadCount/download-count`;
-            // const triggerUrl = `https://quarkjs.io/download-count`;
+            // const triggerUrl = `https://us-central1-diy-mechatronics.cloudfunctions.net/downloadCount/download-count`;
+            const triggerUrl = `https://functions.quarkjs.io/downloadCount/download-count`;
             const finalUrl = `${triggerUrl}/?version=${
         this.version
       }&&binary=${bin}&&channel=${this.channel}`;
