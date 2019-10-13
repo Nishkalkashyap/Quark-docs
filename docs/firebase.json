@@ -8,9 +8,14 @@
       "**/node_modules/**"
     ],
     "rewrites": [{
-      "source": "/GetDashboardStats{,/**}",
-      "function": "GetDashboardStats"
-    }],
+        "source": "/GetDashboardStats{,/**}",
+        "function": "GetDashboardStats"
+      },
+      {
+        "source": "/downloadCount{,/**}",
+        "function": "downloadCount"
+      }
+    ],
     "cleanUrls": false,
     "trailingSlash": false,
     "headers": [{
