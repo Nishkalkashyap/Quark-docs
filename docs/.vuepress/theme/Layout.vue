@@ -6,6 +6,10 @@
         <Message />
     </div>
 
+    <template #sidebar-top>
+      <CarbonAds/>
+    </template>
+
     <!-- <PageBottom slot="sidebar-top"/> -->
     <!-- <BuySellAds slot="page-bottom"/> -->
     <div slot="page-bottom">
