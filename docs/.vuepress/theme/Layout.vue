@@ -2,9 +2,9 @@
 <ParentLayout>
     <!-- <PageBottom slot="page-bottom"/> -->
     <!-- <Disqus slot="page-bottom" /> -->
-    <div slot="page-top">
+    <!-- <div slot="page-top">
         <Message />
-    </div>
+    </div> -->
 
     <template #sidebar-top>
       <CarbonAds/>
