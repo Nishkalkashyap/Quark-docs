@@ -5,7 +5,7 @@ pageClass: download-page
 # All Downloads
 | 🆕 Release type             | ⚡ Latest Version      | 📅 Release Date |
 | -------------------          | --------------------   | --------------- |
-| insiders   | 0.6.3             | October 15 2019,  11:04:00 AM |
+| insiders   | 0.6.4             | April 26 2020,  12:45:12 PM |
 <Download
 channel="insiders"
 />
