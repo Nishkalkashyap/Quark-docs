@@ -54,7 +54,7 @@
     "imagemin-webpack-plugin": "^2.4.2",
     "markdown-it-html5-embed": "^1.0.0",
     "material-icon-theme": "^3.7.1",
-    "node-sass": "^4.12.0",
+    "node-sass": "^7.0.0",
     "open": "^6.1.0",
     "recursive-readdir": "^2.2.2",
     "sass-loader": "^7.1.0",
