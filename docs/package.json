@@ -60,9 +60,9 @@
     "sass-loader": "^7.1.0",
     "sharp": "^0.22.1",
     "single-line-log": "^1.1.2",
-    "svg-inline-loader": "^0.8.0",
+    "svg-inline-loader": "^0.8.2",
     "table": "^5.2.3",
-    "vuepress": "^0.14.11",
+    "vuepress": "^1.9.8",
     "vuesax": "^3.8.35",
     "vuetify": "^1.4.4"
   },
